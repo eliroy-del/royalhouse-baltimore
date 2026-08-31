@@ -12,7 +12,7 @@ import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { churchConfig } from "@/config/church";
 import { images } from "@/config/images";
-import { addressLines, churchStatus, telHref } from "@/lib/church";
+import { addressLines, churchStatus } from "@/lib/church";
 import { breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
 import type { IconName } from "@/types";
