@@ -10,11 +10,11 @@ import type {
 import { cn } from "@/lib/utils";
 
 const controlBase = [
-  "w-full rounded-xl border bg-white px-4 text-[0.9375rem] text-navy-900",
+  "w-full rounded-lg border bg-white px-3 text-[0.875rem] text-navy-900",
   "border-navy-900/15 placeholder:text-navy-900/35",
   "transition-[border-color,box-shadow] duration-200",
   "hover:border-navy-900/25",
-  "focus:border-gold-500 focus:outline-none focus:ring-4 focus:ring-gold-500/15",
+  "focus:border-gold-500 focus:outline-none focus:ring-2 focus:ring-gold-500/15",
   "disabled:cursor-not-allowed disabled:bg-mist disabled:text-navy-900/65",
   "aria-[invalid=true]:border-red-500 aria-[invalid=true]:ring-red-500/15",
 ].join(" ");
@@ -33,7 +33,7 @@ export function Label({
   return (
     <LabelPrimitive.Root
       htmlFor={htmlFor}
-      className={cn("block text-[0.8125rem] font-semibold text-navy-900", className)}
+      className={cn("block text-[0.75rem] font-semibold text-navy-900", className)}
     >
       {children}
       {required ? (
@@ -66,7 +66,7 @@ export function Field({
   children,
 }: FieldShellProps) {
   return (
-    <div className={cn("flex flex-col gap-2", className)}>
+    <div className={cn("flex flex-col gap-1.5", className)}>
       <Label htmlFor={id} required={required}>
         {label}
       </Label>
@@ -86,11 +86,11 @@ export function Field({
 }
 
 export function Input({ className, ...props }: InputHTMLAttributes<HTMLInputElement>) {
-  return <input className={cn(controlBase, "h-12", className)} {...props} />;
+  return <input className={cn(controlBase, "h-10", className)} {...props} />;
 }
 
 export function Textarea({ className, ...props }: TextareaHTMLAttributes<HTMLTextAreaElement>) {
-  return <textarea className={cn(controlBase, "min-h-32 py-3 leading-relaxed", className)} {...props} />;
+  return <textarea className={cn(controlBase, "min-h-24 py-2.5 leading-relaxed", className)} {...props} />;
 }
 
 export function Select({ className, children, ...props }: SelectHTMLAttributes<HTMLSelectElement>) {
@@ -99,7 +99,7 @@ export function Select({ className, children, ...props }: SelectHTMLAttributes<H
       <select
         className={cn(
           controlBase,
-          "h-12 cursor-pointer appearance-none bg-white pr-11",
+          "h-10 cursor-pointer appearance-none bg-white pr-10",
           className,
         )}
         {...props}
@@ -109,7 +109,7 @@ export function Select({ className, children, ...props }: SelectHTMLAttributes<H
       <svg
         aria-hidden="true"
         viewBox="0 0 16 16"
-        className="pointer-events-none absolute right-4 top-1/2 size-3.5 -translate-y-1/2 text-navy-900/65"
+        className="pointer-events-none absolute right-3 top-1/2 size-3.5 -translate-y-1/2 text-navy-900/65"
       >
         <path
           d="M3 6l5 5 5-5"
@@ -132,20 +132,20 @@ export function Checkbox({
   ...props
 }: InputHTMLAttributes<HTMLInputElement> & { id: string; label: string; description?: string }) {
   return (
-    <div className={cn("flex gap-3", className)}>
+    <div className={cn("flex gap-2.5", className)}>
       <input
         id={id}
         type="checkbox"
         className={cn(
-          "mt-0.5 size-5 shrink-0 cursor-pointer appearance-none rounded-md border border-navy-900/25 bg-white",
+          "mt-0.5 size-4 shrink-0 cursor-pointer appearance-none rounded border border-navy-900/25 bg-white",
           "checked:border-gold-500 checked:bg-gold-500",
-          "bg-[length:12px] bg-center bg-no-repeat",
+          "bg-[length:10px] bg-center bg-no-repeat",
           "checked:bg-[url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22 fill=%22none%22 stroke=%22%2307111f%22 stroke-width=%222.5%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22><path d=%22M3 8.5l3.5 3.5L13 5%22/></svg>')]",
           "transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500",
         )}
         {...props}
       />
-      <div className="text-[0.875rem] leading-relaxed">
+      <div className="text-[0.8125rem] leading-snug">
         <LabelPrimitive.Root htmlFor={id} className="cursor-pointer font-medium text-navy-900">
           {label}
         </LabelPrimitive.Root>

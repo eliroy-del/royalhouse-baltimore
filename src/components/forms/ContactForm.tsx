@@ -37,6 +37,7 @@ export function ContactForm() {
         action={
           <Button
             variant="outline"
+            size="sm"
             onClick={() => {
               resetForm();
               reset();
@@ -53,13 +54,13 @@ export function ContactForm() {
     <form
       noValidate
       onSubmit={handleSubmit((values) => submit(values))}
-      className="relative flex flex-col gap-6"
+      className="relative flex flex-col gap-4"
     >
       <Honeypot register={register("companyWebsite")} />
 
       {status === "error" ? <ErrorBanner message={message} /> : null}
 
-      <div className="grid gap-6 sm:grid-cols-2">
+      <div className="grid gap-4 sm:grid-cols-2">
         <Field id="contact-name" label="Your name" required error={errors.name?.message}>
           <Input
             id="contact-name"
@@ -81,7 +82,7 @@ export function ContactForm() {
         </Field>
       </div>
 
-      <div className="grid gap-6 sm:grid-cols-2">
+      <div className="grid gap-4 sm:grid-cols-2">
         <Field id="contact-phone" label="Phone" hint="Optional." error={errors.phone?.message}>
           <Input
             id="contact-phone"
@@ -106,14 +107,14 @@ export function ContactForm() {
       <Field id="message" label="Your message" required error={errors.message?.message}>
         <Textarea
           id="message"
-          rows={6}
+          rows={4}
           aria-invalid={errors.message ? true : undefined}
           aria-describedby={errors.message ? "message-error" : undefined}
           {...register("message")}
         />
       </Field>
 
-      <div className="rounded-xl border border-navy-900/[0.08] bg-mist p-5">
+      <div className="rounded-lg border border-navy-900/[0.08] bg-mist p-3.5">
         <Checkbox
           id="contact-consent"
           label="I'm happy for Royalhouse Baltimore to reply to me"
@@ -121,14 +122,14 @@ export function ContactForm() {
           {...register("consent")}
         />
         {errors.consent ? (
-          <p role="alert" className="mt-3 text-xs font-medium text-red-700">
+          <p role="alert" className="mt-2 text-xs font-medium text-red-700">
             {errors.consent.message}
           </p>
         ) : null}
       </div>
 
-      <div className="flex flex-col gap-4">
-        <Button type="submit" size="lg" disabled={status === "submitting"} className="self-start">
+      <div className="flex flex-col gap-3">
+        <Button type="submit" size="md" disabled={status === "submitting"} className="self-start">
           {status === "submitting" ? (
             <>
               <Loader2 aria-hidden="true" className="size-4 animate-spin" />
