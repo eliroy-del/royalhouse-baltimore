@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 import { images, navyBlurDataURL } from "@/config/images";
-import { addressLines, directionsUrl, mapEmbedUrl } from "@/lib/church";
+import { mapEmbedUrl } from "@/lib/church";
 import { cn } from "@/lib/utils";
 
 /**
@@ -12,7 +12,6 @@ import { cn } from "@/lib/utils";
  */
 export function MapEmbed({ className }: { className?: string }) {
   const embed = mapEmbedUrl();
-  const directions = directionsUrl();
 
   if (embed) {
     return (
@@ -27,25 +26,8 @@ export function MapEmbed({ className }: { className?: string }) {
           src={embed}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          className="aspect-[21/9] max-h-56 w-full border-0 grayscale-[0.15] sm:max-h-64"
+          className="aspect-[2/1] h-full min-h-52 w-full border-0 grayscale-[0.15] sm:min-h-64"
         />
-        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-navy-900/[0.07] bg-white px-3.5 py-3 sm:px-4">
-          <address className="not-italic text-[0.8125rem] leading-relaxed text-navy-900/75">
-            {addressLines().map((line, index) => (
-              <span key={line} className={index === 0 ? "block font-semibold text-navy-900" : "block"}>
-                {line}
-              </span>
-            ))}
-          </address>
-          {directions ? (
-            <Button asChild variant="outline" size="sm">
-              <a href={directions} target="_blank" rel="noreferrer noopener">
-                Get Directions
-                <Icon name="arrow-right" className="size-3.5" />
-              </a>
-            </Button>
-          ) : null}
-        </div>
       </div>
     );
   }
