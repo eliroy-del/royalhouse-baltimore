@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { PlanVisitForm } from "@/components/forms/PlanVisitForm";
 import { Reveal } from "@/components/motion/Reveal";
-import { MapEmbed } from "@/components/sections/MapEmbed";
 import { PageHero } from "@/components/sections/PageHero";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Button } from "@/components/ui/Button";
