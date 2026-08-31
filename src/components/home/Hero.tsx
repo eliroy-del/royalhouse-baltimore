@@ -3,9 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Icon } from "@/components/ui/Icon";
-import { churchConfig } from "@/config/church";
 import { images } from "@/config/images";
-import { churchStatus, serviceTimeSummary } from "@/lib/church";
 
 /**
  * The first six seconds. Deliberately server-rendered with CSS-only motion:
@@ -87,27 +85,6 @@ export function Hero() {
               </Link>
             </Button>
           </div>
-
-          <p
-            className="rise mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-[0.8125rem] text-white/60"
-            style={{ animationDelay: "540ms" }}
-          >
-            <span className="flex items-center gap-2">
-              <Icon name="clock" className="size-4 text-gold-400" />
-              {churchStatus.hasServiceTimes ? serviceTimeSummary() : "Sunday Gatherings"}
-            </span>
-            <span aria-hidden="true" className="hidden h-3 w-px bg-white/20 sm:block" />
-            <span className="flex items-center gap-2">
-              <Icon name="map-pin" className="size-4 text-gold-400" />
-              {churchConfig.city}, {churchConfig.region}
-            </span>
-            <span aria-hidden="true" className="hidden h-3 w-px bg-white/20 sm:block" />
-            {/* The service card immediately below repeats this on small screens. */}
-            <span className="hidden items-center gap-2 sm:flex">
-              <Icon name="baby" className="size-4 text-gold-400" />
-              Kids ministry every service
-            </span>
-          </p>
         </div>
       </Container>
 
