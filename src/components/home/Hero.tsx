@@ -78,10 +78,7 @@ export function Hero() {
               </Link>
             </Button>
             <Button asChild variant="outline-light" size="lg">
-              <Link href="/watch-live">
-                <Icon name="play" className="size-4" />
-                Watch Live
-              </Link>
+              <Link href="/give">Give</Link>
             </Button>
           </div>
         </div>
