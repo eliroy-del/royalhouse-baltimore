@@ -108,6 +108,7 @@ export function ContactForm() {
         <Textarea
           id="message"
           rows={3}
+          className="min-h-20"
           aria-invalid={errors.message ? true : undefined}
           aria-describedby={errors.message ? "message-error" : undefined}
           {...register("message")}
