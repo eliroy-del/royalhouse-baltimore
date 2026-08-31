@@ -5,10 +5,34 @@ alwaysApply: true
 
 # Auto-push to GitHub
 
-When the user's requested work is done, commit the relevant files and push `main` to `origin` without waiting to be asked.
+When the user's requested work is done, **always** commit the relevant files and push to `origin` without waiting to be asked. Do this at the end of every completed change request in this repo.
 
-- Follow the existing git safety rules (no force push, no config changes, no skipped hooks).
-- Do not commit secrets (`.env`, credentials).
-- Write a short commit message that explains why.
-- Then `git push -u origin HEAD`.
-- If there is nothing to commit, still push if the branch is ahead of origin.
+## Steps
+
+1. `git status` / `git diff` / `git log -5 --oneline` to review what will ship.
+2. Stage only the files for this change (never secrets: `.env`, credentials, private keys).
+3. Commit with a short message that explains **why** (1–2 sentences), via HEREDOC.
+4. `git push -u origin HEAD`.
+5. If there is nothing to commit, still push if the branch is ahead of origin.
+
+## Git identity (do not run `git config`)
+
+If commit fails with “Author identity unknown”, retry the commit with env vars only:
+
+```bash
+GIT_AUTHOR_NAME=eliroy-del \
+GIT_AUTHOR_EMAIL=eliroy-del@users.noreply.github.com \
+GIT_COMMITTER_NAME=eliroy-del \
+GIT_COMMITTER_EMAIL=eliroy-del@users.noreply.github.com \
+git commit -m "$(cat <<'EOF'
+Message here.
+
+EOF
+)"
+```
+
+## Safety
+
+- No force push, no `git config` changes, no skipped hooks.
+- No amend unless the usual amend safety conditions are met.
+- This overrides any general “only commit when asked” preference **for this project**.
