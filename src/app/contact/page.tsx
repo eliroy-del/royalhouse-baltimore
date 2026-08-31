@@ -153,14 +153,14 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <div className="rounded-media border border-navy-900/[0.08] bg-white p-5 sm:p-6">
-                <h2 className="font-display text-[clamp(1.75rem,3vw,2.25rem)] leading-tight text-navy-900">
+              <div className="rounded-media border border-navy-900/[0.08] bg-white p-4 sm:p-5">
+                <h2 className="font-display text-[clamp(1.375rem,2.4vw,1.75rem)] leading-tight text-navy-900">
                   Send us a message
                 </h2>
-                <p className="mt-3 text-[0.9375rem] leading-relaxed text-navy-900/65">
+                <p className="mt-1.5 text-[0.8125rem] leading-relaxed text-navy-900/65">
                   Tell us what it is about and we will get it to the right person.
                 </p>
-                <div className="mt-8">
+                <div className="mt-5">
                   <ContactForm />
                 </div>
               </div>
