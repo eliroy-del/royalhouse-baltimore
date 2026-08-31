@@ -60,9 +60,8 @@ export function Hero() {
             className="rise mt-4 max-w-xl text-[0.9375rem] leading-relaxed text-white/80 sm:text-[1.0625rem]"
             style={{ animationDelay: "300ms" }}
           >
-            We are an ordinary group of people in Baltimore who have met an extraordinary God.
-            Whether you have followed Jesus for forty years or you are simply curious, there is a
-            seat here with your name on it.
+            Experience the presence of God and the power of His Word with Royalhouse Chapel
+            International - Baltimore
           </p>
 
           <div
