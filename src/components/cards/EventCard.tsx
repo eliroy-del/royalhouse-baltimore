@@ -52,7 +52,7 @@ export function EventCard({ event, variant = "default", className }: EventCardPr
       <Link
         href={href}
         className={cn(
-          "group relative isolate flex min-h-[15rem] flex-col justify-end overflow-hidden rounded-media bg-navy-950 p-6 text-white sm:min-h-[14rem] lg:p-5",
+          "group relative isolate flex min-h-[12rem] flex-col justify-end overflow-hidden rounded-media bg-navy-950 p-4 text-white sm:min-h-[13rem] lg:p-5",
           className,
         )}
       >
@@ -67,45 +67,45 @@ export function EventCard({ event, variant = "default", className }: EventCardPr
         />
         <div aria-hidden="true" className="absolute inset-0 -z-10 scrim-navy" />
 
-        <div className="flex flex-wrap items-center gap-2.5">
-          <Badge variant="gold" size="md">
+        <div className="flex flex-wrap items-center gap-2">
+          <Badge variant="gold" size="sm">
             Featured
           </Badge>
-          <Badge variant="outline-light" size="md">
+          <Badge variant="outline-light" size="sm">
             {event.category}
           </Badge>
         </div>
 
-        <h3 className="mt-5 max-w-2xl font-display text-[clamp(1.875rem,3.4vw,2.125rem)] leading-[1.05]">
+        <h3 className="mt-3 max-w-2xl font-display text-[clamp(1.375rem,2.6vw,1.75rem)] leading-[1.05]">
           {event.title}
         </h3>
-        <p className="mt-4 max-w-xl text-[0.9375rem] leading-relaxed text-white/75">
+        <p className="mt-2 max-w-xl text-[0.8125rem] leading-relaxed text-white/75 sm:text-[0.875rem]">
           {event.summary}
         </p>
 
-        <dl className="mt-7 flex flex-wrap items-center gap-x-7 gap-y-3 text-[0.875rem] text-white/80">
+        <dl className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-[0.8125rem] text-white/80">
           <div className="flex items-center gap-2">
             <dt className="sr-only">Date</dt>
-            <Icon name="calendar" className="size-4 text-gold-400" />
+            <Icon name="calendar" className="size-3.5 text-gold-400" />
             <dd>{formatDate(event.date)}</dd>
           </div>
           <div className="flex items-center gap-2">
             <dt className="sr-only">Time</dt>
-            <Icon name="clock" className="size-4 text-gold-400" />
+            <Icon name="clock" className="size-3.5 text-gold-400" />
             <dd>{event.startTime}</dd>
           </div>
           <div className="flex items-center gap-2">
             <dt className="sr-only">Location</dt>
-            <Icon name="map-pin" className="size-4 text-gold-400" />
+            <Icon name="map-pin" className="size-3.5 text-gold-400" />
             <dd>{event.location}</dd>
           </div>
         </dl>
 
-        <span className="mt-8 inline-flex items-center gap-2 text-[0.875rem] font-semibold text-gold-300">
+        <span className="mt-4 inline-flex items-center gap-2 text-[0.8125rem] font-semibold text-gold-300">
           See event details
           <Icon
             name="arrow-right"
-            className="size-4 transition-transform duration-300 group-hover:translate-x-1"
+            className="size-3.5 transition-transform duration-300 group-hover:translate-x-1"
           />
         </span>
       </Link>
