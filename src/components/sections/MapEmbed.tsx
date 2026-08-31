@@ -29,8 +29,8 @@ export function MapEmbed({ className }: { className?: string }) {
           referrerPolicy="no-referrer-when-downgrade"
           className="aspect-[16/10] w-full border-0 grayscale-[0.15]"
         />
-        <div className="flex flex-wrap items-center justify-between gap-4 border-t border-navy-900/[0.07] bg-white p-6">
-          <address className="not-italic text-[0.9375rem] leading-relaxed text-navy-900/75">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-navy-900/[0.07] bg-white p-4 sm:p-5">
+          <address className="not-italic text-[0.875rem] leading-relaxed text-navy-900/75">
             {addressLines().map((line, index) => (
               <span key={line} className={index === 0 ? "block font-semibold text-navy-900" : "block"}>
                 {line}
@@ -38,7 +38,7 @@ export function MapEmbed({ className }: { className?: string }) {
             ))}
           </address>
           {directions ? (
-            <Button asChild variant="outline" size="md">
+            <Button asChild variant="outline" size="sm">
               <a href={directions} target="_blank" rel="noreferrer noopener">
                 Get Directions
                 <Icon name="arrow-right" className="size-3.5" />

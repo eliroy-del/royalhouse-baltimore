@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { SocialLinks } from "@/components/layout/SocialLinks";
-import { Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MapEmbed } from "@/components/sections/MapEmbed";
 import { CtaBand, PageHero } from "@/components/sections/PageHero";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -11,10 +10,9 @@ import { Icon } from "@/components/ui/Icon";
 import { Section } from "@/components/ui/Section";
 import { churchConfig } from "@/config/church";
 import { images } from "@/config/images";
-import { addressLines, churchStatus } from "@/lib/church";
+import { addressLines, churchStatus, directionsUrl } from "@/lib/church";
 import { breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
-import type { IconName } from "@/types";
 
 export const metadata = pageMetadata({
   title: "Contact",
@@ -24,44 +22,10 @@ export const metadata = pageMetadata({
   image: images.welcomeLobby.src,
 });
 
-interface ContactMethod {
-  icon: IconName;
-  label: string;
-  value: string;
-  href?: string;
-  muted?: boolean;
-}
-
-function methods(): ContactMethod[] {
-  const list: ContactMethod[] = [];
-
-  list.push(
-    churchStatus.hasEmail
-      ? {
-          icon: "megaphone",
-          label: "Email us",
-          value: churchConfig.contact.email,
-          href: `mailto:${churchConfig.contact.email}`,
-        }
-      : {
-          icon: "megaphone",
-          label: "Email us",
-          value: "Our public inbox goes live shortly. The form below reaches the same team.",
-          muted: true,
-        },
-  );
-
-  list.push({
-    icon: "map-pin",
-    label: "Find us",
-    value: addressLines().join(", "),
-    muted: !churchStatus.hasAddress,
-  });
-
-  return list;
-}
-
 export default function ContactPage() {
+  const directions = directionsUrl();
+  const lines = addressLines();
+
   return (
     <>
       <JsonLd
@@ -82,61 +46,86 @@ export default function ContactPage() {
         size="lg"
       />
 
+      {/* Form first — the primary action. Details sit beside it. */}
       <Section tone="cream" spacing="md">
         <Container>
-          <div className="grid gap-5 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-6">
-            <div>
-              <Stagger className="flex flex-col gap-px overflow-hidden rounded-media border border-navy-900/[0.08] bg-navy-900/[0.07]">
-                {methods().map((method) => (
-                  <StaggerItem key={method.label} className="flex gap-4 bg-white p-6">
-                    <span className="mt-0.5 flex size-10 shrink-0 items-center justify-center rounded-full bg-navy-900/[0.05] text-navy-800">
-                      <Icon name={method.icon} className="size-[1.125rem]" />
-                    </span>
-                    <div className="min-w-0">
-                      <p className="eyebrow text-navy-900/65">{method.label}</p>
-                      {method.href ? (
-                        <a
-                          href={method.href}
-                          className="mt-2 block text-[0.9375rem] font-semibold text-navy-900 underline decoration-gold-500/50 underline-offset-4 hover:decoration-gold-500"
-                        >
-                          {method.value}
-                        </a>
-                      ) : (
-                        <p
-                          className={`mt-2 text-[0.9375rem] leading-relaxed ${
-                            method.muted ? "text-navy-900/65" : "text-navy-900/80"
-                          }`}
-                        >
-                          {method.value}
-                        </p>
-                      )}
-                    </div>
-                  </StaggerItem>
-                ))}
-              </Stagger>
-
-              <div className="mt-8">
-                <p className="eyebrow text-navy-900/65">Follow along</p>
-                <SocialLinks className="mt-4" />
+          <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,0.85fr)] lg:gap-8">
+            <div className="rounded-media border border-navy-900/[0.08] bg-white p-4 sm:p-5">
+              <h2 className="font-display text-[clamp(1.375rem,2.4vw,1.75rem)] leading-tight text-navy-900">
+                Send us a message
+              </h2>
+              <p className="mt-1.5 text-[0.8125rem] leading-relaxed text-navy-900/65">
+                Tell us what it is about and we will get it to the right person.
+              </p>
+              <div className="mt-5">
+                <ContactForm />
               </div>
             </div>
 
-            <div>
+            <aside className="flex flex-col gap-4 lg:sticky lg:top-20">
               <div className="rounded-media border border-navy-900/[0.08] bg-white p-4 sm:p-5">
-                <h2 className="font-display text-[clamp(1.375rem,2.4vw,1.75rem)] leading-tight text-navy-900">
-                  Send us a message
-                </h2>
-                <p className="mt-1.5 text-[0.8125rem] leading-relaxed text-navy-900/65">
-                  Tell us what it is about and we will get it to the right person.
-                </p>
-                <div className="mt-5">
-                  <ContactForm />
-                </div>
+                <p className="eyebrow text-navy-900/65">Find us</p>
+                <address className="mt-2 not-italic text-[0.9375rem] leading-relaxed text-navy-900/80">
+                  {lines.map((line) => (
+                    <span key={line} className="block">
+                      {line}
+                    </span>
+                  ))}
+                </address>
+                {directions ? (
+                  <Button asChild variant="outline" size="sm" className="mt-4">
+                    <a href={directions} target="_blank" rel="noreferrer noopener">
+                      Get Directions
+                      <Icon name="arrow-right" className="size-3.5" />
+                    </a>
+                  </Button>
+                ) : null}
               </div>
 
-              <MapEmbed className="mt-6" />
-            </div>
+              <div className="rounded-media border border-navy-900/[0.08] bg-white p-4 sm:p-5">
+                <p className="eyebrow text-navy-900/65">Email us</p>
+                {churchStatus.hasEmail ? (
+                  <a
+                    href={`mailto:${churchConfig.contact.email}`}
+                    className="mt-2 block text-[0.9375rem] font-semibold text-navy-900 underline decoration-gold-500/50 underline-offset-4 hover:decoration-gold-500"
+                  >
+                    {churchConfig.contact.email}
+                  </a>
+                ) : (
+                  <p className="mt-2 text-[0.875rem] leading-relaxed text-navy-900/65">
+                    Use the form and we will reply from our team inbox.
+                  </p>
+                )}
+              </div>
+
+              <div className="rounded-media border border-navy-900/[0.08] bg-white p-4 sm:p-5">
+                <p className="eyebrow text-navy-900/65">Follow along</p>
+                <SocialLinks className="mt-3" />
+              </div>
+            </aside>
           </div>
+        </Container>
+      </Section>
+
+      <Section tone="white" spacing="md">
+        <Container>
+          <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <p className="eyebrow text-gold-800">Location</p>
+              <h2 className="mt-2 font-display text-[clamp(1.375rem,2.4vw,1.75rem)] leading-tight text-navy-900">
+                How to find the building
+              </h2>
+            </div>
+            {directions ? (
+              <Button asChild variant="link" size="none">
+                <a href={directions} target="_blank" rel="noreferrer noopener">
+                  Open in Google Maps
+                  <Icon name="arrow-right" className="size-3.5" />
+                </a>
+              </Button>
+            ) : null}
+          </div>
+          <MapEmbed />
         </Container>
       </Section>
 
@@ -146,10 +135,10 @@ export default function ContactPage() {
         lede="You are welcome to come first and ask your questions afterwards. That is how most of us started."
         actions={
           <>
-            <Button asChild variant="gold" size="xl">
+            <Button asChild variant="gold" size="md">
               <Link href="/plan-a-visit">Plan Your Visit</Link>
             </Button>
-            <Button asChild variant="outline-light" size="xl">
+            <Button asChild variant="outline-light" size="md">
               <Link href="/prayer">Request Prayer</Link>
             </Button>
           </>
