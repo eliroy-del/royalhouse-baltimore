@@ -6,11 +6,10 @@ import { CtaBand, PageHero } from "@/components/sections/PageHero";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { Icon } from "@/components/ui/Icon";
 import { Section } from "@/components/ui/Section";
 import { churchConfig } from "@/config/church";
 import { images } from "@/config/images";
-import { addressLines, churchStatus, directionsUrl } from "@/lib/church";
+import { addressLines, churchStatus } from "@/lib/church";
 import { breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
 
@@ -23,7 +22,6 @@ export const metadata = pageMetadata({
 });
 
 export default function ContactPage() {
-  const directions = directionsUrl();
   const lines = addressLines();
 
   return (
