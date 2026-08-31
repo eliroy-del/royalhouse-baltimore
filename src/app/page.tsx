@@ -8,7 +8,6 @@ import { MinistriesPreview } from "@/components/home/MinistriesPreview";
 import { OurHeartSection } from "@/components/home/OurHeartSection";
 import { PlanVisitInvite } from "@/components/home/PlanVisitInvite";
 import { PrayerInvite } from "@/components/home/PrayerInvite";
-import { SocialSection } from "@/components/home/SocialSection";
 import { TestimoniesPreview } from "@/components/home/TestimoniesPreview";
 import { ServiceCard } from "@/components/sections/ServiceCard";
 import { pageMetadata } from "@/lib/seo";
@@ -39,7 +38,6 @@ export default function HomePage() {
       <PrayerInvite />
       <GivingInvite />
       <PlanVisitInvite />
-      <SocialSection />
     </>
   );
 }
