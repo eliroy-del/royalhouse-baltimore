@@ -4,7 +4,6 @@ import { GivingInvite } from "@/components/home/GivingInvite";
 import { Hero } from "@/components/home/Hero";
 import { LatestMessage } from "@/components/home/LatestMessage";
 import { MinistriesPreview } from "@/components/home/MinistriesPreview";
-import { OurHeartSection } from "@/components/home/OurHeartSection";
 import { PrayerInvite } from "@/components/home/PrayerInvite";
 import { ServiceCard } from "@/components/sections/ServiceCard";
 import { pageMetadata } from "@/lib/seo";
@@ -25,7 +24,6 @@ export default function HomePage() {
     <>
       <Hero />
       <ServiceCard variant="floating" />
-      <OurHeartSection />
       <EventsPreview />
       <LatestMessage />
       <MinistriesPreview />
