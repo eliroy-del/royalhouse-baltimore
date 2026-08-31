@@ -61,9 +61,9 @@ export default async function ConnectPage() {
       <SectionJumpLinks links={jumpLinks} />
 
       {/* --------------------------------- I'm new -------------------------------- */}
-      <Section tone="cream" spacing="lg" id="new">
+      <Section tone="cream" spacing="md" id="new">
         <Container>
-          <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] lg:gap-10">
+          <div className="grid items-center gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] lg:gap-6">
             <div>
               <SectionHeading
                 eyebrow="I'm New Here"
@@ -121,7 +121,7 @@ export default async function ConnectPage() {
       </Section>
 
       {/* ------------------------------- Next steps ------------------------------- */}
-      <Section tone="white" spacing="lg" id="steps">
+      <Section tone="white" spacing="md" id="steps">
         <Container>
           <SectionHeading
             align="center"
@@ -140,13 +140,13 @@ export default async function ConnectPage() {
       </Section>
 
       {/* --------------------------------- Groups -------------------------------- */}
-      <Section tone="navy" spacing="lg" id="groups" className="overflow-hidden">
+      <Section tone="navy" spacing="md" id="groups" className="overflow-hidden">
         <span
           aria-hidden="true"
           className="pointer-events-none absolute -left-32 top-0 size-[30rem] rounded-full bg-[radial-gradient(circle,rgba(201,162,39,0.14),transparent_65%)]"
         />
         <Container className="relative">
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-10">
+          <div className="grid gap-5 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-6">
             <SectionHeading
               tone="dark"
               eyebrow="Join a Group"
@@ -188,7 +188,7 @@ export default async function ConnectPage() {
       </Section>
 
       {/* --------------------------------- Serve --------------------------------- */}
-      <Section tone="cream" spacing="lg" id="serve">
+      <Section tone="cream" spacing="md" id="serve">
         <Container>
           <SectionHeading
             eyebrow="Serve on a Team"
@@ -219,9 +219,9 @@ export default async function ConnectPage() {
       </Section>
 
       {/* -------------------------------- Baptism -------------------------------- */}
-      <Section tone="white" spacing="lg" id="baptism">
+      <Section tone="white" spacing="md" id="baptism">
         <Container>
-          <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-10">
+          <div className="grid items-center gap-5 lg:grid-cols-2 lg:gap-6">
             <Reveal y={26}>
               <div className="relative aspect-[4/3] overflow-hidden rounded-media bg-navy-900">
                 <Image
@@ -259,7 +259,7 @@ export default async function ConnectPage() {
       </Section>
 
       {/* ------------------------------- Membership ------------------------------ */}
-      <Section tone="mist" spacing="lg" id="membership">
+      <Section tone="mist" spacing="md" id="membership">
         <Container>
           <SectionHeading
             align="center"
@@ -272,7 +272,7 @@ export default async function ConnectPage() {
             {membershipJourney.map((item) => (
               <StaggerItem
                 key={item.step}
-                className="relative rounded-media border border-navy-900/[0.08] bg-white p-7"
+                className="relative rounded-media border border-navy-900/[0.08] bg-white p-5"
               >
                 <span className="font-display text-3xl text-gold-600 tabular-nums">
                   {item.step}
@@ -285,7 +285,7 @@ export default async function ConnectPage() {
             ))}
           </Stagger>
 
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-3">
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
             <Button asChild size="lg">
               <Link href="/contact">Start the conversation</Link>
             </Button>

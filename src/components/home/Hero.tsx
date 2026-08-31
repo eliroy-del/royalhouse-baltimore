@@ -13,7 +13,7 @@ export function Hero() {
   return (
     // Bottom padding always exceeds the floating service card's negative
     // margin, so the hero's service line is never clipped by it.
-    <section className="relative isolate flex min-h-[64svh] flex-col justify-end overflow-hidden bg-navy-950 pb-12 pt-20 sm:pb-14 sm:pt-24 lg:min-h-[70svh] lg:pb-16 lg:pt-24">
+    <section className="relative isolate flex min-h-[56svh] flex-col justify-end overflow-hidden bg-navy-950 pb-10 pt-16 sm:pb-12 sm:pt-20 lg:min-h-[60svh] lg:pb-12 lg:pt-20">
       {/* Cinematic photography with a slow, single settle — never a loop */}
       <div aria-hidden="true" className="absolute inset-0 -z-10">
         <Image
@@ -48,7 +48,7 @@ export function Hero() {
       <Container className="relative">
         <div className="max-w-[68rem]">
           <h1
-            className="rise font-display text-[clamp(2.125rem,5vw,3.75rem)] font-light leading-[0.98] tracking-[-0.02em] text-white"
+            className="rise font-display text-[clamp(1.875rem,4.5vw,2.75rem)] font-light leading-[0.98] tracking-[-0.02em] text-white"
             style={{ animationDelay: "80ms" }}
           >
             A place to encounter God,
@@ -57,7 +57,7 @@ export function Hero() {
           </h1>
 
           <p
-            className="rise mt-4 max-w-xl text-[0.9375rem] leading-relaxed text-white/80 sm:text-[1.0625rem]"
+            className="rise mt-3 max-w-xl text-[0.875rem] leading-relaxed text-white/80 sm:text-[0.9375rem]"
             style={{ animationDelay: "300ms" }}
           >
             Experience the presence of God and the power of His Word with Royalhouse Chapel
@@ -65,10 +65,10 @@ export function Hero() {
           </p>
 
           <div
-            className="rise mt-6 flex flex-col gap-3 sm:flex-row sm:items-center"
+            className="rise mt-5 flex flex-col gap-2.5 sm:flex-row sm:items-center"
             style={{ animationDelay: "420ms" }}
           >
-            <Button asChild variant="gold" size="xl">
+            <Button asChild variant="gold" size="lg">
               <Link href="/plan-a-visit">
                 Plan Your Visit
                 <Icon
@@ -77,7 +77,7 @@ export function Hero() {
                 />
               </Link>
             </Button>
-            <Button asChild variant="outline-light" size="xl">
+            <Button asChild variant="outline-light" size="lg">
               <Link href="/watch-live">
                 <Icon name="play" className="size-4" />
                 Watch Live

@@ -23,7 +23,7 @@ export function PrayerInvite() {
       />
 
       <Container className="relative">
-        <div className="grid items-center gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.7fr)] lg:gap-8">
+        <div className="grid items-center gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.7fr)] lg:gap-5">
           <div>
             <Eyebrow chapter="10" tone="dark">
               We&rsquo;re Here For You

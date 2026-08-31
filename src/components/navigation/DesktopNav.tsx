@@ -73,7 +73,7 @@ export function DesktopNav() {
               >
                 <div className="overflow-hidden rounded-2xl border border-navy-900/10 bg-white shadow-float">
                   <div className="grid grid-cols-[minmax(0,15rem)_1fr]">
-                    <div className="relative hidden flex-col justify-between bg-navy-900 p-7 text-white sm:flex">
+                    <div className="relative hidden flex-col justify-between bg-navy-900 p-5 text-white sm:flex">
                       <div>
                         <p className="eyebrow text-gold-300">{item.label}</p>
                         <p className="mt-4 font-display text-[1.375rem] leading-snug text-white/90">

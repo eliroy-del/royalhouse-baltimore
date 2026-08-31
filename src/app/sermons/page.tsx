@@ -72,9 +72,9 @@ export default async function SermonsPage() {
 
       {/* ------------------------------ Featured ------------------------------ */}
       {featured ? (
-        <Section tone="cream" spacing="lg">
+        <Section tone="cream" spacing="md">
           <Container>
-            <div className="grid gap-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:items-center lg:gap-10">
+            <div className="grid gap-6 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:items-center lg:gap-6">
               <Reveal y={24}>
                 <Link
                   href={`/sermons/${featured.slug}`}
@@ -110,7 +110,7 @@ export default async function SermonsPage() {
                     </Badge>
                   ) : null}
                 </div>
-                <h2 className="mt-5 font-display text-[clamp(1.875rem,3.6vw,2.875rem)] font-light leading-[1.06] text-navy-900">
+                <h2 className="mt-5 font-display text-[clamp(1.875rem,3.6vw,2.125rem)] font-light leading-[1.06] text-navy-900">
                   {featured.title}
                 </h2>
                 <p className="mt-5 text-[1.0625rem] leading-relaxed text-navy-900/70">
@@ -152,14 +152,14 @@ export default async function SermonsPage() {
       ) : null}
 
       {/* ------------------------------- Library ------------------------------- */}
-      <Section tone="white" spacing="lg" id="library">
+      <Section tone="white" spacing="md" id="library">
         <Container>
           <SectionHeading
             eyebrow="The Library"
             title="Every message, searchable."
             lede="Filter by series, topic or speaker — or type whatever you remember and let the search find it."
           />
-          <div className="mt-12">
+          <div className="mt-6">
             <SermonLibrary
               sermons={sermons}
               seriesOptions={seriesOptions}

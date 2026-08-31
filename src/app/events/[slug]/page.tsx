@@ -125,7 +125,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ sl
         }
       />
 
-      <Section tone="cream" spacing="lg">
+      <Section tone="cream" spacing="md">
         <Container>
           {past ? (
             <div
@@ -142,7 +142,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ sl
             </div>
           ) : null}
 
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:gap-10">
+          <div className="grid gap-5 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:gap-6">
             <div>
               <div className="flex flex-wrap items-center gap-2.5">
                 <Badge variant="gold" size="md">
@@ -164,7 +164,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ sl
                 ))}
               </div>
 
-              <div className="mt-10 flex flex-wrap gap-3 border-t border-navy-900/[0.08] pt-8">
+              <div className="mt-6 flex flex-wrap gap-3 border-t border-navy-900/[0.08] pt-5">
                 {event.registrationUrl ? (
                   <Button asChild size="lg">
                     <a href={event.registrationUrl} target="_blank" rel="noreferrer noopener">
@@ -186,7 +186,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ sl
             </div>
 
             <aside className="lg:sticky lg:top-28 lg:self-start">
-              <div className="rounded-media border border-navy-900/[0.08] bg-white p-7">
+              <div className="rounded-media border border-navy-900/[0.08] bg-white p-5">
                 <h2 className="eyebrow text-navy-900/65">Event details</h2>
                 <FactList className="mt-5" facts={details} />
 
@@ -223,7 +223,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ sl
       </Section>
 
       {related.length > 0 ? (
-        <Section tone="white" spacing="lg">
+        <Section tone="white" spacing="md">
           <Container>
             <div className="flex flex-wrap items-end justify-between gap-4">
               <h2 className="font-display text-[clamp(1.75rem,3vw,2.5rem)] leading-tight text-navy-900">
@@ -237,7 +237,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ sl
                 <Icon name="arrow-right" className="size-3.5 text-gold-600" />
               </Link>
             </div>
-            <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {related.map((item) => (
                 <EventCard key={item.id} event={item} className="h-full" />
               ))}

@@ -63,7 +63,7 @@ export function ServiceCard({ variant = "inline", className }: ServiceCardProps)
     <Container
       className={cn(
         "relative",
-        variant === "floating" && "z-20 -mt-8 lg:-mt-12",
+        variant === "floating" && "z-20 -mt-8 lg:-mt-6",
         className,
       )}
     >

@@ -16,7 +16,7 @@ export function TestimonyCard({ testimony, tone = "light", className }: Testimon
   return (
     <figure
       className={cn(
-        "flex h-full flex-col rounded-media border p-7 transition-all duration-500 ease-out-expo hover:-translate-y-1 hover:shadow-elevate sm:p-8",
+        "flex h-full flex-col rounded-media border p-5 transition-all duration-500 ease-out-expo hover:-translate-y-1 hover:shadow-elevate sm:p-5",
         tone === "dark"
           ? "border-white/10 bg-white/[0.04] hover:border-gold-400/40"
           : "border-navy-900/[0.08] bg-white hover:border-gold-500/40",

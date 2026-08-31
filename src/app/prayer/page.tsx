@@ -61,9 +61,9 @@ export default function PrayerPage() {
         breadcrumb={[{ label: "Request Prayer" }]}
       />
 
-      <Section tone="cream" spacing="lg">
+      <Section tone="cream" spacing="md">
         <Container>
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-10">
+          <div className="grid gap-5 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-6">
             <div className="lg:sticky lg:top-28 lg:self-start">
               <SectionHeading
                 eyebrow="Our Promise"
@@ -71,7 +71,7 @@ export default function PrayerPage() {
                 lede="Prayer is not a formality here. It is the reason most of the good things in this church happened at all."
               />
 
-              <ul className="mt-10 flex flex-col gap-7 border-t border-navy-900/[0.08] pt-9">
+              <ul className="mt-6 flex flex-col gap-5 border-t border-navy-900/[0.08] pt-5">
                 {promises.map((promise) => (
                   <li key={promise.title} className="flex gap-4">
                     <span className="mt-0.5 flex size-10 shrink-0 items-center justify-center rounded-full bg-gold-100 text-gold-700">
@@ -90,7 +90,7 @@ export default function PrayerPage() {
               </ul>
 
               <Reveal delay={0.1}>
-                <blockquote className="mt-10 rounded-media border border-navy-900/[0.08] bg-white p-7">
+                <blockquote className="mt-6 rounded-media border border-navy-900/[0.08] bg-white p-5">
                   <p className="font-display text-[1.3125rem] italic leading-relaxed text-navy-900">
                     &ldquo;Do not be anxious about anything, but in every situation, by prayer and
                     petition, with thanksgiving, present your requests to God.&rdquo;
@@ -100,7 +100,7 @@ export default function PrayerPage() {
               </Reveal>
             </div>
 
-            <div className="rounded-media border border-navy-900/[0.08] bg-white p-7 sm:p-10">
+            <div className="rounded-media border border-navy-900/[0.08] bg-white p-5 sm:p-6">
               <h2 className="font-display text-[clamp(1.75rem,3vw,2.25rem)] leading-tight text-navy-900">
                 Send your request
               </h2>

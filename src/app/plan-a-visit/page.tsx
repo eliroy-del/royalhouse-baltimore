@@ -88,9 +88,9 @@ export default function PlanAVisitPage() {
       </Section>
 
       {/* ---------------------------- What to expect ---------------------------- */}
-      <Section tone="white" spacing="lg" id="expect">
+      <Section tone="white" spacing="md" id="expect">
         <Container>
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1fr)] lg:gap-10">
+          <div className="grid gap-5 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1fr)] lg:gap-6">
             <div className="lg:sticky lg:top-28 lg:self-start">
               <SectionHeading
                 eyebrow="What to Expect"
@@ -98,7 +98,7 @@ export default function PlanAVisitPage() {
                 lede="You will not be singled out, asked to stand up, or handed a form. Here is the honest shape of a service with us."
               />
               <Reveal delay={0.2}>
-                <div className="relative mt-10 aspect-[4/3] overflow-hidden rounded-media bg-navy-900">
+                <div className="relative mt-6 aspect-[4/3] overflow-hidden rounded-media bg-navy-900">
                   <Image
                     src={images.worshipTeam.src}
                     alt={images.worshipTeam.alt}
@@ -142,7 +142,7 @@ export default function PlanAVisitPage() {
       </Section>
 
       {/* ------------------------- Practical answers grid ------------------------ */}
-      <Section tone="mist" spacing="lg" id="answers">
+      <Section tone="mist" spacing="md" id="answers">
         <Container>
           <SectionHeading
             align="center"
@@ -159,7 +159,7 @@ export default function PlanAVisitPage() {
                 <StaggerItem
                   key={answer.id}
                   id={answer.id}
-                  className="scroll-mt-32 bg-white p-7 lg:p-8"
+                  className="scroll-mt-24 bg-white p-4 lg:p-5"
                 >
                   <span className="flex size-11 items-center justify-center rounded-full bg-navy-900/[0.05] text-navy-800">
                     <Icon name={answer.icon} className="size-5" />
@@ -177,9 +177,9 @@ export default function PlanAVisitPage() {
       </Section>
 
       {/* -------------------------------- Children ------------------------------- */}
-      <Section tone="white" spacing="lg" id="children">
+      <Section tone="white" spacing="md" id="children">
         <Container>
-          <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-10">
+          <div className="grid items-center gap-5 lg:grid-cols-2 lg:gap-6">
             <Reveal y={26}>
               <div className="relative aspect-[4/3] overflow-hidden rounded-media bg-navy-900">
                 <Image
@@ -239,16 +239,16 @@ export default function PlanAVisitPage() {
       </Section>
 
       {/* ------------------------------ Where & access ---------------------------- */}
-      <Section tone="cream" spacing="lg" id="where">
+      <Section tone="cream" spacing="md" id="where">
         <Container>
-          <div className="grid gap-8 lg:grid-cols-2 lg:gap-10">
+          <div className="grid gap-5 lg:grid-cols-2 lg:gap-6">
             <div>
               <SectionHeading
                 eyebrow="Getting Here"
                 title="Where we meet."
                 lede="We gather in Baltimore, Maryland. Message us any time and we will send you the exact location, the best place to park and the door to walk through."
               />
-              <div id="accessibility" className="mt-10 scroll-mt-32 rounded-media border border-navy-900/[0.08] bg-white p-7">
+              <div id="accessibility" className="mt-6 scroll-mt-24 rounded-media border border-navy-900/[0.08] bg-white p-5">
                 <span className="flex size-11 items-center justify-center rounded-full bg-gold-100 text-gold-700">
                   <Icon name="accessibility" className="size-5" />
                 </span>
@@ -269,9 +269,9 @@ export default function PlanAVisitPage() {
       </Section>
 
       {/* --------------------------------- The form ------------------------------- */}
-      <Section tone="white" spacing="lg" id="form">
+      <Section tone="white" spacing="md" id="form">
         <Container>
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.25fr)] lg:gap-10">
+          <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.25fr)] lg:gap-6">
             <div className="lg:sticky lg:top-28 lg:self-start">
               <SectionHeading
                 eyebrow="Plan Your Visit"
@@ -279,7 +279,7 @@ export default function PlanAVisitPage() {
                 lede="Two minutes now saves you every awkward moment later. We will look out for you, save you a seat and have your children's check-in ready."
               />
 
-              <ul className="mt-10 flex flex-col gap-4 border-t border-navy-900/[0.08] pt-9">
+              <ul className="mt-6 flex flex-col gap-4 border-t border-navy-900/[0.08] pt-5">
                 {reassurances.map((item) => (
                   <li key={item.text} className="flex items-start gap-3.5">
                     <span className="mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-full bg-gold-100 text-gold-700">
@@ -293,7 +293,7 @@ export default function PlanAVisitPage() {
               </ul>
             </div>
 
-            <div className="rounded-media border border-navy-900/[0.08] bg-cream p-7 sm:p-10">
+            <div className="rounded-media border border-navy-900/[0.08] bg-cream p-5 sm:p-6">
               <PlanVisitForm />
             </div>
           </div>
@@ -301,15 +301,15 @@ export default function PlanAVisitPage() {
       </Section>
 
       {/* ----------------------------------- FAQ --------------------------------- */}
-      <Section tone="mist" spacing="lg" id="faq">
+      <Section tone="mist" spacing="md" id="faq">
         <Container width="narrow">
           <SectionHeading
             align="center"
             eyebrow="Still Wondering?"
             title="Frequently asked questions."
           />
-          <FaqAccordion items={faqs} className="mt-12" />
-          <p className="mt-10 text-center text-[0.9375rem] text-navy-900/65">
+          <FaqAccordion items={faqs} className="mt-6" />
+          <p className="mt-6 text-center text-[0.9375rem] text-navy-900/65">
             Cannot find your question?{" "}
             <Link
               href="/contact"

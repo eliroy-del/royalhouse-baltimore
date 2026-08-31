@@ -69,7 +69,7 @@ export function SermonLibrary({
 
   return (
     <div>
-      <div className="flex flex-col gap-6 rounded-media border border-navy-900/[0.08] bg-white p-6 sm:p-7">
+      <div className="flex flex-col gap-6 rounded-media border border-navy-900/[0.08] bg-white p-6 sm:p-5">
         <div className="relative">
           <label htmlFor="sermon-search" className="sr-only">
             Search messages

@@ -24,7 +24,7 @@ export function EmptyState({
   return (
     <div
       className={cn(
-        "flex flex-col items-center rounded-card border border-dashed px-6 py-16 text-center",
+        "flex flex-col items-center rounded-card border border-dashed px-5 py-10 text-center",
         tone === "dark" ? "border-white/15 bg-white/[0.03]" : "border-navy-900/12 bg-white/60",
         className,
       )}

@@ -67,7 +67,7 @@ export default async function LeadershipPage() {
         breadcrumb={[{ label: "Leadership" }]}
       />
 
-      <Section tone="cream" spacing="lg">
+      <Section tone="cream" spacing="md">
         <Container>
           <SectionHeading
             eyebrow="How We Lead"
@@ -77,7 +77,7 @@ export default async function LeadershipPage() {
 
           <Stagger className="mt-8 grid gap-px overflow-hidden rounded-media border border-navy-900/[0.08] bg-navy-900/[0.07] md:grid-cols-3">
             {commitments.map((commitment) => (
-              <StaggerItem key={commitment.title} className="flex flex-col bg-white p-8">
+              <StaggerItem key={commitment.title} className="flex flex-col bg-white p-5">
                 <span className="flex size-11 items-center justify-center rounded-full bg-gold-100 text-gold-700">
                   <Icon name={commitment.icon} className="size-5" />
                 </span>
@@ -100,7 +100,7 @@ export default async function LeadershipPage() {
           <Section
             key={group.id}
             tone={index % 2 === 0 ? "white" : "cream"}
-            spacing="lg"
+            spacing="md"
             id={group.id.toLowerCase()}
             className="scroll-mt-24"
           >
@@ -115,7 +115,7 @@ export default async function LeadershipPage() {
               {/* Small groups keep a bounded grid so one card never floats in a void */}
               <Stagger
                 className={cn(
-                  "mt-12 grid gap-5",
+                  "mt-6 grid gap-5",
                   people.length + groupSlots.length === 1 && "max-w-md",
                   people.length + groupSlots.length === 2 && "max-w-3xl sm:grid-cols-2",
                   people.length + groupSlots.length > 2 &&

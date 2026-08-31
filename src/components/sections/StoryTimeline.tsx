@@ -40,7 +40,7 @@ export function StoryTimeline({
         className="absolute left-[0.4375rem] top-2 h-[calc(100%-1rem)] w-px bg-gradient-to-b from-gold-500/60 via-navy-900/12 to-transparent"
       />
       {milestones.map((milestone) => (
-        <StaggerItem key={milestone.id} className="relative flex gap-7 pb-12 last:pb-0">
+        <StaggerItem key={milestone.id} className="relative flex gap-5 pb-12 last:pb-0">
           <span className="relative z-10 mt-2 size-3.5 shrink-0 rounded-full border-2 border-gold-500 bg-cream" />
           <div className="min-w-0">
             <p className="eyebrow text-gold-800">

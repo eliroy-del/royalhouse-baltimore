@@ -10,7 +10,7 @@ import { pillars } from "@/content/our-heart";
 
 export function OurHeartSection() {
   return (
-    <Section tone="navy" spacing="lg" id="our-heart" className="overflow-hidden">
+    <Section tone="navy" spacing="md" id="our-heart" className="overflow-hidden">
       {/* Warm light from the upper right keeps the navy field from going flat */}
       <span
         aria-hidden="true"
@@ -18,7 +18,7 @@ export function OurHeartSection() {
       />
 
       <Container className="relative">
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:gap-10">
+        <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:gap-6">
           <SectionHeading
             chapter="04"
             eyebrow="Our Heart"
@@ -47,7 +47,7 @@ export function OurHeartSection() {
             {pillars.map((pillar, index) => (
               <StaggerItem
                 key={pillar.id}
-                className="group relative bg-navy-900 p-7 transition-colors duration-500 hover:bg-navy-800/60 sm:p-8"
+                className="group relative bg-navy-900 p-5 transition-colors duration-500 hover:bg-navy-800/60 sm:p-5"
               >
                 <span className="flex items-center justify-between">
                   <span className="flex size-11 items-center justify-center rounded-full border border-gold-500/30 text-gold-300 transition-colors duration-500 group-hover:border-gold-400 group-hover:bg-gold-500 group-hover:text-navy-950">
@@ -74,7 +74,7 @@ export function OurHeartSection() {
         </div>
 
         <Reveal delay={0.1}>
-          <blockquote className="mt-8 border-t border-white/10 pt-8 text-center">
+          <blockquote className="mt-8 border-t border-white/10 pt-5 text-center">
             <p className="mx-auto max-w-3xl font-display text-[clamp(1.5rem,2.8vw,2.125rem)] font-light italic leading-[1.35] text-white/85">
               &ldquo;They devoted themselves to the apostles&rsquo; teaching and to fellowship, to
               the breaking of bread and to prayer.&rdquo;

@@ -17,8 +17,8 @@ export function MinistryCard({ ministry, variant = "default", className }: Minis
     <Link
       href={`/ministries/${ministry.slug}`}
       className={cn(
-        "group relative isolate flex flex-col justify-end overflow-hidden rounded-media bg-navy-950 p-6 text-white transition-transform duration-500 ease-out-expo hover:-translate-y-1 sm:p-7",
-        variant === "tall" ? "min-h-[22rem]" : "min-h-[16rem]",
+        "group relative isolate flex flex-col justify-end overflow-hidden rounded-media bg-navy-950 p-6 text-white transition-transform duration-500 ease-out-expo hover:-translate-y-1 sm:p-5",
+        variant === "tall" ? "min-h-[14rem]" : "min-h-[14rem]",
         className,
       )}
     >

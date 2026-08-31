@@ -76,7 +76,7 @@ export function GivingOptions() {
   return (
     <div className="grid gap-px overflow-hidden rounded-media border border-navy-900/[0.08] bg-navy-900/[0.07] sm:grid-cols-2">
       {methods.map((method) => (
-        <div key={method.id} className="flex flex-col bg-white p-7 lg:p-8">
+        <div key={method.id} className="flex flex-col bg-white p-4 lg:p-5">
           <span className="flex size-11 items-center justify-center rounded-full bg-navy-900/[0.05] text-navy-800">
             <Icon name={method.icon} className="size-5" />
           </span>

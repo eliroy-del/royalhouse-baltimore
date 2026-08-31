@@ -15,10 +15,10 @@ const tones: Record<Tone, string> = {
 
 const spacings: Record<Spacing, string> = {
   none: "",
-  sm: "py-8 sm:py-10",
-  md: "py-10 sm:py-12 lg:py-14",
-  lg: "py-12 sm:py-14 lg:py-16",
-  xl: "py-14 sm:py-16 lg:py-20",
+  sm: "py-6 sm:py-8",
+  md: "py-8 sm:py-10 lg:py-12",
+  lg: "py-10 sm:py-12 lg:py-14",
+  xl: "py-8 sm:py-10 lg:py-12",
 };
 
 interface SectionProps extends HTMLAttributes<HTMLElement> {
@@ -31,7 +31,7 @@ interface SectionProps extends HTMLAttributes<HTMLElement> {
 export function Section({
   as: Tag = "section",
   tone = "cream",
-  spacing = "lg",
+  spacing = "md",
   className,
   ...props
 }: SectionProps) {

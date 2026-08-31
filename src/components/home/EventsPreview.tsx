@@ -14,7 +14,7 @@ export async function EventsPreview() {
   const upcoming = (await getUpcomingEvents(5)).filter((event) => event.id !== featured?.id);
 
   return (
-    <Section tone="white" spacing="lg" id="events">
+    <Section tone="white" spacing="md" id="events">
       <Container>
         <SectionHeading
           chapter="05"
@@ -40,7 +40,7 @@ export async function EventsPreview() {
         />
 
         {featured ? (
-          <div className="mt-8 grid gap-6 lg:grid-cols-[minmax(0,1.55fr)_minmax(0,1fr)] lg:gap-8">
+          <div className="mt-8 grid gap-6 lg:grid-cols-[minmax(0,1.55fr)_minmax(0,1fr)] lg:gap-5">
             <EventCard event={featured} variant="feature" />
 
             <div className="flex flex-col gap-3">

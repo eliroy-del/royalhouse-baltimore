@@ -56,7 +56,7 @@ export default async function TestimoniesPage() {
         }
       />
 
-      <Section tone="cream" spacing="lg">
+      <Section tone="cream" spacing="md">
         <Container>
           <SectionHeading
             eyebrow="Stories From Our Family"
@@ -89,9 +89,9 @@ export default async function TestimoniesPage() {
       </Section>
 
       {/* --------------------------------- Share --------------------------------- */}
-      <Section tone="white" spacing="lg" id="share">
+      <Section tone="white" spacing="md" id="share">
         <Container>
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-10">
+          <div className="grid gap-5 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-6">
             <div className="lg:sticky lg:top-28 lg:self-start">
               <SectionHeading
                 eyebrow="Share Your Testimony"
@@ -99,7 +99,7 @@ export default async function TestimoniesPage() {
                 lede="Your story might be exactly what convinces somebody else that God will do it for them too. You do not have to be a writer — plain words are perfect."
               />
 
-              <div className="mt-10 rounded-media border border-gold-500/25 bg-gold-100/40 p-7">
+              <div className="mt-6 rounded-media border border-gold-500/25 bg-gold-100/40 p-5">
                 <p className="flex items-center gap-2.5 text-[0.9375rem] font-semibold text-navy-900">
                   <Icon name="church" className="size-4 text-gold-700" />
                   How we handle your story
@@ -132,7 +132,7 @@ export default async function TestimoniesPage() {
               </div>
             </div>
 
-            <div className="rounded-media border border-navy-900/[0.08] bg-cream p-7 sm:p-10">
+            <div className="rounded-media border border-navy-900/[0.08] bg-cream p-5 sm:p-6">
               <TestimonyForm />
             </div>
           </div>

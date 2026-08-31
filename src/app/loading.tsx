@@ -9,7 +9,7 @@ export default function Loading() {
     <div
       role="status"
       aria-live="polite"
-      className="flex min-h-[70svh] flex-col items-center justify-center gap-8 bg-navy-950 px-6"
+      className="flex min-h-[55svh] flex-col items-center justify-center gap-5 bg-navy-950 px-6"
     >
       <div className="rise">
         <Logo tone="dark" size="lg" />

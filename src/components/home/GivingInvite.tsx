@@ -15,7 +15,7 @@ export function GivingInvite() {
   return (
     <Section tone="cream" spacing="md" id="give">
       <Container>
-        <div className="grid items-center gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1fr)] lg:gap-8">
+        <div className="grid items-center gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1fr)] lg:gap-5">
           <Reveal y={28} className="order-2 lg:order-1">
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-media bg-navy-900">
               <Image
@@ -28,7 +28,7 @@ export function GivingInvite() {
                 className="object-cover"
               />
             </div>
-            <div className="relative -mt-10 ml-5 mr-10 rounded-card border border-navy-900/[0.08] bg-white p-5 shadow-float sm:ml-8 sm:mr-14">
+            <div className="relative -mt-6 ml-5 mr-10 rounded-card border border-navy-900/[0.08] bg-white p-5 shadow-float sm:ml-8 sm:mr-14">
               <p className="font-display text-[1.125rem] italic leading-snug text-navy-900">
                 &ldquo;Each of you should give what you have decided in your heart to give&hellip;
                 for God loves a cheerful giver.&rdquo;

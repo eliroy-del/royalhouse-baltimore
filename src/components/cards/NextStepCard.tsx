@@ -9,7 +9,7 @@ export function NextStepCard({ step, className }: { step: NextStep; className?: 
     <Link
       href={step.href}
       className={cn(
-        "group flex h-full flex-col rounded-media border p-7 transition-all duration-500 ease-out-expo hover:-translate-y-1 hover:shadow-elevate",
+        "group flex h-full flex-col rounded-media border p-5 transition-all duration-500 ease-out-expo hover:-translate-y-1 hover:shadow-elevate",
         step.featured
           ? "border-gold-500/40 bg-navy-900 text-white hover:border-gold-400"
           : "border-navy-900/[0.08] bg-white hover:border-gold-500/40",

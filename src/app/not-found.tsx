@@ -14,7 +14,7 @@ const suggestions = [
 
 export default function NotFound() {
   return (
-    <section className="relative isolate flex min-h-[70svh] flex-col justify-center overflow-hidden bg-navy-950 py-20 text-white">
+    <section className="relative isolate flex min-h-[55svh] flex-col justify-center overflow-hidden bg-navy-950 py-14 text-white">
       <Image
         src={images.churchExteriorDusk.src}
         alt=""
@@ -41,7 +41,7 @@ export default function NotFound() {
           never existed, but everything else is exactly where you left it.
         </p>
 
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
           <Button asChild variant="gold" size="xl">
             <Link href="/">Back Home</Link>
           </Button>

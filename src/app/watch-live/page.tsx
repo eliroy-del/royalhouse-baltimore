@@ -59,7 +59,7 @@ export default async function WatchLivePage() {
       />
 
       {/* ------------------------------ Live hero ------------------------------ */}
-      <section className="relative isolate flex min-h-[56svh] flex-col justify-end overflow-hidden bg-navy-950 pb-12 pt-28 text-white sm:pb-14">
+      <section className="relative isolate flex min-h-[44svh] flex-col justify-end overflow-hidden bg-navy-950 pb-8 pt-20 text-white sm:pb-10">
         <Image
           src={images.worshipTeam.src}
           alt=""
@@ -79,7 +79,7 @@ export default async function WatchLivePage() {
         />
 
         <Container className="relative">
-          <nav aria-label="Breadcrumb" className="mb-6">
+          <nav aria-label="Breadcrumb" className="mb-3">
             <ol className="flex flex-wrap items-center gap-2 text-[0.75rem] text-white/55">
               <li>
                 <Link href="/" className="transition-colors hover:text-gold-200">
@@ -101,15 +101,15 @@ export default async function WatchLivePage() {
             <span aria-hidden="true" className="h-px w-8 rule-gold" />
             Online Church
           </p>
-          <h1 className="mt-4 max-w-3xl font-display text-[clamp(2rem,4.8vw,3.5rem)] font-light leading-[1.02] tracking-[-0.02em]">
+          <h1 className="mt-3 max-w-3xl font-display text-[clamp(1.75rem,4vw,2.5rem)] font-light leading-[1.02] tracking-[-0.02em]">
             Worship with us <em className="not-italic text-gold-300">online</em>.
           </h1>
-          <p className="mt-6 max-w-2xl text-[1.0625rem] leading-relaxed text-white/75 sm:text-lg">
+          <p className="mt-3 max-w-2xl text-[0.875rem] leading-relaxed text-white/75 sm:text-[0.9375rem]">
             Traveling, unwell, working, or simply not ready to walk into a building yet — you are
             still part of this. Join us live and worship from wherever you are.
           </p>
 
-          <div className="mt-12 max-w-2xl">
+          <div className="mt-5 max-w-2xl">
             <LiveStatus
               isLiveNow={livestream.isLiveNow}
               serviceTimes={churchConfig.serviceTimes}
@@ -125,9 +125,9 @@ export default async function WatchLivePage() {
       </section>
 
       {/* ------------------------------- The stream ------------------------------ */}
-      <Section tone="navy-deep" spacing="lg">
+      <Section tone="navy-deep" spacing="md">
         <Container>
-          <div className="grid gap-10 lg:grid-cols-[minmax(0,1.55fr)_minmax(0,1fr)] lg:gap-8">
+          <div className="grid gap-6 lg:grid-cols-[minmax(0,1.55fr)_minmax(0,1fr)] lg:gap-5">
             <div>
               <VideoPlayer
                 url={livestream.embedUrl}
@@ -160,7 +160,7 @@ export default async function WatchLivePage() {
             </div>
 
             <aside className="flex flex-col gap-6">
-              <div className="rounded-media border border-white/10 bg-white/[0.04] p-7">
+              <div className="rounded-media border border-white/10 bg-white/[0.04] p-5">
                 <h2 className="eyebrow text-gold-300">Service details</h2>
                 <p className="mt-4 text-[1.0625rem] leading-relaxed text-white/80">
                   {serviceTimeDetail()}
@@ -174,7 +174,7 @@ export default async function WatchLivePage() {
                 </Button>
               </div>
 
-              <div className="rounded-media border border-white/10 bg-white/[0.04] p-7">
+              <div className="rounded-media border border-white/10 bg-white/[0.04] p-5">
                 <h2 className="eyebrow text-gold-300">Watching along</h2>
                 <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/65">
                   Live chat and prayer response open here once our stream platform is connected.
@@ -190,7 +190,7 @@ export default async function WatchLivePage() {
       </Section>
 
       {/* ------------------------------ Online well ----------------------------- */}
-      <Section tone="cream" spacing="lg">
+      <Section tone="cream" spacing="md">
         <Container>
           <SectionHeading
             eyebrow="Watching Well"
@@ -200,7 +200,7 @@ export default async function WatchLivePage() {
 
           <div className="mt-8 grid gap-px overflow-hidden rounded-media border border-navy-900/[0.08] bg-navy-900/[0.07] md:grid-cols-3">
             {onlineSteps.map((step, index) => (
-              <Reveal key={step.title} delay={index * 0.08} className="flex flex-col bg-white p-8">
+              <Reveal key={step.title} delay={index * 0.08} className="flex flex-col bg-white p-5">
                 <span className="flex size-11 items-center justify-center rounded-full bg-gold-100 text-gold-700">
                   <Icon name={step.icon} className="size-5" />
                 </span>
@@ -215,7 +215,7 @@ export default async function WatchLivePage() {
       </Section>
 
       {/* ------------------------------ Past streams ---------------------------- */}
-      <Section tone="white" spacing="lg">
+      <Section tone="white" spacing="md">
         <Container>
           <div className="flex flex-wrap items-end justify-between gap-4">
             <SectionHeading
@@ -234,14 +234,14 @@ export default async function WatchLivePage() {
           </div>
 
           {recent.length > 0 ? (
-            <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {recent.map((sermon) => (
                 <SermonCard key={sermon.id} sermon={sermon} className="h-full" />
               ))}
             </div>
           ) : (
             <EmptyState
-              className="mt-12"
+              className="mt-6"
               icon="video"
               title="Recordings are on the way"
               description="Our message library is being published. Join us live on Sunday in the meantime."

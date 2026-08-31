@@ -40,8 +40,8 @@ export function PageHero({
       className={cn(
         "relative isolate flex flex-col justify-end overflow-hidden bg-navy-950 text-white",
         size === "lg"
-          ? "min-h-[52svh] pb-10 pt-28 sm:pb-12"
-          : "min-h-[38svh] pb-8 pt-24 sm:pb-10 lg:min-h-[44svh]",
+          ? "min-h-[42svh] pb-8 pt-24 sm:pb-10"
+          : "min-h-[32svh] pb-6 pt-20 sm:pb-8 lg:min-h-[36svh]",
       )}
     >
       <Image
@@ -64,7 +64,7 @@ export function PageHero({
 
       <Container className={cn("relative", align === "center" && "text-center")}>
         {breadcrumb ? (
-          <nav aria-label="Breadcrumb" className="mb-4">
+          <nav aria-label="Breadcrumb" className="mb-3">
             <ol
               className={cn(
                 "flex flex-wrap items-center gap-2 text-[0.75rem] text-white/55",
@@ -108,10 +108,10 @@ export function PageHero({
 
         <h1
           className={cn(
-            "mt-4 font-display font-light leading-[1.02] tracking-[-0.02em]",
+            "mt-3 font-display font-light leading-[1.02] tracking-[-0.02em]",
             size === "lg"
-              ? "text-[clamp(2rem,4.8vw,3.5rem)]"
-              : "text-[clamp(1.875rem,4vw,3rem)]",
+              ? "text-[clamp(1.75rem,4vw,2.75rem)]"
+              : "text-[clamp(1.625rem,3.4vw,2.375rem)]",
             align === "center" ? "mx-auto max-w-4xl" : "max-w-3xl",
           )}
         >
@@ -121,7 +121,7 @@ export function PageHero({
         {lede ? (
           <div
             className={cn(
-              "mt-4 text-[0.9375rem] leading-relaxed text-white/75 sm:text-base",
+              "mt-3 text-[0.875rem] leading-relaxed text-white/75 sm:text-[0.9375rem]",
               align === "center" ? "mx-auto max-w-2xl" : "max-w-2xl",
             )}
           >
@@ -132,7 +132,7 @@ export function PageHero({
         {actions ? (
           <div
             className={cn(
-              "mt-6 flex flex-wrap items-center gap-3",
+              "mt-5 flex flex-wrap items-center gap-3",
               align === "center" && "justify-center",
             )}
           >
@@ -159,12 +159,12 @@ export function SectionJumpLinks({
       aria-label="On this page"
       className={cn("border-b border-navy-900/[0.08] bg-white", className)}
     >
-      <Container className="flex gap-2 overflow-x-auto py-3 hide-scrollbar">
+      <Container className="flex gap-2 overflow-x-auto py-2.5 hide-scrollbar">
         {links.map((link) => (
           <Link
             key={link.href}
             href={link.href}
-            className="shrink-0 rounded-full border border-navy-900/12 px-4 py-2 text-[0.8125rem] font-medium text-navy-900/70 transition-colors duration-300 hover:border-gold-500/50 hover:bg-gold-100/50 hover:text-navy-900"
+            className="shrink-0 rounded-full border border-navy-900/12 px-3.5 py-1.5 text-[0.8125rem] font-medium text-navy-900/70 transition-colors duration-300 hover:border-gold-500/50 hover:bg-gold-100/50 hover:text-navy-900"
           >
             {link.label}
           </Link>
@@ -189,7 +189,7 @@ export function CtaBand({
   image?: { src: string; alt: string };
 }) {
   return (
-    <section className="relative isolate overflow-hidden bg-navy-900 py-12 text-white sm:py-16">
+    <section className="relative isolate overflow-hidden bg-navy-900 py-10 text-white sm:py-12">
       {image ? (
         <>
           <Image
@@ -216,13 +216,13 @@ export function CtaBand({
           {eyebrow}
           <span aria-hidden="true" className="h-px w-8 bg-gold-500/70" />
         </p>
-        <h2 className="mx-auto mt-4 max-w-3xl font-display text-[clamp(1.75rem,3.4vw,2.5rem)] font-light leading-[1.05]">
+        <h2 className="mx-auto mt-3 max-w-3xl font-display text-[clamp(1.5rem,2.8vw,2.125rem)] font-light leading-[1.05]">
           {title}
         </h2>
-        <p className="mx-auto mt-3 max-w-2xl text-[0.9375rem] leading-relaxed text-white/70">
+        <p className="mx-auto mt-2.5 max-w-2xl text-[0.875rem] leading-relaxed text-white/70 sm:text-[0.9375rem]">
           {lede}
         </p>
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-3">{actions}</div>
+        <div className="mt-5 flex flex-wrap items-center justify-center gap-3">{actions}</div>
       </Container>
     </section>
   );

@@ -52,7 +52,7 @@ export function EventCard({ event, variant = "default", className }: EventCardPr
       <Link
         href={href}
         className={cn(
-          "group relative isolate flex min-h-[20rem] flex-col justify-end overflow-hidden rounded-media bg-navy-950 p-6 text-white sm:min-h-[24rem] lg:p-8",
+          "group relative isolate flex min-h-[15rem] flex-col justify-end overflow-hidden rounded-media bg-navy-950 p-6 text-white sm:min-h-[14rem] lg:p-5",
           className,
         )}
       >
@@ -76,7 +76,7 @@ export function EventCard({ event, variant = "default", className }: EventCardPr
           </Badge>
         </div>
 
-        <h3 className="mt-5 max-w-2xl font-display text-[clamp(1.875rem,3.4vw,2.875rem)] leading-[1.05]">
+        <h3 className="mt-5 max-w-2xl font-display text-[clamp(1.875rem,3.4vw,2.125rem)] leading-[1.05]">
           {event.title}
         </h3>
         <p className="mt-4 max-w-xl text-[0.9375rem] leading-relaxed text-white/75">

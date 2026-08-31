@@ -18,7 +18,7 @@ export default function ErrorBoundary({
   }, [error]);
 
   return (
-    <section className="relative flex min-h-[70svh] flex-col justify-center bg-navy-950 py-20 text-white">
+    <section className="relative flex min-h-[55svh] flex-col justify-center bg-navy-950 py-14 text-white">
       <span
         aria-hidden="true"
         className="pointer-events-none absolute left-1/2 top-1/3 size-[36rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(201,162,39,0.14),transparent_65%)]"
@@ -29,14 +29,14 @@ export default function ErrorBoundary({
           Something went wrong
           <span aria-hidden="true" className="h-px w-8 bg-gold-500/70" />
         </p>
-        <h1 className="mx-auto mt-7 max-w-2xl font-display text-[clamp(2rem,4.8vw,3.5rem)] font-light leading-[1.06]">
+        <h1 className="mx-auto mt-7 max-w-2xl font-display text-[clamp(2rem,4.8vw,2.5rem)] font-light leading-[1.06]">
           That didn&rsquo;t load the way it should have.
         </h1>
         <p className="mx-auto mt-6 max-w-xl text-[1.0625rem] leading-relaxed text-white/70">
           The fault is ours, not yours. Try again — and if it keeps happening, tell us and we will
           get it fixed.
         </p>
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
           <Button variant="gold" size="xl" onClick={reset}>
             Try Again
           </Button>
@@ -48,7 +48,7 @@ export default function ErrorBoundary({
           </Button>
         </div>
         {error.digest ? (
-          <p className="mt-10 text-[0.75rem] text-white/35">Reference: {error.digest}</p>
+          <p className="mt-6 text-[0.75rem] text-white/35">Reference: {error.digest}</p>
         ) : null}
       </Container>
     </section>

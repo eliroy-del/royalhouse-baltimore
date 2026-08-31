@@ -32,7 +32,7 @@ export function SuccessPanel({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       className={cn(
-        "flex flex-col items-center rounded-card border px-6 py-14 text-center",
+        "flex flex-col items-center rounded-card border px-5 py-10 text-center",
         tone === "dark" ? "border-white/12 bg-white/[0.04]" : "border-gold-500/25 bg-gold-100/40",
         className,
       )}

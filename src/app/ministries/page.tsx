@@ -85,7 +85,7 @@ export default async function MinistriesPage() {
           key={group.category}
           id={slugify(group.category)}
           tone={index % 2 === 0 ? "cream" : "white"}
-          spacing="lg"
+          spacing="md"
           className="scroll-mt-24"
         >
           <Container>
@@ -98,7 +98,7 @@ export default async function MinistriesPage() {
                 so a single card never sits beside a wide empty gap. */}
             <Stagger
               className={cn(
-                "mt-12 grid gap-5",
+                "mt-6 grid gap-5",
                 group.items.length === 1 && "max-w-xl",
                 group.items.length === 2 && "max-w-3xl sm:grid-cols-2",
                 group.items.length > 2 && "sm:grid-cols-2 xl:grid-cols-3",
@@ -114,21 +114,21 @@ export default async function MinistriesPage() {
         </Section>
       ))}
 
-      <Section tone="navy" spacing="lg">
+      <Section tone="navy" spacing="md">
         <Container width="narrow">
           <div className="text-center">
             <p className="flex items-center justify-center gap-3 eyebrow text-gold-300">
               <span aria-hidden="true" className="h-px w-8 bg-gold-500/70" />
               Not Sure Where You Fit?
             </p>
-            <h2 className="mt-6 font-display text-[clamp(2rem,4vw,3rem)] font-light leading-[1.06]">
+            <h2 className="mt-6 font-display text-[clamp(2rem,4vw,2.25rem)] font-light leading-[1.06]">
               Tell us what you love and we will help you find it.
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-[1.0625rem] leading-relaxed text-white/70">
               You do not have to have it worked out. Most people discover their place by trying
               something for a season and seeing what comes alive.
             </p>
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
               <Button asChild variant="gold" size="xl">
                 <Link href="/connect#serve">Explore Serving</Link>
               </Button>

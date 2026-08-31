@@ -58,10 +58,10 @@ export default async function EventsPage() {
       />
 
       {featured ? (
-        <Section tone="cream" spacing="lg">
+        <Section tone="cream" spacing="md">
           <Container>
             <SectionHeading eyebrow="Next Up" title="Start here." />
-            <Reveal className="mt-10" y={24}>
+            <Reveal className="mt-6" y={24}>
               <EventCard event={featured} variant="feature" />
             </Reveal>
 
@@ -76,7 +76,7 @@ export default async function EventsPage() {
         </Section>
       ) : null}
 
-      <Section tone="white" spacing="lg" id="calendar">
+      <Section tone="white" spacing="md" id="calendar">
         <Container>
           <SectionHeading
             eyebrow="The Calendar"
@@ -84,7 +84,7 @@ export default async function EventsPage() {
             lede="Filter by what you are looking for. Everything on this page is open to visitors unless it says otherwise."
           />
 
-          <div className="mt-12">
+          <div className="mt-6">
             {upcoming.length > 0 ? (
               <EventsBrowser events={upcoming} categories={categories} />
             ) : (

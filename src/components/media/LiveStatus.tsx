@@ -152,7 +152,7 @@ export function LiveStatus({ isLiveNow, serviceTimes, fallbackMessage }: LiveSta
       >
         {units.map((unit) => (
           <div key={unit.label} className="flex flex-col items-center">
-            <span className="font-display text-[clamp(2rem,5vw,3.25rem)] leading-none figures-lining text-white">
+            <span className="font-display text-[clamp(2rem,5vw,2.375rem)] leading-none figures-lining text-white">
               {String(unit.value).padStart(2, "0")}
             </span>
             <span className="mt-2 eyebrow text-white/60">{unit.label}</span>

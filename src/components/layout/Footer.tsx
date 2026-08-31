@@ -18,16 +18,16 @@ export function Footer() {
       />
 
       <Container className="relative py-8">
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,20rem)_1fr] lg:gap-10">
+        <div className="grid gap-5 lg:grid-cols-[minmax(0,20rem)_1fr] lg:gap-6">
           <div>
-            <LogoLink tone="dark" size="lg" />
-            <p className="mt-4 max-w-sm text-[0.875rem] leading-relaxed text-white/60">
+            <LogoLink tone="dark" size="md" />
+            <p className="mt-3 max-w-sm text-[0.875rem] leading-relaxed text-white/60">
               {churchConfig.statement}
             </p>
-            <SocialLinks tone="dark" className="mt-5" />
+            <SocialLinks tone="dark" className="mt-4" />
           </div>
 
-          <nav aria-label="Footer" className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          <nav aria-label="Footer" className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {footerNav.map((column) => (
               <div key={column.title}>
                 <h3 className="eyebrow text-gold-300">{column.title}</h3>

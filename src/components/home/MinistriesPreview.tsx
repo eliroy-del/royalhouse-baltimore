@@ -14,7 +14,7 @@ export async function MinistriesPreview() {
   const groups = (await getGroups()).slice(0, 4);
 
   return (
-    <Section tone="cream" spacing="lg" id="ministries">
+    <Section tone="cream" spacing="md" id="ministries">
       <Container>
         <SectionHeading
           chapter="07"
@@ -34,13 +34,13 @@ export async function MinistriesPreview() {
           }
         />
 
-        <Stagger className="mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+        <Stagger className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {ministries.map((ministry, index) => (
             <StaggerItem key={ministry.id}>
               <MinistryCard
                 ministry={ministry}
                 variant={index === 0 ? "tall" : "default"}
-                className={index === 0 ? "sm:min-h-[16rem] xl:min-h-[20rem]" : "xl:min-h-[20rem]"}
+                className={index === 0 ? "sm:min-h-[14rem] xl:min-h-[15rem]" : "xl:min-h-[15rem]"}
               />
             </StaggerItem>
           ))}
@@ -50,7 +50,7 @@ export async function MinistriesPreview() {
         <Reveal y={24}>
           <div className="mt-6 overflow-hidden rounded-media border border-navy-900/[0.08] bg-white">
             <div className="grid lg:grid-cols-[minmax(0,20rem)_1fr]">
-              <div className="flex flex-col justify-center gap-4 border-b border-navy-900/[0.07] p-8 lg:border-b-0 lg:border-r lg:p-10">
+              <div className="flex flex-col justify-center gap-4 border-b border-navy-900/[0.07] p-5 lg:border-b-0 lg:border-r lg:p-6">
                 <p className="eyebrow text-gold-800">Groups Across Baltimore</p>
                 <h3 className="font-display text-[1.75rem] leading-tight text-navy-900">
                   Midweek, in homes, around real tables.
@@ -66,7 +66,7 @@ export async function MinistriesPreview() {
 
               <ul className="grid gap-px bg-navy-900/[0.07] sm:grid-cols-2">
                 {groups.map((group) => (
-                  <li key={group.id} className="bg-white p-7">
+                  <li key={group.id} className="bg-white p-5">
                     <p className="text-[0.9375rem] font-semibold text-navy-900">{group.name}</p>
                     <p className="mt-1.5 text-[0.875rem] leading-relaxed text-navy-900/65">
                       {group.focus}

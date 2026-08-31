@@ -123,13 +123,13 @@ export default function ContactPage() {
         breadcrumb={[{ label: "Contact" }]}
       />
 
-      <Section tone="cream" spacing="lg">
+      <Section tone="cream" spacing="md">
         <Container>
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-10">
+          <div className="grid gap-5 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-6">
             <div>
               <SectionHeading eyebrow="Reach Us" title="However suits you best." />
 
-              <Stagger className="mt-10 flex flex-col gap-px overflow-hidden rounded-media border border-navy-900/[0.08] bg-navy-900/[0.07]">
+              <Stagger className="mt-6 flex flex-col gap-px overflow-hidden rounded-media border border-navy-900/[0.08] bg-navy-900/[0.07]">
                 {methods().map((method) => (
                   <StaggerItem key={method.label} className="flex gap-4 bg-white p-6">
                     <span className="mt-0.5 flex size-10 shrink-0 items-center justify-center rounded-full bg-navy-900/[0.05] text-navy-800">
@@ -163,7 +163,7 @@ export default function ContactPage() {
                 <SocialLinks className="mt-4" />
               </div>
 
-              <div className="mt-10 rounded-media border border-navy-900/[0.08] bg-white p-6">
+              <div className="mt-6 rounded-media border border-navy-900/[0.08] bg-white p-6">
                 <p className="text-[0.9375rem] font-semibold text-navy-900">
                   Looking for something specific?
                 </p>
@@ -186,7 +186,7 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <div className="rounded-media border border-navy-900/[0.08] bg-white p-7 sm:p-10">
+              <div className="rounded-media border border-navy-900/[0.08] bg-white p-5 sm:p-6">
                 <h2 className="font-display text-[clamp(1.75rem,3vw,2.25rem)] leading-tight text-navy-900">
                   Send us a message
                 </h2>

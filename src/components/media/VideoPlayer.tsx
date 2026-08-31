@@ -87,7 +87,7 @@ export function VideoPlayer({
   return (
     <div
       className={cn(
-        "relative isolate flex aspect-video flex-col items-center justify-center overflow-hidden rounded-media bg-navy-950 p-8 text-center",
+        "relative isolate flex aspect-video flex-col items-center justify-center overflow-hidden rounded-media bg-navy-950 p-5 text-center",
         className,
       )}
     >

@@ -73,9 +73,9 @@ export default function GivePage() {
       />
 
       {/* ------------------------------ Why we give ------------------------------ */}
-      <Section tone="cream" spacing="lg">
+      <Section tone="cream" spacing="md">
         <Container>
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] lg:gap-10">
+          <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] lg:gap-6">
             <div>
               <SectionHeading
                 eyebrow="Why We Give"
@@ -94,7 +94,7 @@ export default function GivePage() {
                 </p>
               </div>
 
-              <Stagger className="mt-10 flex flex-col gap-5 border-t border-navy-900/[0.08] pt-9">
+              <Stagger className="mt-6 flex flex-col gap-5 border-t border-navy-900/[0.08] pt-5">
                 {trust.map((item) => (
                   <StaggerItem key={item.title} className="flex gap-4">
                     <span className="mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-full bg-gold-100 text-gold-700">
@@ -138,7 +138,7 @@ export default function GivePage() {
       </Section>
 
       {/* -------------------------------- The funds ------------------------------ */}
-      <Section tone="navy" spacing="lg" id="funds" className="overflow-hidden">
+      <Section tone="navy" spacing="md" id="funds" className="overflow-hidden">
         <span
           aria-hidden="true"
           className="pointer-events-none absolute -right-32 -top-32 size-[32rem] rounded-full bg-[radial-gradient(circle,rgba(201,162,39,0.16),transparent_65%)]"
@@ -154,7 +154,7 @@ export default function GivePage() {
 
           <Stagger className="mt-8 grid gap-px overflow-hidden rounded-media bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
             {churchConfig.giving.funds.map((fund, index) => (
-              <StaggerItem key={fund.id} className="flex flex-col bg-navy-900 p-7">
+              <StaggerItem key={fund.id} className="flex flex-col bg-navy-900 p-5">
                 <span className="font-display text-2xl text-gold-400/50 tabular-nums">
                   0{index + 1}
                 </span>
@@ -183,9 +183,9 @@ export default function GivePage() {
       </Section>
 
       {/* ------------------------------ Ways to give ----------------------------- */}
-      <Section tone="white" spacing="lg" id="ways">
+      <Section tone="white" spacing="md" id="ways">
         <Container>
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-10">
+          <div className="grid gap-5 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-6">
             <div className="lg:sticky lg:top-28 lg:self-start">
               <SectionHeading
                 eyebrow="How to Give"
@@ -194,7 +194,7 @@ export default function GivePage() {
               />
               <div
                 id="other-ways"
-                className="mt-9 scroll-mt-32 rounded-card border border-gold-500/25 bg-gold-100/40 p-6"
+                className="mt-9 scroll-mt-24 rounded-card border border-gold-500/25 bg-gold-100/40 p-6"
               >
                 <p className="flex items-center gap-2.5 text-[0.9375rem] font-semibold text-navy-900">
                   <Icon name="church" className="size-4 text-gold-700" />

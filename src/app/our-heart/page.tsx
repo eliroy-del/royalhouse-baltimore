@@ -70,9 +70,9 @@ export default function OurHeartPage() {
       <SectionJumpLinks links={jumpLinks} />
 
       {/* -------------------------------- Who we are ------------------------------ */}
-      <Section tone="cream" spacing="lg" id="who">
+      <Section tone="cream" spacing="md" id="who">
         <Container>
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] lg:gap-10">
+          <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] lg:gap-6">
             <div>
               <SectionHeading eyebrow="Who We Are" title="An ordinary church with an extraordinary God." />
               <div className="mt-8 flex flex-col gap-5 text-[1.0625rem] leading-relaxed text-navy-900/72">
@@ -111,7 +111,7 @@ export default function OurHeartPage() {
 
           <Stagger className="mt-8 grid gap-px overflow-hidden rounded-media border border-navy-900/[0.08] bg-navy-900/[0.07] sm:grid-cols-2 lg:grid-cols-4">
             {pillars.map((pillar, index) => (
-              <StaggerItem key={pillar.id} className="group bg-white p-7">
+              <StaggerItem key={pillar.id} className="group bg-white p-5">
                 <span className="flex items-center justify-between">
                   <span className="flex size-11 items-center justify-center rounded-full bg-navy-900/[0.05] text-navy-800 transition-colors duration-500 group-hover:bg-gold-100 group-hover:text-gold-700">
                     <Icon name={pillar.icon} className="size-5" />
@@ -136,11 +136,11 @@ export default function OurHeartPage() {
       {/* ----------------------------- Mission & vision --------------------------- */}
       <Section tone="navy" spacing="none" id="mission" className="overflow-hidden">
         <div className="grid lg:grid-cols-2">
-          <div className="flex items-center py-12 sm:py-14 lg:py-16">
-            <Container width="full" className="max-w-[42rem] lg:pl-12 lg:pr-16">
+          <div className="flex items-center py-8 sm:py-10 lg:py-12">
+            <Container width="full" className="max-w-[42rem] lg:pl-8 lg:pr-10">
               <Eyebrow tone="dark">{mission.eyebrow}</Eyebrow>
               <Reveal delay={0.06}>
-                <p className="mt-6 font-display text-[clamp(1.875rem,3.6vw,2.875rem)] font-light leading-[1.12] text-white">
+                <p className="mt-6 font-display text-[clamp(1.875rem,3.6vw,2.125rem)] font-light leading-[1.12] text-white">
                   {mission.statement}
                 </p>
               </Reveal>
@@ -152,7 +152,7 @@ export default function OurHeartPage() {
                 ))}
               </div>
 
-              <div className="mt-8 border-t border-white/12 pt-8">
+              <div className="mt-8 border-t border-white/12 pt-5">
                 <Eyebrow tone="dark">{vision.eyebrow}</Eyebrow>
                 <Reveal delay={0.06}>
                   <p className="mt-6 font-display text-[clamp(1.75rem,3.2vw,2.5rem)] font-light leading-[1.14] text-white">
@@ -173,7 +173,7 @@ export default function OurHeartPage() {
           <ParallaxMedia
             src={images.eventWorshipNight.src}
             alt={images.eventWorshipNight.alt}
-            className="order-first min-h-[24rem] lg:order-last lg:min-h-full"
+            className="order-first min-h-[14rem] lg:order-last lg:min-h-full"
             sizes="(min-width: 1024px) 50vw, 100vw"
             strength={7}
             overlay="soft"
@@ -182,7 +182,7 @@ export default function OurHeartPage() {
       </Section>
 
       {/* -------------------------------- Our values ----------------------------- */}
-      <Section tone="white" spacing="lg" id="values">
+      <Section tone="white" spacing="md" id="values">
         <Container>
           <SectionHeading
             align="center"
@@ -191,7 +191,7 @@ export default function OurHeartPage() {
           />
           <Stagger className="mt-8 grid gap-px overflow-hidden rounded-media border border-navy-900/[0.08] bg-navy-900/[0.07] sm:grid-cols-2 lg:grid-cols-3">
             {values.map((value, index) => (
-              <StaggerItem key={value.title} className="bg-white p-7 lg:p-8">
+              <StaggerItem key={value.title} className="bg-white p-4 lg:p-5">
                 <p className="font-display text-lg text-gold-700 tabular-nums">
                   0{index + 1}
                 </p>
@@ -209,7 +209,7 @@ export default function OurHeartPage() {
       </Section>
 
       {/* ------------------------------ What we believe --------------------------- */}
-      <Section tone="mist" spacing="lg" id="beliefs">
+      <Section tone="mist" spacing="md" id="beliefs">
         <Container>
           <SectionHeading
             eyebrow="What We Believe"
@@ -221,7 +221,7 @@ export default function OurHeartPage() {
             {beliefs.map((belief) => (
               <StaggerItem
                 key={belief.id}
-                className="flex h-full flex-col rounded-media border border-navy-900/[0.08] bg-white p-7"
+                className="flex h-full flex-col rounded-media border border-navy-900/[0.08] bg-white p-5"
               >
                 <h3 className="font-display text-[1.375rem] leading-tight text-navy-900">
                   {belief.title}
@@ -239,9 +239,9 @@ export default function OurHeartPage() {
       </Section>
 
       {/* -------------------------------- Our story ------------------------------ */}
-      <Section tone="cream" spacing="lg" id="story">
+      <Section tone="cream" spacing="md" id="story">
         <Container>
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-10">
+          <div className="grid gap-5 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-6">
             <div className="lg:sticky lg:top-28 lg:self-start">
               <SectionHeading
                 eyebrow="Our Story"
@@ -249,7 +249,7 @@ export default function OurHeartPage() {
                 lede="Royalhouse Baltimore is a local expression of a global family — planted here to stay, to serve and to grow with the city."
               />
               <Reveal delay={0.16}>
-                <div className="relative mt-10 aspect-[4/3] overflow-hidden rounded-media bg-navy-900">
+                <div className="relative mt-6 aspect-[4/3] overflow-hidden rounded-media bg-navy-900">
                   <Image
                     src={images.baltimoreCity.src}
                     alt={images.baltimoreCity.alt}
@@ -269,9 +269,9 @@ export default function OurHeartPage() {
       </Section>
 
       {/* ------------------------------- Community ------------------------------- */}
-      <Section tone="white" spacing="lg" id="community">
+      <Section tone="white" spacing="md" id="community">
         <Container>
-          <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-10">
+          <div className="grid items-center gap-5 lg:grid-cols-2 lg:gap-6">
             <Reveal y={26}>
               <div className="relative aspect-[4/3] overflow-hidden rounded-media bg-navy-900">
                 <Image

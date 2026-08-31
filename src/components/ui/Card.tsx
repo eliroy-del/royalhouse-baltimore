@@ -21,8 +21,8 @@ const cardVariants = cva(
       padding: {
         none: "",
         sm: "p-5",
-        md: "p-6 sm:p-7",
-        lg: "p-7 sm:p-9",
+        md: "p-5",
+        lg: "p-5 sm:p-6",
       },
     },
     defaultVariants: { tone: "light", interactive: false, padding: "md" },
