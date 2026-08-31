@@ -22,7 +22,7 @@ export const metadata = pageMetadata({
 
 /**
  * Warm, simple first-visit page modeled on a clear welcome flow:
- * invitation → practical details → kids → dress → form.
+ * invitation → kids → dress → form.
  * @see https://www.livingdestiny.org/plan-a-visit
  */
 export default function PlanAVisitPage() {
