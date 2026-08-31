@@ -27,10 +27,10 @@ export function MapEmbed({ className }: { className?: string }) {
           src={embed}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          className="aspect-[16/10] w-full border-0 grayscale-[0.15]"
+          className="aspect-[21/9] max-h-56 w-full border-0 grayscale-[0.15] sm:max-h-64"
         />
-        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-navy-900/[0.07] bg-white p-4 sm:p-5">
-          <address className="not-italic text-[0.875rem] leading-relaxed text-navy-900/75">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-navy-900/[0.07] bg-white px-3.5 py-3 sm:px-4">
+          <address className="not-italic text-[0.8125rem] leading-relaxed text-navy-900/75">
             {addressLines().map((line, index) => (
               <span key={line} className={index === 0 ? "block font-semibold text-navy-900" : "block"}>
                 {line}

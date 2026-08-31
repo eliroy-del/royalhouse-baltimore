@@ -109,22 +109,6 @@ export default function ContactPage() {
 
       <Section tone="white" spacing="sm">
         <Container width="narrow">
-          <div className="mb-3 flex flex-wrap items-end justify-between gap-2">
-            <div>
-              <p className="eyebrow text-gold-800">Location</p>
-              <h2 className="mt-1.5 font-display text-[clamp(1.25rem,2vw,1.5rem)] leading-tight text-navy-900">
-                How to find the building
-              </h2>
-            </div>
-            {directions ? (
-              <Button asChild variant="link" size="none">
-                <a href={directions} target="_blank" rel="noreferrer noopener">
-                  Open in Google Maps
-                  <Icon name="arrow-right" className="size-3.5" />
-                </a>
-              </Button>
-            ) : null}
-          </div>
           <MapEmbed />
         </Container>
       </Section>
