@@ -11,7 +11,7 @@ import type { IconName } from "@/types";
 
 const actions: { label: string; href: string; icon: IconName }[] = [
   { label: "Visit", href: "/plan-a-visit", icon: "map-pin" },
-  { label: "Watch", href: "/watch-live", icon: "play" },
+  { label: "Messages", href: "/sermons", icon: "play" },
   { label: "Connect", href: "/connect", icon: "users" },
   { label: "Give", href: "/give", icon: "gift" },
 ];

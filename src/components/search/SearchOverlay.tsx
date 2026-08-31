@@ -10,11 +10,10 @@ import type { SearchGroup, SearchResult } from "@/lib/search";
 
 const quickLinks = [
   { label: "Plan a visit", href: "/plan-a-visit" },
-  { label: "Service times", href: "/plan-a-visit#when" },
   { label: "Latest message", href: "/sermons" },
-  { label: "Watch live", href: "/watch-live" },
   { label: "Request prayer", href: "/prayer" },
   { label: "Give", href: "/give" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const groupOrder: SearchGroup[] = ["Pages", "Messages", "Events", "Ministries", "Testimonies"];

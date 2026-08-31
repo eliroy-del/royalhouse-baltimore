@@ -98,7 +98,7 @@ export default function PlanAVisitPage() {
                 <Link href="/connect">Get Connected</Link>
               </Button>
               <Button asChild variant="outline" size="md">
-                <Link href="/watch-live">Church Online</Link>
+                <Link href="/sermons">Messages</Link>
               </Button>
             </div>
           </Reveal>

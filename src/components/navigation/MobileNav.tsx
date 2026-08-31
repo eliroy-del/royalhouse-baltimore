@@ -189,8 +189,8 @@ export function MobileNav() {
                       </Link>
                     </Button>
                     <Button asChild variant="outline-light" size="lg">
-                      <Link href="/watch-live" onClick={close}>
-                        Watch Live
+                      <Link href="/sermons" onClick={close}>
+                        Messages
                       </Link>
                     </Button>
                   </motion.div>

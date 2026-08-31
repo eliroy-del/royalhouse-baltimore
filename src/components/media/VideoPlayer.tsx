@@ -59,7 +59,7 @@ export function VideoPlayer({
   poster,
   className,
   fallbackTitle = "Video coming soon",
-  fallbackMessage = "We are uploading this message now. In the meantime you can join us live on Sunday, or read the summary below.",
+  fallbackMessage = "We are uploading this message now. In the meantime you can browse other teachings, or plan a visit for Sunday.",
 }: VideoPlayerProps) {
   const embed = toEmbedUrl(url);
 
@@ -116,8 +116,8 @@ export function VideoPlayer({
         {fallbackMessage}
       </p>
       <Button asChild variant="light" size="md" className="mt-7">
-        <Link href="/watch-live">
-          Watch live on Sunday
+        <Link href="/sermons">
+          Browse messages
           <Icon name="arrow-right" className="size-3.5" />
         </Link>
       </Button>

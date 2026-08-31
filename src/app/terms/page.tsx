@@ -51,7 +51,7 @@ const sections: LegalSection[] = [
     ],
   },
   {
-    heading: "Photography, video and livestream",
+    heading: "Photography and video",
     body: [
       <p key="1">
         Our services and events are sometimes photographed and streamed. If you would rather not

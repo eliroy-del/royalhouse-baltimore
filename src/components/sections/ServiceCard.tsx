@@ -112,7 +112,7 @@ export function ServiceCard({ variant = "inline", className }: ServiceCardProps)
                   </Button>
                 ) : (
                   <Button asChild variant="outline-light" size="sm">
-                    <Link href="/watch-live">Watch Live</Link>
+                    <Link href="/contact">Contact Us</Link>
                   </Button>
                 )}
               </div>

@@ -175,7 +175,7 @@ export const ministries: Ministry[] = [
     slug: "media-and-production",
     tagline: "So the message travels",
     description: [
-      "Cameras, livestream, editing, photography and social, getting Sunday to the people who could not be in the room, and telling the story of what God is doing here.",
+      "Cameras, editing, photography and social, telling the story of what God is doing here and helping Sunday land with clarity.",
       "Beginners welcome; we will train you.",
     ],
     image: images.eventConference.src,

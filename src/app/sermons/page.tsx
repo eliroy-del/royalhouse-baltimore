@@ -55,17 +55,17 @@ export default async function SermonsPage() {
         breadcrumb={[{ label: "Messages" }]}
         actions={
           <>
-            <Button asChild variant="gold" size="lg">
-              <Link href="/watch-live">
-                <Icon name="play" className="size-4" />
-                Watch Live
-              </Link>
-            </Button>
             {featured ? (
-              <Button asChild variant="outline-light" size="lg">
-                <Link href={`/sermons/${featured.slug}`}>Latest Message</Link>
+              <Button asChild variant="gold" size="lg">
+                <Link href={`/sermons/${featured.slug}`}>
+                  <Icon name="play" className="size-4" />
+                  Latest Message
+                </Link>
               </Button>
             ) : null}
+            <Button asChild variant="outline-light" size="lg">
+              <Link href="/plan-a-visit">Plan Your Visit</Link>
+            </Button>
           </>
         }
       />
@@ -173,14 +173,14 @@ export default async function SermonsPage() {
       <CtaBand
         eyebrow="Better In The Room"
         title="Messages are good. Being here is better."
-        lede="Watching online is a real way to be part of this church. Sitting in the room with us is another."
+        lede="Past teachings are here whenever you need them. Sitting in the room with us on Sunday is another gift entirely."
         actions={
           <>
             <Button asChild variant="gold" size="xl">
               <Link href="/plan-a-visit">Plan Your Visit</Link>
             </Button>
             <Button asChild variant="outline-light" size="xl">
-              <Link href="/watch-live">Watch Live</Link>
+              <Link href="/connect">Get Connected</Link>
             </Button>
           </>
         }

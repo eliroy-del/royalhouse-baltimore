@@ -18,8 +18,7 @@ import type { Address, GivingFund, GivingProvider, ServiceTime, SocialLinks } fr
      3. contact       , phone, email, office hours
      4. social        , public profile URLs
      5. giving        , provider + fund links
-     6. livestream    , channel + embed URL
-     7. leadership    , see src/content/leaders.ts
+     6. leadership    , see src/content/leaders.ts
    ============================================================ */
 
 const PENDING = "" as const;
@@ -51,14 +50,6 @@ export interface ChurchConfig {
     textToGiveNumber: string;
     mailingInstructions: string;
     funds: GivingFund[];
-  };
-  livestream: {
-    platform: "youtube" | "vimeo" | "facebook" | "custom" | null;
-    channelUrl: string;
-    /** Embeddable player URL, e.g. https://www.youtube.com/embed/live_stream?channel=… */
-    embedUrl: string;
-    /** Flip to true (or drive from an API) when a service is on air. */
-    isLiveNow: boolean;
   };
   visit: {
     parking: string;
@@ -148,13 +139,6 @@ export const churchConfig: ChurchConfig = {
     ],
   },
 
-  livestream: {
-    platform: null, // TODO
-    channelUrl: PENDING, // TODO
-    embedUrl: PENDING, // TODO
-    isLiveNow: false,
-  },
-
   // Visitor-facing practical answers. Written to be true of any campus and easy
   // for the church office to sharpen once the venue details are confirmed.
   visit: {
@@ -178,6 +162,5 @@ export const churchStatus = {
   hasPhone: churchConfig.contact.phone.trim().length > 0,
   hasEmail: churchConfig.contact.email.trim().length > 0,
   hasGiving: churchConfig.giving.onlineUrl.trim().length > 0,
-  hasLivestream: churchConfig.livestream.embedUrl.trim().length > 0,
   hasSocial: Object.values(churchConfig.social).some((url) => (url ?? "").trim().length > 0),
 } as const;

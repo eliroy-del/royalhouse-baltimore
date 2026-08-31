@@ -173,7 +173,6 @@ export const mobileNav = [
   { label: "Our Heart", href: "/our-heart" },
   { label: "Messages", href: "/sermons" },
   { label: "Events", href: "/events" },
-  { label: "Watch Live", href: "/watch-live" },
   { label: "Give", href: "/give" },
   { label: "Contact", href: "/contact" },
 ] as const;
@@ -183,11 +182,10 @@ export const footerNav: { title: string; links: { label: string; href: string }[
     title: "Visit",
     links: [
       { label: "Plan a Visit", href: "/plan-a-visit" },
-      { label: "Service Times", href: "/plan-a-visit#when" },
-      { label: "What to Expect", href: "/plan-a-visit#expect" },
-      { label: "Location & Parking", href: "/plan-a-visit#where" },
       { label: "Children's Ministry", href: "/plan-a-visit#children" },
-      { label: "Accessibility", href: "/plan-a-visit#accessibility" },
+      { label: "What to Wear", href: "/plan-a-visit#wear" },
+      { label: "Visiting Form", href: "/plan-a-visit#form" },
+      { label: "Location & Map", href: "/plan-a-visit#map" },
     ],
   },
   {
@@ -213,9 +211,8 @@ export const footerNav: { title: string; links: { label: string; href: string }[
     ],
   },
   {
-    title: "Watch & Give",
+    title: "Messages & Give",
     links: [
-      { label: "Watch Live", href: "/watch-live" },
       { label: "Messages", href: "/sermons" },
       { label: "Events", href: "/events" },
       { label: "Give", href: "/give" },

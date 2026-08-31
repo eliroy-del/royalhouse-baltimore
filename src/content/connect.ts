@@ -144,7 +144,7 @@ export const serveTeams: { name: string; description: string }[] = [
     name: "Community Outreach",
     description: "Serve days, meals, school partnerships and neighborhood care.",
   },
-  { name: "Media & Communications", description: "Photography, editing, social and the livestream." },
+  { name: "Media & Communications", description: "Photography, editing and social storytelling." },
   { name: "Facilities & Setup", description: "The people who make Sunday physically possible." },
 ];
 

@@ -85,8 +85,8 @@ export default function GivePage() {
                 <p>
                   Giving here is not about a building fund or a budget line. It is how a group of
                   ordinary people funds extraordinary things: volunteers trained to keep children
-                  safe, groceries delivered without a lecture attached, a livestream that reaches
-                  somebody who cannot leave the house, a mentor who keeps showing up.
+                  safe, groceries delivered without a lecture attached, mentoring that keeps showing
+                  up for the next generation, a table that stays open for the city.
                 </p>
                 <p>
                   If you are visiting for the first time, please do not give. Genuinely. Let it pass

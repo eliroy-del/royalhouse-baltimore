@@ -9,7 +9,6 @@ const staticRoutes: { path: string; priority: number; changeFrequency: MetadataR
   { path: "/our-heart", priority: 0.8, changeFrequency: "monthly" },
   { path: "/sermons", priority: 0.8, changeFrequency: "weekly" },
   { path: "/events", priority: 0.8, changeFrequency: "weekly" },
-  { path: "/watch-live", priority: 0.8, changeFrequency: "weekly" },
   { path: "/ministries", priority: 0.7, changeFrequency: "monthly" },
   { path: "/give", priority: 0.7, changeFrequency: "yearly" },
   { path: "/prayer", priority: 0.7, changeFrequency: "yearly" },

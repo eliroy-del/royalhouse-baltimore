@@ -47,9 +47,8 @@ export function GivingInvite() {
             <Reveal delay={0.06}>
               <p className="mt-3 max-w-xl text-[0.9375rem] leading-relaxed text-navy-900/70 sm:text-base">
                 Generosity here is not about keeping the lights on. It pays for kids ministry
-                volunteers to be trained, for groceries to reach a family three streets away, for a
-                livestream that finds someone who could not leave the house, and for the gospel to
-                keep traveling.
+                volunteers to be trained, for groceries to reach a family three streets away, for
+                mentoring that stays when life gets hard, and for the gospel to keep traveling.
               </p>
             </Reveal>
 

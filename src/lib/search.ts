@@ -39,13 +39,6 @@ const pages: { title: string; description: string; href: string; icon: IconName;
       keywords: "about beliefs mission vision values story history statement of faith",
     },
     {
-      title: "Watch Live",
-      description: "Join the gathering online, live on Sunday.",
-      href: "/watch-live",
-      icon: "video",
-      keywords: "live stream online watch youtube sunday broadcast",
-    },
-    {
       title: "Give",
       description: "Tithes, offering, missions and community impact.",
       href: "/give",

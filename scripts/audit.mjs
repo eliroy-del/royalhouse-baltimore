@@ -102,7 +102,6 @@ const shots = [
   ["/give", "give"],
   ["/prayer", "prayer"],
   ["/testimonies", "testimonies"],
-  ["/watch-live", "watch-live"],
   ["/leadership", "leadership"],
   ["/contact", "contact"],
   ["/nonexistent-page", "404"],

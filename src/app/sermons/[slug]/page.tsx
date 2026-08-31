@@ -174,7 +174,7 @@ export default async function SermonDetailPage({ params }: { params: Promise<{ s
               <Link href="/plan-a-visit">Plan Your Visit</Link>
             </Button>
             <Button asChild variant="outline-light" size="xl">
-              <Link href="/watch-live">Watch Live</Link>
+              <Link href="/sermons">More Messages</Link>
             </Button>
           </>
         }
