@@ -2,7 +2,7 @@ import type { ComponentType, SVGProps } from "react";
 
 /**
  * Brand glyphs are shipped locally rather than pulled from an icon library,
- * because platform marks are trademarked artwork with their own usage terms —
+ * because platform marks are trademarked artwork with their own usage terms , 
  * and because it keeps the bundle small.
  */
 type GlyphProps = SVGProps<SVGSVGElement>;

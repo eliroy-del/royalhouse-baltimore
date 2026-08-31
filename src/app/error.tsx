@@ -24,16 +24,12 @@ export default function ErrorBoundary({
         className="pointer-events-none absolute left-1/2 top-1/3 size-[36rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(201,162,39,0.14),transparent_65%)]"
       />
       <Container className="relative text-center">
-        <p className="flex items-center justify-center gap-3 eyebrow text-gold-300">
-          <span aria-hidden="true" className="h-px w-8 bg-gold-500/70" />
-          Something went wrong
-          <span aria-hidden="true" className="h-px w-8 bg-gold-500/70" />
-        </p>
+        <p className="eyebrow text-gold-300">Something went wrong</p>
         <h1 className="mx-auto mt-7 max-w-2xl font-display text-[clamp(2rem,4.8vw,2.5rem)] font-light leading-[1.06]">
           That didn&rsquo;t load the way it should have.
         </h1>
         <p className="mx-auto mt-6 max-w-xl text-[1.0625rem] leading-relaxed text-white/70">
-          The fault is ours, not yours. Try again — and if it keeps happening, tell us and we will
+          The fault is ours, not yours. Try again, and if it keeps happening, tell us and we will
           get it fixed.
         </p>
         <div className="mt-6 flex flex-wrap items-center justify-center gap-3">

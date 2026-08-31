@@ -2,7 +2,7 @@
    CONTENT MODELS
    These interfaces are the contract between the UI and whatever
    supplies the content. Today that is `src/content/*`. Tomorrow
-   it can be Sanity, Payload, Strapi, WordPress or Supabase —
+   it can be Sanity, Payload, Strapi, WordPress or Supabase , 
    as long as the adapters in `src/lib/content.ts` return these
    shapes, no component needs to change.
    ============================================================ */
@@ -138,7 +138,7 @@ export interface Ministry {
   description: string[];
   image: string;
   imageAlt: string;
-  /** Leader name — left empty until the church supplies it. */
+  /** Leader name, left empty until the church supplies it. */
   leader: string;
   meetingTime: string;
   meetingLocation: string;
@@ -179,7 +179,7 @@ export interface Testimony {
   date: string;
   location?: string;
   videoUrl?: string;
-  /** Nothing renders unless this is true — submissions are moderated. */
+  /** Nothing renders unless this is true, submissions are moderated. */
   approved: boolean;
   featured: boolean;
   anonymous?: boolean;

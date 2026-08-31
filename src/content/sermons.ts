@@ -2,7 +2,7 @@ import { images } from "@/config/images";
 import type { Sermon, SermonSeries } from "@/types";
 
 /* ============================================================
-   MESSAGES — SAMPLE CONTENT
+   MESSAGES, SAMPLE CONTENT
    ------------------------------------------------------------
    `videoUrl` and `audioUrl` are intentionally empty: no invented
    media links ship. The player renders a considered
@@ -26,7 +26,7 @@ export const series: SermonSeries[] = [
     title: "Rooted",
     slug: "rooted",
     description:
-      "Four weeks on the unglamorous, unshakeable work of putting your life down deep into God — so that weather does not decide your future.",
+      "Four weeks on the unglamorous, unshakeable work of putting your life down deep into God, so that weather does not decide your future.",
     image: images.sermonFeatured.src,
     current: true,
   },
@@ -58,7 +58,7 @@ export const sermons: Sermon[] = [
     speaker: SPEAKER,
     series: "Rooted",
     summary:
-      "Everyone bears fruit in the rain. Roots are what decide who is still standing — and still generous — when the rain stops.",
+      "Everyone bears fruit in the rain. Roots are what decide who is still standing, and still generous, when the rain stops.",
     description: [
       "Jeremiah promises that the person rooted in God does not fear drought. Not because the drought never comes, but because their water source is somewhere else entirely.",
       "This message is for anyone in a season that has gone quiet: unanswered prayer, a hard diagnosis, a job that ended, a faith that feels thinner than it used to. There is a way to keep bearing fruit here.",
@@ -82,7 +82,7 @@ export const sermons: Sermon[] = [
       "The most important growth in your life is happening where nobody is applauding. Here is how to tend it.",
     description: [
       "Roots grow in the dark, in silence, with no audience. So does character. So does prayer. So does the kind of faith that holds a family together.",
-      "A message about the hidden years — and why God is never wasting them.",
+      "A message about the hidden years, and why God is never wasting them.",
     ],
     thumbnail: images.prayerCircle.src,
     thumbnailAlt: images.prayerCircle.alt,
@@ -101,7 +101,7 @@ export const sermons: Sermon[] = [
     summary:
       "You did not end up in this city, this season or this church by accident. God plants people deliberately.",
     description: [
-      "Scripture is full of people who were moved — sometimes willingly, often not — and then discovered they had been planted rather than displaced.",
+      "Scripture is full of people who were moved, sometimes willingly, often not, and then discovered they had been planted rather than displaced.",
       "For anyone who feels far from home, this one is for you.",
     ],
     thumbnail: images.baltimoreCity.src,
@@ -121,7 +121,7 @@ export const sermons: Sermon[] = [
     summary:
       "Jesus never promised the wind would miss your house. He told us exactly what to build on before it arrives.",
     description: [
-      "Two builders, one storm, two completely different outcomes — and the only variable Jesus mentions is the foundation.",
+      "Two builders, one storm, two completely different outcomes, and the only variable Jesus mentions is the foundation.",
       "We open the series by asking a straight question: what is your life actually resting on?",
     ],
     thumbnail: images.heroWorship.src,
@@ -141,7 +141,7 @@ export const sermons: Sermon[] = [
     summary:
       "The early church grew around meals, not marketing. Radical welcome is still the most persuasive thing we own.",
     description: [
-      "Luke keeps putting Jesus at dinner with the wrong people. That is not incidental detail — it is the strategy.",
+      "Luke keeps putting Jesus at dinner with the wrong people. That is not incidental detail, it is the strategy.",
       "A message about widening the table in a city where a lot of people eat alone.",
     ],
     thumbnail: images.smallGroup.src,

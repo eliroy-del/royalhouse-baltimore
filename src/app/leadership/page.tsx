@@ -17,7 +17,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Leadership",
   description:
-    "Meet the leadership of Royalhouse Baltimore — the pastoral team, ministry leaders and staff who serve and shepherd this church family.",
+    "Meet the leadership of Royalhouse Baltimore: the pastoral team, ministry leaders and staff who serve and shepherd this church family.",
   path: "/leadership",
   image: images.churchExteriorDusk.src,
 });

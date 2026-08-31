@@ -6,7 +6,7 @@ export const dynamic = "force-dynamic";
 
 /**
  * Prayer requests are pastorally sensitive. The body of the request is never
- * logged, never cached and never sent to analytics — only non-identifying
+ * logged, never cached and never sent to analytics, only non-identifying
  * metadata is recorded so the team can confirm delivery.
  */
 export async function POST(request: Request) {
@@ -16,7 +16,7 @@ export async function POST(request: Request) {
     scope: "prayer",
     limit: 6,
     successMessage:
-      "Your request has been received. Our prayer team will pray over it this week — in complete confidence.",
+      "Your request has been received. Our prayer team will pray over it this week, in complete confidence.",
     deliver: (data) => {
       // TODO: deliver to the private prayer team inbox over an encrypted transport.
       logSubmission("prayer", {

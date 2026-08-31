@@ -16,7 +16,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Contact",
   description:
-    "Get in touch with Royalhouse Baltimore. Ask a question, request pastoral care, enquire about membership, events, giving or media — a real person will reply.",
+    "Get in touch with Royalhouse Baltimore. Ask a question, request pastoral care, enquire about membership, events, giving or media, a real person will reply.",
   path: "/contact",
   image: images.welcomeLobby.src,
 });
@@ -44,7 +44,7 @@ export default function ContactPage() {
         size="md"
       />
 
-      {/* Form first — the primary action. Details sit beside it. */}
+      {/* Form first, the primary action. Details sit beside it. */}
       <Section tone="cream" spacing="sm">
         <Container width="narrow">
           <div className="grid items-start gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,16rem)] lg:gap-5">

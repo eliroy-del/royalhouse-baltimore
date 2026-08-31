@@ -12,7 +12,7 @@ interface EmptyStateProps {
   className?: string;
 }
 
-/** Content gaps should still feel considered — never a blank region. */
+/** Content gaps should still feel considered, never a blank region. */
 export function EmptyState({
   icon = "sparkles",
   title,

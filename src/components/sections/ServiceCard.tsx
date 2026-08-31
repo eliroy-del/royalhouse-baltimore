@@ -26,7 +26,7 @@ function details(): Detail[] {
       label: "Service times",
       value: churchStatus.hasServiceTimes
         ? serviceTimeSummary()
-        : "Sunday mornings — exact times confirmed weekly",
+        : "Sunday mornings, exact times confirmed weekly",
       muted: !churchStatus.hasServiceTimes,
     },
     {
@@ -50,7 +50,7 @@ function details(): Detail[] {
 }
 
 interface ServiceCardProps {
-  /** `floating` overlaps the section above it — used under the hero. */
+  /** `floating` overlaps the section above it, used under the hero. */
   variant?: "floating" | "inline";
   className?: string;
 }

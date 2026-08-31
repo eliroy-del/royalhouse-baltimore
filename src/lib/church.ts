@@ -27,7 +27,7 @@ export function serviceTimeSummary(): string {
 export function serviceTimeDetail(): string {
   return churchStatus.hasServiceTimes
     ? serviceTimeSummary()
-    : "Service times for this week are confirmed by our team — get in touch and we will make sure you know exactly when to arrive.";
+    : "Service times for this week are confirmed by our team, get in touch and we will make sure you know exactly when to arrive.";
 }
 
 /** Single-line location string, as specific as the data allows. */

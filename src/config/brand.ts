@@ -2,7 +2,7 @@
    BRAND ASSETS
    ------------------------------------------------------------
    The official Royalhouse Chapel mark lives at
-   /public/logo/royalhouse-chapel.png — copied from the supplied
+   /public/logo/royalhouse-chapel.png, copied from the supplied
    artwork without redesign, colour change, crop or effect.
 
    The mark already carries the words "Royalhouse Chapel". On this
@@ -15,7 +15,7 @@
 
 export interface LogoAsset {
   src: string;
-  /** Intrinsic dimensions of the artwork — used only to lock the aspect ratio. */
+  /** Intrinsic dimensions of the artwork, used only to lock the aspect ratio. */
   width: number;
   height: number;
 }
@@ -30,7 +30,7 @@ export const brandConfig = {
     /**
      * Official mark. White field is native to the artwork (the dove is white),
      * so we never punch the background out. On navy surfaces the mark sits
-     * in a white rounded badge — a container, not an edit of the logo.
+     * in a white rounded badge, a container, not an edit of the logo.
      */
     official: {
       src: "/logo/royalhouse-chapel.png",

@@ -2,7 +2,7 @@ import { images } from "@/config/images";
 import type { ChurchEvent } from "@/types";
 
 /* ============================================================
-   EVENTS — SAMPLE CONTENT
+   EVENTS, SAMPLE CONTENT
    ------------------------------------------------------------
    Realistic sample events so the site looks finished during
    development. Replace with the real church calendar (or wire
@@ -32,10 +32,10 @@ export const events: ChurchEvent[] = [
     title: "Night of Worship",
     slug: "night-of-worship",
     summary:
-      "One evening. No agenda but worship, Scripture and prayer — with room to stay as long as you need.",
+      "One evening. No agenda but worship, Scripture and prayer, with room to stay as long as you need.",
     description: [
       "Some evenings are not for programs. This one is for presence. Our worship team leads for the whole night, we read Scripture together, and we make space for prayer without hurrying anybody along.",
-      "Bring a friend, bring your questions, bring whatever you are carrying. Come for twenty minutes or stay to the end — both are welcome.",
+      "Bring a friend, bring your questions, bring whatever you are carrying. Come for twenty minutes or stay to the end, both are welcome.",
     ],
     image: images.eventWorshipNight.src,
     imageAlt: images.eventWorshipNight.alt,
@@ -71,7 +71,7 @@ export const events: ChurchEvent[] = [
     summary:
       "The engine room of the church. We pray for our families, our city and the requests you have sent us.",
     description: [
-      "Every week we gather to pray — for Baltimore, for our schools and streets, for the sick, and through every request that comes into our prayer team.",
+      "Every week we gather to pray, for Baltimore, for our schools and streets, for the sick, and through every request that comes into our prayer team.",
       "You do not need to pray out loud. Come and add your amen.",
     ],
     image: images.prayerCircle.src,
@@ -89,7 +89,7 @@ export const events: ChurchEvent[] = [
     title: "Community Serve Day",
     slug: "community-serve-day",
     summary:
-      "Boots on the ground in our neighborhood — meals, clean-up, school supplies and doors knocked with kindness.",
+      "Boots on the ground in our neighborhood, meals, clean-up, school supplies and doors knocked with kindness.",
     description: [
       "We put on the t-shirts, take the tables out and go looking for practical ways to love our neighbours. Families welcome, no skills required, every pair of hands useful.",
       "If you have been wanting to serve but did not know where to start, start here.",
@@ -111,7 +111,7 @@ export const events: ChurchEvent[] = [
       "Middle and high schoolers: games, worship, real conversation and pizza that disappears fast.",
     description: [
       "A night built entirely for our young people. Loud in the right places, honest in the important ones, and led by adults who genuinely like teenagers.",
-      "Bring your friends. First time is free — every time is free.",
+      "Bring your friends. First time is free, every time is free.",
     ],
     image: images.ministryYouth.src,
     imageAlt: images.ministryYouth.alt,
@@ -128,7 +128,7 @@ export const events: ChurchEvent[] = [
     title: "Women's Brunch",
     slug: "womens-brunch",
     summary:
-      "Good food, real conversation and teaching for women in every season — students to grandmothers.",
+      "Good food, real conversation and teaching for women in every season, students to grandmothers.",
     description: [
       "A morning to breathe. We eat well, we talk properly, and we open the Bible together around tables rather than rows.",
       "Come alone or bring your daughter, your neighbour and your mother.",

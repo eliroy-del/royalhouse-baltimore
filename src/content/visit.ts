@@ -2,7 +2,7 @@ import { churchConfig } from "@/config/church";
 import type { FaqItem, IconName } from "@/types";
 
 /* ============================================================
-   PLAN A VISIT — the answers that remove first-visit anxiety.
+   PLAN A VISIT, the answers that remove first-visit anxiety.
    Practical details that depend on the venue are pulled from
    churchConfig.visit so the church office edits them in one place.
    ============================================================ */
@@ -23,7 +23,7 @@ export const visitAnswers: VisitAnswer[] = [
     question: "When do you meet?",
     answer: "",
     fallback:
-      "Our gatherings are on Sunday. Exact service times are confirmed by our team — send us a message and we will tell you precisely when to arrive, and what is happening that week.",
+      "Our gatherings are on Sunday. Exact service times are confirmed by our team, send us a message and we will tell you precisely when to arrive, and what is happening that week.",
   },
   {
     id: "where",
@@ -32,7 +32,7 @@ export const visitAnswers: VisitAnswer[] = [
     answer:
       "We gather at 5411 Old Frederick Rd, Suite 11, Catonsville, MD 21229. Use the map on this page for directions, and look for Suite 11 when you arrive.",
     fallback:
-      "We gather in Baltimore, Maryland. Our full street address and directions are being published shortly — contact us and we will send you the exact location and the easiest way in.",
+      "We gather in Baltimore, Maryland. Our full street address and directions are being published shortly, contact us and we will send you the exact location and the easiest way in.",
   },
   {
     id: "parking",
@@ -40,7 +40,7 @@ export const visitAnswers: VisitAnswer[] = [
     question: "Where do I park?",
     answer: churchConfig.visit.parking,
     fallback:
-      "Parking details for our venue are being confirmed. Ask us before you come and we will tell you exactly where to leave the car — and where to walk in.",
+      "Parking details for our venue are being confirmed. Ask us before you come and we will tell you exactly where to leave the car, and where to walk in.",
   },
   {
     id: "arrive",
@@ -86,7 +86,7 @@ export const visitAnswers: VisitAnswer[] = [
     icon: "users",
     question: "Can I come on my own?",
     answer:
-      "Absolutely, and many people do. Tell the welcome team it is your first Sunday and someone will sit with you if you would like the company — or leave you to it if you would rather just watch and listen.",
+      "Absolutely, and many people do. Tell the welcome team it is your first Sunday and someone will sit with you if you would like the company, or leave you to it if you would rather just watch and listen.",
   },
 ];
 
@@ -96,7 +96,7 @@ export const faqs: FaqItem[] = [
     group: "Faith",
     question: "Do I need to believe in God to come?",
     answer:
-      "No. Plenty of people in the room are still deciding what they think, and questions are genuinely welcome here. Come and look for yourself — nobody will corner you.",
+      "No. Plenty of people in the room are still deciding what they think, and questions are genuinely welcome here. Come and look for yourself, nobody will corner you.",
   },
   {
     id: "give",
@@ -124,14 +124,14 @@ export const faqs: FaqItem[] = [
     group: "Visit",
     question: "What if I arrive late?",
     answer:
-      "Come in anyway. Life with children, buses and Baltimore traffic is real — someone will quietly help you find a seat.",
+      "Come in anyway. Life with children, buses and Baltimore traffic is real, someone will quietly help you find a seat.",
   },
   {
     id: "communion",
     group: "Faith",
     question: "Who can take communion?",
     answer:
-      "Anyone who follows Jesus is welcome at the table. If you are not there yet, simply let it pass — you are still every bit as welcome in the room.",
+      "Anyone who follows Jesus is welcome at the table. If you are not there yet, simply let it pass, you are still every bit as welcome in the room.",
   },
   {
     id: "prayer",
@@ -145,7 +145,7 @@ export const faqs: FaqItem[] = [
     group: "Visit",
     question: "What happens after my first visit?",
     answer:
-      "Nothing you have not asked for. If you fill in a visit form we will send one friendly message with practical details — and then leave the pace entirely up to you.",
+      "Nothing you have not asked for. If you fill in a visit form we will send one friendly message with practical details, and then leave the pace entirely up to you.",
   },
 ];
 
@@ -168,7 +168,7 @@ export const expectSteps: { step: string; title: string; description: string; ic
     step: "03",
     title: "We open the Bible",
     description:
-      "Clear, practical teaching from Scripture — the kind you can carry into work, parenting and Baltimore on Monday morning.",
+      "Clear, practical teaching from Scripture, the kind you can carry into work, parenting and Baltimore on Monday morning.",
     icon: "book-open",
   },
   {
@@ -182,7 +182,7 @@ export const expectSteps: { step: string; title: string; description: string; ic
     step: "05",
     title: "We stay a while",
     description:
-      "Coffee, conversation and introductions. Stay as long as you like, or slip out quietly — both are completely fine.",
+      "Coffee, conversation and introductions. Stay as long as you like, or slip out quietly, both are completely fine.",
     icon: "message-circle",
   },
 ];

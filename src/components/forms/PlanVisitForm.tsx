@@ -106,7 +106,7 @@ export function PlanVisitForm() {
         <Field
           id="phone"
           label="Phone"
-          hint="Optional — only if you would rather we called."
+          hint="Optional, only if you would rather we called."
           error={errors.phone?.message}
         >
           <Input
@@ -169,7 +169,7 @@ export function PlanVisitForm() {
       <Field
         id="questions"
         label="Anything we should know?"
-        hint="Accessibility needs, children's ages, questions — anything at all."
+        hint="Accessibility needs, children's ages, questions, anything at all."
         error={errors.questions?.message}
       >
         <Textarea
@@ -185,7 +185,7 @@ export function PlanVisitForm() {
         <Checkbox
           id="wantsContact"
           label="Yes, have someone contact me before I visit"
-          description="A friendly message with practical details — nothing more."
+          description="A friendly message with practical details, nothing more."
           {...register("wantsContact")}
         />
         <Checkbox

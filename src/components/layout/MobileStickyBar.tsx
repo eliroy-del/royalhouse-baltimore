@@ -57,7 +57,7 @@ export function MobileStickyBar() {
                       {active ? (
                         <span
                           aria-hidden="true"
-                          className="absolute inset-x-0 top-0 mx-auto h-px w-10 bg-gold-400"
+                          className="absolute inset-x-0 top-1.5 mx-auto size-1 rounded-full bg-gold-400"
                         />
                       ) : null}
                     </Link>

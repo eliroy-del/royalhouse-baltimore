@@ -22,7 +22,7 @@ interface PageHeroProps {
 
 /**
  * Consistent dark hero for every inner page. The header is transparent over
- * this, which is why every page needs one — it keeps navigation contrast AA
+ * this, which is why every page needs one, it keeps navigation contrast AA
  * compliant without per-page special cases.
  */
 export function PageHero({
@@ -102,11 +102,10 @@ export function PageHero({
         {eyebrow ? (
           <p
             className={cn(
-              "flex items-center gap-3 eyebrow text-gold-300",
-              align === "center" && "justify-center",
+              "eyebrow text-gold-300",
+              align === "center" && "text-center",
             )}
           >
-            <span aria-hidden="true" className="h-px w-8 rule-gold" />
             {eyebrow}
           </p>
         ) : null}
@@ -146,8 +145,6 @@ export function PageHero({
           </div>
         ) : null}
       </Container>
-
-      <span aria-hidden="true" className="absolute inset-x-0 bottom-0 h-px rule-gold opacity-40" />
     </section>
   );
 }
@@ -217,11 +214,7 @@ export function CtaBand({
       )}
 
       <Container className="relative text-center">
-        <p className="flex items-center justify-center gap-3 eyebrow text-gold-300">
-          <span aria-hidden="true" className="h-px w-8 bg-gold-500/70" />
-          {eyebrow}
-          <span aria-hidden="true" className="h-px w-8 bg-gold-500/70" />
-        </p>
+        <p className="eyebrow text-gold-300">{eyebrow}</p>
         <h2 className="mx-auto mt-3 max-w-3xl font-display text-[clamp(1.5rem,2.8vw,2.125rem)] font-light leading-[1.05]">
           {title}
         </h2>

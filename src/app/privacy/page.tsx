@@ -10,7 +10,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Privacy Policy",
   description:
-    "How Royalhouse Baltimore collects, uses and protects the information you share with us through this website — including prayer requests and contact forms.",
+    "How Royalhouse Baltimore collects, uses and protects the information you share with us through this website, including prayer requests and contact forms.",
   path: "/privacy",
 });
 
@@ -85,7 +85,7 @@ const sections: LegalSection[] = [
     body: [
       <p key="1">
         This site uses no advertising cookies. If and when we enable privacy-respecting analytics,
-        it will be to understand which pages help people find us — not to track individuals across
+        it will be to understand which pages help people find us, not to track individuals across
         the internet. Analytics are configured through environment variables and are disabled by
         default.
       </p>,

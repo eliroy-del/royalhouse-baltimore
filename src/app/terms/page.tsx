@@ -35,7 +35,7 @@ const sections: LegalSection[] = [
       </p>,
       <p key="2">
         Testimonies are published only with explicit permission, and only after review. We may edit
-        for length and clarity — never for meaning.
+        for length and clarity, never for meaning.
       </p>,
     ],
   },
@@ -55,7 +55,7 @@ const sections: LegalSection[] = [
     body: [
       <p key="1">
         Our services and events are sometimes photographed and streamed. If you would rather not
-        appear, tell a member of our team on arrival and we will make sure it is respected — that
+        appear, tell a member of our team on arrival and we will make sure it is respected, that
         includes children.
       </p>,
     ],
@@ -95,7 +95,7 @@ const sections: LegalSection[] = [
     body: [
       <p key="1">
         We may update these terms as our ministry and this website develop. Questions are always
-        welcome — use the{" "}
+        welcome, use the{" "}
         <Link
           href="/contact"
           className="font-semibold text-navy-900 underline decoration-gold-500/50 underline-offset-4 hover:decoration-gold-500"

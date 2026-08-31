@@ -35,7 +35,7 @@ export function SocialLinks({ tone = "light", className, size = "md" }: SocialLi
               href={url}
               target="_blank"
               rel="noreferrer noopener"
-              aria-label={`${entry.label} — opens in a new tab`}
+              aria-label={`${entry.label}, opens in a new tab`}
               className={classes}
             >
               <Glyph className="size-[1.0625rem]" />

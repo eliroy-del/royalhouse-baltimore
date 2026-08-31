@@ -32,7 +32,7 @@ type PassThrough = Pick<
  * The rule: content is always rendered in its finished state on the server, so
  * the page is fully readable without JavaScript and for anyone who asks for
  * reduced motion. After mount we only arm the entrance animation for elements
- * that start below the fold — animating something the visitor is already reading
+ * that start below the fold; animating something the visitor is already reading
  * would make it disappear and fade back in.
  */
 function useArmed(ref: RefObject<HTMLElement | null>) {

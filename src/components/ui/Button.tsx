@@ -15,10 +15,10 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        /** Navy — the default action across light sections. */
+        /** Navy: the default action across light sections. */
         primary:
           "bg-navy-900 text-white shadow-subtle hover:bg-navy-800 hover:shadow-elevate",
-        /** Royal gold — reserved for the single most important action on a screen. */
+        /** Royal gold: reserved for the single most important action on a screen. */
         gold: "bg-gold-500 text-navy-950 shadow-subtle hover:bg-gold-400 hover:shadow-elevate",
         /** Outlined navy for secondary actions on light backgrounds. */
         outline:

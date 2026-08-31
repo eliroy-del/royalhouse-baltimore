@@ -93,7 +93,7 @@ export function NewsletterForm({ className }: { className?: string }) {
       ) : null}
 
       <p className="mt-3 text-xs leading-relaxed text-white/60">
-        One short email with what matters. Unsubscribe any time — we never sell or share your
+        One short email with what matters. Unsubscribe any time, we never sell or share your
         details.
       </p>
     </form>

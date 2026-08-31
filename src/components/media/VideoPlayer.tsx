@@ -51,7 +51,7 @@ interface VideoPlayerProps {
 
 /**
  * Renders an embedded player when a video URL exists, and a composed
- * placeholder when it does not — we never ship a broken or fake player.
+ * placeholder when it does not, we never ship a broken or fake player.
  */
 export function VideoPlayer({
   url,

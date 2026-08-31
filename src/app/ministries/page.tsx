@@ -17,13 +17,13 @@ import type { Ministry, MinistryCategory } from "@/types";
 export const metadata = pageMetadata({
   title: "Ministries",
   description:
-    "Find your people at Royalhouse Baltimore — worship, kids, youth, young adults, women, men, prayer, outreach, hospitality and media ministries.",
+    "Find your people at Royalhouse Baltimore, worship, kids, youth, young adults, women, men, prayer, outreach, hospitality and media ministries.",
   path: "/ministries",
   image: images.ministryYouth.src,
 });
 
 const categoryIntros: Record<MinistryCategory, string> = {
-  Worship: "The teams that carry Sunday — music, sound, lighting and everything in between.",
+  Worship: "The teams that carry Sunday, music, sound, lighting and everything in between.",
   "Next Generation":
     "Children and teenagers are not the church of tomorrow; they are the church right now.",
   Adults: "Communities for every season of adult life, from your first job to your grandchildren.",
@@ -117,10 +117,7 @@ export default async function MinistriesPage() {
       <Section tone="navy" spacing="md">
         <Container width="narrow">
           <div className="text-center">
-            <p className="flex items-center justify-center gap-3 eyebrow text-gold-300">
-              <span aria-hidden="true" className="h-px w-8 bg-gold-500/70" />
-              Not Sure Where You Fit?
-            </p>
+            <p className="eyebrow text-gold-300">Not Sure Where You Fit?</p>
             <h2 className="mt-6 font-display text-[clamp(2rem,4vw,2.25rem)] font-light leading-[1.06]">
               Tell us what you love and we will help you find it.
             </h2>

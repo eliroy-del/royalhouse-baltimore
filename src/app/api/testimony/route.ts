@@ -6,7 +6,7 @@ export const dynamic = "force-dynamic";
 
 /**
  * Testimonies enter a moderation queue. Nothing submitted here is ever
- * published automatically — a human must review it, and `permissionToPublish`
+ * published automatically, a human must review it, and `permissionToPublish`
  * must be explicitly granted before it can appear on the site.
  */
 export async function POST(request: Request) {

@@ -24,7 +24,7 @@ const promises = [
   {
     icon: "hands-praying" as const,
     title: "It gets prayed for",
-    text: "Every request reaches our prayer team and is prayed over during the week — not filed and forgotten.",
+    text: "Every request reaches our prayer team and is prayed over during the week, not filed and forgotten.",
   },
   {
     icon: "church" as const,

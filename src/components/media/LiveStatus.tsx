@@ -115,7 +115,7 @@ export function LiveStatus({ isLiveNow, serviceTimes, fallbackMessage }: LiveSta
           Live now
         </Badge>
         <p className="text-[1.0625rem] leading-relaxed text-white/75">
-          We are on air right now. Come as you are — the stream is below.
+          We are on air right now. Come as you are. The stream is below.
         </p>
       </div>
     );

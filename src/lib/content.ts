@@ -21,7 +21,7 @@ import type {
 } from "@/types";
 
 /* ============================================================
-   CONTENT ADAPTER — the CMS seam
+   CONTENT ADAPTER: the CMS seam
    ------------------------------------------------------------
    Every page reads content through these functions and never
    imports `src/content/*` directly. They are async on purpose:

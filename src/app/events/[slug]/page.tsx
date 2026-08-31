@@ -249,7 +249,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ sl
       <CtaBand
         eyebrow="First Time?"
         title="Events are a lovely way to start."
-        lede="No pressure, no spotlight — just come, have a look around, and let us make you welcome."
+        lede="No pressure, no spotlight. Just come, have a look around, and let us make you welcome."
         actions={
           <>
             <Button asChild variant="gold" size="xl">

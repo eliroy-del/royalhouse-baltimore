@@ -2,7 +2,7 @@ import { Logo } from "@/components/brand/Logo";
 
 /**
  * Route-level loading state: the logo settles in behind a thin gold progress
- * hairline. Deliberately quiet — no spinner, no layout shift.
+ * hairline. Deliberately quiet, no spinner, no layout shift.
  */
 export default function Loading() {
   return (

@@ -2,10 +2,10 @@ import { images } from "@/config/images";
 import type { Ministry } from "@/types";
 
 /* ============================================================
-   MINISTRIES — PROVISIONAL NAMES
+   MINISTRIES, PROVISIONAL NAMES
    ------------------------------------------------------------
    These names are deliberately plain and descriptive. Royalhouse
-   Baltimore may well use its own ministry names — swap the `name`,
+   Baltimore may well use its own ministry names, swap the `name`,
    `slug` and copy freely, or point `getMinistries()` at a CMS.
    `leader` and `meetingTime` are left empty where the church has
    not supplied them; the cards handle that gracefully.
@@ -18,7 +18,7 @@ export const ministries: Ministry[] = [
     slug: "worship",
     tagline: "The sound of our house",
     description: [
-      "Our worship ministry exists to help a whole room turn its attention to God — not to put on a concert. Musicians, vocalists, sound and lighting all serve the same aim.",
+      "Our worship ministry exists to help a whole room turn its attention to God, not to put on a concert. Musicians, vocalists, sound and lighting all serve the same aim.",
       "If you play, sing or run a desk, there is a place for you here. We audition for readiness and character, not for celebrity.",
     ],
     image: images.worshipTeam.src,
@@ -36,7 +36,7 @@ export const ministries: Ministry[] = [
     slug: "kids",
     tagline: "Faith that fits small hands",
     description: [
-      "Safe, joyful, age-appropriate environments where children meet Jesus for themselves — with stories, songs, questions and a lot of laughing.",
+      "Safe, joyful, age-appropriate environments where children meet Jesus for themselves, with stories, songs, questions and a lot of laughing.",
       "Every volunteer is screened and background-checked, and check-in and pick-up are secure so parents can worship without watching the door.",
     ],
     image: images.ministryKids.src,
@@ -55,7 +55,7 @@ export const ministries: Ministry[] = [
     tagline: "Loud, honest, going somewhere",
     description: [
       "Middle and high schoolers need more than childcare and more than entertainment. They need adults who take their questions seriously and a faith they can own.",
-      "Games, worship, small groups and real conversation — plus a lot of pizza.",
+      "Games, worship, small groups and real conversation, plus a lot of pizza.",
     ],
     image: images.ministryYouth.src,
     imageAlt: images.ministryYouth.alt,
@@ -89,7 +89,7 @@ export const ministries: Ministry[] = [
     slug: "women",
     tagline: "Strong, seen, sent",
     description: [
-      "A community for women in every season — studying, mothering, working, retiring, starting again. Teaching, mentoring and friendships that go past the surface.",
+      "A community for women in every season, studying, mothering, working, retiring, starting again. Teaching, mentoring and friendships that go past the surface.",
       "Brunches, studies and mentoring pairs through the year.",
     ],
     image: images.ministryWomen.src,
@@ -124,7 +124,7 @@ export const ministries: Ministry[] = [
     tagline: "The engine room",
     description: [
       "Nothing significant happens here that was not prayed for first. Our prayer team intercedes for the church, the city and every request that reaches us.",
-      "We pray midweek, before services, and privately over the requests you send — in complete confidence.",
+      "We pray midweek, before services, and privately over the requests you send, in complete confidence.",
     ],
     image: images.prayerCircle.src,
     imageAlt: images.prayerCircle.alt,
@@ -158,7 +158,7 @@ export const ministries: Ministry[] = [
     slug: "welcome-and-hospitality",
     tagline: "The first face of the church",
     description: [
-      "Doors, coffee, directions, seats and warmth. This team decides what a nervous first-time visitor feels in their first ninety seconds — which makes it one of the most important teams we have.",
+      "Doors, coffee, directions, seats and warmth. This team decides what a nervous first-time visitor feels in their first ninety seconds, which makes it one of the most important teams we have.",
       "If you are good with people, we need you.",
     ],
     image: images.welcomeLobby.src,
@@ -175,7 +175,7 @@ export const ministries: Ministry[] = [
     slug: "media-and-production",
     tagline: "So the message travels",
     description: [
-      "Cameras, livestream, editing, photography and social — getting Sunday to the people who could not be in the room, and telling the story of what God is doing here.",
+      "Cameras, livestream, editing, photography and social, getting Sunday to the people who could not be in the room, and telling the story of what God is doing here.",
       "Beginners welcome; we will train you.",
     ],
     image: images.eventConference.src,

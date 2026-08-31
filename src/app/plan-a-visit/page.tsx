@@ -21,7 +21,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Plan a Visit",
   description:
-    "Planning your first visit to Royalhouse Baltimore? Find service times, location, parking, what to expect, children's ministry and accessibility — then let us know you're coming.",
+    "Planning your first visit to Royalhouse Baltimore? Find service times, location, parking, what to expect, children's ministry and accessibility, then let us know you're coming.",
   path: "/plan-a-visit",
   image: images.welcomeLobby.src,
 });
@@ -40,7 +40,7 @@ const reassurances = [
   { icon: "handshake" as const, text: "Someone will meet you at the door by name." },
   { icon: "baby" as const, text: "Kids check-in handled before the first song." },
   { icon: "accessibility" as const, text: "Accessible seating reserved if you need it." },
-  { icon: "message-circle" as const, text: "One friendly message — never a sales pitch." },
+  { icon: "message-circle" as const, text: "One friendly message, never a sales pitch." },
 ];
 
 export default function PlanAVisitPage() {
@@ -61,7 +61,7 @@ export default function PlanAVisitPage() {
             <em className="not-italic text-gold-300">We&rsquo;ve got you.</em>
           </>
         }
-        lede="No dress code, no awkward introductions, no pressure. Here is everything you need to know before Sunday — and a way to tell us you're coming so we can look out for you."
+        lede="No dress code, no awkward introductions, no pressure. Here is everything you need to know before Sunday, and a way to tell us you're coming so we can look out for you."
         image={images.welcomeLobby}
         objectPosition="60% 45%"
         breadcrumb={[{ label: "Plan a Visit" }]}
@@ -198,7 +198,7 @@ export default function PlanAVisitPage() {
               <SectionHeading
                 eyebrow="What About My Children?"
                 title="Bring them. All of them."
-                lede="Children are genuinely welcome in the main service — nobody minds the noise. And if they would rather have their own space, our kids team is ready and waiting."
+                lede="Children are genuinely welcome in the main service. Nobody minds the noise. And if they would rather have their own space, our kids team is ready and waiting."
               />
               <ul className="mt-9 flex flex-col gap-4">
                 {[
@@ -257,7 +257,7 @@ export default function PlanAVisitPage() {
                 </h3>
                 <p className="mt-3 text-[0.9375rem] leading-relaxed text-navy-900/65">
                   Step-free access, accessible restrooms, and seating reserved near the front and on
-                  the aisles. Tell a member of the welcome team — or mention it on the form below —
+                  the aisles. Tell a member of the welcome team, or mention it on the form below. 
                   and it will be arranged before you arrive.
                 </p>
               </div>
@@ -317,7 +317,7 @@ export default function PlanAVisitPage() {
             >
               Ask us directly
             </Link>{" "}
-            — a real person will reply.
+           , a real person will reply.
           </p>
         </Container>
       </Section>

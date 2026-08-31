@@ -19,7 +19,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Connect",
   description:
-    "Find your next step at Royalhouse Baltimore — join a group, serve on a team, get baptized, request prayer, become a member or share your testimony.",
+    "Find your next step at Royalhouse Baltimore, join a group, serve on a team, get baptized, request prayer, become a member or share your testimony.",
   path: "/connect",
   image: images.smallGroup.src,
 });
@@ -73,7 +73,7 @@ export default async function ConnectPage() {
               <div className="mt-9 grid gap-4 sm:grid-cols-3">
                 {[
                   { step: "01", title: "Come and see", text: "Any Sunday. No announcement needed." },
-                  { step: "02", title: "Say hello", text: "Find the welcome team — that is what we are there for." },
+                  { step: "02", title: "Say hello", text: "Find the welcome team. That is what we are there for." },
                   { step: "03", title: "Take a next step", text: "A group, a team, a conversation. Your pace." },
                 ].map((item) => (
                   <div
@@ -127,7 +127,7 @@ export default async function ConnectPage() {
             align="center"
             eyebrow="Find Your Next Step"
             title="Every door here is open."
-            lede="Pick the one that fits where you actually are — not where you think you ought to be."
+            lede="Pick the one that fits where you actually are, not where you think you ought to be."
           />
           <Stagger className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {nextSteps.map((step) => (
@@ -193,7 +193,7 @@ export default async function ConnectPage() {
           <SectionHeading
             eyebrow="Serve on a Team"
             title="You were given gifts on purpose."
-            lede="Serving is where faith stops being an idea. Bring whatever you have — we will train you for the rest, and nobody serves alone."
+            lede="Serving is where faith stops being an idea. Bring whatever you have, we will train you for the rest, and nobody serves alone."
             actions={
               <Button asChild size="lg">
                 <Link href="/contact">
@@ -243,7 +243,7 @@ export default async function ConnectPage() {
               />
               <p className="mt-6 text-[0.9375rem] leading-relaxed text-navy-900/65">
                 We will sit down with you first, answer every question, and then celebrate properly
-                — photographs, applause and all. Bring the people you love.
+               , photographs, applause and all. Bring the people you love.
               </p>
               <div className="mt-9 flex flex-wrap gap-3">
                 <Button asChild size="lg">
@@ -265,7 +265,7 @@ export default async function ConnectPage() {
             align="center"
             eyebrow="Become a Member"
             title="Put down roots on purpose."
-            lede="Membership is not a club card. It is saying: these are my people, this is my church, and I am in — for the ordinary weeks as well as the good ones."
+            lede="Membership is not a club card. It is saying: these are my people, this is my church, and I am in, for the ordinary weeks as well as the good ones."
           />
 
           <Stagger className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

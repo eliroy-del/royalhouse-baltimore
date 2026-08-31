@@ -19,7 +19,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Messages",
   description:
-    "Watch and listen to messages from Royalhouse Baltimore. Browse by series, topic or scripture — practical Bible teaching for real life in Baltimore.",
+    "Watch and listen to messages from Royalhouse Baltimore. Browse by series, topic or scripture, practical Bible teaching for real life in Baltimore.",
   path: "/sermons",
   image: images.sermonFeatured.src,
 });
@@ -157,7 +157,7 @@ export default async function SermonsPage() {
           <SectionHeading
             eyebrow="The Library"
             title="Every message, searchable."
-            lede="Filter by series, topic or speaker — or type whatever you remember and let the search find it."
+            lede="Filter by series, topic or speaker, or type whatever you remember and let the search find it."
           />
           <div className="mt-6">
             <SermonLibrary

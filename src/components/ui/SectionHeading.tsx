@@ -10,12 +10,12 @@ interface EyebrowProps {
   className?: string;
 }
 
-/** The signature Royalhouse label: chapter number, gold hairline, small caps. */
+/** Small-caps label with optional chapter number. */
 export function Eyebrow({ chapter, children, tone = "light", className }: EyebrowProps) {
   return (
     <p
       className={cn(
-        "flex items-center gap-3 eyebrow",
+        "flex items-center gap-2.5 eyebrow",
         tone === "dark" ? "text-gold-300" : "text-gold-800",
         className,
       )}
@@ -30,7 +30,6 @@ export function Eyebrow({ chapter, children, tone = "light", className }: Eyebro
           {chapter}
         </span>
       ) : null}
-      <span aria-hidden="true" className="h-px w-8 rule-gold" />
       <span>{children}</span>
     </p>
   );

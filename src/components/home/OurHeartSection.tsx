@@ -29,7 +29,7 @@ export function OurHeartSection() {
                 <em className="not-italic text-gold-300">transform lives</em>.
               </>
             }
-            lede="These convictions shape everything we do here — how we gather on Sunday, how we spend money, and how we treat the person who has never walked through our doors."
+            lede="These convictions shape everything we do here: how we gather on Sunday, how we spend money, and how we treat the person who has never walked through our doors."
             actions={
               <Button asChild variant="light" size="lg">
                 <Link href="/our-heart">

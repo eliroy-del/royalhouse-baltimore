@@ -18,7 +18,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Give",
   description:
-    "Give to Royalhouse Baltimore. Support tithes, offering, missions and community impact in Baltimore — securely, simply and with a clear picture of where it goes.",
+    "Give to Royalhouse Baltimore. Support tithes, offering, missions and community impact in Baltimore, securely, simply and with a clear picture of where it goes.",
   path: "/give",
   image: images.generosity.src,
 });
@@ -32,7 +32,7 @@ const trust = [
   {
     icon: "hand-heart" as const,
     title: "Local first",
-    text: "A significant share stays in Baltimore — kids ministry, outreach, and families who need help this week.",
+    text: "A significant share stays in Baltimore: kids ministry, outreach, and families who need help this week.",
   },
   {
     icon: "globe" as const,
@@ -58,7 +58,7 @@ export default function GivePage() {
             Give with <em className="not-italic text-gold-300">purpose</em>.
           </>
         }
-        lede="Generosity is not the church asking for something. It is the church becoming something — for a family three streets away, for a child in our kids ministry, for a city we refuse to give up on."
+        lede="Generosity is not the church asking for something. It is the church becoming something, for a family three streets away, for a child in our kids ministry, for a city we refuse to give up on."
         image={images.generosity}
         objectPosition="50% 55%"
         breadcrumb={[{ label: "Give" }]}
@@ -149,7 +149,7 @@ export default function GivePage() {
             align="center"
             eyebrow="Where It Goes"
             title="Every fund, named and explained."
-            lede="These are the only funds approved by our leadership. If you want your gift to go somewhere specific, choose it — and we will honor that."
+            lede="These are the only funds approved by our leadership. If you want your gift to go somewhere specific, choose it, and we will honor that."
           />
 
           <Stagger className="mt-8 grid gap-px overflow-hidden rounded-media bg-white/10 sm:grid-cols-2 lg:grid-cols-4">

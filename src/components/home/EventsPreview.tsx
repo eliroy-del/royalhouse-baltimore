@@ -75,7 +75,7 @@ export async function EventsPreview() {
             className="mt-8"
             icon="calendar"
             title="We're preparing something special"
-            description="Our next season of events is being planned right now. Check back shortly — or come and see us this Sunday in the meantime."
+            description="Our next season of events is being planned right now. Check back shortly, or come and see us this Sunday in the meantime."
             action={
               <Button asChild>
                 <Link href="/plan-a-visit">Plan Your Visit</Link>

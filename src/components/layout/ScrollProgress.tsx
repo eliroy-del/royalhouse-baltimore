@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 /**
- * A thin gold reading line at the very top of the viewport. Decorative —
+ * A thin gold reading line at the very top of the viewport. Decorative , 
  * hidden from assistive tech and skipped entirely when the user prefers
  * reduced motion.
  */

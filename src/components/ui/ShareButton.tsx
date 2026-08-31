@@ -39,7 +39,7 @@ export function ShareButton({
         await navigator.share({ title, text, url: href });
         return;
       } catch {
-        // User dismissed the sheet, or sharing is unavailable — fall through to copy.
+        // User dismissed the sheet, or sharing is unavailable, fall through to copy.
       }
     }
 

@@ -206,7 +206,7 @@ function SearchPanel({ onClose }: { onClose: () => void }) {
               >
                 ask us directly
               </Link>{" "}
-              — a real person will reply.
+             , a real person will reply.
             </p>
           </div>
         )}

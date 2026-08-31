@@ -28,7 +28,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Our Heart",
   description:
-    "Who we are, what we believe and why Royalhouse Baltimore exists — our mission, vision, values, beliefs and commitment to the city of Baltimore.",
+    "Who we are, what we believe and why Royalhouse Baltimore exists: our mission, vision, values, beliefs and commitment to the city of Baltimore.",
   path: "/our-heart",
   image: images.heroWorship.src,
 });
@@ -214,7 +214,7 @@ export default function OurHeartPage() {
           <SectionHeading
             eyebrow="What We Believe"
             title="The convictions underneath everything."
-            lede="Historic Christian faith, held with conviction and explained without jargon. If you want to go deeper on any of these, ask us — we would love the conversation."
+            lede="Historic Christian faith, held with conviction and explained without jargon. If you want to go deeper on any of these, ask us, we would love the conversation."
           />
 
           <Stagger className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -246,7 +246,7 @@ export default function OurHeartPage() {
               <SectionHeading
                 eyebrow="Our Story"
                 title="How this church came to Baltimore."
-                lede="Royalhouse Baltimore is a local expression of a global family — planted here to stay, to serve and to grow with the city."
+                lede="Royalhouse Baltimore is a local expression of a global family, planted here to stay, to serve and to grow with the city."
               />
               <Reveal delay={0.16}>
                 <div className="relative mt-6 aspect-[4/3] overflow-hidden rounded-media bg-navy-900">

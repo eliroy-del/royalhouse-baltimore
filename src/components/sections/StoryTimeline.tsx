@@ -23,7 +23,7 @@ export function StoryTimeline({
         className={className}
         icon="sunrise"
         title="Our story is still being written down"
-        description="The dates, the first gathering, the people who prayed this church into being — our leadership is putting it all on record so we can tell it properly rather than approximately."
+        description="The dates, the first gathering, the people who prayed this church into being, our leadership is putting it all on record so we can tell it properly rather than approximately."
         action={
           <Button asChild variant="outline">
             <Link href="/contact">Ask us about our history</Link>

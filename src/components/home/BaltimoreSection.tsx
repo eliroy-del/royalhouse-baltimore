@@ -40,7 +40,7 @@ export function BaltimoreSection() {
             <Reveal delay={0.12}>
               <p className="mt-3 text-[0.9375rem] leading-relaxed text-navy-900/70">
                 Royalhouse Baltimore belongs to a global family of churches, and to one very
-                particular set of streets. We are here for the long haul — in the rowhouses and the
+                particular set of streets. We are here for the long haul: in the rowhouses and the
                 high-rises, the schools and the shift work, the block parties and the hard weeks.
               </p>
             </Reveal>

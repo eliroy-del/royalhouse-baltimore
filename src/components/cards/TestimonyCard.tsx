@@ -70,7 +70,7 @@ export function TestimonyCard({ testimony, tone = "light", className }: Testimon
               tone === "dark" ? "bg-white/10 text-gold-300" : "bg-navy-900/[0.06] text-navy-800",
             )}
           >
-            {testimony.anonymous ? "—" : initialsOf(testimony.name)}
+            {testimony.anonymous ? ", " : initialsOf(testimony.name)}
           </span>
         )}
 

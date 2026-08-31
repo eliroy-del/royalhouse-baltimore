@@ -1,7 +1,7 @@
 import type { Address, GivingFund, GivingProvider, ServiceTime, SocialLinks } from "@/types";
 
 /* ============================================================
-   ROYALHOUSE BALTIMORE — CHURCH CONFIGURATION
+   ROYALHOUSE BALTIMORE, CHURCH CONFIGURATION
    ------------------------------------------------------------
    This file is the single source of truth for *factual* church
    information. Nothing here is invented.
@@ -13,13 +13,13 @@ import type { Address, GivingFund, GivingProvider, ServiceTime, SocialLinks } fr
    until the church supplies the real details.
 
    To go live, populate:
-     1. address        — street, ZIP, map coordinates
-     2. serviceTimes   — day / time / label for each gathering
-     3. contact        — phone, email, office hours
-     4. social         — public profile URLs
-     5. giving         — provider + fund links
-     6. livestream     — channel + embed URL
-     7. leadership     — see src/content/leaders.ts
+     1. address       , street, ZIP, map coordinates
+     2. serviceTimes  , day / time / label for each gathering
+     3. contact       , phone, email, office hours
+     4. social        , public profile URLs
+     5. giving        , provider + fund links
+     6. livestream    , channel + embed URL
+     7. leadership    , see src/content/leaders.ts
    ============================================================ */
 
 const PENDING = "" as const;
@@ -79,7 +79,7 @@ export const churchConfig: ChurchConfig = {
   regionCode: "MD",
   tagline: "A place to encounter God, grow in faith and find your family.",
   statement:
-    "Royalhouse Baltimore is a Spirit-filled family of believers in Baltimore, Maryland — gathering to worship Jesus, grow together in the Word and serve the city we call home.",
+    "Royalhouse Baltimore is a Spirit-filled family of believers in Baltimore, Maryland, gathering to worship Jesus, grow together in the Word and serve the city we call home.",
 
   address: {
     line1: "5411 Old Frederick Rd",
@@ -98,7 +98,7 @@ export const churchConfig: ChurchConfig = {
   contact: {
     phone: PENDING, // TODO
     email: PENDING, // TODO
-    prayerEmail: PENDING, // TODO — falls back to `email`
+    prayerEmail: PENDING, // TODO, falls back to `email`
     officeHours: [], // TODO: e.g. ["Tuesday – Friday, 10:00 AM – 4:00 PM"]
   },
 
@@ -142,7 +142,7 @@ export const churchConfig: ChurchConfig = {
         id: "community",
         name: "Community Impact",
         description:
-          "Practical love for our neighborhoods — food, families, mentoring and city partnerships.",
+          "Practical love for our neighborhoods, food, families, mentoring and city partnerships.",
         url: PENDING,
       },
     ],
@@ -160,7 +160,7 @@ export const churchConfig: ChurchConfig = {
   visit: {
     parking: PENDING, // TODO: on-site / street / lot details
     arrival:
-      "Head for the main entrance and look for a member of our welcome team — they will be wearing a Royalhouse badge and will walk you to your seat, check your children in and answer anything you need.",
+      "Head for the main entrance and look for a member of our welcome team. They will be wearing a Royalhouse badge and will walk you to your seat, check your children in and answer anything you need.",
     dressCode:
       "Come exactly as you are. You will see suits and sneakers, African print and jeans, and everything in between. Nobody is checking what you wear.",
     serviceLength: PENDING, // TODO: e.g. "About 90 minutes"

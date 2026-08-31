@@ -49,7 +49,7 @@ export const metadata: Metadata = {
         url: siteConfig.ogImage,
         width: 2000,
         height: 1125,
-        alt: `${siteConfig.name} — a church in Baltimore, Maryland`,
+        alt: `${siteConfig.name}: a church in Baltimore, Maryland`,
       },
     ],
   },

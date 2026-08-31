@@ -20,7 +20,7 @@ export async function MinistriesPreview() {
           chapter="07"
           eyebrow="Find Your People"
           title="A church this size is only ever as warm as its smaller rooms."
-          lede="Sunday is where we gather. Ministries and groups are where you are actually known — by name, by story, by the thing you are praying about this week."
+          lede="Sunday is where we gather. Ministries and groups are where you are actually known, by name, by story, by the thing you are praying about this week."
           actions={
             <Button asChild size="lg">
               <Link href="/ministries">

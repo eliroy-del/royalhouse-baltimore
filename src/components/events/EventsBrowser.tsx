@@ -69,7 +69,7 @@ export function EventsBrowser({ events, categories }: EventsBrowserProps) {
           className="mt-6"
           icon="calendar"
           title="Nothing in this category yet"
-          description="Try another category, or check back soon — our calendar is updated every week."
+          description="Try another category, or check back soon. Our calendar is updated every week."
         />
       )}
     </div>

@@ -10,7 +10,7 @@ import { ServiceCard } from "@/components/sections/ServiceCard";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Royalhouse Baltimore — A Church in Baltimore, Maryland",
+  title: "Royalhouse Baltimore: A Church in Baltimore, Maryland",
   description:
     "A Spirit-filled church family in Baltimore, Maryland. Come as you are to worship Jesus, grow in faith and find your people. Plan your visit, watch live or request prayer.",
   path: "/",

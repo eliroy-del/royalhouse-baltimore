@@ -11,7 +11,7 @@ import { images, navyBlurDataURL } from "@/config/images";
 const assurances = [
   "Read only by our pastoral prayer team",
   "Never published, never shared, never posted",
-  "Prayed over within the week — every single one",
+  "Prayed over within the week, every single one",
 ];
 
 export function PrayerInvite() {
@@ -38,7 +38,7 @@ export function PrayerInvite() {
             <Reveal delay={0.1}>
               <p className="mt-3 max-w-xl text-[0.9375rem] leading-relaxed text-white/70 sm:text-base">
                 You do not have to be a member, a believer, or anywhere near sure of what you think
-                about God. If you are carrying something heavy, send it to us. We will pray — with
+                about God. If you are carrying something heavy, send it to us. We will pray, with
                 complete confidence and no follow-up you have not asked for.
               </p>
             </Reveal>

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ============================================================
-   ROYALHOUSE BALTIMORE — DESIGN SYSTEM
+   ROYALHOUSE BALTIMORE: DESIGN SYSTEM
    Single source of truth for color, type, space, radius,
    shadow, easing and motion. Change values here, not in
    components.
@@ -116,7 +116,7 @@
   }
 }
 
-/* Hero text entrance — CSS-only so the first screen ships no JavaScript */
+/* Hero text entrance: CSS-only so the first screen ships no JavaScript */
 @keyframes rise-in {
   from {
     opacity: 0;
@@ -140,7 +140,7 @@
   }
 }
 
-/* Radix Accordion — animates to the measured content height */
+/* Radix Accordion: animates to the measured content height */
 @keyframes accordion-down {
   from {
     height: 0;
@@ -260,7 +260,7 @@
 }
 
 /* ============================================================
-   REDUCED MOTION — honor the user's OS preference
+   REDUCED MOTION: honor the user's OS preference
    ============================================================ */
 
 @media (prefers-reduced-motion: reduce) {
@@ -309,21 +309,12 @@
   font-variant-numeric: lining-nums tabular-nums;
 }
 
-/* The signature Royalhouse arch — a quiet nod to church architecture */
+/* The signature Royalhouse arch: a quiet nod to church architecture */
 @utility mask-arch {
   border-top-left-radius: var(--radius-arch);
   border-top-right-radius: var(--radius-arch);
   border-bottom-left-radius: var(--radius-media);
   border-bottom-right-radius: var(--radius-media);
-}
-
-/* Hairline gold rule */
-@utility rule-gold {
-  background-image: linear-gradient(
-    to right,
-    var(--color-gold-500),
-    color-mix(in oklab, var(--color-gold-500) 20%, transparent)
-  );
 }
 
 /* Cinematic scrim for text over photography */

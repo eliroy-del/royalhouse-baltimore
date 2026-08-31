@@ -26,7 +26,7 @@ export function MobileNav() {
 
   /**
    * The sheet stores the route it was opened on rather than a boolean, so any
-   * completed navigation — including back/forward — closes it without an effect.
+   * completed navigation, including back/forward, closes it without an effect.
    */
   const [openedOn, setOpenedOn] = useState<string | null>(null);
   const open = openedOn === pathname;

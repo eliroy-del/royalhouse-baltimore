@@ -31,7 +31,7 @@ interface LogoProps {
   tone?: LogoTone;
   size?: LogoSize;
   className?: string;
-  /** Preload the mark — true in the header, false in the footer. */
+  /** Preload the mark, true in the header, false in the footer. */
   preload?: boolean;
 }
 
@@ -88,7 +88,7 @@ export function Logo({ tone = "light", size = "md", className, preload = false }
   );
 }
 
-/** The logo wrapped as a home link — used in the header and footer. */
+/** The logo wrapped as a home link, used in the header and footer. */
 export function LogoLink({
   tone = "light",
   size = "md",
@@ -99,7 +99,7 @@ export function LogoLink({
   return (
     <Link
       href="/"
-      aria-label={`${brandConfig.name} — home`}
+      aria-label={`${brandConfig.name}, home`}
       onClick={onNavigate}
       className={cn(
         "inline-flex shrink-0 items-center rounded-md transition-opacity duration-300 hover:opacity-90",

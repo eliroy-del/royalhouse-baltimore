@@ -6,7 +6,7 @@ import type { ChurchEvent, Sermon } from "@/types";
 
 /* ============================================================
    STRUCTURED DATA
-   Only facts we actually have are emitted — no placeholder
+   Only facts we actually have are emitted; no placeholder
    addresses or phone numbers leak into schema.org output.
    ============================================================ */
 
@@ -53,7 +53,7 @@ export function churchSchema(): Json {
     "@type": "Church",
     "@id": `${siteUrl}/#church`,
     name: churchConfig.name,
-    alternateName: `${churchConfig.name} — ${churchConfig.network}`,
+    alternateName: `${churchConfig.name}: ${churchConfig.network}`,
     url: siteUrl,
     description: churchConfig.statement,
     slogan: churchConfig.tagline,

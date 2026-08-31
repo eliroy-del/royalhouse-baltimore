@@ -11,7 +11,7 @@ export async function POST(request: Request) {
     scope: "contact",
     limit: 5,
     successMessage:
-      "Thank you — your message is with our team. We usually reply within two working days.",
+      "Thank you, your message is with our team. We usually reply within two working days.",
     deliver: (data) => {
       // TODO: route by `reason` to the right inbox (office, pastoral care, media, giving).
       logSubmission("contact", {

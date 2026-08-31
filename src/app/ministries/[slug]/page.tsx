@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   return pageMetadata({
     title: `${ministry.name} Ministry`,
-    description: `${ministry.tagline} — ${ministry.description[0] ?? ""}`.slice(0, 200),
+    description: `${ministry.tagline}: ${ministry.description[0] ?? ""}`.slice(0, 200),
     path: `/ministries/${ministry.slug}`,
     image: ministry.image,
   });
@@ -65,7 +65,7 @@ export default async function MinistryDetailPage({
       label: "When it meets",
       value: isSupplied(ministry.meetingTime)
         ? ministry.meetingTime
-        : "Meeting times are confirmed each season — ask us and we will tell you exactly when to come.",
+        : "Meeting times are confirmed each season, ask us and we will tell you exactly when to come.",
     },
     {
       icon: "map-pin" as const,
@@ -79,7 +79,7 @@ export default async function MinistryDetailPage({
       label: "Who leads it",
       value: isSupplied(ministry.leader)
         ? ministry.leader
-        : "Led by one of our ministry leaders — we will introduce you personally.",
+        : "Led by one of our ministry leaders, we will introduce you personally.",
     },
   ];
 

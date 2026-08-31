@@ -2,14 +2,14 @@ import { images } from "@/config/images";
 import type { Testimony } from "@/types";
 
 /* ============================================================
-   TESTIMONIES — SAMPLE CONTENT
+   TESTIMONIES, SAMPLE CONTENT
    ------------------------------------------------------------
    ⚠️ These are illustrative placeholders written to show the
    design and tone, using stock portraits. They are NOT real
    accounts from real members. Delete this array and replace it
    with moderated, permission-granted testimonies before launch.
 
-   Nothing renders unless `approved` is true — see
+   Nothing renders unless `approved` is true, see
    `getTestimonies()` in src/lib/content.ts. Submissions from the
    public form are never published automatically.
    ============================================================ */
@@ -42,7 +42,7 @@ export const testimonies: Testimony[] = [
     name: "Sample Testimony",
     photo: images.portrait2.src,
     quote:
-      "I asked for prayer on a Wednesday night, expecting nothing. By the end of the month the thing I was terrified of had been dealt with — and I had a church.",
+      "I asked for prayer on a Wednesday night, expecting nothing. By the end of the month the thing I was terrified of had been dealt with, and I had a church.",
     content: [
       "I was carrying something I had never said out loud. Writing it in a prayer request felt safer than saying it to a person.",
       "Somebody prayed. Somebody followed up. Nobody gossiped. That combination changed what I believed about God and about church.",

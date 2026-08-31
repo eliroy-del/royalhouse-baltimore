@@ -28,16 +28,12 @@ export default function NotFound() {
       <div aria-hidden="true" className="absolute inset-0 -z-10 bg-navy-950/80" />
 
       <Container className="relative text-center">
-        <p className="flex items-center justify-center gap-3 eyebrow text-gold-300">
-          <span aria-hidden="true" className="h-px w-8 bg-gold-500/70" />
-          404
-          <span aria-hidden="true" className="h-px w-8 bg-gold-500/70" />
-        </p>
+        <p className="eyebrow text-gold-300">404</p>
         <h1 className="mx-auto mt-7 max-w-3xl font-display text-[clamp(2.25rem,5.6vw,4.25rem)] font-light leading-[1.04]">
           Looks like you took a wrong turn.
         </h1>
         <p className="mx-auto mt-6 max-w-xl text-[1.0625rem] leading-relaxed text-white/70">
-          Don&rsquo;t worry — there is still a place for you here. That page has either moved or
+          Don&rsquo;t worry, there is still a place for you here. That page has either moved or
           never existed, but everything else is exactly where you left it.
         </p>
 

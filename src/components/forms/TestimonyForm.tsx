@@ -114,7 +114,7 @@ export function TestimonyForm() {
         <Checkbox
           id="permissionToPublish"
           label="Royalhouse Baltimore may share this story publicly"
-          description="Leave this unchecked and we will keep it entirely private. Either way, a person reads it first — nothing is ever published automatically."
+          description="Leave this unchecked and we will keep it entirely private. Either way, a person reads it first, nothing is ever published automatically."
           {...register("permissionToPublish")}
         />
         <Checkbox

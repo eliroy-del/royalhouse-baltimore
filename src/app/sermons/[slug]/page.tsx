@@ -128,7 +128,7 @@ export default async function SermonDetailPage({ params }: { params: Promise<{ s
                   Something stirred while you were listening?
                 </p>
                 <p className="mt-2 text-[0.875rem] leading-relaxed text-navy-900/70">
-                  Our prayer team would love to pray with you — privately and with no follow-up
+                  Our prayer team would love to pray with you, privately and with no follow-up
                   unless you ask for it.
                 </p>
                 <Button asChild variant="link" size="none" className="mt-4">

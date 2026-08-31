@@ -97,7 +97,7 @@ export async function handleSubmission<T>({
       {
         ok: false,
         message:
-          "We could not deliver that just now. Please try again in a few minutes — or contact the church office directly.",
+          "We could not deliver that just now. Please try again in a few minutes, or contact the church office directly.",
       },
       502,
     );

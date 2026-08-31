@@ -123,7 +123,7 @@ export const testimonySchema = z.object({
   testimony: z
     .string()
     .trim()
-    .min(40, "Tell us the story — at least a few sentences")
+    .min(40, "Tell us the story, at least a few sentences")
     .max(6000, "Please keep it under 6000 characters"),
   /** Explicit permission is required before anything is ever published. */
   permissionToPublish: z.boolean().optional().default(false),

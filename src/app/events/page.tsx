@@ -18,7 +18,7 @@ import type { EventCategory } from "@/types";
 export const metadata = pageMetadata({
   title: "Events",
   description:
-    "What is happening at Royalhouse Baltimore — Sunday gatherings, midweek prayer, youth nights, conferences and community outreach across Baltimore.",
+    "What is happening at Royalhouse Baltimore: Sunday gatherings, midweek prayer, youth nights, conferences and community outreach across Baltimore.",
   path: "/events",
   image: images.eventConference.src,
 });
@@ -91,7 +91,7 @@ export default async function EventsPage() {
               <EmptyState
                 icon="calendar"
                 title="The calendar is being set"
-                description="Our next season of gatherings is being confirmed. Sunday worship continues as normal — come and join us."
+                description="Our next season of gatherings is being confirmed. Sunday worship continues as normal. Come and join us."
                 action={
                   <Button asChild>
                     <Link href="/plan-a-visit">Plan your visit</Link>

@@ -97,15 +97,12 @@ export default async function WatchLivePage() {
             </ol>
           </nav>
 
-          <p className="flex items-center gap-3 eyebrow text-gold-300">
-            <span aria-hidden="true" className="h-px w-8 rule-gold" />
-            Online Church
-          </p>
+          <p className="eyebrow text-gold-300">Online Church</p>
           <h1 className="mt-3 max-w-3xl font-display text-[clamp(1.75rem,4vw,2.5rem)] font-light leading-[1.02] tracking-[-0.02em]">
             Worship with us <em className="not-italic text-gold-300">online</em>.
           </h1>
           <p className="mt-3 max-w-2xl text-[0.875rem] leading-relaxed text-white/75 sm:text-[0.9375rem]">
-            Traveling, unwell, working, or simply not ready to walk into a building yet — you are
+            Traveling, unwell, working, or simply not ready to walk into a building yet? You are
             still part of this. Join us live and worship from wherever you are.
           </p>
 
@@ -117,11 +114,6 @@ export default async function WatchLivePage() {
             />
           </div>
         </Container>
-
-        <span
-          aria-hidden="true"
-          className="absolute inset-x-0 bottom-0 h-px rule-gold opacity-40"
-        />
       </section>
 
       {/* ------------------------------- The stream ------------------------------ */}
@@ -134,7 +126,7 @@ export default async function WatchLivePage() {
                 title="Royalhouse Baltimore live stream"
                 poster={images.heroWorship}
                 fallbackTitle="Our stream goes live here"
-                fallbackMessage="Our live stream channel is being set up. As soon as it is live, the player will appear on this page every Sunday — and we will let you know."
+                fallbackMessage="Our live stream channel is being set up. As soon as it is live, the player will appear on this page every Sunday, and we will let you know."
               />
 
               <div className="mt-8 flex flex-wrap items-center gap-3">

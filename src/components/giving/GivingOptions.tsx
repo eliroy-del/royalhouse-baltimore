@@ -39,7 +39,7 @@ export function GivingOptions() {
       icon: "church" as const,
       title: "Give in person",
       description:
-        "An offering is received as part of our Sunday worship. If you are visiting for the first time, please let it pass you by — this is for people who call this church home.",
+        "An offering is received as part of our Sunday worship. If you are visiting for the first time, please let it pass you by, this is for people who call this church home.",
       action: (
         <Button asChild variant="link" size="none">
           <Link href="/plan-a-visit">Join us on Sunday</Link>

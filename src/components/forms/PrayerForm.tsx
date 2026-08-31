@@ -74,7 +74,7 @@ export function PrayerForm() {
         <Field
           id="prayer-name"
           label="Your name"
-          hint="Optional — leave blank to stay anonymous."
+          hint="Optional, leave blank to stay anonymous."
           error={errors.name?.message}
         >
           <Input

@@ -10,8 +10,6 @@ export function Footer() {
 
   return (
     <footer className="relative overflow-hidden bg-navy-950 text-white">
-      {/* Gold hairline and a soft glow so the footer reads as a destination, not an afterthought */}
-      <span aria-hidden="true" className="absolute inset-x-0 top-0 h-px rule-gold" />
       <span
         aria-hidden="true"
         className="pointer-events-none absolute -right-40 -top-40 size-[32rem] rounded-full bg-[radial-gradient(circle,rgba(201,162,39,0.14),transparent_65%)]"

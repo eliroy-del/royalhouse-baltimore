@@ -25,7 +25,7 @@ export const siteUrl = firstOrigin(
 
 export const siteConfig = {
   name: churchConfig.name,
-  title: `${churchConfig.name} — A Church in Baltimore, Maryland`,
+  title: `${churchConfig.name}: A Church in Baltimore, Maryland`,
   description:
     "Royalhouse Baltimore is a Spirit-filled church in Baltimore, Maryland. Join us on Sunday to worship Jesus, grow in faith and find your family. Plan your visit, watch messages online or request prayer.",
   url: siteUrl,

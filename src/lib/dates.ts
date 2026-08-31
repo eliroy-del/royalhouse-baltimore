@@ -25,7 +25,7 @@ export function formatShortDate(iso: string): string {
   }).format(parse(iso));
 }
 
-/** "June 2026" — used where the exact day adds nothing, e.g. testimonies. */
+/** "June 2026", used where the exact day adds nothing, e.g. testimonies. */
 export function formatMonthYear(iso: string): string {
   return new Intl.DateTimeFormat("en-US", {
     month: "long",

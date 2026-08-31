@@ -1,7 +1,7 @@
 import type { GroupItem, NextStep } from "@/types";
 
 /* ============================================================
-   CONNECT — next steps, groups and serving
+   CONNECT, next steps, groups and serving
    ============================================================ */
 
 export const nextSteps: NextStep[] = [
@@ -55,7 +55,7 @@ export const nextSteps: NextStep[] = [
     id: "membership",
     title: "Become a Member",
     description:
-      "Put down roots on purpose — a short journey through who we are, what we believe and where you fit.",
+      "Put down roots on purpose, a short journey through who we are, what we believe and where you fit.",
     href: "/connect#membership",
     cta: "Learn about membership",
     icon: "church",
@@ -72,7 +72,7 @@ export const nextSteps: NextStep[] = [
     id: "testimony",
     title: "Share Your Testimony",
     description:
-      "God did something. Tell us about it — and help somebody else believe He will do it for them too.",
+      "God did something. Tell us about it, and help somebody else believe He will do it for them too.",
     href: "/testimonies#share",
     cta: "Tell your story",
     icon: "sparkles",
@@ -80,7 +80,7 @@ export const nextSteps: NextStep[] = [
 ];
 
 /**
- * ⚠️ Sample groups. Neighborhoods are indicative only — replace with the
+ * ⚠️ Sample groups. Neighborhoods are indicative only, replace with the
  * church's actual group directory (or connect `getGroups()` to a CMS).
  */
 export const groups: GroupItem[] = [
@@ -168,6 +168,6 @@ export const membershipJourney: { step: string; title: string; description: stri
     step: "04",
     title: "Say yes on purpose",
     description:
-      "Walk through our membership conversation — what we believe, how we live and where you fit.",
+      "Walk through our membership conversation, what we believe, how we live and where you fit.",
   },
 ];

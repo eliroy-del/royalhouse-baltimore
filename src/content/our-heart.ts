@@ -1,12 +1,12 @@
 import type { Belief, Pillar, StoryMilestone } from "@/types";
 
 /* ============================================================
-   OUR HEART — pillars, mission, vision, values, beliefs, story
+   OUR HEART, pillars, mission, vision, values, beliefs, story
    ------------------------------------------------------------
    Editable content. The pillars and beliefs below are written in
    the historic language of the Christian faith and are intended
    as a starting point for the Royalhouse Baltimore leadership to
-   review, sharpen and ratify — not as a final theological
+   review, sharpen and ratify, not as a final theological
    statement of this local church.
    ============================================================ */
 
@@ -40,7 +40,7 @@ export const pillars: Pillar[] = [
     eyebrow: "Pillar Four",
     title: "Impact the World",
     description:
-      "We take the love of Christ past our own doors — into Baltimore neighborhoods first, and to the nations alongside the wider Royalhouse family.",
+      "We take the love of Christ past our own doors, into Baltimore neighborhoods first, and to the nations alongside the wider Royalhouse family.",
     icon: "globe",
   },
 ];
@@ -48,10 +48,10 @@ export const pillars: Pillar[] = [
 export const mission = {
   eyebrow: "Our Mission",
   statement:
-    "To know God, love people and transform lives — one Baltimore neighborhood at a time.",
+    "To know God, love people and transform lives, one Baltimore neighborhood at a time.",
   body: [
     "We are not trying to build a crowd. We are trying to build people: men, women and children who know they are loved by God, rooted in Scripture, held by a real community and sent into the city with something to give.",
-    "That means our Sundays are unhurried enough for the Spirit to work, our teaching is plain enough to apply this week, and our doors are wide enough for anyone to walk through — whatever they believe when they arrive.",
+    "That means our Sundays are unhurried enough for the Spirit to work, our teaching is plain enough to apply this week, and our doors are wide enough for anyone to walk through, whatever they believe when they arrive.",
   ],
 };
 
@@ -74,7 +74,7 @@ export const values: { title: string; description: string }[] = [
   {
     title: "Scripture over opinion",
     description:
-      "The Bible sets the agenda — even when it costs us comfort, convenience or culture points.",
+      "The Bible sets the agenda, even when it costs us comfort, convenience or culture points.",
   },
   {
     title: "People over programs",
@@ -105,14 +105,14 @@ export const beliefs: Belief[] = [
     id: "god",
     title: "One God",
     summary:
-      "We believe in one eternal God who exists as Father, Son and Holy Spirit — perfect in love, holiness and power, and personally involved with the people He made.",
+      "We believe in one eternal God who exists as Father, Son and Holy Spirit, perfect in love, holiness and power, and personally involved with the people He made.",
     scripture: "Deuteronomy 6:4; Matthew 28:19",
   },
   {
     id: "scripture",
     title: "The Scriptures",
     summary:
-      "We believe the Bible is God-breathed, trustworthy and sufficient — our final authority for what we believe and how we live.",
+      "We believe the Bible is God-breathed, trustworthy and sufficient, our final authority for what we believe and how we live.",
     scripture: "2 Timothy 3:16–17",
   },
   {
@@ -126,7 +126,7 @@ export const beliefs: Belief[] = [
     id: "salvation",
     title: "Salvation by Grace",
     summary:
-      "We believe salvation is God's gift, received through repentance and faith in Christ alone — never earned, never deserved, always transforming.",
+      "We believe salvation is God's gift, received through repentance and faith in Christ alone, never earned, never deserved, always transforming.",
     scripture: "Ephesians 2:8–9",
   },
   {
@@ -140,7 +140,7 @@ export const beliefs: Belief[] = [
     id: "church",
     title: "The Church",
     summary:
-      "We believe the church is God's family and His plan — a local, visible, committed community, not an optional extra to personal faith.",
+      "We believe the church is God's family and His plan, a local, visible, committed community, not an optional extra to personal faith.",
     scripture: "Ephesians 4:11–16; Hebrews 10:24–25",
   },
   {
@@ -154,13 +154,13 @@ export const beliefs: Belief[] = [
     id: "hope",
     title: "The Hope to Come",
     summary:
-      "We believe Christ will return to make all things new — and that this hope shapes how we live, love and give today.",
+      "We believe Christ will return to make all things new, and that this hope shapes how we live, love and give today.",
     scripture: "Revelation 21:1–5",
   },
 ];
 
 /**
- * ⚠️ AWAITING CHURCH INPUT — our history.
+ * ⚠️ AWAITING CHURCH INPUT, our history.
  * No founding dates, founders or milestones are invented here. Populate this
  * array and the timeline on /our-heart renders automatically; until then the
  * page shows an honest, well-designed invitation in its place.
@@ -175,7 +175,7 @@ export const communityImpact: { title: string; description: string }[] = [
   {
     title: "Neighborhood care",
     description:
-      "Practical help for families on our doorstep — groceries, school supplies and a warm meal shared without a sermon attached.",
+      "Practical help for families on our doorstep, groceries, school supplies and a warm meal shared without a sermon attached.",
   },
   {
     title: "Mentoring the next generation",

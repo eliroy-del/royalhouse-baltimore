@@ -36,7 +36,7 @@ export interface LeadershipSlot {
   responsibility: string;
 }
 
-/** Structural role slots — titles only, no fabricated people. */
+/** Structural role slots, titles only, no fabricated people. */
 export const leadershipSlots: LeadershipSlot[] = [
   {
     id: "lead-pastor",

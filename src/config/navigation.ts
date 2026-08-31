@@ -34,7 +34,7 @@ export const primaryNav: NavItem[] = [
       {
         label: "What to Expect",
         href: "/plan-a-visit#expect",
-        description: "Worship, teaching, prayer and people — start to finish.",
+        description: "Worship, teaching, prayer and people from start to finish.",
         icon: "compass",
       },
       {
@@ -89,7 +89,7 @@ export const primaryNav: NavItem[] = [
       {
         label: "Request Prayer",
         href: "/prayer",
-        description: "Our team will pray with you this week — in confidence.",
+        description: "Our team will pray with you this week, in confidence.",
         icon: "hands-praying",
       },
       {

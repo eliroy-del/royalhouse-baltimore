@@ -42,7 +42,7 @@ export default async function TestimoniesPage() {
             Look what <em className="not-italic text-gold-300">God has done</em>.
           </>
         }
-        lede="Not highlight reels. Ordinary people from this church telling the truth about what changed — and what is still changing."
+        lede="Not highlight reels. Ordinary people from this church telling the truth about what changed, and what is still changing."
         image={images.baptism}
         objectPosition="50% 40%"
         breadcrumb={[{ label: "Testimonies" }]}
@@ -96,7 +96,7 @@ export default async function TestimoniesPage() {
               <SectionHeading
                 eyebrow="Share Your Testimony"
                 title="God did something. Tell us about it."
-                lede="Your story might be exactly what convinces somebody else that God will do it for them too. You do not have to be a writer — plain words are perfect."
+                lede="Your story might be exactly what convinces somebody else that God will do it for them too. You do not have to be a writer, plain words are perfect."
               />
 
               <div className="mt-6 rounded-media border border-gold-500/25 bg-gold-100/40 p-5">
@@ -106,7 +106,7 @@ export default async function TestimoniesPage() {
                 </p>
                 <ul className="mt-4 flex flex-col gap-3 text-[0.875rem] leading-relaxed text-navy-900/72">
                   {[
-                    "Nothing is ever published automatically — a person reads it first.",
+                    "Nothing is ever published automatically, a person reads it first.",
                     "We only publish with your explicit permission, and we will contact you before we do.",
                     "You can ask to stay anonymous, and we will honor it.",
                     "We edit only for length and clarity, never for meaning.",
