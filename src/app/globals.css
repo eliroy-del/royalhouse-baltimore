@@ -1,0 +1,377 @@
+@import "tailwindcss";
+
+/* ============================================================
+   ROYALHOUSE BALTIMORE — DESIGN SYSTEM
+   Single source of truth for color, type, space, radius,
+   shadow, easing and motion. Change values here, not in
+   components.
+   ============================================================ */
+
+@theme {
+  /* ---------- Typography ---------- */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-cormorant), ui-serif, "Iowan Old Style", Georgia, serif;
+
+  /* ---------- Brand: Royal Navy ---------- */
+  --color-navy-950: #07111f;
+  --color-navy-900: #071b3a;
+  --color-navy-800: #0b2f5b;
+  --color-navy-700: #14457f;
+  --color-navy-600: #275e9e;
+  --color-navy-200: #c3d3e6;
+  --color-navy-100: #e4ecf5;
+
+  /* ---------- Brand: Royal Gold ----------
+     gold-800 is the accessible text weight of the brand gold: it clears
+     WCAG AA (4.5:1) on white, cream, mist and gold-100. Use gold-500/400/300
+     for fills, rules and icons; use gold-800 whenever gold carries small text. */
+  --color-gold-800: #715a13;
+  --color-gold-700: #8c6f18;
+  --color-gold-600: #a8871f;
+  --color-gold-500: #c9a227;
+  --color-gold-400: #d8b545;
+  --color-gold-300: #e5c766;
+  --color-gold-200: #efdca3;
+  --color-gold-100: #f7eed6;
+
+  /* ---------- Neutrals ---------- */
+  --color-ink: #07111f;
+  --color-cream: #faf9f6;
+  --color-mist: #f5f7fa;
+  --color-muted: #6b7280;
+  --color-line: #e2e6ec;
+
+  /* ---------- Radius ---------- */
+  --radius-card: 0.875rem;
+  --radius-media: 1.25rem;
+  --radius-arch: 14rem;
+
+  /* ---------- Elevation ---------- */
+  --shadow-subtle: 0 1px 2px rgb(7 17 31 / 0.04), 0 1px 3px rgb(7 17 31 / 0.06);
+  --shadow-elevate: 0 1px 2px rgb(7 17 31 / 0.04), 0 14px 34px -14px rgb(7 17 31 / 0.18);
+  --shadow-float: 0 2px 4px rgb(7 17 31 / 0.04), 0 28px 64px -24px rgb(7 17 31 / 0.3);
+  --shadow-ring-gold: 0 0 0 1px rgb(201 162 39 / 0.35);
+
+  /* ---------- Easing ---------- */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-soft: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* ---------- Motion ---------- */
+  --animate-slow-zoom: slow-zoom 24s var(--ease-out-expo) forwards;
+  --animate-drift: drift 14s ease-in-out infinite alternate;
+  --animate-pulse-live: pulse-live 2s ease-in-out infinite;
+  --animate-marquee: marquee 45s linear infinite;
+  --animate-loading-sweep: loading-sweep 1.5s var(--ease-in-out-soft) infinite;
+
+  /* ---------- Layout ---------- */
+  --container-page: 84rem; /* 1344px content ceiling */
+}
+
+@keyframes slow-zoom {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes drift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -14px, 0);
+  }
+}
+
+@keyframes pulse-live {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(0.82);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Thin gold hairline that sweeps across the route loading state */
+@keyframes loading-sweep {
+  from {
+    transform: translateX(-110%);
+  }
+  to {
+    transform: translateX(320%);
+  }
+}
+
+/* Hero text entrance — CSS-only so the first screen ships no JavaScript */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes scroll-cue {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: 1;
+  }
+}
+
+/* Radix Accordion — animates to the measured content height */
+@keyframes accordion-down {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+/* Navigation dropdown panel */
+@keyframes nav-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes nav-panel-out {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.99);
+  }
+}
+
+/* ============================================================
+   BASE LAYER
+   ============================================================ */
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    border-color: var(--color-line);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    /* Offset anchor targets for the sticky header */
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-feature-settings: "cv11", "ss01";
+    font-variation-settings: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: var(--color-gold-200);
+    color: var(--color-navy-900);
+  }
+
+  /* Visible, brand-consistent focus for keyboard users only */
+  :focus-visible {
+    outline: 2px solid var(--color-gold-500);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Display type wants tighter tracking + optical leading */
+  .font-display {
+    font-feature-settings: "liga", "dlig";
+    letter-spacing: -0.015em;
+  }
+
+  input,
+  textarea,
+  select,
+  button {
+    font: inherit;
+    color: inherit;
+  }
+
+  /* Remove the iOS tap highlight without removing focus affordance */
+  a,
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* ============================================================
+   REDUCED MOTION — honor the user's OS preference
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================
+   CUSTOM UTILITIES
+   ============================================================ */
+
+/* Small-caps editorial label used above section headings */
+@utility eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  /* Loose enough that a wrapped eyebrow (long ministry audiences, series
+     names) still reads as two clean lines rather than a cramped block. */
+  line-height: 1.4;
+}
+
+/* Display figures for statistics and countdowns. Cormorant defaults to
+   old-style numerals, where a lone "1" is easily misread as a capital I, so
+   figures that carry meaning are set lining and tabular. */
+@utility stat-figure {
+  font-family: var(--font-display);
+  font-feature-settings: "liga", "dlig";
+  letter-spacing: -0.015em;
+  font-size: 2.25rem;
+  line-height: 1;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+@utility figures-lining {
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+/* The signature Royalhouse arch — a quiet nod to church architecture */
+@utility mask-arch {
+  border-top-left-radius: var(--radius-arch);
+  border-top-right-radius: var(--radius-arch);
+  border-bottom-left-radius: var(--radius-media);
+  border-bottom-right-radius: var(--radius-media);
+}
+
+/* Hairline gold rule */
+@utility rule-gold {
+  background-image: linear-gradient(
+    to right,
+    var(--color-gold-500),
+    color-mix(in oklab, var(--color-gold-500) 20%, transparent)
+  );
+}
+
+/* Cinematic scrim for text over photography */
+@utility scrim-navy {
+  background-image:
+    linear-gradient(
+      to top,
+      color-mix(in oklab, var(--color-navy-950) 92%, transparent) 0%,
+      color-mix(in oklab, var(--color-navy-950) 62%, transparent) 42%,
+      color-mix(in oklab, var(--color-navy-950) 34%, transparent) 100%
+    ),
+    linear-gradient(to right, color-mix(in oklab, var(--color-navy-950) 72%, transparent), transparent 78%);
+}
+
+@utility scrim-soft {
+  background-image: linear-gradient(
+    to top,
+    color-mix(in oklab, var(--color-navy-950) 86%, transparent),
+    color-mix(in oklab, var(--color-navy-950) 12%, transparent) 70%,
+    transparent
+  );
+}
+
+/* Fine noise/grain to keep large navy fields from banding */
+@utility texture-grain {
+  position: relative;
+}
+
+@utility rise {
+  animation: rise-in 0.9s var(--ease-out-expo) both;
+}
+
+@utility scroll-cue {
+  animation: scroll-cue 2.4s ease-in-out infinite;
+}
+
+@utility nav-panel-enter {
+  animation: nav-panel-in 0.3s var(--ease-out-expo);
+}
+
+@utility nav-panel-exit {
+  animation: nav-panel-out 0.18s ease-in forwards;
+}
+
+@utility hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
