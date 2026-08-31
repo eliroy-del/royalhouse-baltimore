@@ -7,7 +7,6 @@ import { LatestMessage } from "@/components/home/LatestMessage";
 import { MinistriesPreview } from "@/components/home/MinistriesPreview";
 import { OurHeartSection } from "@/components/home/OurHeartSection";
 import { PrayerInvite } from "@/components/home/PrayerInvite";
-import { TestimoniesPreview } from "@/components/home/TestimoniesPreview";
 import { ServiceCard } from "@/components/sections/ServiceCard";
 import { pageMetadata } from "@/lib/seo";
 
@@ -33,7 +32,6 @@ export default function HomePage() {
       <LatestMessage />
       <MinistriesPreview />
       <BaltimoreSection />
-      <TestimoniesPreview />
       <PrayerInvite />
       <GivingInvite />
     </>
