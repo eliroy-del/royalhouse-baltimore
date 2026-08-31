@@ -111,16 +111,14 @@ export default function ContactPage() {
       />
 
       <PageHero
-        eyebrow="Contact Us"
         title={
           <>
             We&rsquo;d love to <em className="not-italic text-gold-300">hear from you</em>.
           </>
         }
-        lede="Questions, prayer, pastoral care, practical details, or something you would rather say privately — there is a person on the other end of every one of these."
         image={images.welcomeLobby}
         objectPosition="40% 45%"
-        breadcrumb={[{ label: "Contact" }]}
+        size="lg"
       />
 
       <Section tone="cream" spacing="md">

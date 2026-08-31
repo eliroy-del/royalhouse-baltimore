@@ -6,7 +6,7 @@ import { navyBlurDataURL } from "@/config/images";
 import { cn } from "@/lib/utils";
 
 interface PageHeroProps {
-  eyebrow: string;
+  eyebrow?: string;
   title: ReactNode;
   lede?: ReactNode;
   image: { src: string; alt: string };
@@ -17,6 +17,7 @@ interface PageHeroProps {
   size?: "md" | "lg";
   align?: "left" | "center";
   objectPosition?: string;
+  className?: string;
 }
 
 /**
@@ -34,6 +35,7 @@ export function PageHero({
   size = "md",
   align = "left",
   objectPosition = "50% 45%",
+  className,
 }: PageHeroProps) {
   return (
     <section
@@ -42,6 +44,7 @@ export function PageHero({
         size === "lg"
           ? "min-h-[42svh] pb-8 pt-24 sm:pb-10"
           : "min-h-[32svh] pb-6 pt-20 sm:pb-8 lg:min-h-[36svh]",
+        className,
       )}
     >
       <Image
@@ -96,21 +99,24 @@ export function PageHero({
           </nav>
         ) : null}
 
-        <p
-          className={cn(
-            "flex items-center gap-3 eyebrow text-gold-300",
-            align === "center" && "justify-center",
-          )}
-        >
-          <span aria-hidden="true" className="h-px w-8 rule-gold" />
-          {eyebrow}
-        </p>
+        {eyebrow ? (
+          <p
+            className={cn(
+              "flex items-center gap-3 eyebrow text-gold-300",
+              align === "center" && "justify-center",
+            )}
+          >
+            <span aria-hidden="true" className="h-px w-8 rule-gold" />
+            {eyebrow}
+          </p>
+        ) : null}
 
         <h1
           className={cn(
-            "mt-3 font-display font-light leading-[1.02] tracking-[-0.02em]",
+            "font-display font-light leading-[1.02] tracking-[-0.02em]",
+            eyebrow ? "mt-3" : null,
             size === "lg"
-              ? "text-[clamp(1.75rem,4vw,2.75rem)]"
+              ? "text-[clamp(2.25rem,5.5vw,3.75rem)]"
               : "text-[clamp(1.625rem,3.4vw,2.375rem)]",
             align === "center" ? "mx-auto max-w-4xl" : "max-w-3xl",
           )}
