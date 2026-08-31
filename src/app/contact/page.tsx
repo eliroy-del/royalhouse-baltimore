@@ -43,29 +43,29 @@ export default function ContactPage() {
         }
         image={images.welcomeLobby}
         objectPosition="40% 45%"
-        size="lg"
+        size="md"
       />
 
       {/* Form first — the primary action. Details sit beside it. */}
-      <Section tone="cream" spacing="md">
-        <Container>
-          <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,0.85fr)] lg:gap-8">
-            <div className="rounded-media border border-navy-900/[0.08] bg-white p-4 sm:p-5">
-              <h2 className="font-display text-[clamp(1.375rem,2.4vw,1.75rem)] leading-tight text-navy-900">
+      <Section tone="cream" spacing="sm">
+        <Container width="narrow">
+          <div className="grid items-start gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,16rem)] lg:gap-5">
+            <div className="rounded-card border border-navy-900/[0.08] bg-white p-3.5 sm:p-4">
+              <h2 className="font-display text-[clamp(1.25rem,2vw,1.5rem)] leading-tight text-navy-900">
                 Send us a message
               </h2>
-              <p className="mt-1.5 text-[0.8125rem] leading-relaxed text-navy-900/65">
+              <p className="mt-1 text-[0.75rem] leading-relaxed text-navy-900/65">
                 Tell us what it is about and we will get it to the right person.
               </p>
-              <div className="mt-5">
+              <div className="mt-4">
                 <ContactForm />
               </div>
             </div>
 
-            <aside className="flex flex-col gap-4 lg:sticky lg:top-20">
-              <div className="rounded-media border border-navy-900/[0.08] bg-white p-4 sm:p-5">
+            <aside className="rounded-card border border-navy-900/[0.08] bg-white p-3.5 sm:p-4 lg:sticky lg:top-16">
+              <div>
                 <p className="eyebrow text-navy-900/65">Find us</p>
-                <address className="mt-2 not-italic text-[0.9375rem] leading-relaxed text-navy-900/80">
+                <address className="mt-1.5 not-italic text-[0.8125rem] leading-relaxed text-navy-900/80">
                   {lines.map((line) => (
                     <span key={line} className="block">
                       {line}
@@ -73,7 +73,7 @@ export default function ContactPage() {
                   ))}
                 </address>
                 {directions ? (
-                  <Button asChild variant="outline" size="sm" className="mt-4">
+                  <Button asChild variant="outline" size="sm" className="mt-3">
                     <a href={directions} target="_blank" rel="noreferrer noopener">
                       Get Directions
                       <Icon name="arrow-right" className="size-3.5" />
@@ -82,37 +82,37 @@ export default function ContactPage() {
                 ) : null}
               </div>
 
-              <div className="rounded-media border border-navy-900/[0.08] bg-white p-4 sm:p-5">
+              <div className="mt-4 border-t border-navy-900/[0.08] pt-3.5">
                 <p className="eyebrow text-navy-900/65">Email us</p>
                 {churchStatus.hasEmail ? (
                   <a
                     href={`mailto:${churchConfig.contact.email}`}
-                    className="mt-2 block text-[0.9375rem] font-semibold text-navy-900 underline decoration-gold-500/50 underline-offset-4 hover:decoration-gold-500"
+                    className="mt-1.5 block text-[0.8125rem] font-semibold text-navy-900 underline decoration-gold-500/50 underline-offset-4 hover:decoration-gold-500"
                   >
                     {churchConfig.contact.email}
                   </a>
                 ) : (
-                  <p className="mt-2 text-[0.875rem] leading-relaxed text-navy-900/65">
+                  <p className="mt-1.5 text-[0.8125rem] leading-relaxed text-navy-900/65">
                     Use the form and we will reply from our team inbox.
                   </p>
                 )}
               </div>
 
-              <div className="rounded-media border border-navy-900/[0.08] bg-white p-4 sm:p-5">
+              <div className="mt-4 border-t border-navy-900/[0.08] pt-3.5">
                 <p className="eyebrow text-navy-900/65">Follow along</p>
-                <SocialLinks className="mt-3" />
+                <SocialLinks size="sm" className="mt-2.5" />
               </div>
             </aside>
           </div>
         </Container>
       </Section>
 
-      <Section tone="white" spacing="md">
-        <Container>
-          <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
+      <Section tone="white" spacing="sm">
+        <Container width="narrow">
+          <div className="mb-3 flex flex-wrap items-end justify-between gap-2">
             <div>
               <p className="eyebrow text-gold-800">Location</p>
-              <h2 className="mt-2 font-display text-[clamp(1.375rem,2.4vw,1.75rem)] leading-tight text-navy-900">
+              <h2 className="mt-1.5 font-display text-[clamp(1.25rem,2vw,1.5rem)] leading-tight text-navy-900">
                 How to find the building
               </h2>
             </div>
