@@ -6,11 +6,9 @@ import { PageHero } from "@/components/sections/PageHero";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { Icon } from "@/components/ui/Icon";
 import { Section } from "@/components/ui/Section";
 import { churchConfig } from "@/config/church";
 import { images, navyBlurDataURL } from "@/config/images";
-import { churchStatus, locationLine, serviceTimeSummary } from "@/lib/church";
 import { breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
 
@@ -49,42 +47,6 @@ export default function PlanAVisitPage() {
         breadcrumb={[{ label: "Plan a Visit" }]}
         size="lg"
       />
-
-      {/* Service time, address, and quick actions */}
-      <Section tone="cream" spacing="sm">
-        <Container width="narrow" className="text-center">
-          <Reveal>
-            <p className="font-display text-[clamp(1.375rem,2.6vw,1.875rem)] font-light leading-tight text-navy-900">
-              {churchStatus.hasServiceTimes
-                ? serviceTimeSummary()
-                : "Sunday gatherings"}
-            </p>
-            <p className="mt-1.5 text-[0.875rem] leading-relaxed text-navy-900/70">
-              {locationLine()}
-            </p>
-          </Reveal>
-
-          <Reveal delay={0.08}>
-            <div className="mt-5 flex flex-wrap items-center justify-center gap-2.5">
-              <Button asChild variant="gold" size="md">
-                <Link href="#form">
-                  Visiting Form
-                  <Icon name="arrow-right" className="size-3.5" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="md">
-                <Link href="/contact">Contact Us</Link>
-              </Button>
-              <Button asChild variant="outline" size="md">
-                <Link href="/connect">Get Connected</Link>
-              </Button>
-              <Button asChild variant="outline" size="md">
-                <Link href="/sermons">Messages</Link>
-              </Button>
-            </div>
-          </Reveal>
-        </Container>
-      </Section>
 
       {/* Children */}
       <Section tone="white" spacing="sm" id="children">
