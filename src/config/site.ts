@@ -1,9 +1,27 @@
 import { churchConfig } from "./church";
 
-/** Canonical origin. Set NEXT_PUBLIC_SITE_URL in the deployment environment. */
-export const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://royalhousebaltimore.org"
-).replace(/\/$/, "");
+function firstOrigin(...candidates: (string | undefined)[]): string {
+  for (const candidate of candidates) {
+    const value = candidate?.trim().replace(/\/$/, "");
+    if (!value) continue;
+    return /^https?:\/\//i.test(value) ? value : `https://${value}`;
+  }
+  return "https://royalhousebaltimore.org";
+}
+
+/**
+ * Canonical origin for metadata, sitemap and structured data.
+ * Empty Vercel env values are treated as unset (an empty string is not
+ * nullish, and `new URL("")` would crash the build).
+ *
+ * NEXT_PUBLIC_SITE_URL is optional. On Vercel we fall back to the project
+ * production domain, then the deployment URL, then the church placeholder.
+ */
+export const siteUrl = firstOrigin(
+  process.env.NEXT_PUBLIC_SITE_URL,
+  process.env.VERCEL_PROJECT_PRODUCTION_URL,
+  process.env.VERCEL_URL,
+);
 
 export const siteConfig = {
   name: churchConfig.name,
@@ -37,7 +55,7 @@ export const siteConfig = {
 
 /** Analytics is opt-in: nothing loads unless an ID is configured. */
 export const analyticsConfig = {
-  googleAnalyticsId: process.env.NEXT_PUBLIC_GA_ID ?? "",
-  googleTagManagerId: process.env.NEXT_PUBLIC_GTM_ID ?? "",
-  metaPixelId: process.env.NEXT_PUBLIC_META_PIXEL_ID ?? "",
+  googleAnalyticsId: process.env.NEXT_PUBLIC_GA_ID?.trim() ?? "",
+  googleTagManagerId: process.env.NEXT_PUBLIC_GTM_ID?.trim() ?? "",
+  metaPixelId: process.env.NEXT_PUBLIC_META_PIXEL_ID?.trim() ?? "",
 } as const;

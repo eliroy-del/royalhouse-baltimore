@@ -1,0 +1,14 @@
+---
+description: Commit and push to GitHub when a change request is finished
+alwaysApply: true
+---
+
+# Auto-push to GitHub
+
+When the user's requested work is done, commit the relevant files and push `main` to `origin` without waiting to be asked.
+
+- Follow the existing git safety rules (no force push, no config changes, no skipped hooks).
+- Do not commit secrets (`.env`, credentials).
+- Write a short commit message that explains why.
+- Then `git push -u origin HEAD`.
+- If there is nothing to commit, still push if the branch is ahead of origin.

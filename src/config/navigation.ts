@@ -162,37 +162,6 @@ export const primaryNav: NavItem[] = [
       },
     ],
   },
-  {
-    label: "Media",
-    href: "/sermons",
-    intro: "Be encouraged wherever you are.",
-    children: [
-      {
-        label: "Watch Live",
-        href: "/watch-live",
-        description: "Join the gathering online, in real time.",
-        icon: "video",
-      },
-      {
-        label: "Messages",
-        href: "/sermons",
-        description: "Browse every message by series, speaker or topic.",
-        icon: "mic",
-      },
-      {
-        label: "Events",
-        href: "/events",
-        description: "What is happening at Royalhouse Baltimore.",
-        icon: "calendar",
-      },
-      {
-        label: "Worship",
-        href: "/ministries/worship",
-        description: "The sound of our house.",
-        icon: "music",
-      },
-    ],
-  },
   { label: "Give", href: "/give" },
   { label: "Contact", href: "/contact" },
 ];
@@ -245,7 +214,7 @@ export const footerNav: { title: string; links: { label: string; href: string }[
     ],
   },
   {
-    title: "Media & Giving",
+    title: "Watch & Give",
     links: [
       { label: "Watch Live", href: "/watch-live" },
       { label: "Messages", href: "/sermons" },
