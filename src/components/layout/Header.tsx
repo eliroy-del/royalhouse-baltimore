@@ -4,7 +4,6 @@ import Link from "next/link";
 import { LogoLink } from "@/components/brand/Logo";
 import { DesktopNav } from "@/components/navigation/DesktopNav";
 import { MobileNav } from "@/components/navigation/MobileNav";
-import { SearchTrigger } from "@/components/search/SearchOverlay";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Icon } from "@/components/ui/Icon";
@@ -34,7 +33,6 @@ export function Header() {
         <DesktopNav />
 
         <div className="flex items-center gap-2">
-          <SearchTrigger />
           <Button asChild variant="outline-light" size="sm" className="hidden sm:inline-flex">
             <Link href="/give">Give</Link>
           </Button>
