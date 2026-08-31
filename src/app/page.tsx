@@ -1,4 +1,3 @@
-import { BaltimoreSection } from "@/components/home/BaltimoreSection";
 import { EventsPreview } from "@/components/home/EventsPreview";
 import { GivingInvite } from "@/components/home/GivingInvite";
 import { Hero } from "@/components/home/Hero";
@@ -27,7 +26,6 @@ export default function HomePage() {
       <WelcomeSection />
       <EventsPreview />
       <MinistriesPreview />
-      <BaltimoreSection />
       <PrayerInvite />
       <GivingInvite />
     </>
