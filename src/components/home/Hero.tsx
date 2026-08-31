@@ -13,7 +13,7 @@ export function Hero() {
   return (
     // Bottom padding always exceeds the floating service card's negative
     // margin, so the hero's service line is never clipped by it.
-    <section className="relative isolate flex min-h-[56svh] flex-col justify-end overflow-hidden bg-navy-950 pb-10 pt-16 sm:pb-12 sm:pt-20 lg:min-h-[60svh] lg:pb-12 lg:pt-20">
+    <section className="relative isolate flex min-h-[52svh] w-full flex-col justify-end overflow-hidden bg-navy-950 pb-16 pt-16 sm:min-h-[56svh] sm:pb-20 sm:pt-20 lg:min-h-[58svh] lg:pb-24 lg:pt-20">
       {/* Cinematic photography with a slow, single settle, never a loop */}
       <div aria-hidden="true" className="absolute inset-0 -z-10">
         <Image
@@ -86,14 +86,6 @@ export function Hero() {
           </div>
         </div>
       </Container>
-
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 lg:flex"
-      >
-        <span className="eyebrow text-white/60">Scroll</span>
-        <span className="scroll-cue block h-8 w-px bg-gradient-to-b from-gold-400/70 to-transparent" />
-      </div>
     </section>
   );
 }
