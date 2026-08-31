@@ -6,67 +6,44 @@ import { Icon } from "@/components/ui/Icon";
 import { images } from "@/config/images";
 
 /**
- * The first six seconds. Deliberately server-rendered with CSS-only motion:
- * no JavaScript is required for the hero to paint, animate or be read.
+ * Campaign hero: the artwork carries the message, so we keep site copy
+ * off the image and only overlay CTAs on a soft bottom scrim.
  */
 export function Hero() {
   return (
-    // Bottom padding always exceeds the floating service card's negative
-    // margin, so the hero's service line is never clipped by it.
-    <section className="relative isolate flex min-h-[72svh] w-full flex-col justify-end overflow-hidden bg-navy-950 pb-16 pt-20 sm:min-h-[78svh] sm:pb-20 sm:pt-24 lg:min-h-[85svh] lg:pb-24 lg:pt-24">
-      {/* Cinematic photography with a slow, single settle, never a loop */}
-      <div aria-hidden="true" className="absolute inset-0 -z-10">
+    // Aspect tracks the campaign banner; bottom padding clears the floating service card.
+    <section className="relative isolate w-full overflow-hidden bg-navy-950 pb-10 sm:pb-12 lg:pb-14">
+      <div className="relative aspect-[5/2] min-h-[16rem] w-full sm:min-h-[20rem] lg:min-h-[26rem]">
         <Image
-          src={images.heroWorship.src}
-          alt=""
+          src={images.heroCampaign.src}
+          alt={images.heroCampaign.alt}
           fill
           priority
           fetchPriority="high"
           sizes="100vw"
-          quality={82}
-          className="animate-slow-zoom object-cover object-[50%_38%]"
+          quality={90}
+          className="object-cover object-center"
         />
-        {/* Layered navy scrim: keeps AA contrast on every screen size */}
-        <div className="absolute inset-0 bg-navy-950/45" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/72 to-navy-950/25" />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-950/85 via-navy-950/30 to-transparent" />
-      </div>
 
-      {/* Three slow motes of light. Restrained on purpose. */}
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <span className="absolute left-[18%] top-[28%] size-2 rounded-full bg-gold-300/50 blur-[2px] animate-drift" />
-        <span
-          className="absolute left-[62%] top-[42%] size-1.5 rounded-full bg-gold-200/40 blur-[2px] animate-drift"
-          style={{ animationDelay: "3s", animationDuration: "18s" }}
+        {/* Soft overlays: readable CTAs without washing out campaign type */}
+        <div aria-hidden="true" className="absolute inset-0 bg-navy-950/15" />
+        <div
+          aria-hidden="true"
+          className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-navy-950/70 to-transparent sm:h-28"
         />
-        <span
-          className="absolute left-[81%] top-[22%] size-1 rounded-full bg-white/40 blur-[1px] animate-drift"
-          style={{ animationDelay: "6s", animationDuration: "22s" }}
+        <div
+          aria-hidden="true"
+          className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-navy-950/85 via-navy-950/40 to-transparent sm:h-32"
         />
-      </div>
 
-      <Container className="relative">
-        <div className="max-w-[68rem]">
-          <h1
-            className="rise font-display text-[clamp(1.875rem,4.5vw,2.75rem)] font-light leading-[0.98] tracking-[-0.02em] text-white"
-            style={{ animationDelay: "80ms" }}
-          >
-            A place to encounter God,
-            <br className="hidden sm:block" /> grow in faith and{" "}
-            <em className="not-italic text-gold-300">find your family</em>.
-          </h1>
+        <h1 className="sr-only">
+          We Are Not Consumed. Lamentations 3:22. Royalhouse Chapel International — Baltimore.
+        </h1>
 
-          <p
-            className="rise mt-3 max-w-xl text-[0.875rem] leading-relaxed text-white/80 sm:text-[0.9375rem]"
-            style={{ animationDelay: "300ms" }}
-          >
-            Experience the presence of God and the power of His Word with Royalhouse Chapel
-            International - Baltimore
-          </p>
-
+        <Container className="absolute inset-x-0 bottom-0 pb-5 sm:pb-6 lg:pb-7">
           <div
-            className="rise mt-5 flex flex-col gap-2.5 sm:flex-row sm:items-center"
-            style={{ animationDelay: "420ms" }}
+            className="rise flex flex-col gap-2.5 sm:flex-row sm:items-center"
+            style={{ animationDelay: "200ms" }}
           >
             <Button asChild variant="gold" size="lg">
               <Link href="/plan-a-visit">
@@ -81,8 +58,8 @@ export function Hero() {
               <Link href="/give">Give</Link>
             </Button>
           </div>
-        </div>
-      </Container>
+        </Container>
+      </div>
     </section>
   );
 }

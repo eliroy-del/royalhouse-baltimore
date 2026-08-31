@@ -21,6 +21,10 @@ export const images = {
     src: "/images/hero-worship.jpg",
     alt: "A multigenerational congregation standing with hands raised in worship as warm stage light streams over them",
   },
+  heroCampaign: {
+    src: "/images/hero-we-are-not-consumed.jpg",
+    alt: "We Are Not Consumed — Lamentations 3:22. Royalhouse Chapel International 2026 campaign art showing three men standing unharmed in fire with a radiant divine presence behind them",
+  },
   welcomeLobby: {
     src: "/images/welcome-lobby.jpg",
     alt: "A member of the welcome team smiling as she hands a welcome card to a young family in the church foyer",
