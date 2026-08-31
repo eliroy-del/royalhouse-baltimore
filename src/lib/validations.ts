@@ -109,7 +109,6 @@ export const contactSchema = z.object({
     .trim()
     .min(10, "Please give us a little more detail")
     .max(4000, "Please keep it under 4000 characters"),
-  consent: z.literal(true, { message: "Please confirm we can reply to you" }),
   companyWebsite: honeypot,
 });
 

@@ -5,7 +5,7 @@ import { Loader2 } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { ErrorBanner, PrivacyNote, SuccessPanel } from "@/components/forms/FormFeedback";
 import { Button } from "@/components/ui/Button";
-import { Checkbox, Field, Honeypot, Input, Select, Textarea } from "@/components/ui/Field";
+import { Field, Honeypot, Input, Select, Textarea } from "@/components/ui/Field";
 import { Icon } from "@/components/ui/Icon";
 import { useFormPost } from "@/hooks/useFormPost";
 import { contactReasons, contactSchema, type ContactInput } from "@/lib/validations";
@@ -114,20 +114,6 @@ export function ContactForm() {
           {...register("message")}
         />
       </Field>
-
-      <div className="rounded-lg border border-navy-900/[0.08] bg-mist p-3">
-        <Checkbox
-          id="contact-consent"
-          label="I'm happy for Royalhouse Baltimore to reply to me"
-          aria-invalid={errors.consent ? true : undefined}
-          {...register("consent")}
-        />
-        {errors.consent ? (
-          <p role="alert" className="mt-2 text-xs font-medium text-red-700">
-            {errors.consent.message}
-          </p>
-        ) : null}
-      </div>
 
       <div className="flex flex-col gap-2.5">
         <Button type="submit" size="sm" disabled={status === "submitting"} className="self-start">
