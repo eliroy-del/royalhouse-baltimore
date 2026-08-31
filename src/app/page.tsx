@@ -1,5 +1,4 @@
 import { BaltimoreSection } from "@/components/home/BaltimoreSection";
-import { BelongSection } from "@/components/home/BelongSection";
 import { EventsPreview } from "@/components/home/EventsPreview";
 import { GivingInvite } from "@/components/home/GivingInvite";
 import { Hero } from "@/components/home/Hero";
@@ -26,7 +25,6 @@ export default function HomePage() {
     <>
       <Hero />
       <ServiceCard variant="floating" />
-      <BelongSection />
       <OurHeartSection />
       <EventsPreview />
       <LatestMessage />
