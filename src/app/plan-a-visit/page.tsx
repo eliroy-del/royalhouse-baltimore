@@ -55,11 +55,10 @@ export default function PlanAVisitPage() {
             <em className="not-italic text-gold-300">see you</em>.
           </>
         }
-        lede="We'd love to welcome you to our gatherings. Find the answers you need below, and get in touch if you still have questions."
         image={images.welcomeLobby}
         objectPosition="60% 45%"
         breadcrumb={[{ label: "Plan a Visit" }]}
-        size="md"
+        size="lg"
       />
 
       {/* Service time, address, and quick actions */}
