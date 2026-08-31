@@ -71,15 +71,8 @@ export default function PlanAVisitPage() {
                 : "Sunday gatherings"}
             </p>
             <p className="mt-1.5 text-[0.875rem] leading-relaxed text-navy-900/70">
-              {churchStatus.hasServiceTimes
-                ? locationLine()
-                : serviceTimeDetail()}
+              {locationLine()}
             </p>
-            {!churchStatus.hasServiceTimes ? (
-              <p className="mt-1 text-[0.875rem] leading-relaxed text-navy-900/70">
-                {locationLine()}
-              </p>
-            ) : null}
           </Reveal>
 
           <Reveal delay={0.08}>
