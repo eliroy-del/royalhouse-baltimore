@@ -16,7 +16,6 @@ import {
   churchStatus,
   directionsUrl,
   locationLine,
-  serviceTimeDetail,
   serviceTimeSummary,
 } from "@/lib/church";
 import { breadcrumbSchema } from "@/lib/schema";
