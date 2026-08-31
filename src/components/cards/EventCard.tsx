@@ -23,19 +23,19 @@ export function EventCard({ event, variant = "default", className }: EventCardPr
       <Link
         href={href}
         className={cn(
-          "group flex items-center gap-5 rounded-card border border-navy-900/[0.08] bg-white p-4 transition-all duration-500 ease-out-expo hover:-translate-y-0.5 hover:border-gold-500/40 hover:shadow-elevate",
+          "group flex items-center gap-3 rounded-card border border-navy-900/[0.08] bg-white p-3 transition-all duration-500 ease-out-expo hover:-translate-y-0.5 hover:border-gold-500/40 hover:shadow-elevate",
           className,
         )}
       >
-        <span className="flex size-16 shrink-0 flex-col items-center justify-center rounded-xl bg-navy-900 text-white">
-          <span className="eyebrow text-gold-300">{month}</span>
-          <span className="font-display text-2xl leading-none figures-lining">{day}</span>
+        <span className="flex size-12 shrink-0 flex-col items-center justify-center rounded-lg bg-navy-900 text-white">
+          <span className="eyebrow text-[0.5625rem] text-gold-300">{month}</span>
+          <span className="font-display text-xl leading-none figures-lining">{day}</span>
         </span>
         <span className="min-w-0 flex-1">
-          <span className="block text-[0.9375rem] font-semibold text-navy-900 transition-colors group-hover:text-navy-800">
+          <span className="block text-[0.875rem] font-semibold text-navy-900 transition-colors group-hover:text-navy-800">
             {event.title}
           </span>
-          <span className="mt-1 block truncate text-[0.8125rem] text-navy-900/65">
+          <span className="mt-0.5 block truncate text-[0.75rem] text-navy-900/65">
             {event.startTime} · {event.category}
           </span>
         </span>
