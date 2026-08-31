@@ -62,20 +62,20 @@ export function ServiceCard({ variant = "inline", className }: ServiceCardProps)
     <Container
       className={cn(
         "relative w-full",
-        variant === "floating" && "z-20 -mt-10 sm:-mt-12 lg:-mt-14",
+        variant === "floating" && "z-20 -mt-8 sm:-mt-10 lg:-mt-12",
         className,
       )}
     >
-      <Reveal y={16}>
-        <div className="overflow-hidden rounded-media border border-navy-900/[0.07] bg-white shadow-float">
-          <div className="grid lg:grid-cols-[minmax(0,16rem)_1fr]">
-            <div className="relative flex flex-col gap-3 overflow-hidden bg-navy-900 p-4 text-white sm:p-5">
-              <div className="relative -mx-4 -mt-4 aspect-[5/2] overflow-hidden sm:-mx-5 sm:-mt-5">
+      <Reveal y={12}>
+        <div className="overflow-hidden rounded-card border border-navy-900/[0.07] bg-white shadow-float">
+          <div className="grid lg:grid-cols-[minmax(0,14rem)_1fr]">
+            <div className="relative flex flex-col gap-2.5 overflow-hidden bg-navy-900 p-3 text-white sm:p-3.5">
+              <div className="relative -mx-3 -mt-3 aspect-[2.4/1] overflow-hidden sm:-mx-3.5 sm:-mt-3.5">
                 <Image
                   src={images.worshipTeam.src}
                   alt=""
                   fill
-                  sizes="(min-width: 1024px) 16rem, 100vw"
+                  sizes="(min-width: 1024px) 14rem, 100vw"
                   placeholder="blur"
                   blurDataURL={navyBlurDataURL}
                   className="object-cover object-[50%_35%]"
@@ -84,24 +84,24 @@ export function ServiceCard({ variant = "inline", className }: ServiceCardProps)
                   aria-hidden="true"
                   className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/45 to-navy-950/20"
                 />
-                <span className="absolute bottom-2.5 left-4 sm:left-5">
-                  <span className="eyebrow text-gold-300">This Sunday</span>
+                <span className="absolute bottom-1.5 left-3">
+                  <span className="eyebrow text-[0.5625rem] text-gold-300">This Sunday</span>
                 </span>
               </div>
 
               <div className="relative">
-                <p className="font-display text-[clamp(1.25rem,1.8vw,1.5rem)] leading-tight">
+                <p className="font-display text-[1.125rem] leading-tight sm:text-[1.25rem]">
                   Join us this Sunday.
                 </p>
-                <p className="mt-1.5 text-[0.75rem] leading-relaxed text-white/65 sm:text-[0.8125rem]">
+                <p className="mt-1 text-[0.6875rem] leading-snug text-white/65 sm:text-[0.75rem]">
                   Come as you are, arrive whenever you can, and let us take care of the rest.
                 </p>
               </div>
-              <div className="relative mt-auto flex flex-wrap gap-2">
+              <div className="relative flex flex-wrap gap-1.5">
                 <Button asChild variant="gold" size="sm">
                   <Link href="/plan-a-visit">
                     Plan Your Visit
-                    <Icon name="arrow-right" className="size-3.5" />
+                    <Icon name="arrow-right" className="size-3" />
                   </Link>
                 </Button>
                 {directions ? (
@@ -118,19 +118,16 @@ export function ServiceCard({ variant = "inline", className }: ServiceCardProps)
               </div>
             </div>
 
-            <dl className="grid h-full gap-px bg-navy-900/[0.07] sm:grid-cols-2 sm:grid-rows-2">
+            <dl className="grid gap-px bg-navy-900/[0.07] sm:grid-cols-2">
               {details().map((detail) => (
-                <div
-                  key={detail.label}
-                  className="flex flex-col justify-center bg-white p-3.5 sm:p-4"
-                >
-                  <dt className="flex items-center gap-2 eyebrow text-navy-900/65">
-                    <Icon name={detail.icon} className="size-3.5 text-gold-600" />
+                <div key={detail.label} className="bg-white px-3 py-2.5 sm:px-3.5 sm:py-3">
+                  <dt className="flex items-center gap-1.5 eyebrow text-[0.5625rem] text-navy-900/65">
+                    <Icon name={detail.icon} className="size-3 text-gold-600" />
                     {detail.label}
                   </dt>
                   <dd
                     className={cn(
-                      "mt-1.5 text-[0.8125rem] leading-relaxed",
+                      "mt-1 text-[0.75rem] leading-snug",
                       detail.muted ? "text-navy-900/65" : "text-navy-900/80",
                     )}
                   >
