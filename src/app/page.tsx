@@ -6,7 +6,6 @@ import { Hero } from "@/components/home/Hero";
 import { LatestMessage } from "@/components/home/LatestMessage";
 import { MinistriesPreview } from "@/components/home/MinistriesPreview";
 import { OurHeartSection } from "@/components/home/OurHeartSection";
-import { PlanVisitInvite } from "@/components/home/PlanVisitInvite";
 import { PrayerInvite } from "@/components/home/PrayerInvite";
 import { TestimoniesPreview } from "@/components/home/TestimoniesPreview";
 import { ServiceCard } from "@/components/sections/ServiceCard";
@@ -37,7 +36,6 @@ export default function HomePage() {
       <TestimoniesPreview />
       <PrayerInvite />
       <GivingInvite />
-      <PlanVisitInvite />
     </>
   );
 }
