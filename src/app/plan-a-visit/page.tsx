@@ -11,13 +11,7 @@ import { Icon } from "@/components/ui/Icon";
 import { Section } from "@/components/ui/Section";
 import { churchConfig } from "@/config/church";
 import { images, navyBlurDataURL } from "@/config/images";
-import {
-  addressLines,
-  churchStatus,
-  directionsUrl,
-  locationLine,
-  serviceTimeSummary,
-} from "@/lib/church";
+import { churchStatus, locationLine, serviceTimeSummary } from "@/lib/church";
 import { breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
 
@@ -35,9 +29,6 @@ export const metadata = pageMetadata({
  * @see https://www.livingdestiny.org/plan-a-visit
  */
 export default function PlanAVisitPage() {
-  const directions = directionsUrl();
-  const lines = addressLines();
-
   return (
     <>
       <JsonLd
@@ -173,48 +164,15 @@ export default function PlanAVisitPage() {
 
       {/* Visiting form */}
       <Section tone="white" spacing="sm" id="form">
-        <Container>
-          <div className="grid gap-5 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-8">
-            <div>
-              <p className="eyebrow text-gold-800">Visiting Form</p>
-              <h2 className="mt-2 font-display text-[clamp(1.5rem,2.8vw,2rem)] font-light leading-tight text-navy-900">
-                Tell us you&rsquo;re coming.
-              </h2>
-              <p className="mt-3 max-w-md text-[0.9375rem] leading-relaxed text-navy-900/70">
-                A couple of minutes now means we can look out for you, help with kids check-in, and
-                make your first Sunday feel easy.
-              </p>
-
-              <ul className="mt-5 space-y-2.5 text-[0.875rem] leading-snug text-navy-900/75">
-                <li className="flex items-start gap-2.5">
-                  <Icon name="map-pin" className="mt-0.5 size-4 shrink-0 text-gold-600" />
-                  <span>
-                    {lines.map((line) => (
-                      <span key={line} className="block">
-                        {line}
-                      </span>
-                    ))}
-                  </span>
-                </li>
-                {directions ? (
-                  <li>
-                    <a
-                      href={directions}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      className="inline-flex items-center gap-1.5 font-semibold text-navy-900 underline decoration-gold-500/50 underline-offset-4 hover:decoration-gold-500"
-                    >
-                      Get directions
-                      <Icon name="arrow-right" className="size-3.5" />
-                    </a>
-                  </li>
-                ) : null}
-              </ul>
-            </div>
-
-            <div className="rounded-media border border-navy-900/[0.08] bg-cream p-4 sm:p-5">
-              <PlanVisitForm />
-            </div>
+        <Container width="narrow">
+          <div className="mb-4 text-center">
+            <p className="eyebrow text-gold-800">Visiting Form</p>
+            <h2 className="mt-1.5 font-display text-[clamp(1.375rem,2.4vw,1.75rem)] font-light leading-tight text-navy-900">
+              Tell us you&rsquo;re coming.
+            </h2>
+          </div>
+          <div className="rounded-card border border-navy-900/[0.08] bg-cream p-3.5 sm:p-4">
+            <PlanVisitForm />
           </div>
         </Container>
       </Section>

@@ -42,11 +42,12 @@ export function PlanVisitForm() {
         message={message}
         action={
           <>
-            <Button asChild variant="primary">
-              <Link href="/plan-a-visit#expect">See what to expect</Link>
+            <Button asChild variant="primary" size="md">
+              <Link href="/plan-a-visit#children">About kids ministry</Link>
             </Button>
             <Button
               variant="outline"
+              size="md"
               onClick={() => {
                 resetForm();
                 reset();
@@ -64,13 +65,13 @@ export function PlanVisitForm() {
     <form
       noValidate
       onSubmit={handleSubmit((values) => submit(values))}
-      className="relative flex flex-col gap-6"
+      className="relative flex flex-col gap-3.5"
     >
       <Honeypot register={register("companyWebsite")} />
 
       {status === "error" ? <ErrorBanner message={message} /> : null}
 
-      <div className="grid gap-6 sm:grid-cols-2">
+      <div className="grid gap-3 sm:grid-cols-2">
         <Field id="firstName" label="First name" required error={errors.firstName?.message}>
           <Input
             id="firstName"
@@ -91,7 +92,7 @@ export function PlanVisitForm() {
         </Field>
       </div>
 
-      <div className="grid gap-6 sm:grid-cols-2">
+      <div className="grid gap-3 sm:grid-cols-2">
         <Field id="email" label="Email" required error={errors.email?.message}>
           <Input
             id="email"
@@ -103,24 +104,19 @@ export function PlanVisitForm() {
             {...register("email")}
           />
         </Field>
-        <Field
-          id="phone"
-          label="Phone"
-          hint="Optional, only if you would rather we called."
-          error={errors.phone?.message}
-        >
+        <Field id="phone" label="Phone" error={errors.phone?.message}>
           <Input
             id="phone"
             type="tel"
             autoComplete="tel"
             aria-invalid={errors.phone ? true : undefined}
-            aria-describedby={errors.phone ? "phone-error" : "phone-hint"}
+            aria-describedby={errors.phone ? "phone-error" : undefined}
             {...register("phone")}
           />
         </Field>
       </div>
 
-      <div className="grid gap-6 sm:grid-cols-3">
+      <div className="grid gap-3 sm:grid-cols-3">
         <Field id="adults" label="Adults" required error={errors.adults?.message}>
           <Input
             id="adults"
@@ -143,15 +139,7 @@ export function PlanVisitForm() {
             {...register("children")}
           />
         </Field>
-        <Field
-          id="preferredService"
-          label="Preferred service"
-          hint={
-            churchConfig.serviceTimes.length === 0
-              ? "We will confirm times with you."
-              : undefined
-          }
-        >
+        <Field id="preferredService" label="Service">
           <Select id="preferredService" {...register("preferredService")}>
             <option value="">No preference</option>
             {churchConfig.serviceTimes.map((service) => (
@@ -166,26 +154,19 @@ export function PlanVisitForm() {
         </Field>
       </div>
 
-      <Field
-        id="questions"
-        label="Anything we should know?"
-        hint="Accessibility needs, children's ages, questions, anything at all."
-        error={errors.questions?.message}
-      >
+      <Field id="questions" label="Anything we should know?" error={errors.questions?.message}>
         <Textarea
           id="questions"
-          rows={4}
-          placeholder="We're bringing a 3-year-old and my mom uses a walker…"
-          aria-describedby="questions-hint"
+          rows={2}
+          placeholder="Kids' ages, accessibility needs, questions…"
           {...register("questions")}
         />
       </Field>
 
-      <div className="flex flex-col gap-4 rounded-xl border border-navy-900/[0.08] bg-mist p-5">
+      <div className="flex flex-col gap-2.5">
         <Checkbox
           id="wantsContact"
-          label="Yes, have someone contact me before I visit"
-          description="A friendly message with practical details, nothing more."
+          label="Have someone contact me before I visit"
           {...register("wantsContact")}
         />
         <Checkbox
@@ -201,8 +182,8 @@ export function PlanVisitForm() {
         ) : null}
       </div>
 
-      <div className="flex flex-col gap-4">
-        <Button type="submit" size="lg" disabled={status === "submitting"} className="self-start">
+      <div className="flex flex-col gap-2.5 sm:flex-row sm:items-center sm:justify-between">
+        <Button type="submit" size="md" disabled={status === "submitting"}>
           {status === "submitting" ? (
             <>
               <Loader2 aria-hidden="true" className="size-4 animate-spin" />
@@ -213,14 +194,13 @@ export function PlanVisitForm() {
               Plan My Visit
               <Icon
                 name="arrow-right"
-                className="size-4 transition-transform duration-300 group-hover/btn:translate-x-1"
+                className="size-3.5 transition-transform duration-300 group-hover/btn:translate-x-1"
               />
             </>
           )}
         </Button>
         <PrivacyNote>
-          Your details are used only to prepare for your visit. We never sell, share or publish
-          them, and you can ask us to delete them at any time.
+          Used only to prepare for your visit. Never sold or shared.
         </PrivacyNote>
       </div>
     </form>
