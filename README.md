@@ -119,7 +119,7 @@ Two things to wire up before launch:
 2. **Rate limiting.** `src/lib/rate-limit.ts` is in-memory, which is per-instance.
    Move it to Redis or Upstash for multi-instance hosting.
 
-Security headers, including a CSP that allows the livestream and map embeds, are
+Security headers, including a CSP that allows sermon video and map embeds, are
 set in `next.config.ts`.
 
 ### Design system
