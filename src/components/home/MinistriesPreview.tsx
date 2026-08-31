@@ -52,7 +52,7 @@ export async function MinistriesPreview() {
             <div className="grid lg:grid-cols-[minmax(0,20rem)_1fr]">
               <div className="flex flex-col justify-center gap-4 border-b border-navy-900/[0.07] p-5 lg:border-b-0 lg:border-r lg:p-6">
                 <p className="eyebrow text-gold-800">Groups Across Baltimore</p>
-                <h3 className="font-display text-[1.75rem] leading-tight text-navy-900">
+                <h3 className="font-display text-[1.375rem] leading-tight text-navy-900">
                   Midweek, in homes, around real tables.
                 </h3>
                 <p className="text-[0.9375rem] leading-relaxed text-navy-900/65">
