@@ -185,7 +185,7 @@ export const footerNav: { title: string; links: { label: string; href: string }[
       { label: "Children's Ministry", href: "/plan-a-visit#children" },
       { label: "What to Wear", href: "/plan-a-visit#wear" },
       { label: "Visiting Form", href: "/plan-a-visit#form" },
-      { label: "Location & Map", href: "/plan-a-visit#map" },
+      { label: "Location", href: "/contact" },
     ],
   },
   {
