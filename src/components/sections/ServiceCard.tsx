@@ -118,9 +118,12 @@ export function ServiceCard({ variant = "inline", className }: ServiceCardProps)
               </div>
             </div>
 
-            <dl className="grid content-start gap-px bg-navy-900/[0.07] sm:grid-cols-2">
+            <dl className="grid h-full gap-px bg-navy-900/[0.07] sm:grid-cols-2 sm:grid-rows-2">
               {details().map((detail) => (
-                <div key={detail.label} className="bg-white p-3.5 sm:p-4">
+                <div
+                  key={detail.label}
+                  className="flex flex-col justify-center bg-white p-3.5 sm:p-4"
+                >
                   <dt className="flex items-center gap-2 eyebrow text-navy-900/65">
                     <Icon name={detail.icon} className="size-3.5 text-gold-600" />
                     {detail.label}
