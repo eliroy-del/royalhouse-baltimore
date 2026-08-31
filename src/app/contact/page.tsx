@@ -37,22 +37,6 @@ function methods(): ContactMethod[] {
   const list: ContactMethod[] = [];
 
   list.push(
-    churchStatus.hasPhone
-      ? {
-          icon: "message-circle",
-          label: "Call the office",
-          value: churchConfig.contact.phone,
-          href: `tel:${telHref()}`,
-        }
-      : {
-          icon: "message-circle",
-          label: "Call the office",
-          value: "Our phone line is being set up — use the form and we will call you back.",
-          muted: true,
-        },
-  );
-
-  list.push(
     churchStatus.hasEmail
       ? {
           icon: "megaphone",
@@ -74,21 +58,6 @@ function methods(): ContactMethod[] {
     value: addressLines().join(", "),
     muted: !churchStatus.hasAddress,
   });
-
-  list.push(
-    churchConfig.contact.officeHours.length > 0
-      ? {
-          icon: "clock",
-          label: "Office hours",
-          value: churchConfig.contact.officeHours.join(" · "),
-        }
-      : {
-          icon: "clock",
-          label: "Office hours",
-          value: "We reply to messages within two working days, and sooner if it is urgent.",
-          muted: true,
-        },
-  );
 
   return list;
 }
