@@ -13,7 +13,7 @@ export function Hero() {
   return (
     // Bottom padding always exceeds the floating service card's negative
     // margin, so the hero's service line is never clipped by it.
-    <section className="relative isolate flex min-h-[52svh] w-full flex-col justify-end overflow-hidden bg-navy-950 pb-16 pt-16 sm:min-h-[56svh] sm:pb-20 sm:pt-20 lg:min-h-[58svh] lg:pb-24 lg:pt-20">
+    <section className="relative isolate flex min-h-[72svh] w-full flex-col justify-end overflow-hidden bg-navy-950 pb-16 pt-20 sm:min-h-[78svh] sm:pb-20 sm:pt-24 lg:min-h-[85svh] lg:pb-24 lg:pt-24">
       {/* Cinematic photography with a slow, single settle, never a loop */}
       <div aria-hidden="true" className="absolute inset-0 -z-10">
         <Image
