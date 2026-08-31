@@ -5,6 +5,7 @@ import { Hero } from "@/components/home/Hero";
 import { LatestMessage } from "@/components/home/LatestMessage";
 import { MinistriesPreview } from "@/components/home/MinistriesPreview";
 import { PrayerInvite } from "@/components/home/PrayerInvite";
+import { WelcomeSection } from "@/components/home/WelcomeSection";
 import { ServiceCard } from "@/components/sections/ServiceCard";
 import { pageMetadata } from "@/lib/seo";
 
@@ -24,6 +25,7 @@ export default function HomePage() {
     <>
       <Hero />
       <ServiceCard variant="floating" />
+      <WelcomeSection />
       <EventsPreview />
       <LatestMessage />
       <MinistriesPreview />
