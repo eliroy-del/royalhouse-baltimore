@@ -61,13 +61,6 @@ function methods(): ContactMethod[] {
   return list;
 }
 
-const routes = [
-  { label: "Prayer & pastoral care", href: "/prayer", icon: "hands-praying" as const },
-  { label: "Plan a first visit", href: "/plan-a-visit", icon: "map-pin" as const },
-  { label: "Giving questions", href: "/give", icon: "gift" as const },
-  { label: "Join a group or team", href: "/connect", icon: "users" as const },
-];
-
 export default function ContactPage() {
   return (
     <>
@@ -125,27 +118,6 @@ export default function ContactPage() {
               <div className="mt-8">
                 <p className="eyebrow text-navy-900/65">Follow along</p>
                 <SocialLinks className="mt-4" />
-              </div>
-
-              <div className="mt-6 rounded-media border border-navy-900/[0.08] bg-white p-6">
-                <p className="text-[0.9375rem] font-semibold text-navy-900">
-                  Looking for something specific?
-                </p>
-                <ul className="mt-4 flex flex-col gap-2.5">
-                  {routes.map((route) => (
-                    <li key={route.href}>
-                      <Link
-                        href={route.href}
-                        className="group flex items-center gap-3 text-[0.9375rem] text-navy-900/70 transition-colors hover:text-navy-900"
-                      >
-                        <Icon name={route.icon} className="size-4 text-gold-600" />
-                        <span className="border-b border-transparent pb-0.5 transition-colors group-hover:border-gold-500/60">
-                          {route.label}
-                        </span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
               </div>
             </div>
 
