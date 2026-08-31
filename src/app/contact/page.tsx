@@ -1,10 +1,8 @@
-import Link from "next/link";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { SocialLinks } from "@/components/layout/SocialLinks";
 import { MapEmbed } from "@/components/sections/MapEmbed";
-import { CtaBand, PageHero } from "@/components/sections/PageHero";
+import { PageHero } from "@/components/sections/PageHero";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { churchConfig } from "@/config/church";
@@ -100,22 +98,6 @@ export default function ContactPage() {
       <Section tone="white" spacing="none">
         <MapEmbed fullBleed />
       </Section>
-
-      <CtaBand
-        eyebrow="Or Just Turn Up"
-        title="Sometimes the simplest answer is a Sunday."
-        lede="You are welcome to come first and ask your questions afterwards. That is how most of us started."
-        actions={
-          <>
-            <Button asChild variant="gold" size="md">
-              <Link href="/plan-a-visit">Plan Your Visit</Link>
-            </Button>
-            <Button asChild variant="outline-light" size="md">
-              <Link href="/prayer">Request Prayer</Link>
-            </Button>
-          </>
-        }
-      />
     </>
   );
 }
