@@ -82,13 +82,13 @@ export const churchConfig: ChurchConfig = {
     "Royalhouse Baltimore is a Spirit-filled family of believers in Baltimore, Maryland — gathering to worship Jesus, grow together in the Word and serve the city we call home.",
 
   address: {
-    line1: PENDING, // TODO: street address
-    line2: PENDING,
-    city: "Baltimore",
+    line1: "5411 Old Frederick Rd",
+    line2: "Suite 11",
+    city: "Catonsville",
     region: "Maryland",
-    postalCode: PENDING, // TODO: ZIP code
+    postalCode: "21229",
     country: "United States",
-    mapQuery: PENDING, // TODO: e.g. "Royalhouse Baltimore, 123 Example St, Baltimore, MD 21201"
+    mapQuery: "5411 Old Frederick Rd, Suite 11, Catonsville, MD 21229",
   },
 
   // TODO: add each gathering, e.g.

@@ -29,7 +29,8 @@ export const visitAnswers: VisitAnswer[] = [
     id: "where",
     icon: "map-pin",
     question: "Where do I go?",
-    answer: "",
+    answer:
+      "We gather at 5411 Old Frederick Rd, Suite 11, Catonsville, MD 21229. Use the map on this page for directions, and look for Suite 11 when you arrive.",
     fallback:
       "We gather in Baltimore, Maryland. Our full street address and directions are being published shortly — contact us and we will send you the exact location and the easiest way in.",
   },
