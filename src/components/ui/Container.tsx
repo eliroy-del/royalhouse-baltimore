@@ -25,7 +25,7 @@ export function Container({
 }: ContainerProps) {
   return (
     <Tag
-      className={cn("mx-auto w-full px-5 sm:px-8 lg:px-12", widths[width], className)}
+      className={cn("mx-auto w-full px-4 sm:px-6 lg:px-8", widths[width], className)}
       {...props}
     />
   );

@@ -74,7 +74,7 @@ export default async function SermonsPage() {
       {featured ? (
         <Section tone="cream" spacing="lg">
           <Container>
-            <div className="grid gap-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:items-center lg:gap-16">
+            <div className="grid gap-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:items-center lg:gap-10">
               <Reveal y={24}>
                 <Link
                   href={`/sermons/${featured.slug}`}

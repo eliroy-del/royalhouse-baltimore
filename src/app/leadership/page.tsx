@@ -75,7 +75,7 @@ export default async function LeadershipPage() {
             lede="A church rises or falls on the character of the people leading it. So we say out loud what we expect of ourselves."
           />
 
-          <Stagger className="mt-14 grid gap-px overflow-hidden rounded-media border border-navy-900/[0.08] bg-navy-900/[0.07] md:grid-cols-3">
+          <Stagger className="mt-8 grid gap-px overflow-hidden rounded-media border border-navy-900/[0.08] bg-navy-900/[0.07] md:grid-cols-3">
             {commitments.map((commitment) => (
               <StaggerItem key={commitment.title} className="flex flex-col bg-white p-8">
                 <span className="flex size-11 items-center justify-center rounded-full bg-gold-100 text-gold-700">

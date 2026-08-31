@@ -16,14 +16,14 @@ const assurances = [
 
 export function PrayerInvite() {
   return (
-    <Section tone="navy" spacing="xl" id="prayer" className="overflow-hidden">
+    <Section tone="navy" spacing="lg" id="prayer" className="overflow-hidden">
       <span
         aria-hidden="true"
         className="pointer-events-none absolute inset-y-0 right-0 w-1/2 bg-[radial-gradient(80%_60%_at_100%_50%,rgba(201,162,39,0.12),transparent_70%)]"
       />
 
       <Container className="relative">
-        <div className="grid items-center gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.8fr)] lg:gap-20">
+        <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.8fr)] lg:gap-10">
           <div>
             <Eyebrow chapter="10" tone="dark">
               We&rsquo;re Here For You

@@ -125,7 +125,7 @@ export default function ContactPage() {
 
       <Section tone="cream" spacing="lg">
         <Container>
-          <div className="grid gap-14 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-20">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-10">
             <div>
               <SectionHeading eyebrow="Reach Us" title="However suits you best." />
 

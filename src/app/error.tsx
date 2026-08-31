@@ -18,7 +18,7 @@ export default function ErrorBoundary({
   }, [error]);
 
   return (
-    <section className="relative flex min-h-[80svh] flex-col justify-center bg-navy-950 py-32 text-white">
+    <section className="relative flex min-h-[70svh] flex-col justify-center bg-navy-950 py-20 text-white">
       <span
         aria-hidden="true"
         className="pointer-events-none absolute left-1/2 top-1/3 size-[36rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(201,162,39,0.14),transparent_65%)]"

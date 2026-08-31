@@ -63,7 +63,7 @@ export default async function ConnectPage() {
       {/* --------------------------------- I'm new -------------------------------- */}
       <Section tone="cream" spacing="lg" id="new">
         <Container>
-          <div className="grid items-center gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] lg:gap-20">
+          <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] lg:gap-10">
             <div>
               <SectionHeading
                 eyebrow="I'm New Here"
@@ -129,7 +129,7 @@ export default async function ConnectPage() {
             title="Every door here is open."
             lede="Pick the one that fits where you actually are — not where you think you ought to be."
           />
-          <Stagger className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <Stagger className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {nextSteps.map((step) => (
               <StaggerItem key={step.id} className="h-full">
                 <NextStepCard step={step} />
@@ -146,7 +146,7 @@ export default async function ConnectPage() {
           className="pointer-events-none absolute -left-32 top-0 size-[30rem] rounded-full bg-[radial-gradient(circle,rgba(201,162,39,0.14),transparent_65%)]"
         />
         <Container className="relative">
-          <div className="grid gap-14 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-10">
             <SectionHeading
               tone="dark"
               eyebrow="Join a Group"
@@ -204,7 +204,7 @@ export default async function ConnectPage() {
             }
           />
 
-          <Stagger className="mt-14 grid gap-px overflow-hidden rounded-media border border-navy-900/[0.08] bg-navy-900/[0.07] sm:grid-cols-2 lg:grid-cols-4">
+          <Stagger className="mt-8 grid gap-px overflow-hidden rounded-media border border-navy-900/[0.08] bg-navy-900/[0.07] sm:grid-cols-2 lg:grid-cols-4">
             {serveTeams.map((team) => (
               <StaggerItem key={team.name} className="bg-white p-6">
                 <p className="text-[0.9375rem] font-semibold text-navy-900">{team.name}</p>
@@ -221,7 +221,7 @@ export default async function ConnectPage() {
       {/* -------------------------------- Baptism -------------------------------- */}
       <Section tone="white" spacing="lg" id="baptism">
         <Container>
-          <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
+          <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-10">
             <Reveal y={26}>
               <div className="relative aspect-[4/3] overflow-hidden rounded-media bg-navy-900">
                 <Image
@@ -268,7 +268,7 @@ export default async function ConnectPage() {
             lede="Membership is not a club card. It is saying: these are my people, this is my church, and I am in — for the ordinary weeks as well as the good ones."
           />
 
-          <Stagger className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <Stagger className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {membershipJourney.map((item) => (
               <StaggerItem
                 key={item.step}

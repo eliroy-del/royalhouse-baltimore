@@ -84,8 +84,8 @@ export function SectionHeading({
             // headings need leading below 1 to look properly set.
             "font-display font-normal leading-[0.96] tracking-tight",
             size === "lg"
-              ? "mt-5 text-[clamp(2.125rem,4.4vw,3.5rem)]"
-              : "mt-4 text-[clamp(1.75rem,3vw,2.5rem)]",
+              ? "mt-3 text-[clamp(1.75rem,3.4vw,2.75rem)]"
+              : "mt-3 text-[clamp(1.5rem,2.5vw,2.125rem)]",
             tone === "dark" ? "text-white" : "text-navy-900",
           )}
         >
@@ -97,7 +97,7 @@ export function SectionHeading({
         <Reveal delay={0.12}>
           <div
             className={cn(
-              "mt-5 max-w-2xl text-[1.0625rem] leading-relaxed",
+              "mt-3 max-w-2xl text-[0.9375rem] leading-relaxed sm:text-[1.0625rem]",
               align === "center" && "mx-auto",
               tone === "dark" ? "text-white/70" : "text-navy-900/70",
             )}
@@ -111,7 +111,7 @@ export function SectionHeading({
         <Reveal delay={0.18}>
           <div
             className={cn(
-              "mt-8 flex flex-wrap items-center gap-3",
+              "mt-5 flex flex-wrap items-center gap-3",
               align === "center" && "justify-center",
             )}
           >

@@ -65,7 +65,7 @@ export default async function TestimoniesPage() {
           />
 
           {testimonies.length > 0 ? (
-            <Stagger className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            <Stagger className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
               {testimonies.map((testimony) => (
                 <StaggerItem key={testimony.id} className="h-full">
                   <TestimonyCard testimony={testimony} className="h-full" />
@@ -74,7 +74,7 @@ export default async function TestimoniesPage() {
             </Stagger>
           ) : (
             <EmptyState
-              className="mt-14"
+              className="mt-8"
               icon="sparkles"
               title="The first story could be yours"
               description="We are gathering testimonies from our church family right now. Every one is read by a person and shared only with permission."
@@ -91,7 +91,7 @@ export default async function TestimoniesPage() {
       {/* --------------------------------- Share --------------------------------- */}
       <Section tone="white" spacing="lg" id="share">
         <Container>
-          <div className="grid gap-14 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-20">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-10">
             <div className="lg:sticky lg:top-28 lg:self-start">
               <SectionHeading
                 eyebrow="Share Your Testimony"

@@ -10,9 +10,9 @@ import { expectSteps } from "@/content/visit";
 
 export function PlanVisitInvite() {
   return (
-    <Section tone="white" spacing="xl" id="plan-a-visit">
+    <Section tone="white" spacing="lg" id="plan-a-visit">
       <Container>
-        <div className="grid gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-20">
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-10">
           <div>
             <Eyebrow chapter="12">Come See Us</Eyebrow>
 

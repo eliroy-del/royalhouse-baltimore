@@ -14,7 +14,7 @@ export async function MinistriesPreview() {
   const groups = (await getGroups()).slice(0, 4);
 
   return (
-    <Section tone="cream" spacing="xl" id="ministries">
+    <Section tone="cream" spacing="lg" id="ministries">
       <Container>
         <SectionHeading
           chapter="07"
@@ -34,13 +34,13 @@ export async function MinistriesPreview() {
           }
         />
 
-        <Stagger className="mt-14 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+        <Stagger className="mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
           {ministries.map((ministry, index) => (
             <StaggerItem key={ministry.id}>
               <MinistryCard
                 ministry={ministry}
                 variant={index === 0 ? "tall" : "default"}
-                className={index === 0 ? "sm:min-h-[20rem] xl:min-h-[26rem]" : "xl:min-h-[26rem]"}
+                className={index === 0 ? "sm:min-h-[16rem] xl:min-h-[20rem]" : "xl:min-h-[20rem]"}
               />
             </StaggerItem>
           ))}

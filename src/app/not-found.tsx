@@ -14,7 +14,7 @@ const suggestions = [
 
 export default function NotFound() {
   return (
-    <section className="relative isolate flex min-h-[86svh] flex-col justify-center overflow-hidden bg-navy-950 py-32 text-white">
+    <section className="relative isolate flex min-h-[70svh] flex-col justify-center overflow-hidden bg-navy-950 py-20 text-white">
       <Image
         src={images.churchExteriorDusk.src}
         alt=""

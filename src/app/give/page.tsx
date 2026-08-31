@@ -75,7 +75,7 @@ export default function GivePage() {
       {/* ------------------------------ Why we give ------------------------------ */}
       <Section tone="cream" spacing="lg">
         <Container>
-          <div className="grid gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] lg:gap-20">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] lg:gap-10">
             <div>
               <SectionHeading
                 eyebrow="Why We Give"
@@ -152,7 +152,7 @@ export default function GivePage() {
             lede="These are the only funds approved by our leadership. If you want your gift to go somewhere specific, choose it — and we will honor that."
           />
 
-          <Stagger className="mt-14 grid gap-px overflow-hidden rounded-media bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
+          <Stagger className="mt-8 grid gap-px overflow-hidden rounded-media bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
             {churchConfig.giving.funds.map((fund, index) => (
               <StaggerItem key={fund.id} className="flex flex-col bg-navy-900 p-7">
                 <span className="font-display text-2xl text-gold-400/50 tabular-nums">
@@ -185,7 +185,7 @@ export default function GivePage() {
       {/* ------------------------------ Ways to give ----------------------------- */}
       <Section tone="white" spacing="lg" id="ways">
         <Container>
-          <div className="grid gap-14 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-10">
             <div className="lg:sticky lg:top-28 lg:self-start">
               <SectionHeading
                 eyebrow="How to Give"

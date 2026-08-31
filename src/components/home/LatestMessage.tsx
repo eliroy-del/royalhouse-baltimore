@@ -19,7 +19,7 @@ export async function LatestMessage() {
   const recent = (await getLatestSermons(4)).filter((sermon) => sermon.id !== featured?.id);
 
   return (
-    <Section tone="navy-deep" spacing="xl" id="latest-message" className="overflow-hidden">
+    <Section tone="navy-deep" spacing="lg" id="latest-message" className="overflow-hidden">
       <span
         aria-hidden="true"
         className="pointer-events-none absolute -left-40 top-1/3 size-[34rem] rounded-full bg-[radial-gradient(circle,rgba(20,69,127,0.5),transparent_65%)]"
@@ -28,7 +28,7 @@ export async function LatestMessage() {
       <Container className="relative">
         {featured ? (
           <>
-            <div className="grid gap-12 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] lg:gap-16">
+            <div className="grid gap-8 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] lg:gap-10">
               <div>
                 <Eyebrow chapter="06" tone="dark">
                   Be Encouraged
@@ -119,7 +119,7 @@ export async function LatestMessage() {
             </div>
 
             {recent.length > 0 ? (
-              <div className="mt-16 border-t border-white/10 pt-12">
+              <div className="mt-10 border-t border-white/10 pt-8">
                 <div className="flex flex-wrap items-end justify-between gap-4">
                   <h3 className="font-display text-2xl text-white">Recent messages</h3>
                   <Link

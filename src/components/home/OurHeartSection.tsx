@@ -10,7 +10,7 @@ import { pillars } from "@/content/our-heart";
 
 export function OurHeartSection() {
   return (
-    <Section tone="navy" spacing="xl" id="our-heart" className="overflow-hidden">
+    <Section tone="navy" spacing="lg" id="our-heart" className="overflow-hidden">
       {/* Warm light from the upper right keeps the navy field from going flat */}
       <span
         aria-hidden="true"
@@ -18,7 +18,7 @@ export function OurHeartSection() {
       />
 
       <Container className="relative">
-        <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:gap-20">
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:gap-10">
           <SectionHeading
             chapter="04"
             eyebrow="Our Heart"
@@ -74,7 +74,7 @@ export function OurHeartSection() {
         </div>
 
         <Reveal delay={0.1}>
-          <blockquote className="mt-18 border-t border-white/10 pt-12 text-center">
+          <blockquote className="mt-8 border-t border-white/10 pt-8 text-center">
             <p className="mx-auto max-w-3xl font-display text-[clamp(1.5rem,2.8vw,2.125rem)] font-light italic leading-[1.35] text-white/85">
               &ldquo;They devoted themselves to the apostles&rsquo; teaching and to fellowship, to
               the breaking of bread and to prayer.&rdquo;

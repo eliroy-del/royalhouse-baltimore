@@ -68,7 +68,7 @@ export function MapEmbed({ className }: { className?: string }) {
       />
       <div aria-hidden="true" className="absolute inset-0 -z-10 bg-navy-950/72" />
 
-      <div className="flex flex-col items-start gap-5 p-8 sm:p-12">
+      <div className="flex flex-col items-start gap-4 p-6 sm:p-8">
         <span className="flex size-11 items-center justify-center rounded-full border border-gold-500/40 text-gold-300">
           <Icon name="map-pin" className="size-5" />
         </span>

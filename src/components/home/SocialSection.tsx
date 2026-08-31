@@ -48,7 +48,7 @@ export function SocialSection() {
           className="mx-auto"
         />
 
-        <Stagger className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        <Stagger className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {platforms.map((platform) => {
             const meta = socialGlyphs[platform.id];
             if (!meta) return null;

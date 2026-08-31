@@ -73,7 +73,7 @@ export default async function SermonDetailPage({ params }: { params: Promise<{ s
 
       <Section tone="cream" spacing="lg">
         <Container>
-          <div className="grid gap-12 lg:grid-cols-[minmax(0,1.45fr)_minmax(0,1fr)] lg:gap-16">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,1.45fr)_minmax(0,1fr)] lg:gap-10">
             <div>
               <VideoPlayer
                 url={sermon.videoUrl}

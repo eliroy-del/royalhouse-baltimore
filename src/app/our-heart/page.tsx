@@ -72,7 +72,7 @@ export default function OurHeartPage() {
       {/* -------------------------------- Who we are ------------------------------ */}
       <Section tone="cream" spacing="lg" id="who">
         <Container>
-          <div className="grid gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] lg:gap-20">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] lg:gap-10">
             <div>
               <SectionHeading eyebrow="Who We Are" title="An ordinary church with an extraordinary God." />
               <div className="mt-8 flex flex-col gap-5 text-[1.0625rem] leading-relaxed text-navy-900/72">
@@ -109,7 +109,7 @@ export default function OurHeartPage() {
             </Reveal>
           </div>
 
-          <Stagger className="mt-18 grid gap-px overflow-hidden rounded-media border border-navy-900/[0.08] bg-navy-900/[0.07] sm:grid-cols-2 lg:grid-cols-4">
+          <Stagger className="mt-8 grid gap-px overflow-hidden rounded-media border border-navy-900/[0.08] bg-navy-900/[0.07] sm:grid-cols-2 lg:grid-cols-4">
             {pillars.map((pillar, index) => (
               <StaggerItem key={pillar.id} className="group bg-white p-7">
                 <span className="flex items-center justify-between">
@@ -136,7 +136,7 @@ export default function OurHeartPage() {
       {/* ----------------------------- Mission & vision --------------------------- */}
       <Section tone="navy" spacing="none" id="mission" className="overflow-hidden">
         <div className="grid lg:grid-cols-2">
-          <div className="flex items-center py-20 sm:py-24 lg:py-32">
+          <div className="flex items-center py-12 sm:py-14 lg:py-16">
             <Container width="full" className="max-w-[42rem] lg:pl-12 lg:pr-16">
               <Eyebrow tone="dark">{mission.eyebrow}</Eyebrow>
               <Reveal delay={0.06}>
@@ -152,7 +152,7 @@ export default function OurHeartPage() {
                 ))}
               </div>
 
-              <div className="mt-14 border-t border-white/12 pt-12">
+              <div className="mt-8 border-t border-white/12 pt-8">
                 <Eyebrow tone="dark">{vision.eyebrow}</Eyebrow>
                 <Reveal delay={0.06}>
                   <p className="mt-6 font-display text-[clamp(1.75rem,3.2vw,2.5rem)] font-light leading-[1.14] text-white">
@@ -189,7 +189,7 @@ export default function OurHeartPage() {
             eyebrow="Our Values"
             title="The commitments we are willing to be measured by."
           />
-          <Stagger className="mt-14 grid gap-px overflow-hidden rounded-media border border-navy-900/[0.08] bg-navy-900/[0.07] sm:grid-cols-2 lg:grid-cols-3">
+          <Stagger className="mt-8 grid gap-px overflow-hidden rounded-media border border-navy-900/[0.08] bg-navy-900/[0.07] sm:grid-cols-2 lg:grid-cols-3">
             {values.map((value, index) => (
               <StaggerItem key={value.title} className="bg-white p-7 lg:p-8">
                 <p className="font-display text-lg text-gold-700 tabular-nums">
@@ -217,7 +217,7 @@ export default function OurHeartPage() {
             lede="Historic Christian faith, held with conviction and explained without jargon. If you want to go deeper on any of these, ask us — we would love the conversation."
           />
 
-          <Stagger className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <Stagger className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {beliefs.map((belief) => (
               <StaggerItem
                 key={belief.id}
@@ -241,7 +241,7 @@ export default function OurHeartPage() {
       {/* -------------------------------- Our story ------------------------------ */}
       <Section tone="cream" spacing="lg" id="story">
         <Container>
-          <div className="grid gap-14 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-10">
             <div className="lg:sticky lg:top-28 lg:self-start">
               <SectionHeading
                 eyebrow="Our Story"
@@ -271,7 +271,7 @@ export default function OurHeartPage() {
       {/* ------------------------------- Community ------------------------------- */}
       <Section tone="white" spacing="lg" id="community">
         <Container>
-          <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
+          <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-10">
             <Reveal y={26}>
               <div className="relative aspect-[4/3] overflow-hidden rounded-media bg-navy-900">
                 <Image

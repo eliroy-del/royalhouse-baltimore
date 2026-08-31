@@ -114,7 +114,7 @@ export default async function MinistryDetailPage({
 
       <Section tone="cream" spacing="lg">
         <Container>
-          <div className="grid gap-12 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] lg:gap-16">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] lg:gap-10">
             <div>
               <Badge variant="gold" size="md">
                 {ministry.audience}

@@ -12,7 +12,7 @@ export function FinalCta() {
   return (
     <section
       aria-labelledby="final-cta-heading"
-      className="relative isolate overflow-hidden bg-navy-950 py-28 text-white sm:py-32 lg:py-40"
+      className="relative isolate overflow-hidden bg-navy-950 py-14 text-white sm:py-16 lg:py-20"
     >
       <Image
         src={images.churchExteriorDusk.src}
@@ -41,21 +41,21 @@ export function FinalCta() {
         <Reveal delay={0.08}>
           <h2
             id="final-cta-heading"
-            className="mx-auto mt-7 max-w-4xl font-display text-[clamp(2.5rem,6.4vw,5rem)] font-light leading-[1.02] tracking-[-0.02em]"
+            className="mx-auto mt-4 max-w-4xl font-display text-[clamp(2rem,4.8vw,3.5rem)] font-light leading-[1.02] tracking-[-0.02em]"
           >
             We&rsquo;ll see you Sunday.
           </h2>
         </Reveal>
 
         <Reveal delay={0.14}>
-          <p className="mx-auto mt-6 max-w-2xl text-[1.0625rem] leading-relaxed text-white/75 sm:text-lg">
+          <p className="mx-auto mt-4 max-w-2xl text-[0.9375rem] leading-relaxed text-white/75 sm:text-base">
             Tell us you are coming and we will look out for you at the door, save you a seat and
             make sure your children are settled before the first song.
           </p>
         </Reveal>
 
         <Reveal delay={0.2}>
-          <div className="mt-11 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button asChild variant="gold" size="xl">
               <Link href="/plan-a-visit">
                 Plan Your Visit
@@ -72,7 +72,7 @@ export function FinalCta() {
         </Reveal>
 
         <Reveal delay={0.26}>
-          <p className="mt-10 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[0.8125rem] text-white/55">
+          <p className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[0.8125rem] text-white/55">
             <span className="flex items-center gap-2">
               <Icon name="clock" className="size-4 text-gold-400" />
               {churchStatus.hasServiceTimes ? serviceTimeSummary() : "Sunday Gatherings"}

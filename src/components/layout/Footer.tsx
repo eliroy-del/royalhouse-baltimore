@@ -19,11 +19,11 @@ export function Footer() {
       />
 
       {/* ---------------------------- Newsletter ---------------------------- */}
-      <Container className="relative border-b border-white/10 py-14">
-        <div className="grid gap-8 lg:grid-cols-[1fr_28rem] lg:items-center lg:gap-16">
+      <Container className="relative border-b border-white/10 py-8">
+        <div className="grid gap-6 lg:grid-cols-[1fr_28rem] lg:items-center lg:gap-10">
           <div>
             <p className="eyebrow text-gold-300">Stay Connected</p>
-            <h2 className="mt-4 font-display text-[clamp(1.75rem,3vw,2.5rem)] leading-tight">
+            <h2 className="mt-3 font-display text-[clamp(1.5rem,2.6vw,2rem)] leading-tight">
               Never miss what God is doing here.
             </h2>
             <p className="mt-3 max-w-xl text-[0.9375rem] leading-relaxed text-white/60">
@@ -36,21 +36,21 @@ export function Footer() {
       </Container>
 
       {/* ------------------------- Brand + navigation ------------------------ */}
-      <Container className="relative py-14">
-        <div className="grid gap-12 lg:grid-cols-[minmax(0,20rem)_1fr] lg:gap-20">
+      <Container className="relative py-8">
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,20rem)_1fr] lg:gap-10">
           <div>
             <LogoLink tone="dark" size="lg" />
-            <p className="mt-6 max-w-sm text-[0.9375rem] leading-relaxed text-white/60">
+            <p className="mt-4 max-w-sm text-[0.875rem] leading-relaxed text-white/60">
               {churchConfig.statement}
             </p>
-            <SocialLinks tone="dark" className="mt-7" />
+            <SocialLinks tone="dark" className="mt-5" />
           </div>
 
           <nav aria-label="Footer" className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
             {footerNav.map((column) => (
               <div key={column.title}>
                 <h3 className="eyebrow text-gold-300">{column.title}</h3>
-                <ul className="mt-5 flex flex-col gap-3">
+                <ul className="mt-4 flex flex-col gap-2">
                   {column.links.map((link) => (
                     <li key={`${column.title}-${link.href}`}>
                       <Link

@@ -13,7 +13,7 @@ export async function TestimoniesPreview() {
   const testimonies = await getFeaturedTestimonies(3);
 
   return (
-    <Section tone="mist" spacing="xl" id="testimonies">
+    <Section tone="mist" spacing="lg" id="testimonies">
       <Container>
         <SectionHeading
           align="center"
@@ -27,7 +27,7 @@ export async function TestimoniesPreview() {
         {testimonies.length > 0 ? (
           <>
             {/* Snap-scrolls on mobile, settles into a grid from md up — no carousel JS needed */}
-            <Stagger className="mt-14 -mx-5 flex snap-x snap-mandatory gap-5 overflow-x-auto px-5 pb-2 hide-scrollbar md:mx-0 md:grid md:grid-cols-3 md:overflow-visible md:px-0">
+            <Stagger className="mt-8 -mx-5 flex snap-x snap-mandatory gap-5 overflow-x-auto px-5 pb-2 hide-scrollbar md:mx-0 md:grid md:grid-cols-3 md:overflow-visible md:px-0">
               {testimonies.map((testimony) => (
                 <StaggerItem
                   key={testimony.id}
@@ -55,7 +55,7 @@ export async function TestimoniesPreview() {
           </>
         ) : (
           <EmptyState
-            className="mt-14"
+            className="mt-8"
             icon="sparkles"
             title="The first story could be yours"
             description="We are collecting testimonies from our church family right now. If God has done something in your life, we would love to hear it."

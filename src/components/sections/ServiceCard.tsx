@@ -63,15 +63,15 @@ export function ServiceCard({ variant = "inline", className }: ServiceCardProps)
     <Container
       className={cn(
         "relative",
-        variant === "floating" && "z-20 -mt-14 lg:-mt-24",
+        variant === "floating" && "z-20 -mt-10 lg:-mt-16",
         className,
       )}
     >
       <Reveal y={24}>
         <div className="overflow-hidden rounded-media border border-navy-900/[0.07] bg-white shadow-float">
           <div className="grid lg:grid-cols-[minmax(0,24rem)_1fr]">
-            <div className="relative flex flex-col justify-between gap-7 overflow-hidden bg-navy-900 p-8 text-white lg:p-10">
-              <div className="relative -mx-8 -mt-8 mb-1 aspect-[16/9] overflow-hidden lg:-mx-10 lg:-mt-10">
+            <div className="relative flex flex-col justify-between gap-5 overflow-hidden bg-navy-900 p-6 text-white lg:p-8">
+              <div className="relative -mx-6 -mt-6 mb-1 aspect-[16/9] overflow-hidden lg:-mx-8 lg:-mt-8">
                 <Image
                   src={images.worshipTeam.src}
                   alt=""

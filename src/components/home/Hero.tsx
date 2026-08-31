@@ -15,7 +15,7 @@ export function Hero() {
   return (
     // Bottom padding always exceeds the floating service card's negative
     // margin, so the hero's service line is never clipped by it.
-    <section className="relative isolate flex min-h-[92svh] flex-col justify-end overflow-hidden bg-navy-950 pb-28 pt-32 sm:pb-32 sm:pt-36 lg:min-h-[96svh] lg:pb-36 lg:pt-44">
+    <section className="relative isolate flex min-h-[64svh] flex-col justify-end overflow-hidden bg-navy-950 pb-12 pt-22 sm:pb-14 sm:pt-24 lg:min-h-[70svh] lg:pb-16 lg:pt-28">
       {/* Cinematic photography with a slow, single settle — never a loop */}
       <div aria-hidden="true" className="absolute inset-0 -z-10">
         <Image
@@ -49,17 +49,9 @@ export function Hero() {
 
       <Container className="relative">
         <div className="max-w-[68rem]">
-          <p
-            className="rise flex items-center gap-3 eyebrow text-gold-300"
-            style={{ animationDelay: "80ms" }}
-          >
-            <span aria-hidden="true" className="h-px w-10 rule-gold" />
-            Welcome to {churchConfig.name}
-          </p>
-
           <h1
-            className="rise mt-7 font-display text-[clamp(2.75rem,6.6vw,5.25rem)] font-light leading-[0.98] tracking-[-0.02em] text-white"
-            style={{ animationDelay: "180ms" }}
+            className="rise font-display text-[clamp(2.125rem,5vw,3.75rem)] font-light leading-[0.98] tracking-[-0.02em] text-white"
+            style={{ animationDelay: "80ms" }}
           >
             A place to encounter God,
             <br className="hidden sm:block" /> grow in faith and{" "}
@@ -67,7 +59,7 @@ export function Hero() {
           </h1>
 
           <p
-            className="rise mt-7 max-w-xl text-[1.0625rem] leading-relaxed text-white/80 sm:text-lg"
+            className="rise mt-4 max-w-xl text-[0.9375rem] leading-relaxed text-white/80 sm:text-[1.0625rem]"
             style={{ animationDelay: "300ms" }}
           >
             We are an ordinary group of people in Baltimore who have met an extraordinary God.
@@ -76,7 +68,7 @@ export function Hero() {
           </p>
 
           <div
-            className="rise mt-10 flex flex-col gap-3 sm:flex-row sm:items-center"
+            className="rise mt-6 flex flex-col gap-3 sm:flex-row sm:items-center"
             style={{ animationDelay: "420ms" }}
           >
             <Button asChild variant="gold" size="xl">
@@ -97,7 +89,7 @@ export function Hero() {
           </div>
 
           <p
-            className="rise mt-10 flex flex-wrap items-center gap-x-5 gap-y-2 text-[0.8125rem] text-white/60"
+            className="rise mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-[0.8125rem] text-white/60"
             style={{ animationDelay: "540ms" }}
           >
             <span className="flex items-center gap-2">

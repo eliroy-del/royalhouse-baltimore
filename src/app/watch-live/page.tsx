@@ -59,7 +59,7 @@ export default async function WatchLivePage() {
       />
 
       {/* ------------------------------ Live hero ------------------------------ */}
-      <section className="relative isolate flex min-h-[78svh] flex-col justify-end overflow-hidden bg-navy-950 pb-16 pt-40 text-white sm:pb-20">
+      <section className="relative isolate flex min-h-[56svh] flex-col justify-end overflow-hidden bg-navy-950 pb-12 pt-28 text-white sm:pb-14">
         <Image
           src={images.worshipTeam.src}
           alt=""
@@ -101,7 +101,7 @@ export default async function WatchLivePage() {
             <span aria-hidden="true" className="h-px w-8 rule-gold" />
             Online Church
           </p>
-          <h1 className="mt-6 max-w-3xl font-display text-[clamp(2.5rem,6.4vw,5rem)] font-light leading-[1.02] tracking-[-0.02em]">
+          <h1 className="mt-4 max-w-3xl font-display text-[clamp(2rem,4.8vw,3.5rem)] font-light leading-[1.02] tracking-[-0.02em]">
             Worship with us <em className="not-italic text-gold-300">online</em>.
           </h1>
           <p className="mt-6 max-w-2xl text-[1.0625rem] leading-relaxed text-white/75 sm:text-lg">
@@ -127,7 +127,7 @@ export default async function WatchLivePage() {
       {/* ------------------------------- The stream ------------------------------ */}
       <Section tone="navy-deep" spacing="lg">
         <Container>
-          <div className="grid gap-10 lg:grid-cols-[minmax(0,1.55fr)_minmax(0,1fr)] lg:gap-14">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,1.55fr)_minmax(0,1fr)] lg:gap-8">
             <div>
               <VideoPlayer
                 url={livestream.embedUrl}
@@ -198,7 +198,7 @@ export default async function WatchLivePage() {
             lede="Watching a service is not the same as scrolling past one. A little intention makes an enormous difference."
           />
 
-          <div className="mt-14 grid gap-px overflow-hidden rounded-media border border-navy-900/[0.08] bg-navy-900/[0.07] md:grid-cols-3">
+          <div className="mt-8 grid gap-px overflow-hidden rounded-media border border-navy-900/[0.08] bg-navy-900/[0.07] md:grid-cols-3">
             {onlineSteps.map((step, index) => (
               <Reveal key={step.title} delay={index * 0.08} className="flex flex-col bg-white p-8">
                 <span className="flex size-11 items-center justify-center rounded-full bg-gold-100 text-gold-700">

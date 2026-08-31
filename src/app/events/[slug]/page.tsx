@@ -142,7 +142,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ sl
             </div>
           ) : null}
 
-          <div className="grid gap-12 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:gap-16">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:gap-10">
             <div>
               <div className="flex flex-wrap items-center gap-2.5">
                 <Badge variant="gold" size="md">

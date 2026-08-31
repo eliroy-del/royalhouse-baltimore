@@ -19,9 +19,9 @@ const welcomes = [
 
 export function BelongSection() {
   return (
-    <Section tone="cream" spacing="xl" id="belong">
+    <Section tone="cream" spacing="lg" id="belong">
       <Container>
-        <div className="grid items-center gap-14 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1fr)] lg:gap-20">
+        <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1fr)] lg:gap-10">
           {/* The arch is our one architectural motif — a quiet nod to sanctuary windows */}
           <Reveal y={28} className="relative">
             <div className="relative mx-auto aspect-[3/4] w-full max-w-md overflow-hidden mask-arch bg-navy-900 lg:max-w-none">

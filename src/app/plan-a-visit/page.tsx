@@ -90,7 +90,7 @@ export default function PlanAVisitPage() {
       {/* ---------------------------- What to expect ---------------------------- */}
       <Section tone="white" spacing="lg" id="expect">
         <Container>
-          <div className="grid gap-14 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1fr)] lg:gap-20">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1fr)] lg:gap-10">
             <div className="lg:sticky lg:top-28 lg:self-start">
               <SectionHeading
                 eyebrow="What to Expect"
@@ -151,7 +151,7 @@ export default function PlanAVisitPage() {
             lede="Straight answers, no church jargon. If we have not covered it, just ask us."
           />
 
-          <Stagger className="mt-14 grid gap-px overflow-hidden rounded-media border border-navy-900/[0.08] bg-navy-900/[0.07] sm:grid-cols-2 lg:grid-cols-3">
+          <Stagger className="mt-8 grid gap-px overflow-hidden rounded-media border border-navy-900/[0.08] bg-navy-900/[0.07] sm:grid-cols-2 lg:grid-cols-3">
             {visitAnswers.map((answer) => {
               const isPending = answer.answer.trim().length === 0;
               const body = isPending ? (answer.fallback ?? "") : answer.answer;
@@ -179,7 +179,7 @@ export default function PlanAVisitPage() {
       {/* -------------------------------- Children ------------------------------- */}
       <Section tone="white" spacing="lg" id="children">
         <Container>
-          <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
+          <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-10">
             <Reveal y={26}>
               <div className="relative aspect-[4/3] overflow-hidden rounded-media bg-navy-900">
                 <Image
@@ -241,7 +241,7 @@ export default function PlanAVisitPage() {
       {/* ------------------------------ Where & access ---------------------------- */}
       <Section tone="cream" spacing="lg" id="where">
         <Container>
-          <div className="grid gap-14 lg:grid-cols-2 lg:gap-16">
+          <div className="grid gap-8 lg:grid-cols-2 lg:gap-10">
             <div>
               <SectionHeading
                 eyebrow="Getting Here"
@@ -271,7 +271,7 @@ export default function PlanAVisitPage() {
       {/* --------------------------------- The form ------------------------------- */}
       <Section tone="white" spacing="lg" id="form">
         <Container>
-          <div className="grid gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.25fr)] lg:gap-20">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.25fr)] lg:gap-10">
             <div className="lg:sticky lg:top-28 lg:self-start">
               <SectionHeading
                 eyebrow="Plan Your Visit"

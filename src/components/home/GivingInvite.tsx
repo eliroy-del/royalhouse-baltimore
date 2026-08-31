@@ -14,9 +14,9 @@ export function GivingInvite() {
   const funds = churchConfig.giving.funds;
 
   return (
-    <Section tone="cream" spacing="xl" id="give">
+    <Section tone="cream" spacing="lg" id="give">
       <Container>
-        <div className="grid items-center gap-14 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1fr)] lg:gap-20">
+        <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1fr)] lg:gap-10">
           <Reveal y={28} className="order-2 lg:order-1">
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-media bg-navy-900">
               <Image

@@ -26,7 +26,7 @@ export function BaltimoreSection() {
           strength={6}
         />
 
-        <div className="flex items-center py-20 sm:py-24 lg:py-28">
+        <div className="flex items-center py-12 sm:py-14 lg:py-16">
           <Container width="full" className="max-w-[42rem] lg:pr-16">
             <Eyebrow chapter="08">Rooted in Baltimore</Eyebrow>
 

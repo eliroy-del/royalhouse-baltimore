@@ -15,10 +15,10 @@ const tones: Record<Tone, string> = {
 
 const spacings: Record<Spacing, string> = {
   none: "",
-  sm: "py-14 sm:py-16",
-  md: "py-18 sm:py-22 lg:py-26",
-  lg: "py-20 sm:py-26 lg:py-32",
-  xl: "py-24 sm:py-32 lg:py-40",
+  sm: "py-8 sm:py-10",
+  md: "py-10 sm:py-12 lg:py-14",
+  lg: "py-12 sm:py-14 lg:py-16",
+  xl: "py-14 sm:py-16 lg:py-20",
 };
 
 interface SectionProps extends HTMLAttributes<HTMLElement> {

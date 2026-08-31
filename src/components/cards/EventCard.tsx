@@ -52,7 +52,7 @@ export function EventCard({ event, variant = "default", className }: EventCardPr
       <Link
         href={href}
         className={cn(
-          "group relative isolate flex min-h-[26rem] flex-col justify-end overflow-hidden rounded-media bg-navy-950 p-8 text-white sm:min-h-[30rem] lg:p-12",
+          "group relative isolate flex min-h-[20rem] flex-col justify-end overflow-hidden rounded-media bg-navy-950 p-6 text-white sm:min-h-[24rem] lg:p-8",
           className,
         )}
       >
