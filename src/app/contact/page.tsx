@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Icon } from "@/components/ui/Icon";
 import { Section } from "@/components/ui/Section";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 import { churchConfig } from "@/config/church";
 import { images } from "@/config/images";
 import { addressLines, churchStatus } from "@/lib/church";
@@ -94,9 +93,7 @@ export default function ContactPage() {
         <Container>
           <div className="grid gap-5 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-6">
             <div>
-              <SectionHeading eyebrow="Reach Us" title="However suits you best." />
-
-              <Stagger className="mt-6 flex flex-col gap-px overflow-hidden rounded-media border border-navy-900/[0.08] bg-navy-900/[0.07]">
+              <Stagger className="flex flex-col gap-px overflow-hidden rounded-media border border-navy-900/[0.08] bg-navy-900/[0.07]">
                 {methods().map((method) => (
                   <StaggerItem key={method.label} className="flex gap-4 bg-white p-6">
                     <span className="mt-0.5 flex size-10 shrink-0 items-center justify-center rounded-full bg-navy-900/[0.05] text-navy-800">
