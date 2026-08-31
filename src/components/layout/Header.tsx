@@ -8,9 +8,7 @@ import { SearchTrigger } from "@/components/search/SearchOverlay";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Icon } from "@/components/ui/Icon";
-import { churchConfig } from "@/config/church";
 import { useScrolled } from "@/hooks/useScrolled";
-import { churchStatus, serviceTimeSummary, telHref } from "@/lib/church";
 import { cn } from "@/lib/utils";
 
 export function Header() {
@@ -25,52 +23,6 @@ export function Header() {
           : "bg-gradient-to-b from-navy-950/55 to-transparent",
       )}
     >
-      {/* Utility strip — the "when and where" answered before anyone scrolls. */}
-      {/* `inert` keeps the collapsed strip out of the tab order while the
-          height transition still has an element to animate. */}
-      <div
-        aria-hidden={scrolled}
-        inert={scrolled}
-        className={cn(
-          "hidden overflow-hidden border-b border-white/10 transition-[max-height,opacity] duration-500 ease-out-expo lg:block",
-          scrolled ? "max-h-0 opacity-0" : "max-h-12 opacity-100",
-        )}
-      >
-        <Container className="flex h-10 items-center justify-between text-[0.75rem] text-white/70">
-          <p className="flex items-center gap-2">
-            <Icon name="clock" className="size-3.5 text-gold-400" />
-            <span className="font-medium tracking-wide">
-              {churchStatus.hasServiceTimes ? serviceTimeSummary() : "Sunday Gatherings"}
-            </span>
-            <span aria-hidden="true" className="mx-1 h-3 w-px bg-white/20" />
-            <Icon name="map-pin" className="size-3.5 text-gold-400" />
-            <span>
-              {churchConfig.city}, {churchConfig.region}
-            </span>
-          </p>
-          <p className="flex items-center gap-5">
-            {churchStatus.hasPhone ? (
-              <a href={`tel:${telHref()}`} className="transition-colors hover:text-white">
-                {churchConfig.contact.phone}
-              </a>
-            ) : null}
-            <Link
-              href="/prayer"
-              className="transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500"
-            >
-              Request Prayer
-            </Link>
-            <Link
-              href="/watch-live"
-              className="inline-flex items-center gap-1.5 font-medium text-gold-300 transition-colors hover:text-gold-200"
-            >
-              <Icon name="play" className="size-3.5" />
-              Watch Live
-            </Link>
-          </p>
-        </Container>
-      </div>
-
       <Container
         className={cn(
           "flex items-center justify-between gap-6 transition-[height] duration-500 ease-out-expo",
