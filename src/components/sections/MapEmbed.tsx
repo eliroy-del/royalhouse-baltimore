@@ -10,14 +10,24 @@ import { cn } from "@/lib/utils";
  * Interactive map when a location is configured; otherwise an honest,
  * well-composed panel that still gets the visitor to a human being.
  */
-export function MapEmbed({ className }: { className?: string }) {
+export function MapEmbed({
+  className,
+  fullBleed = false,
+}: {
+  className?: string;
+  /** Edge-to-edge layout without rounded inset framing. */
+  fullBleed?: boolean;
+}) {
   const embed = mapEmbedUrl();
 
   if (embed) {
     return (
       <div
         className={cn(
-          "overflow-hidden rounded-media border border-navy-900/[0.08] bg-mist",
+          "overflow-hidden bg-mist",
+          fullBleed
+            ? "rounded-none border-y border-navy-900/[0.08]"
+            : "rounded-media border border-navy-900/[0.08]",
           className,
         )}
       >
@@ -26,7 +36,12 @@ export function MapEmbed({ className }: { className?: string }) {
           src={embed}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          className="aspect-[2/1] h-full min-h-52 w-full border-0 grayscale-[0.15] sm:min-h-64"
+          className={cn(
+            "h-full w-full border-0 grayscale-[0.15]",
+            fullBleed
+              ? "aspect-[21/9] min-h-56 sm:min-h-72 lg:min-h-96"
+              : "aspect-[2/1] min-h-52 sm:min-h-64",
+          )}
         />
       </div>
     );

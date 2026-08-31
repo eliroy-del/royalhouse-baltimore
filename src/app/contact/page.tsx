@@ -97,10 +97,8 @@ export default function ContactPage() {
         </Container>
       </Section>
 
-      <Section tone="white" spacing="sm">
-        <Container width="narrow">
-          <MapEmbed />
-        </Container>
+      <Section tone="white" spacing="none">
+        <MapEmbed fullBleed />
       </Section>
 
       <CtaBand
