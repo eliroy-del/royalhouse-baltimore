@@ -74,17 +74,14 @@ export function Logo({ tone = "light", size = "md", className, preload = false }
         >
           Royalhouse
         </span>
-        <span className="mt-1 flex items-center gap-2">
-          <span aria-hidden="true" className="h-px w-4 rule-gold" />
-          <span
-            className={cn(
-              "font-semibold uppercase",
-              scale.local,
-              tone === "dark" ? "text-gold-300" : "text-gold-800",
-            )}
-          >
-            {brandConfig.localName}
-          </span>
+        <span
+          className={cn(
+            "mt-1 font-semibold uppercase",
+            scale.local,
+            tone === "dark" ? "text-gold-300" : "text-gold-800",
+          )}
+        >
+          {brandConfig.localName}
         </span>
       </span>
     </span>
