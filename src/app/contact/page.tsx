@@ -72,14 +72,6 @@ export default function ContactPage() {
                     </span>
                   ))}
                 </address>
-                {directions ? (
-                  <Button asChild variant="outline" size="sm" className="mt-3">
-                    <a href={directions} target="_blank" rel="noreferrer noopener">
-                      Get Directions
-                      <Icon name="arrow-right" className="size-3.5" />
-                    </a>
-                  </Button>
-                ) : null}
               </div>
 
               <div className="mt-4 border-t border-navy-900/[0.08] pt-3.5">
