@@ -20,7 +20,6 @@ export interface NavItem {
  * everything else lives one level down inside an animated panel.
  */
 export const primaryNav: NavItem[] = [
-  { label: "Home", href: "/" },
   {
     label: "Plan a Visit",
     href: "/plan-a-visit",

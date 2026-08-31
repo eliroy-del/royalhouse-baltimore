@@ -24,22 +24,22 @@ export function Header() {
     >
       <Container
         className={cn(
-          "flex items-center justify-between gap-6 transition-[height] duration-500 ease-out-expo",
-          scrolled ? "h-14" : "h-16",
+          "flex items-center justify-between gap-4 transition-[height] duration-500 ease-out-expo",
+          scrolled ? "h-12" : "h-14",
         )}
       >
-        <LogoLink tone="dark" size={scrolled ? "sm" : "md"} preload />
+        <LogoLink tone="dark" size="sm" preload />
 
         <DesktopNav />
 
         <div className="flex items-center gap-2">
-          <Button asChild variant="outline-light" size="sm" className="hidden sm:inline-flex">
-            <Link href="/give">Give</Link>
-          </Button>
           <Button asChild variant="gold" size="sm" className="hidden md:inline-flex">
             <Link href="/plan-a-visit">
               Plan Your Visit
-              <Icon name="arrow-right" className="size-3.5 transition-transform duration-300 group-hover/btn:translate-x-0.5" />
+              <Icon
+                name="arrow-right"
+                className="size-3.5 transition-transform duration-300 group-hover/btn:translate-x-0.5"
+              />
             </Link>
           </Button>
           <MobileNav />

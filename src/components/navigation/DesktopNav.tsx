@@ -14,11 +14,11 @@ function isActive(pathname: string, href: string): boolean {
 }
 
 const triggerClasses = [
-  "relative inline-flex items-center gap-1.5 rounded-md px-3 py-2 text-[0.875rem] font-medium",
+  "relative inline-flex items-center gap-1 rounded-md px-2.5 py-1.5 text-[0.8125rem] font-medium",
   "text-white/85 transition-colors duration-200 hover:text-white",
   "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500",
   // Gold underline reveal
-  "after:pointer-events-none after:absolute after:inset-x-3 after:bottom-1 after:h-px",
+  "after:pointer-events-none after:absolute after:inset-x-2.5 after:bottom-0.5 after:h-px",
   "after:origin-left after:scale-x-0 after:bg-gold-400 after:transition-transform after:duration-300",
   "after:ease-out-expo hover:after:scale-x-100 data-[state=open]:after:scale-x-100",
 ].join(" ");
