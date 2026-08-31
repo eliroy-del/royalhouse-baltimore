@@ -1,7 +1,6 @@
 import { EventsPreview } from "@/components/home/EventsPreview";
 import { GivingInvite } from "@/components/home/GivingInvite";
 import { Hero } from "@/components/home/Hero";
-import { MinistriesPreview } from "@/components/home/MinistriesPreview";
 import { PrayerInvite } from "@/components/home/PrayerInvite";
 import { WelcomeSection } from "@/components/home/WelcomeSection";
 import { ServiceCard } from "@/components/sections/ServiceCard";
@@ -25,7 +24,6 @@ export default function HomePage() {
       <ServiceCard variant="floating" />
       <WelcomeSection />
       <EventsPreview />
-      <MinistriesPreview />
       <PrayerInvite />
       <GivingInvite />
     </>
