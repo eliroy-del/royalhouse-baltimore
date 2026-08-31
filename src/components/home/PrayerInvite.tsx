@@ -47,7 +47,7 @@ export function PrayerInvite() {
               <ul className="mt-5 flex flex-col gap-2.5">
                 {assurances.map((item) => (
                   <li key={item} className="flex items-start gap-2.5">
-                    <span className="mt-0.5 flex size-4.5 shrink-0 items-center justify-center rounded-full bg-gold-500/20 text-gold-300">
+                    <span className="mt-0.5 flex size-4 shrink-0 items-center justify-center rounded-full bg-gold-500/20 text-gold-300">
                       <svg viewBox="0 0 16 16" aria-hidden="true" className="size-2.5">
                         <path
                           d="M3.5 8.5l3 3L12.5 5"
