@@ -1,7 +1,6 @@
 import { BaltimoreSection } from "@/components/home/BaltimoreSection";
 import { BelongSection } from "@/components/home/BelongSection";
 import { EventsPreview } from "@/components/home/EventsPreview";
-import { FinalCta } from "@/components/home/FinalCta";
 import { GivingInvite } from "@/components/home/GivingInvite";
 import { Hero } from "@/components/home/Hero";
 import { LatestMessage } from "@/components/home/LatestMessage";
@@ -41,7 +40,6 @@ export default function HomePage() {
       <GivingInvite />
       <PlanVisitInvite />
       <SocialSection />
-      <FinalCta />
     </>
   );
 }

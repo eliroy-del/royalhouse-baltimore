@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { LogoLink } from "@/components/brand/Logo";
-import { NewsletterForm } from "@/components/forms/NewsletterForm";
 import { SocialLinks } from "@/components/layout/SocialLinks";
 import { Container } from "@/components/ui/Container";
 import { churchConfig } from "@/config/church";
@@ -18,24 +17,6 @@ export function Footer() {
         className="pointer-events-none absolute -right-40 -top-40 size-[32rem] rounded-full bg-[radial-gradient(circle,rgba(201,162,39,0.14),transparent_65%)]"
       />
 
-      {/* ---------------------------- Newsletter ---------------------------- */}
-      <Container className="relative border-b border-white/10 py-8">
-        <div className="grid gap-6 lg:grid-cols-[1fr_28rem] lg:items-center lg:gap-10">
-          <div>
-            <p className="eyebrow text-gold-300">Stay Connected</p>
-            <h2 className="mt-3 font-display text-[clamp(1.5rem,2.6vw,2rem)] leading-tight">
-              Never miss what God is doing here.
-            </h2>
-            <p className="mt-3 max-w-xl text-[0.9375rem] leading-relaxed text-white/60">
-              Service reminders, upcoming events and the occasional word of encouragement — sent to
-              your inbox, not your notifications.
-            </p>
-          </div>
-          <NewsletterForm />
-        </div>
-      </Container>
-
-      {/* ------------------------- Brand + navigation ------------------------ */}
       <Container className="relative py-8">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,20rem)_1fr] lg:gap-10">
           <div>
@@ -68,7 +49,6 @@ export function Footer() {
         </div>
       </Container>
 
-      {/* ------------------------------ Legal ------------------------------- */}
       <Container className="relative flex flex-col gap-4 border-t border-white/10 py-8 text-[0.8125rem] text-white/60 sm:flex-row sm:items-center sm:justify-between">
         <p>
           © {year} {churchConfig.name}.{" "}
