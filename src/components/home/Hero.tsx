@@ -6,14 +6,14 @@ import { Icon } from "@/components/ui/Icon";
 import { images } from "@/config/images";
 
 /**
- * Homepage hero: glowing cross on the right, welcome headline and CTAs
- * overlaid on the open dark field to the left.
+ * Homepage hero: glowing cross on the right, welcome headline and primary
+ * CTA on the left. The Sunday invite bar floats across the bottom edge.
  */
 export function Hero() {
   return (
-    // Bottom padding clears the floating service card.
-    <section className="relative isolate w-full overflow-hidden bg-navy-950 pb-10 sm:pb-12 lg:pb-14">
-      <div className="relative aspect-[16/9] min-h-[20rem] w-full sm:min-h-[24rem] lg:min-h-[32rem]">
+    // Extra bottom padding so the floating Sunday bar can overlap cleanly.
+    <section className="relative isolate w-full overflow-hidden bg-navy-950 pb-14 sm:pb-16 lg:pb-20">
+      <div className="relative flex min-h-[70svh] w-full items-center sm:min-h-[74svh] lg:min-h-[78svh]">
         <Image
           src={images.heroCampaign.src}
           alt={images.heroCampaign.alt}
@@ -25,44 +25,43 @@ export function Hero() {
           className="object-cover object-[72%_center]"
         />
 
-        <div aria-hidden="true" className="absolute inset-0 bg-navy-950/20" />
+        <div aria-hidden="true" className="absolute inset-0 bg-navy-950/35" />
         <div
           aria-hidden="true"
-          className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-navy-950/75 to-transparent sm:h-28"
+          className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-navy-950/80 to-transparent"
         />
         <div
           aria-hidden="true"
-          className="absolute inset-y-0 left-0 w-[78%] bg-gradient-to-r from-navy-950/85 via-navy-950/50 to-transparent"
+          className="absolute inset-y-0 left-0 w-[78%] bg-gradient-to-r from-navy-950/80 via-navy-950/45 to-transparent"
         />
         <div
           aria-hidden="true"
-          className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-navy-950 via-navy-950/60 to-transparent sm:h-48 lg:h-56"
+          className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-navy-950/70 to-transparent"
         />
 
-        <Container className="absolute inset-x-0 bottom-0 pb-5 sm:pb-6 lg:pb-7">
-          <div className="rise flex max-w-4xl flex-col items-start gap-5 text-left">
-            <h1 className="font-display text-[clamp(2.25rem,6.5vw,4.25rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white">
+        <Container className="relative z-10 py-24 sm:py-28 lg:py-32">
+          <div className="rise flex max-w-3xl flex-col items-start gap-5 text-left">
+            <p className="eyebrow text-gold-300">Come as you are</p>
+            <h1 className="font-display text-[clamp(2.5rem,7vw,4.5rem)] font-bold leading-[1.02] tracking-[-0.02em] text-white">
               <span className="block">Welcome to</span>
               <span className="block">
                 <span className="text-gold-300">Royalhouse Chapel</span>
                 {" - Baltimore"}
               </span>
             </h1>
-
-            <div className="flex flex-col gap-2.5 sm:flex-row sm:items-center">
-              <Button asChild variant="gold" size="lg">
-                <Link href="/plan-a-visit">
-                  Plan Your Visit
-                  <Icon
-                    name="arrow-right"
-                    className="size-4 transition-transform duration-300 group-hover/btn:translate-x-1"
-                  />
-                </Link>
-              </Button>
-              <Button asChild variant="outline-light" size="lg">
-                <Link href="/give">Give</Link>
-              </Button>
-            </div>
+            <p className="max-w-xl text-[0.9375rem] leading-relaxed text-white/80 sm:text-base">
+              Experience the presence of God and the power of His Word with Royalhouse Chapel
+              International - Baltimore.
+            </p>
+            <Button asChild variant="gold" size="lg">
+              <Link href="/plan-a-visit">
+                I&rsquo;m New Here
+                <Icon
+                  name="arrow-right"
+                  className="size-4 transition-transform duration-300 group-hover/btn:translate-x-1"
+                />
+              </Link>
+            </Button>
           </div>
         </Container>
       </div>
