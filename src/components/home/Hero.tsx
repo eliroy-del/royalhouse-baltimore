@@ -32,39 +32,37 @@ export function Hero() {
         />
         <div
           aria-hidden="true"
-          className="absolute inset-y-0 left-0 w-[72%] bg-gradient-to-r from-navy-950/80 via-navy-950/45 to-transparent"
+          className="absolute inset-y-0 left-0 w-[78%] bg-gradient-to-r from-navy-950/85 via-navy-950/50 to-transparent"
         />
         <div
           aria-hidden="true"
-          className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-navy-950 via-navy-950/55 to-transparent sm:h-44 lg:h-52"
+          className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-navy-950 via-navy-950/60 to-transparent sm:h-48 lg:h-56"
         />
 
         <Container className="absolute inset-x-0 bottom-0 pb-5 sm:pb-6 lg:pb-7">
-          <h1
-            className="rise max-w-4xl font-display text-[clamp(2.25rem,6.5vw,4.25rem)] font-bold leading-[1.02] tracking-[-0.02em] text-white"
-            style={{ animationDelay: "80ms" }}
-          >
-            Welcome to{" "}
-            <em className="not-italic text-gold-300">Royalhouse Chapel</em>
-            {" - Baltimore"}
-          </h1>
+          <div className="rise flex max-w-4xl flex-col items-start gap-5 text-left">
+            <h1 className="font-display text-[clamp(2.25rem,6.5vw,4.25rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white">
+              <span className="block">Welcome to</span>
+              <span className="block">
+                <span className="text-gold-300">Royalhouse Chapel</span>
+                {" - Baltimore"}
+              </span>
+            </h1>
 
-          <div
-            className="rise mt-5 flex flex-col gap-2.5 sm:flex-row sm:items-center"
-            style={{ animationDelay: "280ms" }}
-          >
-            <Button asChild variant="gold" size="lg">
-              <Link href="/plan-a-visit">
-                Plan Your Visit
-                <Icon
-                  name="arrow-right"
-                  className="size-4 transition-transform duration-300 group-hover/btn:translate-x-1"
-                />
-              </Link>
-            </Button>
-            <Button asChild variant="outline-light" size="lg">
-              <Link href="/give">Give</Link>
-            </Button>
+            <div className="flex flex-col gap-2.5 sm:flex-row sm:items-center">
+              <Button asChild variant="gold" size="lg">
+                <Link href="/plan-a-visit">
+                  Plan Your Visit
+                  <Icon
+                    name="arrow-right"
+                    className="size-4 transition-transform duration-300 group-hover/btn:translate-x-1"
+                  />
+                </Link>
+              </Button>
+              <Button asChild variant="outline-light" size="lg">
+                <Link href="/give">Give</Link>
+              </Button>
+            </div>
           </div>
         </Container>
       </div>
