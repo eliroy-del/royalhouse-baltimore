@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Icon } from "@/components/ui/Icon";
 import { images, navyBlurDataURL } from "@/config/images";
-import { churchStatus, directionsUrl, locationLine, serviceTimeSummary } from "@/lib/church";
+import { directionsUrl } from "@/lib/church";
 import { cn } from "@/lib/utils";
 
 interface ServiceCardProps {
@@ -15,18 +15,15 @@ interface ServiceCardProps {
 }
 
 /**
- * Compact Sunday invite bar: thumbnail, message, and actions.
- * Modeled on a floating hero CTA strip rather than a tall info card.
+ * Floating Sunday invite: campaign line, thumbnail, and visit actions.
+ * Narrower and taller than a thin strip so the statement can breathe.
  */
 export function ServiceCard({ variant = "inline", className }: ServiceCardProps) {
   const directions = directionsUrl();
-  const schedule = churchStatus.hasServiceTimes
-    ? serviceTimeSummary()
-    : "Sunday mornings";
-  const place = locationLine();
 
   return (
     <Container
+      width="narrow"
       className={cn(
         "relative w-full",
         variant === "floating" && "z-20 -mt-8 sm:-mt-10 lg:-mt-12",
@@ -34,31 +31,30 @@ export function ServiceCard({ variant = "inline", className }: ServiceCardProps)
       )}
     >
       <Reveal y={12}>
-        <div className="flex flex-col overflow-hidden rounded-card border border-navy-900/[0.07] bg-white shadow-float sm:flex-row sm:items-stretch">
-          <div className="relative aspect-[16/10] w-full shrink-0 sm:aspect-auto sm:w-40 lg:w-48">
+        <div className="flex min-h-[12rem] flex-col overflow-hidden rounded-card border border-navy-900/[0.07] bg-white shadow-float sm:min-h-[14rem] sm:flex-row sm:items-stretch">
+          <div className="relative aspect-[16/10] w-full shrink-0 sm:aspect-auto sm:w-44 lg:w-52">
             <Image
               src={images.worshipTeam.src}
               alt=""
               fill
-              sizes="(min-width: 1024px) 12rem, (min-width: 640px) 10rem, 100vw"
+              sizes="(min-width: 1024px) 13rem, (min-width: 640px) 11rem, 100vw"
               placeholder="blur"
               blurDataURL={navyBlurDataURL}
               className="object-cover object-[50%_35%]"
             />
           </div>
 
-          <div className="flex flex-1 flex-col justify-center gap-3 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-6 sm:px-5 sm:py-4 lg:px-6">
-            <div className="min-w-0">
-              <p className="text-[1.0625rem] font-semibold leading-snug text-navy-900 sm:text-[1.125rem]">
-                Join us this Sunday
-              </p>
-              <p className="mt-1 text-[0.8125rem] leading-snug text-navy-900/65 sm:text-[0.875rem]">
-                {schedule}
-                {place ? ` · ${place}` : null}
-              </p>
-            </div>
+          <div className="flex flex-1 flex-col justify-center gap-4 px-4 py-5 sm:gap-5 sm:px-5 sm:py-6 lg:px-6">
+            <p className="max-w-xl text-[0.6875rem] font-bold uppercase leading-[1.45] tracking-[0.06em] text-navy-950 sm:text-[0.75rem] lg:text-[0.8125rem]">
+              The King has been waiting for you,{" "}
+              <span className="text-navy-700">
+                and so has your miracle. Worship with us.
+              </span>{" "}
+              Each service is unique and packed with power, praise, prayer, presence and the
+              prophetic.
+            </p>
 
-            <div className="flex shrink-0 flex-wrap items-center gap-3">
+            <div className="flex flex-wrap items-center gap-3">
               <Button asChild variant="gold" size="md">
                 <Link href="/plan-a-visit">
                   Plan Your Visit
