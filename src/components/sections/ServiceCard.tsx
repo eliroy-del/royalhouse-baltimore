@@ -38,8 +38,8 @@ export function ServiceCard({ variant = "inline", className }: ServiceCardProps)
             />
           </div>
 
-          <div className="flex flex-1 flex-col justify-center px-4 py-5 sm:px-5 sm:py-6 lg:px-6">
-            <p className="max-w-xl text-[0.875rem] font-bold uppercase leading-[1.4] tracking-[0.05em] text-navy-950 sm:text-[1rem] lg:text-[1.0625rem]">
+          <div className="flex flex-1 flex-col items-center justify-center px-4 py-5 text-center sm:px-5 sm:py-6 lg:px-6">
+            <p className="max-w-xl text-[1rem] font-bold uppercase leading-[1.35] tracking-[0.05em] text-black sm:text-[1.125rem] lg:text-[1.25rem]">
               The King has been waiting for you, and so has your miracle. Worship with us. Each
               service is unique and packed with power, praise, prayer, presence and the prophetic.
             </p>
