@@ -39,13 +39,9 @@ export function ServiceCard({ variant = "inline", className }: ServiceCardProps)
           </div>
 
           <div className="flex flex-1 flex-col justify-center px-4 py-5 sm:px-5 sm:py-6 lg:px-6">
-            <p className="max-w-xl text-[0.6875rem] font-bold uppercase leading-[1.45] tracking-[0.06em] text-navy-950 sm:text-[0.75rem] lg:text-[0.8125rem]">
-              The King has been waiting for you,{" "}
-              <span className="text-navy-700">
-                and so has your miracle. Worship with us.
-              </span>{" "}
-              Each service is unique and packed with power, praise, prayer, presence and the
-              prophetic.
+            <p className="max-w-xl text-[0.875rem] font-bold uppercase leading-[1.4] tracking-[0.05em] text-navy-950 sm:text-[1rem] lg:text-[1.0625rem]">
+              The King has been waiting for you, and so has your miracle. Worship with us. Each
+              service is unique and packed with power, praise, prayer, presence and the prophetic.
             </p>
           </div>
         </div>
