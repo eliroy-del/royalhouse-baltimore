@@ -43,10 +43,7 @@ export function Hero() {
           <div className="rise flex max-w-3xl flex-col items-start gap-5 text-left">
             <h1 className="font-display text-[clamp(2.5rem,7vw,4.5rem)] font-bold leading-[1.02] tracking-[-0.02em] text-white">
               <span className="block">Welcome to</span>
-              <span className="block">
-                <span className="text-gold-300">Royalhouse Chapel</span>
-                {" - Baltimore"}
-              </span>
+              <span className="block">Royalhouse Chapel - Baltimore</span>
             </h1>
             <p className="max-w-xl text-[0.9375rem] leading-relaxed text-white/80 sm:text-base">
               Experience the presence of God and the power of His Word with Royalhouse Chapel
