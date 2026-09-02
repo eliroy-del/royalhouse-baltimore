@@ -41,7 +41,6 @@ export function Hero() {
 
         <Container className="relative z-10 py-24 sm:py-28 lg:py-32">
           <div className="rise flex max-w-3xl flex-col items-start gap-5 text-left">
-            <p className="eyebrow text-gold-300">Come as you are</p>
             <h1 className="font-display text-[clamp(2.5rem,7vw,4.5rem)] font-bold leading-[1.02] tracking-[-0.02em] text-white">
               <span className="block">Welcome to</span>
               <span className="block">

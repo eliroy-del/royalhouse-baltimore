@@ -67,7 +67,7 @@ export function Logo({ tone = "light", size = "md", className, preload = false }
       <span className="flex min-w-0 flex-col items-start leading-none">
         <span
           className={cn(
-            "font-display font-medium tracking-[0.005em]",
+            "font-display font-bold tracking-[0.005em]",
             scale.word,
             tone === "dark" ? "text-white" : "text-navy-900",
           )}
@@ -76,9 +76,9 @@ export function Logo({ tone = "light", size = "md", className, preload = false }
         </span>
         <span
           className={cn(
-            "mt-1 font-semibold uppercase",
+            "mt-1 font-bold uppercase",
             scale.local,
-            tone === "dark" ? "text-gold-300" : "text-gold-800",
+            tone === "dark" ? "text-white" : "text-gold-800",
           )}
         >
           {brandConfig.localName}
