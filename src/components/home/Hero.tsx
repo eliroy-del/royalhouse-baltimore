@@ -6,7 +6,7 @@ import { Icon } from "@/components/ui/Icon";
 import { images } from "@/config/images";
 
 /**
- * Homepage hero: glowing cross on the right, welcome headline and primary
+ * Homepage hero: worship-stage photograph, welcome headline and primary
  * CTA on the left. The Sunday invite bar floats across the bottom edge.
  */
 export function Hero() {
@@ -22,7 +22,7 @@ export function Hero() {
           fetchPriority="high"
           sizes="100vw"
           quality={90}
-          className="object-cover object-[72%_center]"
+          className="object-cover object-[58%_center]"
         />
 
         <div aria-hidden="true" className="absolute inset-0 bg-navy-950/35" />

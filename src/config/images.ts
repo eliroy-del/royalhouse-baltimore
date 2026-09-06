@@ -22,8 +22,8 @@ export const images = {
     alt: "A multigenerational congregation standing with hands raised in worship as warm stage light streams over them",
   },
   heroCampaign: {
-    src: "/images/hero-cross-light.jpg",
-    alt: "A glowing golden cross of light against a dark stone wall",
+    src: "/images/hero-worship-stage.jpg",
+    alt: "The Royalhouse Chapel worship team singing on stage as the congregation worships",
   },
   welcomeLobby: {
     src: "/images/welcome-lobby.jpg",
