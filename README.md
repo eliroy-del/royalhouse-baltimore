@@ -62,9 +62,8 @@ Fill in `src/config/church.ts`:
 - Visit details: parking, arrival, dress, kids, accessibility, service length
 
 Then the brand asset — see `public/logo/README.md`. The official Royalhouse Chapel
-mark is installed at `public/logo/royalhouse-chapel.png` and rendered, unaltered,
-in the header, footer and loading screen, paired with the local wordmark
-**Royalhouse Baltimore**.
+Baltimore lockup is installed at `public/logo/royalhouse-baltimore.png` and
+rendered, unaltered, in the header, footer and loading screen.
 
 Sample events, sermons, ministries, testimonies and leadership placeholders live
 in `src/content/` and are clearly marked as sample content. Copy is written in US

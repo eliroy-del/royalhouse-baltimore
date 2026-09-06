@@ -1,16 +1,14 @@
 /* ============================================================
    BRAND ASSETS
    ------------------------------------------------------------
-   The official Royalhouse Chapel mark lives at
-   /public/logo/royalhouse-chapel.png, copied from the supplied
-   artwork without redesign, colour change, crop or effect.
+   The official Royalhouse Chapel Baltimore lockup lives at
+   /public/logo/royalhouse-baltimore.png, copied from the supplied
+   artwork without redesign, colour change, or effect.
 
-   The mark already carries the words "Royalhouse Chapel". On this
-   site it is always paired with the local identifier "Baltimore",
-   so the church is presented as a Baltimore assembly of the
-   Royalhouse family rather than as the international organisation.
+   Empty export canvas was trimmed so the mark can size in the
+   header. The 1:1 source field is kept for app icons.
 
-   Sizing is CSS-only. The artwork's intrinsic 1:1 ratio is locked.
+   Sizing is CSS-only. The artwork's intrinsic ratio is locked.
    ============================================================ */
 
 export interface LogoAsset {
@@ -22,20 +20,20 @@ export interface LogoAsset {
 
 export const brandConfig = {
   /** Accessible name for the logo, used as alt text / aria-label. */
-  name: "Royalhouse Baltimore",
-  /** The local identifier shown beside the official mark. */
+  name: "Royalhouse Chapel Baltimore",
+  /** The local identifier, retained for copy that names the assembly. */
   localName: "Baltimore",
 
   logo: {
     /**
-     * Official mark. White field is native to the artwork (the dove is white),
-     * so we never punch the background out. On navy surfaces the mark sits
-     * in a white rounded badge, a container, not an edit of the logo.
+     * Official Baltimore lockup. White dove, crown, chapel wordmark and
+     * BALTIMORE sit on the native black field. We never recolour or
+     * punch the background out.
      */
     official: {
-      src: "/logo/royalhouse-chapel.png",
-      width: 225,
-      height: 225,
+      src: "/logo/royalhouse-baltimore.png",
+      width: 794,
+      height: 650,
     } satisfies LogoAsset,
   },
 
@@ -43,5 +41,5 @@ export const brandConfig = {
    * Minimum clear space around the logo, expressed as a Tailwind class.
    * Applied by the Logo component so the mark always breathes.
    */
-  clearSpace: "p-1",
+  clearSpace: "p-0.5",
 } as const;

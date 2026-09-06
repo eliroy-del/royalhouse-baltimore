@@ -6,25 +6,10 @@ import { cn } from "@/lib/utils";
 type LogoTone = "light" | "dark";
 type LogoSize = "sm" | "md" | "lg";
 
-const sizes: Record<
-  LogoSize,
-  { mark: string; word: string; local: string }
-> = {
-  sm: {
-    mark: "size-10",
-    word: "text-[1.0625rem]",
-    local: "text-[0.5rem] tracking-[0.32em]",
-  },
-  md: {
-    mark: "size-12",
-    word: "text-[1.25rem]",
-    local: "text-[0.5625rem] tracking-[0.36em]",
-  },
-  lg: {
-    mark: "size-16",
-    word: "text-[1.625rem]",
-    local: "text-[0.625rem] tracking-[0.4em]",
-  },
+const sizes: Record<LogoSize, string> = {
+  sm: "h-12",
+  md: "h-16",
+  lg: "h-28",
 };
 
 interface LogoProps {
@@ -33,64 +18,39 @@ interface LogoProps {
   className?: string;
   /** Preload the mark, true in the header, false in the footer. */
   preload?: boolean;
+  /** Decorative when the parent link already names the church. */
+  decorative?: boolean;
 }
 
 /**
- * Official Royalhouse Chapel mark, sized with CSS only, paired with the
- * local wordmark "Royalhouse Baltimore". The supplied artwork is never
- * recoloured, cropped or given effects. On every surface it sits in a
- * white rounded badge so the native white dove remains visible.
+ * Official Royalhouse Chapel Baltimore lockup. The supplied artwork is
+ * never recoloured, cropped in the layout, or given effects. Sizing is
+ * CSS-only; the intrinsic ratio stays locked.
  */
-export function Logo({ tone = "light", size = "md", className, preload = false }: LogoProps) {
-  const scale = sizes[size];
+export function Logo({
+  size = "md",
+  className,
+  preload = false,
+  decorative = false,
+}: LogoProps) {
   const { official } = brandConfig.logo;
 
   return (
-    <span className={cn("flex items-center gap-3", className)}>
-      <span
-        className={cn(
-          "relative shrink-0 overflow-hidden rounded-lg bg-white",
-          "shadow-[0_0_0_1px_rgba(201,162,39,0.28)]",
-          scale.mark,
-          brandConfig.clearSpace,
-        )}
-      >
-        <Image
-          src={official.src}
-          alt=""
-          width={official.width}
-          height={official.height}
-          preload={preload}
-          className="size-full object-contain"
-        />
-      </span>
-      <span className="flex min-w-0 flex-col items-start leading-none">
-        <span
-          className={cn(
-            "font-display font-bold tracking-[0.005em]",
-            scale.word,
-            tone === "dark" ? "text-white" : "text-navy-900",
-          )}
-        >
-          Royalhouse
-        </span>
-        <span
-          className={cn(
-            "mt-1 font-bold uppercase",
-            scale.local,
-            tone === "dark" ? "text-white" : "text-gold-800",
-          )}
-        >
-          {brandConfig.localName}
-        </span>
-      </span>
+    <span className={cn("inline-flex items-center", brandConfig.clearSpace, className)}>
+      <Image
+        src={official.src}
+        alt={decorative ? "" : brandConfig.name}
+        width={official.width}
+        height={official.height}
+        preload={preload}
+        className={cn("w-auto object-contain", sizes[size])}
+      />
     </span>
   );
 }
 
 /** The logo wrapped as a home link, used in the header and footer. */
 export function LogoLink({
-  tone = "light",
   size = "md",
   className,
   onNavigate,
@@ -106,7 +66,7 @@ export function LogoLink({
         className,
       )}
     >
-      <Logo tone={tone} size={size} preload={preload} />
+      <Logo size={size} preload={preload} decorative />
     </Link>
   );
 }

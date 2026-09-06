@@ -18,7 +18,7 @@ export function Footer() {
       <Container className="relative py-8">
         <div className="grid gap-5 lg:grid-cols-[minmax(0,20rem)_1fr] lg:gap-6">
           <div>
-            <LogoLink tone="dark" size="md" />
+            <LogoLink tone="dark" size="lg" />
             <p className="mt-3 max-w-sm text-[0.875rem] leading-relaxed text-white/60">
               {churchConfig.statement}
             </p>

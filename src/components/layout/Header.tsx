@@ -25,7 +25,7 @@ export function Header() {
       <Container
         className={cn(
           "flex items-center justify-between gap-4 transition-[height] duration-500 ease-out-expo",
-          scrolled ? "h-16" : "h-[4.5rem]",
+          scrolled ? "h-[4.5rem]" : "h-20",
         )}
       >
         <LogoLink tone="dark" size="md" preload />
