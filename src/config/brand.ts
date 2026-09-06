@@ -27,8 +27,8 @@ export const brandConfig = {
   logo: {
     /**
      * Official Baltimore lockup. White dove, crown, chapel wordmark and
-     * BALTIMORE sit on the native black field. We never recolour or
-     * punch the background out.
+     * BALTIMORE with the gold arrow. The black export field is removed
+     * so the mark sits on navy header and footer surfaces.
      */
     official: {
       src: "/logo/royalhouse-baltimore.png",

@@ -7,7 +7,8 @@ It was copied from the supplied artwork. Nothing in this project redesigns,
 recolours, or approximates the dove, crown, roofline, or wordmark.
 
 Empty black canvas around the lockup was trimmed so the mark can size in
-the header. The native black field is preserved.
+the header. The black export field is transparent so the artwork sits on
+navy surfaces.
 
 To replace the file, drop a higher-resolution official PNG or SVG of the
 same artwork here and update the `width` / `height` in `src/config/brand.ts`.
