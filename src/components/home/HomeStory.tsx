@@ -49,36 +49,36 @@ export function YouBelongHere() {
 
 export function WhoWeAreHome() {
   return (
-    <Section tone="white" spacing="lg">
+    <Section tone="white" spacing="sm">
       <Container>
-        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+        <div className="grid items-center gap-5 lg:grid-cols-[1fr_minmax(0,16rem)] lg:gap-8">
           <div>
-            <h2 className="font-display text-[clamp(2rem,4vw,3rem)] text-navy-900">
+            <h2 className="font-display text-[clamp(1.75rem,3.2vw,2.5rem)] leading-tight text-navy-900">
               A campus of Royalhouse Chapel
             </h2>
-            <p className="mt-4 max-w-xl text-[1.05rem] leading-relaxed text-navy-900/75">
+            <p className="mt-3 max-w-xl text-[0.9375rem] leading-relaxed text-navy-900/75 sm:text-base">
               Royalhouse Baltimore is a campus of {churchConfig.campusOf} and part of the{" "}
               {churchConfig.network} family, with churches across North America and around the
               world and international headquarters in {churchConfig.headquarters}.
             </p>
-            <p className="mt-4 max-w-xl text-[1.05rem] leading-relaxed text-navy-900/75">
+            <p className="mt-3 max-w-xl text-[0.9375rem] leading-relaxed text-navy-900/75 sm:text-base">
               {churchConfig.statement}
             </p>
-            <ul className="mt-6 grid gap-2 sm:grid-cols-2">
+            <ul className="mt-4 grid gap-1.5 sm:grid-cols-2">
               {churchConfig.identity.map((item) => (
-                <li key={item} className="flex items-start gap-2 text-[0.9375rem] text-navy-900">
-                  <span aria-hidden="true" className="mt-2 size-1.5 shrink-0 rounded-full bg-gold-400" />
+                <li key={item} className="flex items-start gap-2 text-[0.875rem] text-navy-900">
+                  <span aria-hidden="true" className="mt-1.5 size-1.5 shrink-0 rounded-full bg-gold-400" />
                   {item}
                 </li>
               ))}
             </ul>
           </div>
-          <div className="relative aspect-[4/5] overflow-hidden rounded-media">
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-[16rem] overflow-hidden rounded-media">
             <Image
               src={images.prayerKneeling.src}
               alt={images.prayerKneeling.alt}
               fill
-              sizes="(min-width: 1024px) 40vw, 100vw"
+              sizes="256px"
               className="object-cover object-[center_40%]"
             />
           </div>
