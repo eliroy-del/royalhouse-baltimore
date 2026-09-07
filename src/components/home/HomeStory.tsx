@@ -15,11 +15,11 @@ export function YouBelongHere() {
         <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
           <div className="relative aspect-[4/5] overflow-hidden rounded-media">
             <Image
-              src={images.welcomeHome.src}
-              alt={images.welcomeHome.alt}
+              src={images.outdoorWelcome.src}
+              alt={images.outdoorWelcome.alt}
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
-              className="object-cover"
+              className="object-cover object-[center_20%]"
             />
           </div>
           <div>
@@ -118,7 +118,7 @@ export function OurVisionHome() {
 export function PlanVisitHome() {
   const stackedImages = [
     images.welcomeHome,
-    images.outdoorWelcome,
+    images.congregationNotes,
     images.worshipResponse,
   ] as const;
 
