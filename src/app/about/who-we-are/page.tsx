@@ -71,24 +71,24 @@ export default function WhoWeArePage() {
         </Container>
       </Section>
 
-      <Section tone="cream" spacing="lg">
-        <Container className="grid items-center gap-8 lg:grid-cols-2">
+      <Section tone="cream" spacing="sm">
+        <Container className="grid items-center gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,14rem)] lg:gap-8">
           <div>
-            <h2 className="font-display text-3xl text-navy-900">
+            <h2 className="font-display text-[clamp(1.75rem,3.2vw,2.5rem)] leading-tight text-navy-900">
               Our relationship to Royalhouse Chapel International
             </h2>
-            <p className="mt-4 text-[1.05rem] leading-relaxed text-navy-900/75">
+            <p className="mt-3 text-lg leading-relaxed text-navy-900/75 sm:text-xl">
               Royalhouse Baltimore is a campus of {churchConfig.campusOf} and belongs to the wider{" "}
               {churchConfig.network} family. The international headquarters is in{" "}
               {churchConfig.headquarters}.
             </p>
           </div>
-          <div className="relative aspect-[4/5] overflow-hidden rounded-media">
+          <div className="relative mx-auto aspect-[3/4] w-full max-w-[14rem] overflow-hidden rounded-media">
             <Image
               src={images.apostleAgorMina.src}
               alt={images.apostleAgorMina.alt}
               fill
-              sizes="40vw"
+              sizes="224px"
               className="object-cover"
             />
           </div>
