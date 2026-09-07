@@ -88,29 +88,31 @@ export function WhoWeAreHome() {
 
 export function OurVisionHome() {
   return (
-    <Section tone="navy" spacing="lg">
-      <Container>
-        <p className="eyebrow text-gold-300">Our Vision</p>
-        <h2 className="mt-3 max-w-2xl font-display text-[clamp(2rem,4vw,3rem)] text-white">
-          Presence. Hope. Love.
+    <section className="relative isolate overflow-hidden py-16 sm:py-20 lg:py-24">
+      <Image
+        src={images.congregationPrayer.src}
+        alt=""
+        fill
+        sizes="100vw"
+        className="object-cover"
+      />
+      <div aria-hidden="true" className="absolute inset-0 bg-navy-950/70" />
+      <Container className="relative z-10">
+        <h2 className="text-center text-[clamp(2rem,4.5vw,3.25rem)] font-bold text-white">
+          Our Vision
         </h2>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 grid gap-4 md:grid-cols-3 md:gap-5">
           {churchConfig.vision.map((pillar) => (
-            <div key={pillar.title} className="rounded-card border border-white/10 bg-white/5 p-6">
-              <h3 className="font-display text-2xl text-white">{pillar.title}</h3>
-              <p className="mt-3 text-[0.8125rem] uppercase tracking-[0.16em] text-gold-300">
-                {pillar.intro}
-              </p>
-              <ul className="mt-3 flex flex-col gap-1.5 text-white/80">
-                {pillar.points.map((point) => (
-                  <li key={point}>{point}</li>
-                ))}
-              </ul>
-            </div>
+            <p
+              key={pillar.statement}
+              className="bg-white p-6 text-[0.9375rem] leading-relaxed text-black sm:p-8"
+            >
+              {pillar.statement}
+            </p>
           ))}
         </div>
       </Container>
-    </Section>
+    </section>
   );
 }
 

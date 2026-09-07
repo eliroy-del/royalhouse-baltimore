@@ -58,19 +58,14 @@ export default function WhoWeArePage() {
       <Section tone="white" spacing="lg">
         <Container>
           <h2 className="font-display text-3xl text-navy-900">Our Vision</h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
+          <div className="mt-8 grid gap-4 md:grid-cols-3 md:gap-5">
             {churchConfig.vision.map((pillar) => (
-              <div key={pillar.title} className="rounded-card border border-navy-900/10 p-6">
-                <h3 className="font-display text-2xl text-navy-900">{pillar.title}</h3>
-                <p className="mt-3 text-[0.8125rem] uppercase tracking-[0.16em] text-gold-700">
-                  {pillar.intro}
-                </p>
-                <ul className="mt-3 flex flex-col gap-1.5 text-navy-900/75">
-                  {pillar.points.map((point) => (
-                    <li key={point}>{point}</li>
-                  ))}
-                </ul>
-              </div>
+              <p
+                key={pillar.statement}
+                className="border border-navy-900/10 bg-white p-6 text-[0.9375rem] leading-relaxed text-navy-900 sm:p-8"
+              >
+                {pillar.statement}
+              </p>
             ))}
           </div>
         </Container>

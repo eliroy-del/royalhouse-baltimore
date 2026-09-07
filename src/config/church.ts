@@ -11,9 +11,7 @@ import type { Address, ServiceTime, SocialLinks } from "@/types";
 const PENDING = "" as const;
 
 export interface VisionPillar {
-  title: string;
-  intro: string;
-  points: string[];
+  statement: string;
 }
 
 export interface ServeTeam {
@@ -152,19 +150,16 @@ export const churchConfig: ChurchConfig = {
 
   vision: [
     {
-      title: "Bring people into God's presence",
-      intro: "Through",
-      points: ["Prayer", "Praise", "Worship"],
+      statement:
+        "Bring people into God's presence through prayer, praise, and worship.",
     },
     {
-      title: "Preach messages of hope",
-      intro: "Relevant to people's",
-      points: ["Physical needs", "Spiritual needs"],
+      statement:
+        "Preach messages of hope that are relevant to the physical and spiritual needs of the people.",
     },
     {
-      title: "Create an atmosphere of love",
-      intro: "Through",
-      points: ["Sharing", "Caring", "Fellowship"],
+      statement:
+        "Bring comfort to God's people, and create an atmosphere of love, sharing, caring, and fellowship for them.",
     },
   ],
 
