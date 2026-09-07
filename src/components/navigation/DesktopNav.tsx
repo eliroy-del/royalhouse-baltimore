@@ -63,7 +63,7 @@ export function DesktopNav() {
 
               <NavigationMenu.Content
                 className={cn(
-                  "absolute left-1/2 top-full z-50 w-[min(60rem,calc(100vw-4rem))] -translate-x-1/2 pt-3",
+                  "absolute right-0 top-full z-50 w-[min(36rem,calc(100vw-2rem))] pt-3",
                   "data-[state=open]:nav-panel-enter data-[state=closed]:nav-panel-exit",
                 )}
               >

@@ -30,9 +30,8 @@ export function Header() {
       >
         <LogoLink tone="dark" size="md" preload />
 
-        <DesktopNav />
-
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1 sm:gap-2">
+          <DesktopNav />
           <Button
             type="button"
             variant="gold"
