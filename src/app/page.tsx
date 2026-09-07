@@ -1,31 +1,41 @@
+import {
+  ConnectHome,
+  FinalCta,
+  GiveHome,
+  LocationHome,
+  OurVisionHome,
+  PlanVisitHome,
+  WelcomeVideo,
+  WhoWeAreHome,
+  YouBelongHere,
+} from "@/components/home/HomeStory";
 import { EventsPreview } from "@/components/home/EventsPreview";
-import { GivingInvite } from "@/components/home/GivingInvite";
 import { Hero } from "@/components/home/Hero";
-import { PrayerInvite } from "@/components/home/PrayerInvite";
-import { WelcomeSection } from "@/components/home/WelcomeSection";
-import { ServiceCard } from "@/components/sections/ServiceCard";
+import { ServiceInfo } from "@/components/home/ServiceInfo";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Royalhouse Baltimore: A Church in Baltimore, Maryland",
   description:
-    "A Spirit-filled church family in Baltimore, Maryland. Come as you are to worship Jesus, grow in faith and find your people. Plan your visit or request prayer.",
+    "Royalhouse Baltimore is a Spirit-filled church in Baltimore, Maryland. Tuesdays at 7:00 PM and Sundays at 6:00 PM at 5411 Old Frederick Rd, Ste 11-12. You belong here.",
   path: "/",
 });
 
-/**
- * The homepage is written as a twelve-chapter journey: welcome, gather,
- * belong, believe, happen, hear, connect, city, witness, pray, give, visit.
- */
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <ServiceCard variant="floating" />
-      <WelcomeSection />
+      <ServiceInfo />
+      <YouBelongHere />
+      <WhoWeAreHome />
+      <OurVisionHome />
+      <PlanVisitHome />
       <EventsPreview />
-      <PrayerInvite />
-      <GivingInvite />
+      <WelcomeVideo />
+      <ConnectHome />
+      <GiveHome />
+      <LocationHome />
+      <FinalCta />
     </>
   );
 }

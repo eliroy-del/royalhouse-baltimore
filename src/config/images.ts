@@ -101,6 +101,58 @@ export const images = {
     src: "/images/portrait-3.jpg",
     alt: "Portrait of a smiling older woman in a teal cardigan seated in a church foyer",
   },
+  pastorRichieO: {
+    src: "/images/pastor-richieo.jpg",
+    alt: "Pastor RichieO, Lead Pastor of Royalhouse Baltimore",
+  },
+  pastorRichieOSeated: {
+    src: "/images/pastor-richieo-seated.jpg",
+    alt: "Pastor RichieO seated and smiling",
+  },
+  pastorRichieOPreaching: {
+    src: "/images/pastor-richieo-preaching.jpg",
+    alt: "Pastor RichieO preaching from the pulpit",
+  },
+  pastorRichieOFamily: {
+    src: "/images/pastor-richieo-family.jpg",
+    alt: "Pastor RichieO with Lady Trisha and their sons",
+  },
+  apostleAgormeda: {
+    src: "/images/apostle-agormeda.jpg",
+    alt: "Apostle Emmanuel Agormeda, Apostle over Royalhouse Chapel churches across North America",
+  },
+  apostleAgorMina: {
+    src: "/images/apostle-agor-mina.jpg",
+    alt: "Apostle Emmanuel Agormeda and Rev. Mrs. Willhemina Agormeda",
+  },
+  prayerKneeling: {
+    src: "/images/prayer-kneeling.jpg",
+    alt: "A man kneeling in prayer during a gathering",
+  },
+  prayerHands: {
+    src: "/images/prayer-hands.jpg",
+    alt: "A man praying with clasped hands",
+  },
+  congregationPrayer: {
+    src: "/images/congregation-prayer.jpg",
+    alt: "Members of the congregation praying together",
+  },
+  worshipResponse: {
+    src: "/images/worship-response.jpg",
+    alt: "A woman worshiping with her hand over her heart",
+  },
+  outdoorWelcome: {
+    src: "/images/outdoor-welcome.jpg",
+    alt: "A smiling woman standing outside the church building",
+  },
+  welcomeHome: {
+    src: "/images/welcome-home.jpg",
+    alt: "A smiling woman holding a Welcome Home sign",
+  },
+  congregationNotes: {
+    src: "/images/congregation-notes.jpg",
+    alt: "People taking notes during the teaching of God's Word",
+  },
 } as const satisfies Record<string, ImageAsset>;
 
 export type ImageKey = keyof typeof images;

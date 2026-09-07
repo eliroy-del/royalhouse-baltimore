@@ -1,33 +1,30 @@
+import { images } from "@/config/images";
 import type { Leader } from "@/types";
 
-/* ============================================================
-   LEADERSHIP
-   ------------------------------------------------------------
-   ⚠️ NO PEOPLE ARE INVENTED HERE.
-
-   We do not publish names, portraits or biographies that the
-   church has not supplied. `leaders` is therefore empty, and the
-   leadership page renders the role slots below as elegant
-   monogram placeholders instead.
-
-   TO PUBLISH THE REAL TEAM
-   Add entries to `leaders` (see the Leader type) and they replace
-   the placeholders automatically:
-
-     {
-       id: "lead-pastor",
-       name: "…",
-       role: "Lead Pastor",
-       photo: "/images/leaders/….jpg",
-       bio: "…",
-       responsibility: "…",
-       email: "…",
-       socialLinks: {},
-       group: "Lead",
-     }
-   ============================================================ */
-
-export const leaders: Leader[] = [];
+export const leaders: Leader[] = [
+  {
+    id: "pastor-richieo",
+    name: "Pastor RichieO",
+    role: "Lead Pastor",
+    photo: images.pastorRichieO.src,
+    bio: "Pastor RichieO grew up in London, Ghana and Maryland. He has nearly two decades of Young Adults ministry leadership and served as Teens Pastor at Grace2Grace Center, Royalhouse Chapel International in Laurel, Maryland. He is a cybersecurity engineer and an Afrogospel artist who has collaborated with artists globally. He has a passion for serving God, is committed to preaching the Word, raising disciples, equipping believers, and leading the Baltimore campus. He is committed to touching the generation and the Baltimore area with the power of God. He has been married to Lady Trisha for 14 years and they have four sons.",
+    responsibility: "Lead Pastor of Royalhouse Baltimore",
+    email: "",
+    socialLinks: {},
+    group: "Lead",
+  },
+  {
+    id: "apostle-agormeda",
+    name: "Apostle Emmanuel Agormeda",
+    role: "Apostle, North American Missions",
+    photo: images.apostleAgormeda.src,
+    bio: "Rev. Emmanuel T. Agormeda is Senior Pastor of Royalhouse Chapel International, Maryland, and Apostle over Royalhouse Chapel churches across North America. He carries Apostolic, Pastoral and Prophetic ministry as a church planter and church-strengthening leader, a conference preacher, and a trainer of church staff, lay leaders, deacons, ministers and pastors. He holds a Bachelor's degree in Political Science and a Master's of Divinity with Pastoral Studies emphasis, and is a doctoral candidate at Oral Roberts School of Theology. He is married to Rev. Mrs. Willhemina Agormeda and they have three children.",
+    responsibility: "Apostle over Royalhouse Chapel churches across North America",
+    email: "",
+    socialLinks: {},
+    group: "Lead",
+  },
+];
 
 export interface LeadershipSlot {
   id: string;
@@ -36,51 +33,7 @@ export interface LeadershipSlot {
   responsibility: string;
 }
 
-/** Structural role slots, titles only, no fabricated people. */
-export const leadershipSlots: LeadershipSlot[] = [
-  {
-    id: "lead-pastor",
-    role: "Lead Pastor",
-    group: "Lead",
-    responsibility: "Vision, teaching and the spiritual care of the whole church.",
-  },
-  {
-    id: "associate-pastor",
-    role: "Associate Pastor",
-    group: "Pastoral",
-    responsibility: "Pastoral care, discipleship pathways and membership.",
-  },
-  {
-    id: "worship-director",
-    role: "Worship Director",
-    group: "Ministry",
-    responsibility: "Leading our worship ministry, musicians and production teams.",
-  },
-  {
-    id: "next-gen-lead",
-    role: "Next Generation Lead",
-    group: "Ministry",
-    responsibility: "Kids and youth ministry, safeguarding and volunteer training.",
-  },
-  {
-    id: "prayer-lead",
-    role: "Prayer Lead",
-    group: "Ministry",
-    responsibility: "Midweek prayer, intercession teams and confidential prayer requests.",
-  },
-  {
-    id: "outreach-lead",
-    role: "Community Outreach Lead",
-    group: "Ministry",
-    responsibility: "Neighborhood care, city partnerships and serve days.",
-  },
-  {
-    id: "administrator",
-    role: "Church Administrator",
-    group: "Staff",
-    responsibility: "Operations, communications, facilities and giving records.",
-  },
-];
+export const leadershipSlots: LeadershipSlot[] = [];
 
 export const leadershipGroups: {
   id: Leader["group"];
@@ -90,26 +43,8 @@ export const leadershipGroups: {
 }[] = [
   {
     id: "Lead",
-    eyebrow: "Teaching & Vision",
-    title: "Lead Pastor",
-    description: "The primary teaching and shepherding responsibility for Royalhouse Baltimore.",
-  },
-  {
-    id: "Pastoral",
-    eyebrow: "Care & Discipleship",
-    title: "Pastoral Team",
-    description: "The people who carry the day-to-day care of this church family.",
-  },
-  {
-    id: "Ministry",
-    eyebrow: "Teams & Training",
-    title: "Ministry Leaders",
-    description: "Those who lead and equip our teams across every area of church life.",
-  },
-  {
-    id: "Staff",
-    eyebrow: "Behind The Scenes",
-    title: "Staff & Operations",
-    description: "The team who keep everything running behind the scenes.",
+    eyebrow: "Leadership",
+    title: "Leaders",
+    description: "The people the church has named to shepherd and serve Royalhouse Baltimore.",
   },
 ];

@@ -54,7 +54,7 @@ export async function EventsPreview() {
           <EmptyState
             icon="calendar"
             title="We're preparing something special"
-            description="Our next season of events is being planned right now. Check back shortly, or come and see us this Sunday in the meantime."
+            description="No upcoming events are available right now."
             action={
               <Button asChild>
                 <Link href="/plan-a-visit">Plan Your Visit</Link>

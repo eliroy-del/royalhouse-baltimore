@@ -1,10 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
 import { PlanVisitForm } from "@/components/forms/PlanVisitForm";
 import { Reveal } from "@/components/motion/Reveal";
 import { PageHero } from "@/components/sections/PageHero";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { churchConfig } from "@/config/church";
@@ -36,17 +34,39 @@ export default function PlanAVisitPage() {
       />
 
       <PageHero
-        title={
-          <>
-            We can&rsquo;t wait to{" "}
-            <em className="not-italic text-gold-300">see you</em>.
-          </>
-        }
-        image={images.welcomeLobby}
-        objectPosition="60% 45%"
+        eyebrow="You Belong Here"
+        title="Planning your first visit? Here's what you need to know."
+        image={images.welcomeHome}
+        objectPosition="50% 40%"
         breadcrumb={[{ label: "Plan a Visit" }]}
         size="lg"
       />
+
+      <Section tone="cream" spacing="sm" id="when">
+        <Container>
+          <p className="eyebrow text-gold-800">Service Times</p>
+          <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+            {churchConfig.serviceTimes.map((service) => (
+              <li key={service.day} className="rounded-card border border-navy-900/10 bg-white p-4">
+                <p className="font-display text-2xl text-navy-900">{service.day}</p>
+                <p className="mt-1 text-navy-900/70">{service.time}</p>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-4 text-[0.9375rem] text-navy-900/70">
+            {churchConfig.address.line1}, {churchConfig.address.line2}, {churchConfig.address.city},{" "}
+            {churchConfig.regionCode} {churchConfig.address.postalCode}
+          </p>
+          <p className="mt-2 text-[0.9375rem] text-navy-900/70">
+            Service length: {churchConfig.visit.serviceLength}
+          </p>
+          <ul className="mt-3 flex flex-col gap-1 text-[0.9375rem] text-navy-900/70">
+            {churchConfig.visit.serviceIncludes.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </Container>
+      </Section>
 
       {/* Children */}
       <Section tone="white" spacing="sm" id="children">
@@ -74,15 +94,6 @@ export default function PlanAVisitPage() {
               <p className="mt-3 text-[0.9375rem] leading-relaxed text-navy-900/70">
                 {churchConfig.visit.children}
               </p>
-              <p className="mt-3 text-[0.9375rem] leading-relaxed text-navy-900/70">
-                Our welcome team will help you check children in when you arrive. Kids are also
-                welcome to stay with you in the main gathering, nobody minds the noise.
-              </p>
-              <div className="mt-5">
-                <Button asChild variant="outline" size="md">
-                  <Link href="/ministries/kids">About kids ministry</Link>
-                </Button>
-              </div>
             </Reveal>
           </div>
         </Container>

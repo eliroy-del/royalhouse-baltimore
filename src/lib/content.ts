@@ -68,7 +68,7 @@ export async function getRelatedEvents(event: ChurchEvent, limit = 3): Promise<C
 /* --------------------------------- Sermons --------------------------------- */
 
 export async function getSermons(): Promise<Sermon[]> {
-  return [...sermons].sort(byDateDesc);
+  return [];
 }
 
 export async function getFeaturedSermon(): Promise<Sermon | null> {
@@ -102,7 +102,7 @@ export async function getCurrentSeries(): Promise<SermonSeries | null> {
 /* -------------------------------- Ministries ------------------------------- */
 
 export async function getMinistries(): Promise<Ministry[]> {
-  return ministries;
+  return [];
 }
 
 export async function getFeaturedMinistries(limit = 4): Promise<Ministry[]> {
@@ -118,7 +118,7 @@ export async function getMinistryBySlug(slug: string): Promise<Ministry | null> 
 
 /** Only moderated, approved testimonies are ever returned. */
 export async function getTestimonies(): Promise<Testimony[]> {
-  return testimonies.filter((testimony) => testimony.approved).sort(byDateDesc);
+  return [];
 }
 
 export async function getFeaturedTestimonies(limit = 3): Promise<Testimony[]> {

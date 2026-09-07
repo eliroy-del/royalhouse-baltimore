@@ -10,17 +10,11 @@ import { isSupplied } from "@/lib/utils";
    blank, a dash, or a fabricated address.
    ============================================================ */
 
-/** Compact service-time summary, e.g. "Sundays · 9:00 AM & 11:30 AM". */
+/** Compact service-time summary, e.g. "Tuesdays · 7:00 PM · Sundays · 6:00 PM". */
 export function serviceTimeSummary(): string {
   const { serviceTimes } = churchConfig;
-  if (serviceTimes.length === 0) return "Sunday Gatherings";
-
-  const sundays = serviceTimes.filter((s) => s.day === "Sunday");
-  const times = (sundays.length > 0 ? sundays : serviceTimes).map((s) => s.time);
-  const dayLabel = sundays.length > 0 ? "Sundays" : `${serviceTimes[0]!.day}s`;
-
-  if (times.length === 1) return `${dayLabel} · ${times[0]}`;
-  return `${dayLabel} · ${times.slice(0, -1).join(", ")} & ${times.at(-1)}`;
+  if (serviceTimes.length === 0) return "Gatherings";
+  return serviceTimes.map((service) => `${service.day}s · ${service.time}`).join("  ·  ");
 }
 
 /** Line used under the hero and in the service card. */

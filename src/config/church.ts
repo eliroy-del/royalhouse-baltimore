@@ -1,39 +1,40 @@
-import type { Address, GivingFund, GivingProvider, ServiceTime, SocialLinks } from "@/types";
+import type { Address, ServiceTime, SocialLinks } from "@/types";
 
 /* ============================================================
    ROYALHOUSE BALTIMORE, CHURCH CONFIGURATION
    ------------------------------------------------------------
-   This file is the single source of truth for *factual* church
-   information. Nothing here is invented.
-
-   ⚠️  FIELDS AWAITING REAL CHURCH DATA
-   Every value below marked `PENDING` is an empty string or empty
-   array. The interface degrades gracefully wherever data is
-   missing (see `src/lib/church.ts`), so the site stays polished
-   until the church supplies the real details.
-
-   To go live, populate:
-     1. address       , street, ZIP, map coordinates
-     2. serviceTimes  , day / time / label for each gathering
-     3. contact       , phone, email, office hours
-     4. social        , public profile URLs
-     5. giving        , provider + fund links
-     6. leadership    , see src/content/leaders.ts
+   Single source of truth for factual church information.
+   Nothing here is invented. Empty strings stay empty until
+   the church supplies the missing detail.
    ============================================================ */
 
 const PENDING = "" as const;
 
+export interface VisionPillar {
+  title: string;
+  intro: string;
+  points: string[];
+}
+
+export interface ServeTeam {
+  id: string;
+  name: string;
+  areas: string[];
+}
+
 export interface ChurchConfig {
   name: string;
   shortName: string;
-  /** The wider Royalhouse family this local assembly belongs to. */
+  domain: string;
   network: string;
+  campusOf: string;
+  headquarters: string;
   city: string;
   region: string;
   regionCode: string;
   tagline: string;
-  /** One-sentence description used in the footer and metadata. */
   statement: string;
+  belongingLine: string;
   address: Address;
   serviceTimes: ServiceTime[];
   contact: {
@@ -44,12 +45,10 @@ export interface ChurchConfig {
   };
   social: SocialLinks;
   giving: {
-    provider: GivingProvider;
-    /** Primary hosted giving URL. Empty until a provider is selected. */
+    zelleEmail: string;
     onlineUrl: string;
     textToGiveNumber: string;
     mailingInstructions: string;
-    funds: GivingFund[];
   };
   visit: {
     parking: string;
@@ -58,109 +57,169 @@ export interface ChurchConfig {
     serviceLength: string;
     accessibility: string;
     children: string;
+    childrenAges: string;
+    serviceIncludes: string[];
   };
+  identity: string[];
+  vision: VisionPillar[];
+  livestream: {
+    enabled: boolean;
+    youtubeUrl: string;
+  };
+  welcomeVideoUrl: string;
+  forms: {
+    connectUrl: string;
+    serveUrl: string;
+  };
+  serveTeams: ServeTeam[];
 }
 
 export const churchConfig: ChurchConfig = {
   name: "Royalhouse Baltimore",
   shortName: "Royalhouse",
+  domain: "royalhousebaltimore.org",
   network: "Royalhouse Chapel International",
+  campusOf: "Royalhouse Chapel Maryland Mission",
+  headquarters: "Accra, Ghana",
   city: "Baltimore",
   region: "Maryland",
   regionCode: "MD",
-  tagline: "A place to encounter God, grow in faith and find your family.",
+  tagline: "Touching Our Generation With the Power of God",
+  belongingLine: "You belong here.",
   statement:
-    "Royalhouse Baltimore is a Spirit-filled family of believers in Baltimore, Maryland, gathering to worship Jesus, grow together in the Word and serve the city we call home.",
+    "Royalhouse Baltimore is a passionate, Spirit-filled community devoted to prayer and fasting, praise and worship, study and confession of God's Word, and genuine fellowship.",
 
   address: {
     line1: "5411 Old Frederick Rd",
-    line2: "Suite 11",
-    city: "Catonsville",
+    line2: "Ste 11-12",
+    city: "Baltimore",
     region: "Maryland",
     postalCode: "21229",
     country: "United States",
-    mapQuery: "5411 Old Frederick Rd, Suite 11, Catonsville, MD 21229",
+    mapQuery: "5411 Old Frederick Rd, Ste 11-12, Baltimore, MD 21229",
   },
 
-  // TODO: add each gathering, e.g.
-  // { label: "Sunday Celebration", day: "Sunday", time: "10:00 AM", note: "Kids ministry available" }
-  serviceTimes: [],
+  serviceTimes: [
+    { label: "Tuesday Gathering", day: "Tuesday", time: "7:00 PM" },
+    { label: "Sunday Gathering", day: "Sunday", time: "6:00 PM" },
+  ],
 
   contact: {
-    phone: PENDING, // TODO
-    email: PENDING, // TODO
-    prayerEmail: PENDING, // TODO, falls back to `email`
-    officeHours: [], // TODO: e.g. ["Tuesday – Friday, 10:00 AM – 4:00 PM"]
+    phone: "(301) 437-9441",
+    email: "baltimore@royalhousemd.org",
+    prayerEmail: PENDING,
+    officeHours: [],
   },
 
   social: {
     instagram: "https://www.instagram.com/royalhousebaltimore",
-    facebook: PENDING, // TODO
-    youtube: PENDING, // TODO
+    facebook: PENDING,
+    youtube: PENDING,
     tiktok: "https://www.tiktok.com/@royalhousebaltimore",
-    whatsapp: PENDING, // TODO
+    whatsapp: PENDING,
   },
 
   giving: {
-    provider: null, // TODO: "stripe" | "paypal" | "tithely" | "pushpay" | "planning-center"
-    onlineUrl: PENDING, // TODO: hosted giving link
+    zelleEmail: "royalhousebal@gmail.com",
+    onlineUrl: PENDING,
     textToGiveNumber: PENDING,
     mailingInstructions: PENDING,
-    // Only funds officially approved by the church leadership should appear here.
-    funds: [
-      {
-        id: "tithes",
-        name: "Tithes",
-        description:
-          "The regular, proportional giving that sustains the everyday life and ministry of the church.",
-        url: PENDING,
-      },
-      {
-        id: "offering",
-        name: "Offering",
-        description:
-          "Gifts given above the tithe to support worship, teaching, discipleship and hospitality.",
-        url: PENDING,
-      },
-      {
-        id: "missions",
-        name: "Missions",
-        description:
-          "Carrying the gospel beyond Baltimore through partners, church planting and global outreach.",
-        url: PENDING,
-      },
-      {
-        id: "community",
-        name: "Community Impact",
-        description:
-          "Practical love for our neighborhoods, food, families, mentoring and city partnerships.",
-        url: PENDING,
-      },
+  },
+
+  visit: {
+    parking: PENDING,
+    arrival: PENDING,
+    dressCode:
+      "Some people dress casually while others prefer dressing up a little. Everyone is welcome.",
+    serviceLength: "Approximately 90 minutes.",
+    accessibility: PENDING,
+    children: "Kids Church is available for ages 2–11.",
+    childrenAges: "2–11",
+    serviceIncludes: [
+      "Praise and worship",
+      "Bible-based message",
+      "Prayer and reflection",
+      "Fellowship before and after the service",
     ],
   },
 
-  // Visitor-facing practical answers. Written to be true of any campus and easy
-  // for the church office to sharpen once the venue details are confirmed.
-  visit: {
-    parking: PENDING, // TODO: on-site / street / lot details
-    arrival:
-      "Head for the main entrance and look for a member of our welcome team. They will be wearing a Royalhouse badge and will walk you to your seat, check your children in and answer anything you need.",
-    dressCode:
-      "Come exactly as you are. You will see suits and sneakers, African print and jeans, and everything in between. Nobody is checking what you wear.",
-    serviceLength: PENDING, // TODO: e.g. "About 90 minutes"
-    accessibility:
-      "Our gathering space is step-free with accessible restrooms and reserved seating near the front and the aisles. Let a member of the welcome team know what you need and we will make it happen.",
-    children:
-      "Children are welcome in the main service, and we also run a safe, joyful kids environment with background-checked volunteers and a secure check-in and pick-up process.",
+  identity: [
+    "Prayer and fasting",
+    "Praise and worship",
+    "Study and confession of God's Word",
+    "Genuine fellowship",
+  ],
+
+  vision: [
+    {
+      title: "Bring people into God's presence",
+      intro: "Through",
+      points: ["Prayer", "Praise", "Worship"],
+    },
+    {
+      title: "Preach messages of hope",
+      intro: "Relevant to people's",
+      points: ["Physical needs", "Spiritual needs"],
+    },
+    {
+      title: "Create an atmosphere of love",
+      intro: "Through",
+      points: ["Sharing", "Caring", "Fellowship"],
+    },
+  ],
+
+  livestream: {
+    enabled: false,
+    youtubeUrl: PENDING,
   },
+
+  welcomeVideoUrl: PENDING,
+
+  forms: {
+    connectUrl:
+      process.env.NEXT_PUBLIC_CONNECT_FORM_URL?.trim() ||
+      "https://docs.google.com/forms/d/1nkMQQOOzXHjToZYofo8MfkJoLGC2_cfE5MDBmdPQyRo/viewform",
+    serveUrl:
+      process.env.NEXT_PUBLIC_SERVE_FORM_URL?.trim() ||
+      "https://docs.google.com/forms/d/1nkMQQOOzXHjToZYofo8MfkJoLGC2_cfE5MDBmdPQyRo/viewform",
+  },
+
+  serveTeams: [
+    { id: "worship", name: "Worship Team", areas: ["Musicians"] },
+    { id: "kids", name: "Kids Church", areas: [] },
+    {
+      id: "connection",
+      name: "Connection Team",
+      areas: [],
+    },
+    {
+      id: "media",
+      name: "Media Team",
+      areas: ["Video", "Photography", "Sound", "Projection", "Web", "Social Media"],
+    },
+    { id: "pillars", name: "Pillars For Christ", areas: ["Intercessory Prayer"] },
+    {
+      id: "hospitality",
+      name: "Hospitality",
+      areas: ["Guest Services", "Ushers"],
+    },
+    { id: "watch-tower", name: "Watch Tower / Security", areas: [] },
+    {
+      id: "facilities",
+      name: "Facilities Management",
+      areas: ["Maintenance", "Cleaning"],
+    },
+  ],
 };
 
-/** Convenience: which optional systems are wired up yet. */
 export const churchStatus = {
   hasAddress: churchConfig.address.line1.trim().length > 0,
   hasServiceTimes: churchConfig.serviceTimes.length > 0,
   hasPhone: churchConfig.contact.phone.trim().length > 0,
   hasEmail: churchConfig.contact.email.trim().length > 0,
-  hasGiving: churchConfig.giving.onlineUrl.trim().length > 0,
+  hasGiving: churchConfig.giving.zelleEmail.trim().length > 0,
+  hasZelle: churchConfig.giving.zelleEmail.trim().length > 0,
   hasSocial: Object.values(churchConfig.social).some((url) => (url ?? "").trim().length > 0),
+  hasWelcomeVideo: churchConfig.welcomeVideoUrl.trim().length > 0,
+  hasLivestream: churchConfig.livestream.enabled && churchConfig.livestream.youtubeUrl.trim().length > 0,
 } as const;

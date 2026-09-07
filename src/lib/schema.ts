@@ -2,7 +2,7 @@ import { churchConfig, churchStatus } from "@/config/church";
 import { brandConfig } from "@/config/brand";
 import { siteConfig, siteUrl } from "@/config/site";
 import { isSupplied } from "@/lib/utils";
-import type { ChurchEvent, Sermon } from "@/types";
+import type { ChurchEvent, Leader, Sermon } from "@/types";
 
 /* ============================================================
    STRUCTURED DATA
@@ -135,6 +135,22 @@ export function eventSchema(event: ChurchEvent): Json {
           },
         }
       : {}),
+  };
+}
+
+export function personSchema(leader: Leader): Json {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: leader.name,
+    jobTitle: leader.role,
+    description: leader.bio,
+    ...(isSupplied(leader.photo) ? { image: `${siteUrl}${leader.photo}` } : {}),
+    worksFor: {
+      "@type": "Church",
+      name: churchConfig.name,
+      url: siteUrl,
+    },
   };
 }
 

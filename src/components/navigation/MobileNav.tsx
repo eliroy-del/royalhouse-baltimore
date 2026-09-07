@@ -9,6 +9,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { LogoLink } from "@/components/brand/Logo";
+import { useGiving } from "@/components/giving/GivingProvider";
 import { SocialLinks } from "@/components/layout/SocialLinks";
 import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
@@ -23,6 +24,7 @@ const EASE = [0.16, 1, 0.3, 1] as const;
 export function MobileNav() {
   const pathname = usePathname();
   const reduceMotion = usePrefersReducedMotion();
+  const { openGive } = useGiving();
 
   /**
    * The sheet stores the route it was opened on rather than a boolean, so any
@@ -184,14 +186,20 @@ export function MobileNav() {
                   >
                     <Button asChild variant="gold" size="lg">
                       <Link href="/plan-a-visit" onClick={close}>
-                        Plan Your Visit
+                        Plan a Visit
                         <Icon name="arrow-right" className="size-4" />
                       </Link>
                     </Button>
-                    <Button asChild variant="outline-light" size="lg">
-                      <Link href="/sermons" onClick={close}>
-                        Messages
-                      </Link>
+                    <Button
+                      type="button"
+                      variant="outline-light"
+                      size="lg"
+                      onClick={() => {
+                        close();
+                        openGive();
+                      }}
+                    >
+                      Give
                     </Button>
                   </motion.div>
 

@@ -12,11 +12,11 @@ import { breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Contact",
+  title: "Connect",
   description:
-    "Get in touch with Royalhouse Baltimore. Ask a question, request pastoral care, enquire about membership, events, giving or media, a real person will reply.",
+    "Connect with Royalhouse Baltimore. Email baltimore@royalhousemd.org or call (301) 437-9441.",
   path: "/contact",
-  image: images.welcomeLobby.src,
+  image: images.welcomeHome.src,
 });
 
 export default function ContactPage() {
@@ -32,12 +32,9 @@ export default function ContactPage() {
       />
 
       <PageHero
-        title={
-          <>
-            We&rsquo;d love to <em className="not-italic text-gold-300">hear from you</em>.
-          </>
-        }
-        image={images.welcomeLobby}
+        eyebrow="Connect"
+        title="We'd love to hear from you."
+        image={images.welcomeHome}
         objectPosition="40% 45%"
         size="md"
       />
@@ -56,6 +53,14 @@ export default function ContactPage() {
               <div className="mt-4">
                 <ContactForm />
               </div>
+              <a
+                href={churchConfig.forms.connectUrl}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="mt-4 inline-flex text-[0.8125rem] font-semibold text-navy-700 underline decoration-gold-400 underline-offset-4"
+              >
+                Or use our Connect form
+              </a>
             </div>
 
             <aside className="rounded-card border border-navy-900/[0.08] bg-white p-3.5 sm:p-4 lg:sticky lg:top-16">

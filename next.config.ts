@@ -60,6 +60,13 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      { source: "/our-heart", destination: "/about/who-we-are", permanent: true },
+      { source: "/leadership", destination: "/about/our-senior-pastor", permanent: true },
+      { source: "/connect", destination: "/contact", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

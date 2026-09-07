@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { DM_Serif_Display, Inter } from "next/font/google";
+import { GivingProvider } from "@/components/giving/GivingProvider";
 import { Analytics } from "@/components/layout/Analytics";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
@@ -16,11 +17,10 @@ const inter = Inter({
   display: "swap",
 });
 
-const cormorant = Cormorant_Garamond({
+const display = DM_Serif_Display({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  style: ["normal", "italic"],
-  variable: "--font-cormorant",
+  weight: "400",
+  variable: "--font-display-serif",
   display: "swap",
 });
 
@@ -80,7 +80,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${cormorant.variable}`}>
+    <html lang="en" className={`${inter.variable} ${display.variable}`}>
       <body className="min-h-dvh antialiased">
         <a
           href="#main"
@@ -89,18 +89,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to main content
         </a>
 
-        <ScrollProgress />
-        <Header />
+        <GivingProvider>
+          <ScrollProgress />
+          <Header />
 
-        <main id="main" className="relative">
-          {children}
-        </main>
+          <main id="main" className="relative">
+            {children}
+          </main>
 
-        <Footer />
+          <Footer />
 
-        {/* Bottom bar sits above the footer on mobile; this keeps it from covering content. */}
-        <div aria-hidden="true" className="h-16 bg-navy-950 lg:hidden" />
-        <MobileStickyBar />
+          {/* Bottom bar sits above the footer on mobile; this keeps it from covering content. */}
+          <div aria-hidden="true" className="h-16 bg-navy-950 lg:hidden" />
+          <MobileStickyBar />
+        </GivingProvider>
 
         <JsonLd data={[churchSchema(), websiteSchema()]} />
         <Analytics />

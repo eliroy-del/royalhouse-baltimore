@@ -1,24 +1,24 @@
 "use client";
 
-import Link from "next/link";
 import { LogoLink } from "@/components/brand/Logo";
+import { useGiving } from "@/components/giving/GivingProvider";
 import { DesktopNav } from "@/components/navigation/DesktopNav";
 import { MobileNav } from "@/components/navigation/MobileNav";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { Icon } from "@/components/ui/Icon";
 import { useScrolled } from "@/hooks/useScrolled";
 import { cn } from "@/lib/utils";
 
 export function Header() {
   const scrolled = useScrolled(24);
+  const { openGive } = useGiving();
 
   return (
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,backdrop-filter] duration-500 ease-out-expo",
         scrolled
-          ? "bg-navy-950/85 shadow-[0_1px_0_rgba(201,162,39,0.18),0_18px_40px_-24px_rgba(7,17,31,0.8)] backdrop-blur-xl"
+          ? "bg-navy-950/85 shadow-[0_1px_0_rgba(244,210,108,0.18),0_18px_40px_-24px_rgba(0,18,38,0.8)] backdrop-blur-xl"
           : "bg-gradient-to-b from-navy-950/55 to-transparent",
       )}
     >
@@ -33,14 +33,14 @@ export function Header() {
         <DesktopNav />
 
         <div className="flex items-center gap-2">
-          <Button asChild variant="gold" size="sm" className="hidden md:inline-flex">
-            <Link href="/plan-a-visit">
-              Plan Your Visit
-              <Icon
-                name="arrow-right"
-                className="size-3.5 transition-transform duration-300 group-hover/btn:translate-x-0.5"
-              />
-            </Link>
+          <Button
+            type="button"
+            variant="gold"
+            size="sm"
+            className="hidden md:inline-flex"
+            onClick={openGive}
+          >
+            Give
           </Button>
           <MobileNav />
         </div>
