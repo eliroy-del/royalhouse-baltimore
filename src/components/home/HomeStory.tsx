@@ -10,28 +10,31 @@ import { directionsUrl } from "@/lib/church";
 
 export function YouBelongHere() {
   return (
-    <Section tone="cream" spacing="lg">
+    <Section tone="cream" spacing="sm">
       <Container>
-        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-media">
+        <div className="grid items-center gap-5 lg:grid-cols-[minmax(0,16rem)_1fr] lg:gap-8">
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-[16rem] overflow-hidden rounded-media">
             <Image
-              src={images.prayerHands.src}
-              alt={images.prayerHands.alt}
+              src={images.welcomeHome.src}
+              alt={images.welcomeHome.alt}
               fill
-              sizes="(min-width: 1024px) 40vw, 100vw"
-              className="object-cover object-[center_25%]"
+              sizes="256px"
+              className="object-cover object-[center_20%]"
             />
           </div>
           <div>
-            <p className="eyebrow text-gold-700">Welcome</p>
-            <h2 className="mt-3 font-display text-[clamp(2rem,4vw,3.25rem)] text-navy-900">
+            <p className="flex items-center gap-3 font-display text-[clamp(1.75rem,3vw,2.375rem)] italic leading-none text-gold-600">
+              Welcome
+              <span aria-hidden="true" className="h-px w-10 bg-gold-400 sm:w-14" />
+            </p>
+            <h2 className="mt-3 font-display text-[clamp(2rem,4vw,3rem)] text-navy-900">
               {churchConfig.belongingLine}
             </h2>
-            <p className="mt-4 max-w-xl text-[1.05rem] leading-relaxed text-navy-900/75">
+            <p className="mt-3 max-w-xl text-[1.05rem] leading-relaxed text-navy-900/75">
               Royalhouse Baltimore is a place to build faith, share fellowship, encounter God in
               prayer and worship, grow through God&rsquo;s Word, and find genuine community.
             </p>
-            <Button asChild variant="primary" size="lg" className="mt-6">
+            <Button asChild variant="primary" size="lg" className="mt-5">
               <Link href="/about/who-we-are">
                 Discover Who We Are
                 <Icon name="arrow-right" className="size-4" />
@@ -117,7 +120,7 @@ export function OurVisionHome() {
 
 export function PlanVisitHome() {
   const stackedImages = [
-    images.welcomeHome,
+    images.outdoorWelcome,
     images.congregationNotes,
     images.worshipResponse,
   ] as const;
