@@ -117,13 +117,18 @@ export function OurVisionHome() {
 }
 
 export function PlanVisitHome() {
+  const stackedImages = [
+    images.welcomeHome,
+    images.outdoorWelcome,
+    images.worshipResponse,
+  ] as const;
+
   return (
     <Section tone="cream" spacing="lg">
       <Container>
-        <div className="grid items-center gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="grid items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
           <div>
-            <p className="eyebrow text-gold-700">Plan Your Visit</p>
-            <h2 className="mt-3 font-display text-[clamp(2rem,4vw,3rem)] text-navy-900">
+            <h2 className="font-display text-[clamp(2rem,4vw,3rem)] text-navy-900">
               What to expect
             </h2>
             <p className="mt-4 max-w-xl text-[1.05rem] leading-relaxed text-navy-900/75">
@@ -137,22 +142,60 @@ export function PlanVisitHome() {
                 </li>
               ))}
             </ul>
-            <p className="mt-4 text-[0.9375rem] text-navy-900/70">
-              Service length: {churchConfig.visit.serviceLength} Kids Church: ages{" "}
-              {churchConfig.visit.childrenAges}.
-            </p>
-            <Button asChild variant="gold" size="lg" className="mt-6">
-              <Link href="/plan-a-visit">Plan a Visit</Link>
-            </Button>
+            <div className="mt-8 grid gap-3 sm:grid-cols-2">
+              <div className="rounded-card border border-navy-900/10 bg-white p-4 shadow-subtle">
+                <span className="inline-flex size-9 items-center justify-center rounded-full bg-gold-100 text-navy-900">
+                  <Icon name="clock" className="size-4" />
+                </span>
+                <p className="mt-3 text-[0.6875rem] font-semibold uppercase tracking-[0.18em] text-gold-700">
+                  Service length
+                </p>
+                <p className="mt-1 font-display text-2xl leading-tight text-navy-900">
+                  {churchConfig.visit.serviceLength.replace(/\.$/, "")}
+                </p>
+              </div>
+              <div className="rounded-card border border-navy-900/10 bg-white p-4 shadow-subtle">
+                <span className="inline-flex size-9 items-center justify-center rounded-full bg-gold-100 text-navy-900">
+                  <Icon name="baby" className="size-4" />
+                </span>
+                <p className="mt-3 text-[0.6875rem] font-semibold uppercase tracking-[0.18em] text-gold-700">
+                  Kids Church
+                </p>
+                <p className="mt-1 font-display text-2xl leading-tight text-navy-900">
+                  Ages {churchConfig.visit.childrenAges}
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="relative aspect-[4/5] overflow-hidden rounded-media">
-            <Image
-              src={images.outdoorWelcome.src}
-              alt={images.outdoorWelcome.alt}
-              fill
-              sizes="(min-width: 1024px) 36vw, 100vw"
-              className="object-cover"
-            />
+
+          <div className="grid grid-cols-2 grid-rows-2 gap-3">
+            <div className="relative col-span-1 row-span-2 min-h-[18rem] overflow-hidden rounded-media sm:min-h-[22rem]">
+              <Image
+                src={stackedImages[0].src}
+                alt={stackedImages[0].alt}
+                fill
+                sizes="(min-width: 1024px) 22vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="relative min-h-[8.5rem] overflow-hidden rounded-media sm:min-h-[10.5rem]">
+              <Image
+                src={stackedImages[1].src}
+                alt={stackedImages[1].alt}
+                fill
+                sizes="(min-width: 1024px) 18vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="relative min-h-[8.5rem] overflow-hidden rounded-media sm:min-h-[10.5rem]">
+              <Image
+                src={stackedImages[2].src}
+                alt={stackedImages[2].alt}
+                fill
+                sizes="(min-width: 1024px) 18vw, 50vw"
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </Container>
