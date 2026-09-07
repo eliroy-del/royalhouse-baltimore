@@ -60,18 +60,18 @@ export default async function SeniorPastorPage() {
         </Container>
       </Section>
 
-      <Section tone="white" spacing="lg">
-        <Container className="grid items-center gap-8 lg:grid-cols-2">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-media">
+      <Section tone="white" spacing="sm">
+        <Container className="grid items-center gap-5 lg:grid-cols-[minmax(0,20rem)_1fr] lg:gap-8">
+          <div className="relative mx-auto aspect-[4/3] w-full max-w-[20rem] overflow-hidden rounded-media">
             <Image
               src={images.pastorRichieOFamily.src}
               alt={images.pastorRichieOFamily.alt}
               fill
-              sizes="40vw"
+              sizes="320px"
               className="object-cover"
             />
           </div>
-          <p className="text-[1.05rem] leading-relaxed text-navy-900/75">
+          <p className="text-lg leading-relaxed text-navy-900/75 sm:text-xl">
             He has been married to Lady Trisha for 14 years and they have four sons.
           </p>
         </Container>
