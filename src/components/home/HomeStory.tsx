@@ -50,8 +50,7 @@ export function WhoWeAreHome() {
       <Container>
         <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
           <div>
-            <p className="eyebrow text-gold-700">Who We Are</p>
-            <h2 className="mt-3 font-display text-[clamp(2rem,4vw,3rem)] text-navy-900">
+            <h2 className="font-display text-[clamp(2rem,4vw,3rem)] text-navy-900">
               A campus of Royalhouse Chapel
             </h2>
             <p className="mt-4 max-w-xl text-[1.05rem] leading-relaxed text-navy-900/75">
@@ -73,11 +72,11 @@ export function WhoWeAreHome() {
           </div>
           <div className="relative aspect-[4/5] overflow-hidden rounded-media">
             <Image
-              src={images.congregationPrayer.src}
-              alt={images.congregationPrayer.alt}
+              src={images.worshipResponse.src}
+              alt={images.worshipResponse.alt}
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
-              className="object-cover"
+              className="object-cover object-[center_30%]"
             />
           </div>
         </div>
