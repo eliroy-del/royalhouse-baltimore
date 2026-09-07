@@ -72,11 +72,11 @@ export function WhoWeAreHome() {
           </div>
           <div className="relative aspect-[4/5] overflow-hidden rounded-media">
             <Image
-              src={images.worshipResponse.src}
-              alt={images.worshipResponse.alt}
+              src={images.prayerKneeling.src}
+              alt={images.prayerKneeling.alt}
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
-              className="object-cover object-[center_30%]"
+              className="object-cover object-[center_40%]"
             />
           </div>
         </div>
@@ -297,11 +297,11 @@ export function GiveHome() {
         <div className="grid items-center gap-8 lg:grid-cols-2">
           <div className="relative aspect-[16/11] overflow-hidden rounded-media">
             <Image
-              src={images.prayerKneeling.src}
-              alt={images.prayerKneeling.alt}
+              src={images.worshipResponse.src}
+              alt={images.worshipResponse.alt}
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
-              className="object-cover"
+              className="object-cover object-[center_30%]"
             />
           </div>
           <div>
