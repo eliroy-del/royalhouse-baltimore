@@ -15,11 +15,11 @@ export function YouBelongHere() {
         <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
           <div className="relative aspect-[4/5] overflow-hidden rounded-media">
             <Image
-              src={images.outdoorWelcome.src}
-              alt={images.outdoorWelcome.alt}
+              src={images.prayerHands.src}
+              alt={images.prayerHands.alt}
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
-              className="object-cover object-[center_20%]"
+              className="object-cover object-[center_25%]"
             />
           </div>
           <div>
