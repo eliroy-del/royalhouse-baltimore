@@ -89,14 +89,14 @@ export function Footer() {
 
       <Container className="relative flex flex-col gap-4 border-t border-white/10 py-8 text-[0.8125rem] text-white/60 sm:flex-row sm:items-center sm:justify-between">
         <p>
-          © {year} {churchConfig.name}.{" "}
+          © {year} {churchConfig.name}. Powered by{" "}
           <a
             href="https://solveek.com"
             target="_blank"
             rel="noreferrer noopener"
             className="transition-colors hover:text-white/80"
           >
-            Powered by solveek.com
+            solveek.com
           </a>
         </p>
         <ul className="flex flex-wrap items-center gap-6">
