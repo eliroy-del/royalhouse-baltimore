@@ -316,26 +316,3 @@ export function LocationHome() {
     </Section>
   );
 }
-
-export function FinalCta() {
-  return (
-    <Section tone="navy-deep" spacing="lg">
-      <Container className="text-center">
-        <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] text-white">
-          We&rsquo;ll see you at Royalhouse Baltimore.
-        </h2>
-        <p className="mx-auto mt-4 max-w-xl text-white/75">
-          Come as you are. Come expectant. Come ready to worship.
-        </p>
-        <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <Button asChild variant="gold" size="lg">
-            <Link href="/plan-a-visit">Plan a Visit</Link>
-          </Button>
-          <Button asChild variant="outline-light" size="lg">
-            <Link href="/contact">Connect</Link>
-          </Button>
-        </div>
-      </Container>
-    </Section>
-  );
-}

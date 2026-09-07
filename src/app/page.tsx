@@ -1,6 +1,5 @@
 import {
   ConnectHome,
-  FinalCta,
   GiveHome,
   LocationHome,
   OurVisionHome,
@@ -35,7 +34,6 @@ export default function HomePage() {
       <ConnectHome />
       <GiveHome />
       <LocationHome />
-      <FinalCta />
     </>
   );
 }
