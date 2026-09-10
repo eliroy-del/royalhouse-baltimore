@@ -61,14 +61,14 @@ export default async function SeniorPastorPage() {
       </Section>
 
       <Section tone="white" spacing="sm">
-        <Container className="grid items-center gap-5 lg:grid-cols-[minmax(0,20rem)_1fr] lg:gap-8">
-          <div className="relative mx-auto aspect-[4/3] w-full max-w-[20rem] overflow-hidden rounded-media">
+        <Container className="grid items-center gap-5 lg:grid-cols-[minmax(0,18rem)_1fr] lg:gap-8">
+          <div className="relative mx-auto aspect-[3/4] w-full max-w-[18rem] overflow-hidden rounded-media">
             <Image
               src={images.pastorRichieOFamily.src}
               alt={images.pastorRichieOFamily.alt}
               fill
-              sizes="320px"
-              className="object-cover"
+              sizes="288px"
+              className="object-cover object-[center_18%]"
             />
           </div>
           <p className="text-lg leading-relaxed text-navy-900/75 sm:text-xl">
