@@ -16,9 +16,21 @@ export const metadata = pageMetadata({
   image: images.pastorRichieO.src,
 });
 
+const FAMILY_LINE =
+  "He has been married to Lady Trisha for 14 years and they have four sons.";
+
+function ministryParagraphs(bio: string) {
+  const ministry = bio.replace(FAMILY_LINE, "").replace(/\s+/g, " ").trim();
+  const breakAt = "He has a passion for serving God";
+  const index = ministry.indexOf(breakAt);
+  if (index <= 0) return [ministry];
+  return [ministry.slice(0, index).trim(), ministry.slice(index).trim()];
+}
+
 export default async function SeniorPastorPage() {
   const leaders = await getLeaders();
   const pastor = leaders.find((leader) => leader.id === "pastor-richieo");
+  const paragraphs = pastor ? ministryParagraphs(pastor.bio) : [];
 
   return (
     <>
@@ -40,40 +52,57 @@ export default async function SeniorPastorPage() {
       />
 
       <Section tone="cream" spacing="lg">
-        <Container className="grid items-start gap-10 lg:grid-cols-[minmax(0,18rem)_1fr]">
-          <div className="relative aspect-[3/4] overflow-hidden rounded-media">
-            <Image
-              src={images.pastorRichieO.src}
-              alt={images.pastorRichieO.alt}
-              fill
-              sizes="320px"
-              className="object-cover"
-            />
-          </div>
-          <div>
+        <Container className="grid items-start gap-10 lg:grid-cols-[minmax(0,20rem)_minmax(0,38rem)] lg:gap-16">
+          <figure className="mx-auto w-full max-w-[20rem] lg:mx-0">
+            <div className="relative aspect-[3/4] overflow-hidden rounded-media shadow-elevate">
+              <Image
+                src={images.pastorRichieO.src}
+                alt={images.pastorRichieO.alt}
+                fill
+                sizes="320px"
+                className="object-cover"
+              />
+            </div>
+          </figure>
+          <div className="lg:pt-1">
             <p className="eyebrow text-gold-700">Lead Pastor</p>
-            <h2 className="mt-3 font-display text-4xl text-navy-900">Pastor RichieO</h2>
-            {pastor ? (
-              <p className="mt-5 text-[1.05rem] leading-relaxed text-navy-900/75">{pastor.bio}</p>
-            ) : null}
+            <h2 className="mt-3 font-display text-[clamp(2rem,4vw,3rem)] leading-[1.05] text-navy-900">
+              Pastor RichieO
+            </h2>
+            <span aria-hidden="true" className="mt-5 block h-px w-14 bg-gold-400" />
+            <div className="mt-6 space-y-4 text-[1.05rem] leading-relaxed text-navy-900/75">
+              {paragraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
           </div>
         </Container>
       </Section>
 
-      <Section tone="white" spacing="sm">
-        <Container className="grid items-center gap-5 lg:grid-cols-[minmax(0,18rem)_1fr] lg:gap-8">
-          <div className="relative mx-auto aspect-[3/4] w-full max-w-[18rem] overflow-hidden rounded-media">
-            <Image
-              src={images.pastorRichieOFamily.src}
-              alt={images.pastorRichieOFamily.alt}
-              fill
-              sizes="288px"
-              className="object-cover object-[center_18%]"
-            />
-          </div>
-          <p className="text-lg leading-relaxed text-navy-900/75 sm:text-xl">
-            He has been married to Lady Trisha for 14 years and they have four sons.
-          </p>
+      <Section tone="navy-deep" spacing="lg">
+        <Container>
+          <article className="overflow-hidden rounded-media bg-navy-900 shadow-float lg:grid lg:grid-cols-2 lg:items-stretch">
+            <figure className="relative aspect-[4/5] w-full">
+              <Image
+                src={images.pastorRichieOFamily.src}
+                alt={images.pastorRichieOFamily.alt}
+                fill
+                sizes="(min-width: 1024px) 42vw, 100vw"
+                className="object-cover object-[center_18%]"
+              />
+            </figure>
+            <div className="flex flex-col justify-center px-8 py-10 sm:px-12 lg:px-16 lg:py-14">
+              <p className="eyebrow text-gold-300">Family</p>
+              <h2 className="mt-3 text-balance font-display text-[clamp(1.875rem,3.4vw,2.75rem)] leading-[1.08] text-white">
+                Lady Trisha
+              </h2>
+              <p className="mt-2 font-display text-xl italic text-gold-300/90">and their four sons</p>
+              <span aria-hidden="true" className="mt-6 block h-px w-14 bg-gold-400" />
+              <p className="mt-6 max-w-sm text-[1.05rem] leading-relaxed text-white/75">
+                Pastor RichieO has been married to Lady Trisha for 14 years.
+              </p>
+            </div>
+          </article>
         </Container>
       </Section>
     </>
