@@ -79,24 +79,23 @@ export default async function SeniorPastorPage() {
         </Container>
       </Section>
 
-      <Section tone="navy-deep" spacing="lg">
+      <Section tone="white" spacing="lg">
         <Container>
-          <figure className="mx-auto max-w-4xl overflow-hidden rounded-media bg-navy-900 shadow-float">
-            <div className="relative aspect-[4/3]">
-              <Image
-                src={images.pastorRichieOFamily.src}
-                alt={images.pastorRichieOFamily.alt}
-                fill
-                sizes="(min-width: 1024px) 56rem, 100vw"
-                className="object-cover object-[center_16%]"
-              />
-            </div>
-            <figcaption className="px-6 py-7 text-center sm:px-10 sm:py-8">
-              <p className="eyebrow text-gold-300">Family</p>
-              <h2 className="mt-3 text-balance font-display text-[clamp(1.75rem,3vw,2.5rem)] leading-[1.1] text-white">
+          <figure className="mx-auto max-w-[26rem] sm:max-w-[30rem]">
+            <Image
+              src={images.pastorRichieOFamily.src}
+              alt={images.pastorRichieOFamily.alt}
+              width={900}
+              height={1350}
+              sizes="(min-width: 640px) 30rem, 100vw"
+              className="h-auto w-full rounded-media shadow-elevate"
+            />
+            <figcaption className="mt-7 text-center">
+              <h2 className="text-balance font-display text-[clamp(1.75rem,3vw,2.25rem)] leading-[1.1] text-navy-900">
                 Lady Trisha and their four sons
               </h2>
-              <p className="mx-auto mt-3 max-w-md text-[1.05rem] leading-relaxed text-white/70">
+              <span aria-hidden="true" className="mx-auto mt-4 block h-px w-10 bg-gold-400" />
+              <p className="mx-auto mt-4 max-w-sm text-[1.05rem] leading-relaxed text-navy-900/70">
                 Pastor RichieO has been married to Lady Trisha for 14 years.
               </p>
             </figcaption>
