@@ -10,31 +10,30 @@ import { directionsUrl } from "@/lib/church";
 
 export function YouBelongHere() {
   return (
-    <Section tone="cream" spacing="sm">
+    <Section tone="cream" spacing="lg">
       <Container>
-        <div className="grid items-center gap-5 lg:grid-cols-[minmax(0,16rem)_1fr] lg:gap-8">
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-[16rem] overflow-hidden rounded-media">
+        <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,24rem)_minmax(0,1fr)] lg:gap-14">
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-[24rem] overflow-hidden rounded-media lg:mx-0">
             <Image
               src={images.welcomeHome.src}
               alt={images.welcomeHome.alt}
               fill
-              sizes="256px"
+              sizes="384px"
               className="object-cover object-[center_20%]"
             />
           </div>
-          <div>
-            <p className="flex items-center gap-3 font-display text-[clamp(1.75rem,3vw,2.375rem)] italic leading-none text-gold-600">
+          <div className="max-w-2xl">
+            <p className="font-display text-[clamp(1.75rem,3vw,2.375rem)] italic leading-none text-gold-600">
               Welcome
-              <span aria-hidden="true" className="h-px w-10 bg-gold-400 sm:w-14" />
             </p>
-            <h2 className="mt-3 font-display text-[clamp(2rem,4vw,3rem)] text-navy-900">
+            <h2 className="mt-4 font-display text-[clamp(2.25rem,4.5vw,3.25rem)] leading-[1.08] text-navy-900">
               {churchConfig.belongingLine}
             </h2>
-            <p className="mt-3 max-w-xl text-[1.05rem] leading-relaxed text-navy-900/75">
+            <p className="mt-5 text-[1.05rem] leading-relaxed text-navy-900/75">
               Royalhouse Baltimore is a place to build faith, share fellowship, encounter God in
               prayer and worship, grow through God&rsquo;s Word, and find genuine community.
             </p>
-            <Button asChild variant="primary" size="lg" className="mt-5">
+            <Button asChild variant="primary" size="lg" className="mt-8">
               <Link href="/about/who-we-are">
                 Discover Who We Are
                 <Icon name="arrow-right" className="size-4" />
