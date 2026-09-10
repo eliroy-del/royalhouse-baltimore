@@ -153,6 +153,10 @@ export const images = {
     src: "/images/congregation-notes.jpg",
     alt: "People taking notes during the teaching of God's Word",
   },
+  grace2GraceCenter: {
+    src: "/images/grace2grace-center.jpg",
+    alt: "A congregation gathered at Grace2Grace Center as a speaker teaches from the stage",
+  },
 } as const satisfies Record<string, ImageAsset>;
 
 export type ImageKey = keyof typeof images;

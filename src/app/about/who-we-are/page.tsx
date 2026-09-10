@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ParallaxMedia } from "@/components/motion/ParallaxMedia";
 import { PageHero } from "@/components/sections/PageHero";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Button } from "@/components/ui/Button";
@@ -70,27 +71,40 @@ export default function WhoWeArePage() {
         </Container>
       </Section>
 
-      <Section tone="cream" spacing="lg">
-        <Container>
+      <section className="relative isolate overflow-hidden py-16 sm:py-20 lg:py-24">
+        <ParallaxMedia
+          src={images.grace2GraceCenter.src}
+          alt=""
+          className="absolute inset-0"
+          imageClassName="object-[center_70%]"
+          sizes="100vw"
+          strength={12}
+          overlay="none"
+        />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-gradient-to-b from-navy-950/68 via-navy-950/52 to-navy-950/70"
+        />
+        <Container className="relative z-10">
           <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,22rem)] lg:gap-14">
             <div className="max-w-2xl">
-              <h2 className="text-balance font-display text-[clamp(2rem,4vw,3rem)] leading-[1.08] text-navy-900">
+              <h2 className="text-balance font-display text-[clamp(2rem,4vw,3rem)] leading-[1.08] text-white">
                 Our relationship to Royalhouse Chapel International
               </h2>
               <span aria-hidden="true" className="mt-5 block h-px w-14 bg-gold-400" />
-              <p className="mt-5 text-[1.05rem] leading-relaxed text-navy-900/75">
+              <p className="mt-5 text-[1.05rem] leading-relaxed text-white/75">
                 Royalhouse Baltimore is a campus of {churchConfig.campusOf} and belongs to the
                 wider {churchConfig.network} family. The international headquarters is in{" "}
                 {churchConfig.headquarters}.
               </p>
-              <Button asChild variant="primary" size="lg" className="mt-8">
+              <Button asChild variant="gold" size="lg" className="mt-8">
                 <Link href="/about/our-north-american-missions-lead">
                   Meet Apostle Emmanuel Agormeda
                 </Link>
               </Button>
             </div>
             <figure className="mx-auto w-full max-w-[22rem] lg:mx-0">
-              <div className="relative aspect-[3/4] overflow-hidden rounded-media shadow-elevate">
+              <div className="relative aspect-[3/4] overflow-hidden rounded-media shadow-float">
                 <Image
                   src={images.apostleAgorMina.src}
                   alt={images.apostleAgorMina.alt}
@@ -99,13 +113,13 @@ export default function WhoWeArePage() {
                   className="object-cover object-top"
                 />
               </div>
-              <figcaption className="mt-3 text-center text-[0.875rem] leading-relaxed text-navy-900/60">
+              <figcaption className="mt-3 text-center text-[0.875rem] leading-relaxed text-white/70">
                 Apostle Emmanuel Agormeda and Rev. Mrs. Willhemina Agormeda
               </figcaption>
             </figure>
           </div>
         </Container>
-      </Section>
+      </section>
 
       <Section tone="white" spacing="lg">
         <Container width="narrow">
