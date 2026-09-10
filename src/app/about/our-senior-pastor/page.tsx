@@ -81,28 +81,26 @@ export default async function SeniorPastorPage() {
 
       <Section tone="navy-deep" spacing="lg">
         <Container>
-          <article className="overflow-hidden rounded-media bg-navy-900 shadow-float lg:grid lg:grid-cols-2 lg:items-stretch">
-            <figure className="relative aspect-[4/5] w-full">
+          <figure className="mx-auto max-w-4xl overflow-hidden rounded-media bg-navy-900 shadow-float">
+            <div className="relative aspect-[4/3]">
               <Image
                 src={images.pastorRichieOFamily.src}
                 alt={images.pastorRichieOFamily.alt}
                 fill
-                sizes="(min-width: 1024px) 42vw, 100vw"
-                className="object-cover object-[center_18%]"
+                sizes="(min-width: 1024px) 56rem, 100vw"
+                className="object-cover object-[center_16%]"
               />
-            </figure>
-            <div className="flex flex-col justify-center px-8 py-10 sm:px-12 lg:px-16 lg:py-14">
+            </div>
+            <figcaption className="px-6 py-7 text-center sm:px-10 sm:py-8">
               <p className="eyebrow text-gold-300">Family</p>
-              <h2 className="mt-3 text-balance font-display text-[clamp(1.875rem,3.4vw,2.75rem)] leading-[1.08] text-white">
-                Lady Trisha
+              <h2 className="mt-3 text-balance font-display text-[clamp(1.75rem,3vw,2.5rem)] leading-[1.1] text-white">
+                Lady Trisha and their four sons
               </h2>
-              <p className="mt-2 font-display text-xl italic text-gold-300/90">and their four sons</p>
-              <span aria-hidden="true" className="mt-6 block h-px w-14 bg-gold-400" />
-              <p className="mt-6 max-w-sm text-[1.05rem] leading-relaxed text-white/75">
+              <p className="mx-auto mt-3 max-w-md text-[1.05rem] leading-relaxed text-white/70">
                 Pastor RichieO has been married to Lady Trisha for 14 years.
               </p>
-            </div>
-          </article>
+            </figcaption>
+          </figure>
         </Container>
       </Section>
     </>
