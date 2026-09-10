@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ParallaxMedia } from "@/components/motion/ParallaxMedia";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Icon } from "@/components/ui/Icon";
@@ -91,12 +93,14 @@ export function WhoWeAreHome() {
 export function OurVisionHome() {
   return (
     <section className="relative isolate overflow-hidden py-20 sm:py-24 lg:py-28">
-      <Image
+      <ParallaxMedia
         src={images.congregationPrayer.src}
         alt=""
-        fill
+        className="absolute inset-0"
+        imageClassName="object-[center_30%]"
         sizes="100vw"
-        className="object-cover object-[center_30%]"
+        strength={12}
+        overlay="none"
       />
       <div
         aria-hidden="true"
@@ -104,21 +108,24 @@ export function OurVisionHome() {
       />
       <Container className="relative z-10">
         <div className="text-center">
-          <h2 className="font-display text-[clamp(2.25rem,4.5vw,3.5rem)] font-light leading-[1.08] text-white">
-            Our Vision
-          </h2>
-          <span aria-hidden="true" className="mx-auto mt-5 block h-px w-14 bg-gold-400" />
+          <Reveal>
+            <h2 className="font-display text-[clamp(2.25rem,4.5vw,3.5rem)] font-light leading-[1.08] text-white">
+              Our Vision
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <span aria-hidden="true" className="mx-auto mt-5 block h-px w-14 bg-gold-400" />
+          </Reveal>
         </div>
-        <div className="mt-12 grid gap-5 md:grid-cols-3 md:gap-6">
+        <Stagger className="mt-12 grid gap-5 md:grid-cols-3 md:gap-6">
           {churchConfig.vision.map((pillar) => (
-            <p
-              key={pillar.statement}
-              className="flex min-h-[10.5rem] items-center rounded-media bg-white px-7 py-8 text-[1.05rem] leading-relaxed text-navy-900 sm:min-h-[12rem] sm:px-8 sm:py-10"
-            >
-              {pillar.statement}
-            </p>
+            <StaggerItem key={pillar.statement}>
+              <p className="flex min-h-[10.5rem] items-center rounded-media bg-white px-7 py-8 text-[1.05rem] leading-relaxed text-navy-900 sm:min-h-[12rem] sm:px-8 sm:py-10">
+                {pillar.statement}
+              </p>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </Container>
     </section>
   );
