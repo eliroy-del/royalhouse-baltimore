@@ -79,23 +79,23 @@ export default async function SeniorPastorPage() {
         </Container>
       </Section>
 
-      <Section tone="white" spacing="lg">
+      <Section tone="white" spacing="md">
         <Container>
-          <figure className="mx-auto max-w-[26rem] sm:max-w-[30rem]">
+          <figure className="mx-auto max-w-[18rem] sm:max-w-[20rem]">
             <Image
               src={images.pastorRichieOFamily.src}
               alt={images.pastorRichieOFamily.alt}
               width={900}
               height={1350}
-              sizes="(min-width: 640px) 30rem, 100vw"
+              sizes="320px"
               className="h-auto w-full rounded-media shadow-elevate"
             />
-            <figcaption className="mt-7 text-center">
-              <h2 className="text-balance font-display text-[clamp(1.75rem,3vw,2.25rem)] leading-[1.1] text-navy-900">
+            <figcaption className="mt-5 text-center">
+              <h2 className="text-balance font-display text-[clamp(1.375rem,2.4vw,1.75rem)] leading-[1.15] text-navy-900">
                 Lady Trisha and their four sons
               </h2>
-              <span aria-hidden="true" className="mx-auto mt-4 block h-px w-10 bg-gold-400" />
-              <p className="mx-auto mt-4 max-w-sm text-[1.05rem] leading-relaxed text-navy-900/70">
+              <span aria-hidden="true" className="mx-auto mt-3 block h-px w-10 bg-gold-400" />
+              <p className="mx-auto mt-3 max-w-sm text-[0.9375rem] leading-relaxed text-navy-900/70">
                 Pastor RichieO has been married to Lady Trisha for 14 years.
               </p>
             </figcaption>
