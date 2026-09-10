@@ -35,7 +35,6 @@ export default async function MissionsLeadPage() {
         ]}
       />
       <PageHero
-        eyebrow="North American Missions"
         title="Apostle Emmanuel Agormeda"
         image={images.apostleAgormeda}
         objectPosition="50% 15%"
