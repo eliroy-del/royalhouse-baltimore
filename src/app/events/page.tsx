@@ -45,7 +45,6 @@ export default async function EventsPage() {
       />
 
       <PageHero
-        eyebrow="Events"
         title={
           <>
             There is always <em className="not-italic text-gold-300">something happening</em>.
@@ -78,7 +77,6 @@ export default async function EventsPage() {
       <Section tone="white" spacing="md" id="calendar">
         <Container>
           <SectionHeading
-            eyebrow="The Calendar"
             title="Everything coming up."
             lede="Filter by what you are looking for. Everything on this page is open to visitors unless it says otherwise."
           />
@@ -103,7 +101,6 @@ export default async function EventsPage() {
       </Section>
 
       <CtaBand
-        eyebrow="Come Along"
         title="You do not need an invitation. This is one."
         lede="Bring a friend, bring your family, or come on your own and let us look after you."
         image={images.eventWorshipNight}

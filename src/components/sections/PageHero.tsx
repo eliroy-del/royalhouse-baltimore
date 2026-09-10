@@ -185,7 +185,7 @@ export function CtaBand({
   actions,
   image,
 }: {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   lede: string;
   actions: ReactNode;
@@ -214,8 +214,13 @@ export function CtaBand({
       )}
 
       <Container className="relative text-center">
-        <p className="eyebrow text-gold-300">{eyebrow}</p>
-        <h2 className="mx-auto mt-3 max-w-3xl font-display text-[clamp(1.5rem,2.8vw,2.125rem)] font-light leading-[1.05]">
+        {eyebrow ? <p className="eyebrow text-gold-300">{eyebrow}</p> : null}
+        <h2
+          className={cn(
+            "mx-auto max-w-3xl font-display text-[clamp(1.5rem,2.8vw,2.125rem)] font-light leading-[1.05]",
+            eyebrow && "mt-3",
+          )}
+        >
           {title}
         </h2>
         <p className="mx-auto mt-2.5 max-w-2xl text-[0.875rem] leading-relaxed text-white/70 sm:text-[0.9375rem]">
