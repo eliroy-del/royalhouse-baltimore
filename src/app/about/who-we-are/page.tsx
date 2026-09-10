@@ -71,26 +71,39 @@ export default function WhoWeArePage() {
         </Container>
       </Section>
 
-      <Section tone="cream" spacing="sm">
-        <Container className="grid items-center gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,14rem)] lg:gap-8">
-          <div>
-            <h2 className="font-display text-[clamp(1.75rem,3.2vw,2.5rem)] leading-tight text-navy-900">
-              Our relationship to Royalhouse Chapel International
-            </h2>
-            <p className="mt-3 text-lg leading-relaxed text-navy-900/75 sm:text-xl">
-              Royalhouse Baltimore is a campus of {churchConfig.campusOf} and belongs to the wider{" "}
-              {churchConfig.network} family. The international headquarters is in{" "}
-              {churchConfig.headquarters}.
-            </p>
-          </div>
-          <div className="relative mx-auto aspect-[3/4] w-full max-w-[14rem] overflow-hidden rounded-media">
-            <Image
-              src={images.apostleAgorMina.src}
-              alt={images.apostleAgorMina.alt}
-              fill
-              sizes="224px"
-              className="object-cover"
-            />
+      <Section tone="cream" spacing="lg">
+        <Container>
+          <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,22rem)] lg:gap-14">
+            <div className="max-w-2xl">
+              <h2 className="text-balance font-display text-[clamp(2rem,4vw,3rem)] leading-[1.08] text-navy-900">
+                Our relationship to Royalhouse Chapel International
+              </h2>
+              <span aria-hidden="true" className="mt-5 block h-px w-14 bg-gold-400" />
+              <p className="mt-5 text-[1.05rem] leading-relaxed text-navy-900/75">
+                Royalhouse Baltimore is a campus of {churchConfig.campusOf} and belongs to the
+                wider {churchConfig.network} family. The international headquarters is in{" "}
+                {churchConfig.headquarters}.
+              </p>
+              <Button asChild variant="primary" size="lg" className="mt-8">
+                <Link href="/about/our-north-american-missions-lead">
+                  Meet Apostle Emmanuel Agormeda
+                </Link>
+              </Button>
+            </div>
+            <figure className="mx-auto w-full max-w-[22rem] lg:mx-0">
+              <div className="relative aspect-[3/4] overflow-hidden rounded-media shadow-elevate">
+                <Image
+                  src={images.apostleAgorMina.src}
+                  alt={images.apostleAgorMina.alt}
+                  fill
+                  sizes="352px"
+                  className="object-cover object-top"
+                />
+              </div>
+              <figcaption className="mt-3 text-center text-[0.875rem] leading-relaxed text-navy-900/60">
+                Apostle Emmanuel Agormeda and Rev. Mrs. Willhemina Agormeda
+              </figcaption>
+            </figure>
           </div>
         </Container>
       </Section>
