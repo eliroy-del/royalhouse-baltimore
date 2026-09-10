@@ -16,16 +16,16 @@ export async function EventsPreview() {
     <Section tone="white" spacing="sm" id="events">
       <Container>
         {featured ? (
-          <div className="grid gap-3 lg:grid-cols-[minmax(0,1.45fr)_minmax(0,1fr)] lg:gap-3">
-            <EventCard
-              event={featured}
-              variant="feature"
-              className="min-h-[11rem] p-4 sm:min-h-[12rem] lg:min-h-[13rem] lg:p-4"
-            />
+          upcoming.length > 0 ? (
+            <div className="grid gap-3 lg:grid-cols-[minmax(0,1.45fr)_minmax(0,1fr)] lg:gap-3">
+              <EventCard
+                event={featured}
+                variant="feature"
+                className="min-h-[11rem] p-4 sm:min-h-[12rem] lg:min-h-[13rem] lg:p-4"
+              />
 
-            <div className="flex flex-col gap-2">
-              <p className="eyebrow px-1 text-navy-900/65">Also coming up</p>
-              {upcoming.length > 0 ? (
+              <div className="flex flex-col gap-2">
+                <p className="eyebrow px-1 text-navy-900/65">Also coming up</p>
                 <Stagger className="flex flex-col gap-2">
                   {upcoming.slice(0, 3).map((event) => (
                     <StaggerItem key={event.id}>
@@ -33,23 +33,22 @@ export async function EventsPreview() {
                     </StaggerItem>
                   ))}
                 </Stagger>
-              ) : (
-                <EmptyState
-                  icon="calendar"
-                  title="More dates on the way"
-                  description="We are finalising the next season of the calendar. Check back soon, or subscribe and we will tell you first."
-                  className="flex-1"
-                />
-              )}
-              <Link
-                href="/events"
-                className="mt-1 inline-flex items-center gap-2 px-1 text-[0.8125rem] font-semibold text-navy-900 underline decoration-gold-500/50 decoration-1 underline-offset-[6px] transition-colors hover:decoration-gold-500"
-              >
-                View the full calendar
-                <Icon name="arrow-right" className="size-3.5 text-gold-600" />
-              </Link>
+                <Link
+                  href="/events"
+                  className="mt-1 inline-flex items-center gap-2 px-1 text-[0.8125rem] font-semibold text-navy-900 underline decoration-gold-500/50 decoration-1 underline-offset-[6px] transition-colors hover:decoration-gold-500"
+                >
+                  View the full calendar
+                  <Icon name="arrow-right" className="size-3.5 text-gold-600" />
+                </Link>
+              </div>
             </div>
-          </div>
+          ) : (
+            <EventCard
+              event={featured}
+              variant="feature"
+              className="min-h-[11rem] p-4 sm:min-h-[12rem] lg:min-h-[13rem] lg:p-4"
+            />
+          )
         ) : (
           <EmptyState
             icon="calendar"
