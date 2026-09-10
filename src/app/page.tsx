@@ -4,7 +4,6 @@ import {
   LocationHome,
   OurVisionHome,
   PlanVisitHome,
-  WelcomeVideo,
   WhoWeAreHome,
   YouBelongHere,
 } from "@/components/home/HomeStory";
@@ -30,7 +29,6 @@ export default function HomePage() {
       <OurVisionHome />
       <PlanVisitHome />
       <EventsPreview />
-      <WelcomeVideo />
       <ConnectHome />
       <GiveHome />
       <LocationHome />
