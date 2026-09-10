@@ -23,7 +23,6 @@ export default function GivePage() {
         ])}
       />
       <PageHero
-        eyebrow="Give"
         title="Give With Purpose"
         lede="Generosity is part of worship and helps support the mission of Royalhouse Baltimore."
         image={images.prayerKneeling}
