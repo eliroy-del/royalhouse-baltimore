@@ -28,7 +28,6 @@ export default function WhoWeArePage() {
         ])}
       />
       <PageHero
-        eyebrow="About"
         title="Who We Are"
         image={images.congregationPrayer}
         breadcrumb={[{ label: "Who We Are" }]}
