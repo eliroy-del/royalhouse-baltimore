@@ -48,37 +48,38 @@ export function YouBelongHere() {
 
 export function WhoWeAreHome() {
   return (
-    <Section tone="white" spacing="sm">
+    <Section tone="white" spacing="lg">
       <Container>
-        <div className="grid items-center gap-5 lg:grid-cols-[1fr_minmax(0,16rem)] lg:gap-8">
-          <div>
-            <h2 className="font-display text-[clamp(1.75rem,3.2vw,2.5rem)] leading-tight text-navy-900">
+        <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,32rem)] lg:gap-14">
+          <div className="max-w-2xl">
+            <h2 className="font-display text-[clamp(2rem,4vw,3rem)] leading-[1.08] text-navy-900">
               A campus of Royalhouse Chapel
             </h2>
-            <p className="mt-3 max-w-xl text-[0.9375rem] leading-relaxed text-navy-900/75 sm:text-base">
+            <span aria-hidden="true" className="mt-5 block h-px w-14 bg-gold-400" />
+            <p className="mt-5 text-[1.05rem] leading-relaxed text-navy-900/75">
               Royalhouse Baltimore is a campus of {churchConfig.campusOf} and part of the{" "}
               {churchConfig.network} family, with churches across North America and around the
               world and international headquarters in {churchConfig.headquarters}.
             </p>
-            <p className="mt-3 max-w-xl text-[0.9375rem] leading-relaxed text-navy-900/75 sm:text-base">
+            <p className="mt-4 text-[1.05rem] leading-relaxed text-navy-900/75">
               {churchConfig.statement}
             </p>
-            <ul className="mt-4 grid gap-1.5 sm:grid-cols-2">
+            <ul className="mt-8 grid gap-x-10 gap-y-3 sm:grid-cols-2">
               {churchConfig.identity.map((item) => (
-                <li key={item} className="flex items-start gap-2 text-[0.875rem] text-navy-900">
+                <li key={item} className="flex items-start gap-2.5 text-[0.9375rem] text-navy-900">
                   <span aria-hidden="true" className="mt-1.5 size-1.5 shrink-0 rounded-full bg-gold-400" />
                   {item}
                 </li>
               ))}
             </ul>
           </div>
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-[16rem] overflow-hidden rounded-media">
+          <div className="relative mx-auto aspect-[4/3] w-full max-w-[32rem] overflow-hidden rounded-media shadow-elevate lg:mx-0">
             <Image
               src={images.prayerKneeling.src}
               alt={images.prayerKneeling.alt}
               fill
-              sizes="256px"
-              className="object-cover object-[center_40%]"
+              sizes="(min-width: 1024px) 32rem, 100vw"
+              className="object-cover object-[center_60%]"
             />
           </div>
         </div>
@@ -89,24 +90,30 @@ export function WhoWeAreHome() {
 
 export function OurVisionHome() {
   return (
-    <section className="relative isolate overflow-hidden py-16 sm:py-20 lg:py-24">
+    <section className="relative isolate overflow-hidden py-20 sm:py-24 lg:py-28">
       <Image
         src={images.congregationPrayer.src}
         alt=""
         fill
         sizes="100vw"
-        className="object-cover"
+        className="object-cover object-[center_30%]"
       />
-      <div aria-hidden="true" className="absolute inset-0 bg-navy-950/70" />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-gradient-to-b from-navy-950/80 via-navy-950/64 to-navy-950/80"
+      />
       <Container className="relative z-10">
-        <h2 className="text-center text-[clamp(2rem,4.5vw,3.25rem)] font-bold text-white">
-          Our Vision
-        </h2>
-        <div className="mt-10 grid gap-4 md:grid-cols-3 md:gap-5">
+        <div className="text-center">
+          <h2 className="font-display text-[clamp(2.25rem,4.5vw,3.5rem)] font-light leading-[1.08] text-white">
+            Our Vision
+          </h2>
+          <span aria-hidden="true" className="mx-auto mt-5 block h-px w-14 bg-gold-400" />
+        </div>
+        <div className="mt-12 grid gap-5 md:grid-cols-3 md:gap-6">
           {churchConfig.vision.map((pillar) => (
             <p
               key={pillar.statement}
-              className="bg-white p-6 text-[0.9375rem] leading-relaxed text-black sm:p-8"
+              className="flex min-h-[10.5rem] items-center rounded-media bg-white px-7 py-8 text-[1.05rem] leading-relaxed text-navy-900 sm:min-h-[12rem] sm:px-8 sm:py-10"
             >
               {pillar.statement}
             </p>
