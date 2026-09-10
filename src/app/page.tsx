@@ -1,6 +1,4 @@
 import {
-  ConnectHome,
-  GiveHome,
   LocationHome,
   OurVisionHome,
   PlanVisitHome,
@@ -29,8 +27,6 @@ export default function HomePage() {
       <OurVisionHome />
       <PlanVisitHome />
       <EventsPreview />
-      <ConnectHome />
-      <GiveHome />
       <LocationHome />
     </>
   );
