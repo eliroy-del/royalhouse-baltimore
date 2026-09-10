@@ -60,8 +60,7 @@ export default async function EventsPage() {
       {featured ? (
         <Section tone="cream" spacing="md">
           <Container>
-            <SectionHeading eyebrow="Next Up" title="Start here." />
-            <Reveal className="mt-6" y={24}>
+            <Reveal y={24}>
               <EventCard event={featured} variant="feature" />
             </Reveal>
 
