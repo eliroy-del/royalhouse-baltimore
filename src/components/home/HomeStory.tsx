@@ -213,6 +213,8 @@ export function PlanVisitHome() {
 
 export function WelcomeVideo() {
   const hasVideo = churchStatus.hasWelcomeVideo;
+  const playButtonClass =
+    "inline-flex size-16 items-center justify-center rounded-full bg-gold-400 text-navy-950 transition-colors duration-300 ease-out-expo group-hover:bg-white";
 
   return (
     <Section tone="navy-deep" spacing="lg">
@@ -232,64 +234,16 @@ export function WelcomeVideo() {
           {hasVideo ? (
             <a
               href={churchConfig.welcomeVideoUrl}
-              className="absolute inset-0 flex items-center justify-center"
+              className="group absolute inset-0 flex items-center justify-center"
             >
-              <span className="inline-flex size-16 items-center justify-center rounded-full bg-gold-400 text-black">
+              <span className={playButtonClass}>
                 <Icon name="play" className="size-6" />
                 <span className="sr-only">Play welcome video</span>
               </span>
             </a>
           ) : (
-            <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-white">
-              <span
-                aria-hidden="true"
-                className="inline-flex size-16 items-center justify-center rounded-full bg-gold-400 text-black"
-              >
-                <Icon name="play" className="size-6" />
-              </span>
-              <p className="mt-4 text-sm text-white/80">Welcome video coming soon.</p>
-            </div>
-          )}
-        </div>
-      </Container>
-    </Section>
-  );
-}
-
-export function WelcomeVideo() {
-  const hasVideo = churchStatus.hasWelcomeVideo;
-
-  return (
-    <Section tone="navy-deep" spacing="lg">
-      <Container width="narrow" className="text-center">
-        <h2 className="font-display text-[clamp(2rem,4vw,3rem)] text-white">
-          Welcome to Royalhouse Baltimore
-        </h2>
-        <div className="relative mx-auto mt-8 aspect-video overflow-hidden rounded-media">
-          <Image
-            src={images.heroCampaign.src}
-            alt="Welcome video placeholder"
-            fill
-            sizes="80vw"
-            className="object-cover"
-          />
-          <div aria-hidden="true" className="absolute inset-0 bg-navy-950/45" />
-          {hasVideo ? (
-            <a
-              href={churchConfig.welcomeVideoUrl}
-              className="absolute inset-0 flex items-center justify-center"
-            >
-              <span className="inline-flex size-16 items-center justify-center rounded-full bg-gold-400 text-black">
-                <Icon name="play" className="size-6" />
-                <span className="sr-only">Play welcome video</span>
-              </span>
-            </a>
-          ) : (
-            <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-white">
-              <span
-                aria-hidden="true"
-                className="inline-flex size-16 items-center justify-center rounded-full bg-gold-400 text-black"
-              >
+            <div className="group absolute inset-0 flex flex-col items-center justify-center px-6 text-white">
+              <span aria-hidden="true" className={playButtonClass}>
                 <Icon name="play" className="size-6" />
               </span>
               <p className="mt-4 text-sm text-white/80">Welcome video coming soon.</p>
@@ -321,7 +275,7 @@ export function LocationHome() {
               href={directions}
               target="_blank"
               rel="noreferrer noopener"
-              className="mt-6 inline-flex items-center gap-2 font-semibold text-gold-300"
+              className="mt-6 inline-flex items-center gap-2 font-semibold text-gold-300 transition-colors duration-300 hover:text-white"
             >
               Get Directions
               <Icon name="arrow-right" className="size-4" />

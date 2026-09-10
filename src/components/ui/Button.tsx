@@ -17,17 +17,17 @@ const buttonVariants = cva(
       variant: {
         /** Navy: the default action across light sections. */
         primary:
-          "bg-navy-900 text-white shadow-subtle hover:bg-navy-800 hover:shadow-elevate",
+          "bg-navy-900 text-white shadow-subtle hover:bg-gold-400 hover:text-navy-950 hover:shadow-elevate",
         /** Royal gold: reserved for the single most important action on a screen. */
-        gold: "bg-gold-400 text-black shadow-subtle hover:bg-gold-300 hover:shadow-elevate",
+        gold: "bg-gold-400 text-navy-950 shadow-subtle hover:bg-white hover:text-navy-950 hover:shadow-elevate",
         /** Outlined navy for secondary actions on light backgrounds. */
         outline:
-          "border border-navy-900/20 bg-transparent text-navy-900 hover:border-navy-900/40 hover:bg-navy-900/[0.04]",
+          "border border-navy-900/20 bg-transparent text-navy-900 hover:border-navy-900 hover:bg-navy-900 hover:text-white",
         /** White pill for use over photography and navy sections. */
-        light: "bg-white text-navy-900 shadow-elevate hover:bg-gold-100",
+        light: "bg-white text-navy-900 shadow-elevate hover:bg-gold-400 hover:text-navy-950",
         /** Glass outline for use over photography. */
         "outline-light":
-          "border border-white/35 bg-white/[0.06] text-white backdrop-blur-sm hover:border-white/60 hover:bg-white/15",
+          "border border-white/35 bg-white/[0.06] text-white backdrop-blur-sm hover:border-gold-400 hover:bg-gold-400 hover:text-navy-950",
         ghost: "text-navy-900 hover:bg-navy-900/[0.05]",
         "ghost-light": "text-white/90 hover:bg-white/10 hover:text-white",
         /** Inline text action with the signature gold underline. */
