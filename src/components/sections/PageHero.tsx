@@ -214,7 +214,11 @@ export function CtaBand({
       )}
 
       <Container className="relative text-center">
-        {eyebrow ? <p className="eyebrow text-gold-300">{eyebrow}</p> : null}
+        {eyebrow ? (
+          <p className="text-[0.9375rem] font-semibold uppercase tracking-[0.2em] text-white sm:text-base">
+            {eyebrow}
+          </p>
+        ) : null}
         <h2
           className={cn(
             "mx-auto max-w-3xl font-display text-[clamp(1.5rem,2.8vw,2.125rem)] font-light leading-[1.05]",
