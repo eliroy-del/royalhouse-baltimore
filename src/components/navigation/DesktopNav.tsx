@@ -64,60 +64,34 @@ export function DesktopNav() {
 
               <NavigationMenu.Content
                 className={cn(
-                  "absolute right-0 top-full z-50 w-[min(36rem,calc(100vw-2rem))] pt-3",
+                  "absolute right-0 top-full z-50 w-[min(18rem,calc(100vw-2rem))] pt-3",
                   "data-[state=open]:nav-panel-enter data-[state=closed]:nav-panel-exit",
                 )}
               >
-                <div className="overflow-hidden rounded-2xl border border-navy-900/10 bg-white shadow-float">
-                  <div className="grid grid-cols-[minmax(0,15rem)_1fr]">
-                    <div className="relative hidden flex-col justify-between bg-navy-900 p-5 text-white sm:flex">
-                      <div>
-                        <p className="eyebrow text-gold-300">{item.label}</p>
-                        <p className="mt-4 font-display text-[1.375rem] leading-snug text-white/90">
-                          {item.intro}
-                        </p>
-                      </div>
+                <ul className="overflow-hidden rounded-2xl border border-navy-900/10 bg-white p-2 shadow-float">
+                  {item.children.map((child) => (
+                    <li key={child.href}>
                       <NavigationMenu.Link asChild>
                         <Link
-                          href={item.href}
-                          className="mt-8 inline-flex items-center gap-2 text-[0.8125rem] font-semibold text-gold-300 transition-colors hover:text-gold-200"
+                          href={child.href}
+                          className="group/link flex items-center gap-3 rounded-xl px-3 py-2.5 transition-colors duration-200 hover:bg-mist focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500"
                         >
-                          Explore {item.label}
-                          <Icon name="arrow-right" className="size-4" />
+                          <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-navy-900/[0.05] text-navy-800 transition-colors duration-300 group-hover/link:bg-gold-100 group-hover/link:text-gold-700">
+                            <Icon name={child.icon} className="size-[1.125rem]" />
+                          </span>
+                          <span className="min-w-0">
+                            <span className="block text-[0.9375rem] font-semibold text-navy-900">
+                              {child.label}
+                            </span>
+                            <span className="block text-[0.8125rem] leading-snug text-navy-900/65">
+                              {child.description}
+                            </span>
+                          </span>
                         </Link>
                       </NavigationMenu.Link>
-                      <span
-                        aria-hidden="true"
-                        className="absolute inset-y-0 right-0 w-px bg-gradient-to-b from-transparent via-gold-500/40 to-transparent"
-                      />
-                    </div>
-
-                    <ul className="grid gap-1 p-4 sm:grid-cols-2">
-                      {item.children.map((child) => (
-                        <li key={child.href}>
-                          <NavigationMenu.Link asChild>
-                            <Link
-                              href={child.href}
-                              className="group/link flex gap-3 rounded-xl p-3 transition-colors duration-200 hover:bg-mist focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500"
-                            >
-                              <span className="mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-lg bg-navy-900/[0.05] text-navy-800 transition-colors duration-300 group-hover/link:bg-gold-100 group-hover/link:text-gold-700">
-                                <Icon name={child.icon} className="size-[1.125rem]" />
-                              </span>
-                              <span className="min-w-0">
-                                <span className="block text-[0.875rem] font-semibold text-navy-900">
-                                  {child.label}
-                                </span>
-                                <span className="mt-0.5 block text-[0.8125rem] leading-snug text-navy-900/65">
-                                  {child.description}
-                                </span>
-                              </span>
-                            </Link>
-                          </NavigationMenu.Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+                    </li>
+                  ))}
+                </ul>
               </NavigationMenu.Content>
             </NavigationMenu.Item>
           );

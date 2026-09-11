@@ -18,24 +18,24 @@ export const primaryNav: NavItem[] = [
   {
     label: "About",
     href: "/about/who-we-are",
-    intro: "Who we are, who leads us, and how we belong to the Royalhouse family.",
+    intro: "Who we are and who leads us.",
     children: [
       {
         label: "Who We Are",
         href: "/about/who-we-are",
-        description: "Our identity, vision and place in Royalhouse Chapel International.",
+        description: "Identity and vision",
         icon: "heart",
       },
       {
-        label: "Our Senior Pastor",
+        label: "Senior Pastor",
         href: "/about/our-senior-pastor",
-        description: "Meet Pastor RichieO, Lead Pastor of Royalhouse Baltimore.",
+        description: "Pastor RichieO",
         icon: "users",
       },
       {
-        label: "Our North American Missions Lead",
+        label: "Missions Lead",
         href: "/about/our-north-american-missions-lead",
-        description: "Meet Apostle Emmanuel Agormeda.",
+        description: "Apostle Emmanuel Agormeda",
         icon: "globe",
       },
     ],
