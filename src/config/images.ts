@@ -113,6 +113,10 @@ export const images = {
     src: "/images/pastor-richieo-preaching.jpg",
     alt: "Pastor RichieO preaching from the pulpit",
   },
+  pastorRichieOStage: {
+    src: "/images/pastor-richieo-stage.jpg",
+    alt: "Pastor RichieO preaching at Grace2Grace Center",
+  },
   pastorRichieOFamily: {
     src: "/images/pastor-richieo-family.jpg",
     alt: "Pastor RichieO with Lady Trisha and their sons",
