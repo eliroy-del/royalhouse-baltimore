@@ -42,8 +42,8 @@ export function PageHero({
       className={cn(
         "relative isolate flex flex-col justify-end overflow-hidden bg-navy-950 text-white",
         size === "lg"
-          ? "min-h-[42svh] pb-8 pt-28 sm:pb-10"
-          : "min-h-[32svh] pb-6 pt-24 sm:pb-8 lg:min-h-[36svh]",
+          ? "min-h-[42svh] pb-8 pt-32 sm:pb-10"
+          : "min-h-[32svh] pb-6 pt-28 sm:pb-8 lg:min-h-[36svh]",
         className,
       )}
     >

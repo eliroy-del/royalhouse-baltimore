@@ -25,7 +25,7 @@ export function Header() {
       <Container
         className={cn(
           "flex items-center justify-between gap-4 transition-[height] duration-500 ease-out-expo",
-          scrolled ? "h-20" : "h-24",
+          scrolled ? "h-24" : "h-28",
         )}
       >
         <LogoLink tone="dark" size="md" preload />
@@ -35,7 +35,7 @@ export function Header() {
           <Button
             type="button"
             variant="gold"
-            size="sm"
+            size="md"
             className="hidden md:inline-flex"
             onClick={openGive}
           >
