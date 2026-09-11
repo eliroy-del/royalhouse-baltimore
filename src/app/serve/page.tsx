@@ -25,7 +25,6 @@ export default function ServePage() {
         ])}
       />
       <PageHero
-        eyebrow="Serve"
         title="Join the Launch Team"
         lede="Find a place to serve at Royalhouse Baltimore."
         image={images.congregationNotes}
