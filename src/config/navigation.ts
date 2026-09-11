@@ -40,6 +40,7 @@ export const primaryNav: NavItem[] = [
       },
     ],
   },
+  { label: "Serve", href: "/serve" },
   { label: "Events", href: "/events" },
   { label: "Contact", href: "/contact" },
 ];
@@ -47,10 +48,10 @@ export const primaryNav: NavItem[] = [
 export const mobileNav = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about/who-we-are" },
+  { label: "Serve", href: "/serve" },
   { label: "Plan a Visit", href: "/plan-a-visit" },
   { label: "Events", href: "/events" },
   { label: "Contact", href: "/contact" },
-  { label: "Serve", href: "/serve" },
   { label: "Prayer", href: "/prayer" },
 ] as const;
 
@@ -59,10 +60,10 @@ export const footerNav: { title: string; links: { label: string; href: string }[
     title: "Explore",
     links: [
       { label: "About", href: "/about/who-we-are" },
+      { label: "Serve", href: "/serve" },
       { label: "Events", href: "/events" },
       { label: "Contact", href: "/contact" },
       { label: "Plan a Visit", href: "/plan-a-visit" },
-      { label: "Serve", href: "/serve" },
     ],
   },
   {

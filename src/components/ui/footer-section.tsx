@@ -8,10 +8,10 @@ import { addressLines } from "@/lib/church";
 
 const quickLinks = [
   { label: "About", href: "/about/who-we-are" },
+  { label: "Serve", href: "/serve" },
   { label: "Events", href: "/events" },
   { label: "Contact", href: "/contact" },
   { label: "Plan a Visit", href: "/plan-a-visit" },
-  { label: "Serve", href: "/serve" },
   { label: "Give", href: "/give" },
   { label: "Request Prayer", href: "/prayer" },
 ] as const;
