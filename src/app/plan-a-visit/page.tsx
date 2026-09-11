@@ -34,7 +34,6 @@ export default function PlanAVisitPage() {
       />
 
       <PageHero
-        eyebrow="You Belong Here"
         title="Planning your first visit? Here's what you need to know."
         image={images.welcomeHome}
         objectPosition="50% 40%"
