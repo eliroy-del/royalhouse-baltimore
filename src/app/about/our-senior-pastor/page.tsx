@@ -44,7 +44,6 @@ export default async function SeniorPastorPage() {
         ]}
       />
       <PageHero
-        eyebrow="Lead Pastor"
         title="Pastor RichieO"
         image={images.pastorRichieOPreaching}
         objectPosition="50% 20%"
