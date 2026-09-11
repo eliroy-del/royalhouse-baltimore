@@ -50,8 +50,8 @@ export const images = {
     alt: "Teenagers and young adults laughing together in a bright church youth space, one holding an open Bible",
   },
   ministryKids: {
-    src: "/images/ministry-kids.jpg",
-    alt: "A volunteer reading an illustrated storybook to a circle of young children in a colorful kids ministry room",
+    src: "/images/ministry-kids-circle.jpg",
+    alt: "A volunteer sitting in a circle with children during kids church",
   },
   ministryOutreach: {
     src: "/images/ministry-outreach.jpg",

@@ -86,8 +86,7 @@ export default function PlanAVisitPage() {
             </Reveal>
 
             <Reveal delay={0.06}>
-              <p className="eyebrow text-gold-800">For Families</p>
-              <h2 className="mt-2 font-display text-[clamp(1.5rem,2.8vw,2rem)] font-light leading-tight text-navy-900">
+              <h2 className="font-display text-[clamp(1.5rem,2.8vw,2rem)] font-light leading-tight text-navy-900">
                 Are there services for my children?
               </h2>
               <p className="mt-3 text-[0.9375rem] leading-relaxed text-navy-900/70">
