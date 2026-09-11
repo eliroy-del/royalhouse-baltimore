@@ -27,13 +27,13 @@ export const primaryNav: NavItem[] = [
         icon: "heart",
       },
       {
-        label: "Senior Pastor",
+        label: "Lead Pastor",
         href: "/about/our-senior-pastor",
         description: "Pastor RichieO",
         icon: "users",
       },
       {
-        label: "Missions Lead",
+        label: "Head of Missions (North America)",
         href: "/about/our-north-american-missions-lead",
         description: "Apostle Emmanuel Agormeda",
         icon: "globe",
