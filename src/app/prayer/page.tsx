@@ -65,7 +65,6 @@ export default function PrayerPage() {
           <div className="grid gap-5 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-6">
             <div className="lg:sticky lg:top-28 lg:self-start">
               <SectionHeading
-                eyebrow="Our Promise"
                 title="Three things we commit to."
                 lede="Prayer is not a formality here. It is the reason most of the good things in this church happened at all."
               />
