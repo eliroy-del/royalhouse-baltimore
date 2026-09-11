@@ -49,7 +49,6 @@ export default function PrayerPage() {
       />
 
       <PageHero
-        eyebrow="Prayer"
         title={
           <>
             We would love to <em className="not-italic text-gold-300">pray with you</em>.
