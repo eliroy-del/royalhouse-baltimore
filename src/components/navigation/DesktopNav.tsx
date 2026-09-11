@@ -15,7 +15,8 @@ function isActive(pathname: string, href: string): boolean {
 
 const triggerClasses = [
   "relative inline-flex items-center gap-1 rounded-md px-3.5 py-3 text-base font-medium",
-  "text-white/85 transition-colors duration-200 hover:text-white",
+  "text-white/85 transition-colors duration-200 hover:text-gold-300",
+  "data-[state=open]:text-gold-300",
   "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500",
 ].join(" ");
 
@@ -57,7 +58,7 @@ export function DesktopNav() {
                 <ChevronDown
                   aria-hidden="true"
                   strokeWidth={1.75}
-                  className="size-3.5 text-white/50 transition-transform duration-300 ease-out-expo group-data-[state=open]:rotate-180"
+                  className="size-3.5 text-white/50 transition-[color,transform] duration-300 ease-out-expo group-hover:text-gold-300 group-data-[state=open]:rotate-180 group-data-[state=open]:text-gold-300"
                 />
               </NavigationMenu.Trigger>
 
