@@ -32,7 +32,6 @@ export default function ContactPage() {
       />
 
       <PageHero
-        eyebrow="Connect"
         title="We'd love to hear from you."
         image={images.welcomeHome}
         objectPosition="40% 45%"
