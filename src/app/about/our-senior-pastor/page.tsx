@@ -74,6 +74,7 @@ export default async function SeniorPastorPage() {
               {paragraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
+              <p>Pastor RichieO has been married to Lady Trisha for 14 years.</p>
             </div>
           </div>
         </Container>
