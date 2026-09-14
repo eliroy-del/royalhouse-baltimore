@@ -104,8 +104,8 @@ export default function PlanAVisitPage() {
             <Reveal delay={0.06} className="lg:order-2">
               <div className="relative aspect-[4/3] overflow-hidden rounded-media bg-navy-900">
                 <Image
-                  src={images.baptism.src}
-                  alt={images.baptism.alt}
+                  src={images.baptismBw.src}
+                  alt={images.baptismBw.alt}
                   fill
                   sizes="(min-width: 1024px) 48vw, 100vw"
                   placeholder="blur"
@@ -116,8 +116,7 @@ export default function PlanAVisitPage() {
             </Reveal>
 
             <Reveal className="lg:order-1">
-              <p className="eyebrow text-gold-800">Come As You Are</p>
-              <h2 className="mt-2 font-display text-[clamp(1.5rem,2.8vw,2rem)] font-light leading-tight text-navy-900">
+              <h2 className="font-display text-[clamp(1.5rem,2.8vw,2rem)] font-light leading-tight text-navy-900">
                 What should I wear?
               </h2>
               <p className="mt-3 text-[0.9375rem] leading-relaxed text-navy-900/70">

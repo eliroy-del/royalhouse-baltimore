@@ -73,6 +73,10 @@ export const images = {
     src: "/images/baptism.jpg",
     alt: "A young woman laughing with joy as she is lifted out of the baptism pool by two pastors",
   },
+  baptismBw: {
+    src: "/images/baptism-bw.jpg",
+    alt: "A young woman laughing with joy as she is lifted out of the baptism pool by two pastors",
+  },
   churchExteriorDusk: {
     src: "/images/church-exterior-dusk.jpg",
     alt: "A modern church building glowing warmly at dusk as people walk in and greet one another on the steps",
