@@ -135,8 +135,7 @@ export default function PlanAVisitPage() {
       <Section tone="white" spacing="sm" id="form">
         <Container width="narrow">
           <div className="mb-4 text-center">
-            <p className="eyebrow text-gold-800">Visiting Form</p>
-            <h2 className="mt-1.5 font-display text-[clamp(1.375rem,2.4vw,1.75rem)] font-light leading-tight text-navy-900">
+            <h2 className="font-display text-[clamp(1.375rem,2.4vw,1.75rem)] font-light leading-tight text-navy-900">
               Tell us you&rsquo;re coming.
             </h2>
           </div>
