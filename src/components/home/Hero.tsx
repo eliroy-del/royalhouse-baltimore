@@ -36,12 +36,16 @@ export function Hero() {
         />
 
         <Container className="relative z-10 py-24 sm:py-28 lg:py-32">
-          <div className="rise flex max-w-3xl flex-col items-start gap-5 text-left">
+          <div className="rise flex max-w-5xl flex-col items-start gap-5 text-left">
             <p className="eyebrow text-gold-300">{churchConfig.name}</p>
             <p className="type-body-lg font-medium text-white/90">
               A Spirit-filled church for the Baltimore area.
             </p>
-            <h1 className="font-display type-display text-white">{churchConfig.tagline}</h1>
+            <h1 className="font-display type-display text-white">
+              Touching Our Generation
+              <br />
+              With the Power of God
+            </h1>
             <p className="max-w-2xl text-[1.0625rem] font-medium leading-relaxed text-gold-300 sm:text-[1.125rem]">
               Prayer. Praise. Worship. The Word. Community. Fellowship.
             </p>
