@@ -101,22 +101,6 @@ export default function PrayerPage() {
           </div>
         </Container>
       </Section>
-
-      <CtaBand
-        eyebrow="Pray With Us"
-        title="Or come and pray in the room."
-        lede="We gather midweek to pray for our families, our city and every request that reaches us. You are welcome to sit in and simply add your amen."
-        actions={
-          <>
-            <Button asChild variant="gold" size="xl">
-              <Link href="/events/midweek-prayer">Midweek Prayer</Link>
-            </Button>
-            <Button asChild variant="outline-light" size="xl">
-              <Link href="/ministries/prayer">Join the Prayer Team</Link>
-            </Button>
-          </>
-        }
-      />
     </>
   );
 }
