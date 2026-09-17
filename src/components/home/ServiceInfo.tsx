@@ -15,11 +15,18 @@ export function ServiceInfo() {
         <h2 className="sr-only">Gathering times and location</h2>
         <div className="overflow-hidden rounded-media shadow-float lg:grid lg:grid-cols-[minmax(0,1.45fr)_minmax(18rem,0.75fr)]">
           <div className="bg-navy-950 px-6 py-8 sm:px-8 sm:py-9">
-            <div className="grid gap-7 sm:grid-cols-3 sm:gap-6">
-              {churchConfig.serviceTimes.map((service) => (
-                <div key={service.label} className="min-w-0">
+            <div className="grid gap-7 sm:grid-cols-3 sm:gap-0">
+              {churchConfig.serviceTimes.map((service, index) => (
+                <div
+                  key={service.label}
+                  className={
+                    index > 0
+                      ? "min-w-0 border-t border-white/25 pt-7 sm:border-l sm:border-t-0 sm:px-6 sm:pt-0 lg:px-7"
+                      : "min-w-0 sm:pr-6 lg:pr-7"
+                  }
+                >
                   {service.phase ? (
-                    <p className="text-[0.75rem] font-semibold uppercase tracking-[0.06em] text-gold-300">
+                    <p className="text-[0.875rem] font-semibold uppercase tracking-[0.06em] text-gold-300 sm:text-[0.9375rem]">
                       {service.phase}
                     </p>
                   ) : null}
