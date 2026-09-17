@@ -46,14 +46,10 @@ export default function PlanAVisitPage() {
 
       <Section tone="cream" spacing="sm" id="when">
         <Container>
-          <p className="eyebrow text-gold-800">Gatherings</p>
-          <ul className="mt-4 grid gap-3 lg:grid-cols-3">
+          <ul className="grid gap-3 lg:grid-cols-3">
             {churchConfig.serviceTimes.map((service) => (
               <li key={service.label} className="rounded-card border border-navy-900/10 bg-white p-4">
-                {service.phase ? (
-                  <p className="text-[0.75rem] font-semibold text-gold-800">{service.phase}</p>
-                ) : null}
-                <p className="mt-2 font-display text-xl text-navy-900 sm:text-2xl">{service.day}</p>
+                <p className="font-display text-xl text-navy-900 sm:text-2xl">{service.day}</p>
                 <p className="mt-1 text-navy-900/70">{service.time}</p>
                 {service.note ? (
                   <p className="mt-2 text-[0.875rem] text-navy-900/60">{service.note}</p>
