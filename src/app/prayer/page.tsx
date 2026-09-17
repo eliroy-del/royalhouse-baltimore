@@ -1,9 +1,7 @@
-import Link from "next/link";
 import { PrayerForm } from "@/components/forms/PrayerForm";
 import { Reveal } from "@/components/motion/Reveal";
-import { CtaBand, PageHero } from "@/components/sections/PageHero";
+import { PageHero } from "@/components/sections/PageHero";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
