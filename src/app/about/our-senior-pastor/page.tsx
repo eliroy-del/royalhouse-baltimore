@@ -52,14 +52,15 @@ export default async function SeniorPastorPage() {
       />
 
       <Section tone="cream" spacing="lg">
-        <Container className="grid items-start gap-10 lg:grid-cols-[minmax(0,16rem)_minmax(0,40rem)] lg:gap-14">
-          <figure className="mx-auto w-full max-w-[16rem] lg:mx-0">
+        <Container className="grid items-start gap-10 lg:grid-cols-[minmax(0,24rem)_minmax(0,1fr)] lg:gap-16">
+          <figure className="mx-auto w-full max-w-[24rem] lg:mx-0">
             <div className="relative aspect-[4/5] overflow-hidden rounded-media shadow-elevate">
               <Image
                 src={images.pastorRichieO.src}
                 alt={images.pastorRichieO.alt}
                 fill
-                sizes="256px"
+                sizes="(min-width: 1024px) 384px, min(100vw - 2rem, 384px)"
+                quality={90}
                 className="object-cover object-[center_12%]"
               />
             </div>
