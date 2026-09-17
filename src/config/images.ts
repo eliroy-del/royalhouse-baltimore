@@ -125,6 +125,10 @@ export const images = {
     src: "/images/pastor-richieo-family.jpg",
     alt: "Pastor RichieO with Lady Trisha and their sons",
   },
+  pastorRichieOFamilyDenim: {
+    src: "/images/pastor-richieo-family-denim.jpg",
+    alt: "Pastor RichieO with Lady Trisha and their sons in white and denim",
+  },
   apostleAgormeda: {
     src: "/images/apostle-agormeda.jpg",
     alt: "Apostle Emmanuel Agormeda, Apostle over Royalhouse Chapel churches across North America",
