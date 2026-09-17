@@ -88,35 +88,35 @@ export default async function SeniorPastorPage() {
       </Section>
 
       <section
-        aria-label="Pastor RichieO with family, at rest, and preaching"
+        aria-label="Pastor RichieO with family and at rest"
         className="bg-navy-950"
       >
         <div className="grid gap-px bg-navy-950 sm:grid-cols-2 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)_minmax(0,1fr)] lg:h-[min(82vh,42rem)]">
           <figure className="relative order-2 min-h-[17rem] overflow-hidden sm:min-h-[22rem] lg:order-1 lg:min-h-0">
             <Image
-              src={images.pastorRichieOSeated.src}
-              alt={images.pastorRichieOSeated.alt}
+              src={images.pastorRichieOFamily.src}
+              alt={images.pastorRichieOFamily.alt}
               fill
               sizes="(min-width: 1024px) 32vw, 50vw"
-              className="object-cover object-[center_16%]"
+              className="object-cover object-[center_18%]"
             />
           </figure>
           <figure className="relative order-1 col-span-2 min-h-[26rem] overflow-hidden sm:min-h-[32rem] lg:order-2 lg:col-span-1 lg:min-h-0">
             <Image
-              src={images.pastorRichieOFamily.src}
-              alt={images.pastorRichieOFamily.alt}
+              src={images.pastorRichieOSeated.src}
+              alt={images.pastorRichieOSeated.alt}
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
-              className="object-cover object-[center_18%]"
+              className="object-cover object-[center_16%]"
             />
           </figure>
           <figure className="relative order-3 min-h-[17rem] overflow-hidden sm:min-h-[22rem] lg:order-3 lg:min-h-0">
             <Image
-              src={images.pastorRichieOStage.src}
-              alt={images.pastorRichieOStage.alt}
+              src={images.pastorRichieOFamilyDenim.src}
+              alt={images.pastorRichieOFamilyDenim.alt}
               fill
               sizes="(min-width: 1024px) 32vw, 50vw"
-              className="object-cover object-[center_28%]"
+              className="object-cover object-[center_22%]"
             />
           </figure>
         </div>
