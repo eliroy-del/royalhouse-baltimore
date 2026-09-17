@@ -17,7 +17,7 @@ export const metadata = pageMetadata({
 });
 
 const FAMILY_LINE =
-  "He has been married to Lady Trisha for 14 years and they have four sons.";
+  "Pastor RichieO has been married to Lady Trisha for 14 years and is blessed with 4 sons.";
 
 function ministryParagraphs(bio: string) {
   const ministry = bio.replace(FAMILY_LINE, "").replace(/\s+/g, " ").trim();
@@ -73,7 +73,7 @@ export default async function SeniorPastorPage() {
               {paragraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
-              <p>Pastor RichieO has been married to Lady Trisha for 14 years.</p>
+              <p>{FAMILY_LINE}</p>
             </div>
           </div>
         </Container>

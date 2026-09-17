@@ -7,7 +7,7 @@ export const leaders: Leader[] = [
     name: "Pastor RichieO",
     role: "Lead Pastor",
     photo: images.pastorRichieO.src,
-    bio: "Pastor RichieO grew up in London, Ghana and Maryland. He has nearly two decades of Young Adults ministry leadership and served as Teens Pastor at Grace2Grace Center, Royalhouse Chapel International in Laurel, Maryland. He is a cybersecurity engineer and an Afrogospel artist who has collaborated with artists globally. He has a passion for serving God, is committed to preaching the Word, raising disciples, equipping believers, and leading the Baltimore campus. He is committed to touching the generation and the Baltimore area with the power of God. He has been married to Lady Trisha for 14 years and they have four sons.",
+    bio: "Pastor RichieO grew up in London, UK, Ghana and Maryland. He has nearly two decades of Young Adults ministry leadership and served as Teens Pastor at Grace2Grace Center, Royalhouse Chapel International in Laurel, Maryland. He is a cybersecurity engineer and an Afrogospel artist who has collaborated with artists globally. He has a passion for serving God, is committed to preaching the Word, raising disciples, equipping believers, and leading the Baltimore campus. He is committed to touching this generation and the Baltimore area with the power of God. Pastor RichieO has been married to Lady Trisha for 14 years and is blessed with 4 sons.",
     responsibility: "Lead Pastor of Royalhouse Baltimore",
     email: "",
     socialLinks: {},
