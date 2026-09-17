@@ -1,33 +1,26 @@
 /**
  * Royalhouse Baltimore — global typography
  * ------------------------------------------------------------
- * Selected face: Plus Jakarta Sans (Google Fonts via next/font)
+ * Selected face: Montserrat (Google Fonts via next/font)
  *
- * Why this face (vs the reference and candidates):
- * - Reference character matches Avenir / Avenir Next: geometric
- *   construction, open counters, high x-height, calm authority.
- * - Avenir Next is not freely licensed for web; Plus Jakarta Sans
- *   is the closest free match among evaluated options.
- * - Manrope: slightly more condensed; less spacious at display sizes.
- * - DM Sans: cooler / more tech; less rounded warmth.
- * - Nunito Sans: friendlier but softer authority.
- * - Inter: neo-grotesque (Helvetica lineage), not Avenir geometry.
- *
- * One family for all UI. Hierarchy is weight + size + tracking only.
- * If a licensed Avenir Next file is supplied later, swap via next/font/local
- * and keep the CSS token names below unchanged.
+ * Why this face:
+ * - Update brief asked for a less “AI” face and a larger presence,
+ *   closer to royalhousema.org network-site typography.
+ * - Montserrat reads larger at the same size, stays one-family clean,
+ *   and works for nav, headings, body, and UI.
+ * - If a licensed Avenir Next file is supplied later, swap via
+ *   next/font/local and keep these token names unchanged.
  */
 
 export const typographyConfig = {
-  family: "Plus Jakarta Sans",
-  cssVariable: "--font-plus-jakarta",
+  family: "Montserrat",
+  cssVariable: "--font-montserrat",
   weights: {
     regular: 400,
     medium: 500,
     semibold: 600,
     bold: 700,
   },
-  /** Fluid roles — implemented as `.type-*` utilities in globals.css */
   roles: {
     display: "Hero / campaign headlines",
     h1: "Page titles",

@@ -38,17 +38,21 @@ export function Hero() {
         <Container className="relative z-10 py-24 sm:py-28 lg:py-32">
           <div className="rise flex max-w-3xl flex-col items-start gap-5 text-left">
             <p className="eyebrow text-gold-300">{churchConfig.name}</p>
-            <h1 className="font-display type-display text-white">
-              {churchConfig.tagline}
-            </h1>
+            <p className="type-body-lg font-medium text-white/90">
+              A Spirit-filled church for the Baltimore area.
+            </p>
+            <h1 className="font-display type-display text-white">{churchConfig.tagline}</h1>
+            <p className="max-w-2xl text-[1.0625rem] font-medium leading-relaxed text-gold-300 sm:text-[1.125rem]">
+              Prayer. Praise. Worship. The Word. Community. Fellowship.
+            </p>
             <p className="max-w-xl type-body-lg text-white/80">
-              A place to build faith, share fellowship, encounter God, grow spiritually, and find
-              community.
+              A growing church family where people from every background can encounter God, build
+              meaningful relationships, and grow in faith.
             </p>
             <div className="flex flex-wrap items-center gap-3">
               <Button asChild variant="gold" size="lg">
                 <Link href="/plan-a-visit">
-                  Plan a Visit
+                  Plan Your Visit
                   <Icon
                     name="arrow-right"
                     className="size-4 transition-transform duration-300 group-hover/btn:translate-x-1"
@@ -56,7 +60,7 @@ export function Hero() {
                 </Link>
               </Button>
               <Button asChild variant="outline-light" size="lg">
-                <Link href="/contact">Connect With Us</Link>
+                <Link href="/contact">Join Us</Link>
               </Button>
             </div>
           </div>

@@ -14,7 +14,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Royalhouse Baltimore: A Church in Baltimore, Maryland",
   description:
-    "Royalhouse Baltimore is a Spirit-filled church in Baltimore, Maryland. Tuesdays at 7:00 PM. Sundays twice a month; Launch Sunday May 2027 at 5411 Old Frederick Rd, Ste 11-12. You belong here.",
+    "Royalhouse Baltimore is a Spirit-filled church in Baltimore, Maryland. Tuesdays at 7 PM. Sunday evenings begin November 2026; Sunday morning launch May 2027 at 5411 Old Frederick Rd, Ste 11-12. You belong here.",
   path: "/",
 });
 

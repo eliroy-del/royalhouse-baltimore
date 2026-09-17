@@ -23,6 +23,8 @@ export interface ServiceTime {
   day: string;
   /** Human readable detail, e.g. "7:00 PM" or "Launch Sunday: May 2027" */
   time: string;
+  /** Optional phase label, e.g. "Current Gatherings" or "Coming May 2027" */
+  phase?: string;
   /** Optional qualifier, e.g. "Kids ministry in all services" */
   note?: string;
   /** Schema.org weekday when this maps to a recurring weekly service */

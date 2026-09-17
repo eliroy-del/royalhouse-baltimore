@@ -97,7 +97,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ sl
             {event.registrationUrl ? (
               <Button asChild variant="gold" size="lg">
                 <a href={event.registrationUrl} target="_blank" rel="noreferrer noopener">
-                  Register
+                  Reserve Your Spot
                   <Icon name="arrow-right" className="size-4" />
                 </a>
               </Button>
@@ -168,7 +168,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ sl
                 {event.registrationUrl ? (
                   <Button asChild size="lg">
                     <a href={event.registrationUrl} target="_blank" rel="noreferrer noopener">
-                      Register for this event
+                      Reserve Your Spot
                     </a>
                   </Button>
                 ) : null}

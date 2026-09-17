@@ -20,6 +20,12 @@ export interface ServeTeam {
   areas: string[];
 }
 
+export interface ChildrenProgram {
+  name: string;
+  ages: string;
+  description: string;
+}
+
 export interface ChurchConfig {
   name: string;
   shortName: string;
@@ -56,6 +62,7 @@ export interface ChurchConfig {
     accessibility: string;
     children: string;
     childrenAges: string;
+    childrenPrograms: ChildrenProgram[];
     serviceIncludes: string[];
   };
   identity: string[];
@@ -100,14 +107,24 @@ export const churchConfig: ChurchConfig = {
   serviceTimes: [
     {
       label: "Tuesday Gathering",
-      day: "Tuesday",
-      time: "7:00 PM",
+      day: "Tuesdays",
+      time: "7 PM",
+      note: "Bible Teaching, Worship & Corporate Prayer",
+      phase: "Current Gatherings",
       weekday: "Tuesday",
     },
     {
-      label: "Sunday Gathering",
-      day: "Sundays (Twice a Month)",
-      time: "Launch Sunday: May 2027",
+      label: "Sunday Evening Gatherings",
+      day: "Sunday Evenings",
+      time: "6 PM",
+      phase: "Coming November 2026",
+      weekday: "Sunday",
+    },
+    {
+      label: "Sunday Morning Launch",
+      day: "Sunday Morning Worship Experience",
+      time: "Launching May 2027",
+      phase: "Coming May 2027",
       weekday: "Sunday",
     },
   ],
@@ -141,8 +158,28 @@ export const churchConfig: ChurchConfig = {
       "Some people dress casually while others prefer dressing up a little. Everyone is welcome.",
     serviceLength: "Approximately 90 minutes.",
     accessibility: PENDING,
-    children: "Kids Church is available for ages 2–11.",
+    children:
+      "Children's Ministry includes Kids Zone (ages 2–6) and Kids Church (ages 7–11). Ages 12+ join the main gathering.",
     childrenAges: "2–11",
+    childrenPrograms: [
+      {
+        name: "Kids Zone",
+        ages: "2–6",
+        description:
+          "A fun, engaging environment where younger children learn about Jesus through Bible stories, worship, activities and age-appropriate teaching.",
+      },
+      {
+        name: "Kids Church",
+        ages: "7–11",
+        description:
+          "An interactive environment where elementary-age children grow in Scripture, faith, friendship and confidence.",
+      },
+      {
+        name: "Ages 12+",
+        ages: "12+",
+        description: "Join the Main Gathering",
+      },
+    ],
     serviceIncludes: [
       "Praise and worship",
       "Bible-based message",
@@ -190,11 +227,11 @@ export const churchConfig: ChurchConfig = {
   },
 
   serveTeams: [
-    { id: "worship", name: "Worship Team", areas: ["Musicians"] },
-    { id: "kids", name: "Kids Church", areas: [] },
+    { id: "worship", name: "Worship Team", areas: ["Musicians", "Covenant Voices Choir"] },
+    { id: "kids", name: "Children's Ministry", areas: [] },
     {
       id: "connection",
-      name: "Connection Team",
+      name: "Connections/Outreach Team",
       areas: [],
     },
     {
@@ -211,7 +248,7 @@ export const churchConfig: ChurchConfig = {
     { id: "watch-tower", name: "Watch Tower / Security", areas: [] },
     {
       id: "facilities",
-      name: "Facilities Management",
+      name: "Keepers Team",
       areas: ["Maintenance", "Cleaning"],
     },
   ],

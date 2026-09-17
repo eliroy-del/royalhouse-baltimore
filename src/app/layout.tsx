@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import { GivingProvider } from "@/components/giving/GivingProvider";
 import { Analytics } from "@/components/layout/Analytics";
 import { Footer } from "@/components/layout/Footer";
@@ -12,13 +12,13 @@ import { churchSchema, websiteSchema } from "@/lib/schema";
 import "./globals.css";
 
 /**
- * Single primary face for the entire site (nav, headings, body, UI).
- * Weights limited to the controlled system: 400 / 500 / 600 / 700.
+ * Montserrat: larger, clearer display character closer to royalhousema.org
+ * network sites, and less “AI SaaS” than Plus Jakarta Sans.
  */
-const plusJakarta = Plus_Jakarta_Sans({
+const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-plus-jakarta",
+  variable: "--font-montserrat",
   display: "swap",
 });
 
@@ -78,7 +78,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={plusJakarta.variable}>
+    <html lang="en" className={montserrat.variable}>
       <body className="min-h-dvh font-sans antialiased">
         <a
           href="#main"
@@ -97,7 +97,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
           <Footer />
 
-          {/* Bottom bar sits above the footer on mobile; this keeps it from covering content. */}
           <div aria-hidden="true" className="h-16 bg-navy-950 lg:hidden" />
           <MobileStickyBar />
         </GivingProvider>

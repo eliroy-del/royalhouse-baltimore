@@ -10,7 +10,8 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Serve",
-  description: "Join the launch team at Royalhouse Baltimore and find a place to serve.",
+  description:
+    "Help build Royalhouse Baltimore. Find a place to serve on the launch team.",
   path: "/serve",
   image: images.congregationNotes.src,
 });
@@ -25,14 +26,31 @@ export default function ServePage() {
         ])}
       />
       <PageHero
-        title="Join the Launch Team"
-        lede="Find a place to serve at Royalhouse Baltimore."
+        title="Help Build Royalhouse Baltimore"
+        lede="We're not waiting until launch day to build a church. We're building it together now."
         image={images.congregationNotes}
         breadcrumb={[{ label: "Serve" }]}
+        actions={
+          <Button asChild variant="gold" size="lg">
+            <a href={churchConfig.forms.serveUrl} target="_blank" rel="noreferrer noopener">
+              Join a Team
+            </a>
+          </Button>
+        }
       />
 
       <Section tone="cream" spacing="lg">
         <Container>
+          <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <p className="max-w-2xl text-[1.05rem] leading-relaxed text-navy-900/75">
+              Choose a team below, then tell us where you&rsquo;d like to serve.
+            </p>
+            <Button asChild variant="gold" size="lg" className="shrink-0">
+              <a href={churchConfig.forms.serveUrl} target="_blank" rel="noreferrer noopener">
+                Serve With Us
+              </a>
+            </Button>
+          </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {churchConfig.serveTeams.map((team) => (
               <article
@@ -50,11 +68,6 @@ export default function ServePage() {
               </article>
             ))}
           </div>
-          <Button asChild variant="gold" size="lg" className="mt-10">
-            <a href={churchConfig.forms.serveUrl} target="_blank" rel="noreferrer noopener">
-              Join the Launch Team
-            </a>
-          </Button>
         </Container>
       </Section>
     </>

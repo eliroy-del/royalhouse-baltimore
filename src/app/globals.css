@@ -9,25 +9,25 @@
 
 @theme {
   /* ---------- Typography ----------
-     Plus Jakarta Sans is the sole primary face (Avenir Next character).
+     Montserrat is the sole primary face (larger, network-site character).
      --font-display aliases the same family so existing utilities stay coherent. */
-  --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, -apple-system, sans-serif;
-  --font-display: var(--font-plus-jakarta), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-montserrat), ui-sans-serif, system-ui, -apple-system, sans-serif;
 
-  /* Type scale tokens (rem) */
-  --text-display: clamp(2.5rem, 4.2vw + 1.25rem, 5.25rem);
-  --text-h1: clamp(2rem, 2.8vw + 1rem, 3.5rem);
-  --text-h2: clamp(1.625rem, 1.8vw + 0.9rem, 2.5rem);
-  --text-h3: clamp(1.25rem, 0.8vw + 0.95rem, 1.75rem);
-  --text-h4: clamp(1.125rem, 0.4vw + 0.95rem, 1.375rem);
-  --text-body-lg: clamp(1.0625rem, 0.2vw + 1rem, 1.1875rem);
-  --text-body: 1.0625rem;
-  --text-body-sm: 0.9375rem;
-  --text-caption: 0.8125rem;
-  --text-label: 0.75rem;
-  --text-nav: 1rem;
-  --text-button: 0.9375rem;
-  --text-eyebrow: 0.8125rem;
+  /* Type scale tokens (rem) — sized up for clearer editorial presence */
+  --text-display: clamp(2.75rem, 4.8vw + 1.25rem, 5.75rem);
+  --text-h1: clamp(2.25rem, 3vw + 1rem, 3.75rem);
+  --text-h2: clamp(1.75rem, 2vw + 0.9rem, 2.75rem);
+  --text-h3: clamp(1.375rem, 0.9vw + 1rem, 1.875rem);
+  --text-h4: clamp(1.1875rem, 0.45vw + 1rem, 1.5rem);
+  --text-body-lg: clamp(1.125rem, 0.25vw + 1.05rem, 1.25rem);
+  --text-body: 1.125rem;
+  --text-body-sm: 1rem;
+  --text-caption: 0.875rem;
+  --text-label: 0.8125rem;
+  --text-nav: 1.0625rem;
+  --text-button: 1rem;
+  --text-eyebrow: 0.875rem;
 
   /* ---------- Brand: Royal Blue ---------- */
   --color-navy-950: #001226;

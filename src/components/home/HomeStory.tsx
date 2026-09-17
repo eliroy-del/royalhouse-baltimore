@@ -174,10 +174,10 @@ export function PlanVisitHome() {
                   <Icon name="baby" className="size-4" />
                 </span>
                 <p className="mt-3 text-[0.6875rem] font-semibold uppercase tracking-[0.18em] text-gold-700">
-                  Kids Church
+                  Children's Ministry
                 </p>
                 <p className="mt-1 font-display text-2xl leading-tight text-navy-900">
-                  Ages {churchConfig.visit.childrenAges}
+                  Ages 2–11
                 </p>
               </div>
             </div>

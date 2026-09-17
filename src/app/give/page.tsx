@@ -23,8 +23,8 @@ export default function GivePage() {
         ])}
       />
       <PageHero
-        title="Give With Purpose"
-        lede="Generosity is part of worship and helps support the mission of Royalhouse Baltimore."
+        title="Give"
+        lede="Your generosity helps us worship, disciple, serve families and invest in the Baltimore community."
         image={images.prayerKneeling}
         breadcrumb={[{ label: "Give" }]}
       />

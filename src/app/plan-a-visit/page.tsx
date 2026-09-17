@@ -1,8 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 import { PlanVisitForm } from "@/components/forms/PlanVisitForm";
 import { Reveal } from "@/components/motion/Reveal";
 import { PageHero } from "@/components/sections/PageHero";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { churchConfig } from "@/config/church";
@@ -18,11 +20,6 @@ export const metadata = pageMetadata({
   image: images.welcomeLobby.src,
 });
 
-/**
- * Warm, simple first-visit page modeled on a clear welcome flow:
- * invitation → kids → dress → form.
- * @see https://www.livingdestiny.org/plan-a-visit
- */
 export default function PlanAVisitPage() {
   return (
     <>
@@ -34,21 +31,33 @@ export default function PlanAVisitPage() {
       />
 
       <PageHero
-        title="Planning your first visit? Here's what you need to know."
+        title="New here? We'd love to meet you."
+        lede="You don't need to know anyone. You don't need to dress a certain way. You don't need to have everything figured out. Just come. We'll take it from there."
         image={images.welcomeHome}
         objectPosition="50% 40%"
         breadcrumb={[{ label: "Plan a Visit" }]}
         size="lg"
+        actions={
+          <Button asChild variant="gold" size="lg">
+            <a href="#form">Plan My Visit</a>
+          </Button>
+        }
       />
 
       <Section tone="cream" spacing="sm" id="when">
         <Container>
-          <p className="eyebrow text-gold-800">Service Times</p>
-          <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+          <p className="eyebrow text-gold-800">Gatherings</p>
+          <ul className="mt-4 grid gap-3 lg:grid-cols-3">
             {churchConfig.serviceTimes.map((service) => (
               <li key={service.label} className="rounded-card border border-navy-900/10 bg-white p-4">
-                <p className="font-display text-2xl text-navy-900">{service.day}</p>
+                {service.phase ? (
+                  <p className="text-[0.75rem] font-semibold text-gold-800">{service.phase}</p>
+                ) : null}
+                <p className="mt-2 font-display text-xl text-navy-900 sm:text-2xl">{service.day}</p>
                 <p className="mt-1 text-navy-900/70">{service.time}</p>
+                {service.note ? (
+                  <p className="mt-2 text-[0.875rem] text-navy-900/60">{service.note}</p>
+                ) : null}
               </li>
             ))}
           </ul>
@@ -67,10 +76,9 @@ export default function PlanAVisitPage() {
         </Container>
       </Section>
 
-      {/* Children */}
       <Section tone="white" spacing="sm" id="children">
         <Container>
-          <div className="grid items-center gap-5 lg:grid-cols-2 lg:gap-8">
+          <div className="grid items-start gap-5 lg:grid-cols-2 lg:gap-8">
             <Reveal y={18}>
               <div className="relative aspect-[4/3] overflow-hidden rounded-media bg-navy-900">
                 <Image
@@ -87,17 +95,28 @@ export default function PlanAVisitPage() {
 
             <Reveal delay={0.06}>
               <h2 className="font-display text-[clamp(1.5rem,2.8vw,2rem)] font-semibold leading-tight text-navy-900">
-                Are there services for my children?
+                Children&rsquo;s Ministry
               </h2>
-              <p className="mt-3 text-[0.9375rem] leading-relaxed text-navy-900/70">
-                {churchConfig.visit.children}
-              </p>
+              <div className="mt-5 space-y-5">
+                {churchConfig.visit.childrenPrograms.map((program) => (
+                  <div key={program.name}>
+                    <p className="font-semibold text-navy-900">
+                      {program.name}
+                      {program.ages !== "12+" ? (
+                        <span className="font-normal text-navy-900/65"> — Ages {program.ages}</span>
+                      ) : null}
+                    </p>
+                    <p className="mt-1 text-[0.9375rem] leading-relaxed text-navy-900/70">
+                      {program.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </Reveal>
           </div>
         </Container>
       </Section>
 
-      {/* What to wear */}
       <Section tone="mist" spacing="sm" id="wear">
         <Container>
           <div className="grid items-center gap-5 lg:grid-cols-2 lg:gap-8">
@@ -131,7 +150,6 @@ export default function PlanAVisitPage() {
         </Container>
       </Section>
 
-      {/* Visiting form */}
       <Section tone="white" spacing="sm" id="form">
         <Container width="narrow">
           <div className="mb-4 text-center">
@@ -139,9 +157,16 @@ export default function PlanAVisitPage() {
               Tell us you&rsquo;re coming.
             </h2>
           </div>
-          <div className="rounded-card border border-navy-900/[0.08] bg-cream p-3.5 sm:p-4">
+          <div className="relative rounded-card border border-navy-900/[0.08] bg-cream p-3.5 sm:p-4">
             <PlanVisitForm />
           </div>
+          <p className="mt-6 text-center text-[0.9375rem] text-navy-900/65">
+            Prefer to message us first?{" "}
+            <Link href="/contact" className="font-medium text-navy-900 underline decoration-gold-500/60">
+              Contact the team
+            </Link>
+            .
+          </p>
         </Container>
       </Section>
     </>

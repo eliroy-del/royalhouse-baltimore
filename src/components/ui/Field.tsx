@@ -155,12 +155,23 @@ export function Checkbox({
   );
 }
 
-/** Off-screen honeypot. Bots fill it in; humans never see it. */
+/** Hidden honeypot. Never visible to people; bots that fill it are rejected server-side. */
 export function Honeypot({ register }: { register?: Record<string, unknown> }) {
   return (
-    <div aria-hidden="true" className="absolute left-[-9999px] top-0 h-0 w-0 overflow-hidden">
-      <label htmlFor="company-website">Company website</label>
-      <input id="company-website" tabIndex={-1} autoComplete="off" {...register} />
+    <div
+      aria-hidden="true"
+      className="pointer-events-none absolute -left-[10000px] top-auto h-px w-px overflow-hidden opacity-0"
+    >
+      <label htmlFor="company-website" className="sr-only">
+        Leave this field blank
+      </label>
+      <input
+        id="company-website"
+        type="text"
+        tabIndex={-1}
+        autoComplete="off"
+        {...register}
+      />
     </div>
   );
 }

@@ -13,28 +13,23 @@ export function ServiceInfo() {
     <section className="relative z-10 -mt-10 px-4 sm:-mt-14">
       <Container>
         <h2 className="sr-only">Gathering times and location</h2>
-        <div className="overflow-hidden rounded-media shadow-float lg:grid lg:grid-cols-[minmax(0,1.35fr)_minmax(20rem,0.85fr)]">
+        <div className="overflow-hidden rounded-media shadow-float lg:grid lg:grid-cols-[minmax(0,1.45fr)_minmax(18rem,0.75fr)]">
           <div className="bg-navy-950 px-6 py-8 sm:px-8 sm:py-9">
-            <div className="grid gap-8 sm:grid-cols-2 sm:gap-10">
-              {churchConfig.serviceTimes.map((service, index) => (
-                <div
-                  key={service.label}
-                  className={
-                    index > 0
-                      ? "border-t border-white/15 pt-8 sm:border-l sm:border-t-0 sm:pl-10 sm:pt-0"
-                      : undefined
-                  }
-                >
-                  <p className="text-[0.8125rem] font-medium text-white/70">{service.day}</p>
-                  <p
-                    className={
-                      service.time.includes("PM") || service.time.includes("AM")
-                        ? "mt-2 font-display text-[clamp(2.25rem,4.5vw,3.25rem)] leading-none tracking-[-0.03em] text-white"
-                        : "mt-2 font-display text-[clamp(1.25rem,2.8vw,1.75rem)] leading-snug tracking-[-0.02em] text-white"
-                    }
-                  >
-                    {service.time}
+            <div className="grid gap-7 sm:grid-cols-3 sm:gap-6">
+              {churchConfig.serviceTimes.map((service) => (
+                <div key={service.label} className="min-w-0">
+                  {service.phase ? (
+                    <p className="text-[0.75rem] font-semibold uppercase tracking-[0.06em] text-gold-300">
+                      {service.phase}
+                    </p>
+                  ) : null}
+                  <p className="mt-2 font-display text-[clamp(1.125rem,2vw,1.375rem)] font-semibold leading-snug text-white">
+                    {service.day}
                   </p>
+                  <p className="mt-1 text-[1.0625rem] font-medium text-white/85">{service.time}</p>
+                  {service.note ? (
+                    <p className="mt-2 text-[0.8125rem] leading-snug text-white/60">{service.note}</p>
+                  ) : null}
                 </div>
               ))}
             </div>

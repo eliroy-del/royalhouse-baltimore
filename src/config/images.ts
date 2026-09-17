@@ -75,7 +75,7 @@ export const images = {
   },
   baptismBw: {
     src: "/images/baptism-bw.jpg",
-    alt: "A young woman laughing with joy as she is lifted out of the baptism pool by two pastors",
+    alt: "A baptism celebration at Royalhouse Chapel, shown in black and white",
   },
   churchExteriorDusk: {
     src: "/images/church-exterior-dusk.jpg",
