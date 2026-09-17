@@ -66,6 +66,7 @@ export default function WhoWeArePage() {
       <PageHero
         title="Who We Are"
         image={images.congregationPrayer}
+        objectPosition="40% 22%"
         breadcrumb={[{ label: "Who We Are" }]}
       />
 
