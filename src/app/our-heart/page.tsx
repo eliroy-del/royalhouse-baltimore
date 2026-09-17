@@ -140,7 +140,7 @@ export default function OurHeartPage() {
             <Container width="full" className="max-w-[42rem] lg:pl-8 lg:pr-10">
               <Eyebrow tone="dark">{mission.eyebrow}</Eyebrow>
               <Reveal delay={0.06}>
-                <p className="mt-6 font-display text-[clamp(1.875rem,3.6vw,2.125rem)] font-light leading-[1.12] text-white">
+                <p className="mt-6 font-display text-[clamp(1.875rem,3.6vw,2.125rem)] font-semibold leading-[1.12] text-white">
                   {mission.statement}
                 </p>
               </Reveal>
@@ -155,7 +155,7 @@ export default function OurHeartPage() {
               <div className="mt-8 border-t border-white/12 pt-5">
                 <Eyebrow tone="dark">{vision.eyebrow}</Eyebrow>
                 <Reveal delay={0.06}>
-                  <p className="mt-6 font-display text-[clamp(1.75rem,3.2vw,2.5rem)] font-light leading-[1.14] text-white">
+                  <p className="mt-6 font-display text-[clamp(1.75rem,3.2vw,2.5rem)] font-semibold leading-[1.14] text-white">
                     {vision.statement}
                   </p>
                 </Reveal>

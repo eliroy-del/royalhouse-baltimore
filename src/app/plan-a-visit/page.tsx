@@ -86,7 +86,7 @@ export default function PlanAVisitPage() {
             </Reveal>
 
             <Reveal delay={0.06}>
-              <h2 className="font-display text-[clamp(1.5rem,2.8vw,2rem)] font-light leading-tight text-navy-900">
+              <h2 className="font-display text-[clamp(1.5rem,2.8vw,2rem)] font-semibold leading-tight text-navy-900">
                 Are there services for my children?
               </h2>
               <p className="mt-3 text-[0.9375rem] leading-relaxed text-navy-900/70">
@@ -116,7 +116,7 @@ export default function PlanAVisitPage() {
             </Reveal>
 
             <Reveal className="lg:order-1">
-              <h2 className="font-display text-[clamp(1.5rem,2.8vw,2rem)] font-light leading-tight text-navy-900">
+              <h2 className="font-display text-[clamp(1.5rem,2.8vw,2rem)] font-semibold leading-tight text-navy-900">
                 What should I wear?
               </h2>
               <p className="mt-3 text-[0.9375rem] leading-relaxed text-navy-900/70">
@@ -135,7 +135,7 @@ export default function PlanAVisitPage() {
       <Section tone="white" spacing="sm" id="form">
         <Container width="narrow">
           <div className="mb-4 text-center">
-            <h2 className="font-display text-[clamp(1.375rem,2.4vw,1.75rem)] font-light leading-tight text-navy-900">
+            <h2 className="font-display text-[clamp(1.375rem,2.4vw,1.75rem)] font-semibold leading-tight text-navy-900">
               Tell us you&rsquo;re coming.
             </h2>
           </div>

@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
   [
-    "group/btn relative inline-flex items-center justify-center gap-2 rounded-full font-medium",
+    "group/btn relative inline-flex items-center justify-center gap-2 rounded-full type-button",
     "whitespace-nowrap transition-[background-color,color,border-color,box-shadow,transform] duration-300",
     "ease-out-expo will-change-transform",
     "focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-gold-500",

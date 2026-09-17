@@ -79,7 +79,7 @@ export function SectionHeading({
       <Reveal delay={0.06}>
         <Tag
           className={cn(
-            "font-display font-normal leading-[0.96] tracking-tight",
+            "font-display font-semibold leading-[1.1] tracking-tight",
             size === "lg"
               ? "mt-2 text-[clamp(1.5rem,2.8vw,2.25rem)]"
               : "mt-2 text-[clamp(1.375rem,2.2vw,1.875rem)]",

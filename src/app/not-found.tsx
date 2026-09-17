@@ -29,7 +29,7 @@ export default function NotFound() {
 
       <Container className="relative text-center">
         <p className="eyebrow text-gold-300">404</p>
-        <h1 className="mx-auto mt-7 max-w-3xl font-display text-[clamp(2.25rem,5.6vw,4.25rem)] font-light leading-[1.04]">
+        <h1 className="mx-auto mt-7 max-w-3xl font-display text-[clamp(2.25rem,5.6vw,4.25rem)] font-semibold leading-[1.04]">
           Looks like you took a wrong turn.
         </h1>
         <p className="mx-auto mt-6 max-w-xl text-[1.0625rem] leading-relaxed text-white/70">

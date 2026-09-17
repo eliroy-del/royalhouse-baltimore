@@ -45,7 +45,7 @@ export function WelcomeSection() {
             <Eyebrow>Welcome</Eyebrow>
 
             <Reveal delay={0.06}>
-              <h2 className="mt-2 font-display text-[clamp(1.375rem,2.8vw,1.875rem)] font-light leading-[1.05] tracking-tight text-navy-900">
+              <h2 className="mt-2 font-display text-[clamp(1.375rem,2.8vw,1.875rem)] font-semibold leading-[1.05] tracking-tight text-navy-900">
                 You belong here{" "}
                 <em className="not-italic text-gold-600">before</em> you have anything figured out.
               </h2>

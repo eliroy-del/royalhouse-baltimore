@@ -119,7 +119,7 @@ export default async function MinistryDetailPage({
               <Badge variant="gold" size="md">
                 {ministry.audience}
               </Badge>
-              <h2 className="mt-6 font-display text-[clamp(1.875rem,3.4vw,2.75rem)] font-light leading-[1.08] text-navy-900">
+              <h2 className="mt-6 font-display text-[clamp(1.875rem,3.4vw,2.75rem)] font-semibold leading-[1.08] text-navy-900">
                 What this ministry is really about
               </h2>
               <div className="mt-7 flex flex-col gap-5 text-[1.0625rem] leading-relaxed text-navy-900/75">

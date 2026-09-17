@@ -69,7 +69,7 @@ export default async function SeniorPastorPage() {
               Pastor RichieO
             </h2>
             <span aria-hidden="true" className="mt-5 block h-px w-14 bg-gold-400" />
-            <div className="mt-6 space-y-4 text-[1.05rem] leading-relaxed text-navy-900/75">
+            <div className="mt-6 space-y-4 type-body-lg text-navy-900/75">
               {paragraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}

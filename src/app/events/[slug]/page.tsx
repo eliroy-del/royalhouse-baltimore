@@ -155,7 +155,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ sl
                 ) : null}
               </div>
 
-              <h2 className="mt-6 font-display text-[clamp(1.75rem,3vw,2.5rem)] font-light leading-tight text-navy-900">
+              <h2 className="mt-6 font-display text-[clamp(1.75rem,3vw,2.5rem)] font-semibold leading-tight text-navy-900">
                 About this gathering
               </h2>
               <div className="mt-6 flex flex-col gap-5 text-[1.0625rem] leading-relaxed text-navy-900/75">

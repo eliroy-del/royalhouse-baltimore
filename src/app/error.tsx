@@ -25,7 +25,7 @@ export default function ErrorBoundary({
       />
       <Container className="relative text-center">
         <p className="eyebrow text-gold-300">Something went wrong</p>
-        <h1 className="mx-auto mt-7 max-w-2xl font-display text-[clamp(2rem,4.8vw,2.5rem)] font-light leading-[1.06]">
+        <h1 className="mx-auto mt-7 max-w-2xl font-display text-[clamp(2rem,4.8vw,2.5rem)] font-semibold leading-[1.06]">
           That didn&rsquo;t load the way it should have.
         </h1>
         <p className="mx-auto mt-6 max-w-xl text-[1.0625rem] leading-relaxed text-white/70">

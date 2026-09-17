@@ -109,7 +109,7 @@ export function OurVisionHome() {
       <Container className="relative z-10">
         <div className="text-center">
           <Reveal>
-            <h2 className="font-display text-[clamp(2.25rem,4.5vw,3.5rem)] font-light leading-[1.08] text-white">
+            <h2 className="font-display text-[clamp(2.25rem,4.5vw,3.5rem)] font-semibold leading-[1.08] text-white">
               Our Vision
             </h2>
           </Reveal>

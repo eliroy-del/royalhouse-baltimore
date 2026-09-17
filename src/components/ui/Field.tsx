@@ -33,7 +33,7 @@ export function Label({
   return (
     <LabelPrimitive.Root
       htmlFor={htmlFor}
-      className={cn("block text-[0.75rem] font-semibold text-navy-900", className)}
+      className={cn("block type-label text-navy-900", className)}
     >
       {children}
       {required ? (

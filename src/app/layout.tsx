@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import { GivingProvider } from "@/components/giving/GivingProvider";
 import { Analytics } from "@/components/layout/Analytics";
 import { Footer } from "@/components/layout/Footer";
@@ -11,9 +11,14 @@ import { siteConfig, siteUrl } from "@/config/site";
 import { churchSchema, websiteSchema } from "@/lib/schema";
 import "./globals.css";
 
-const inter = Inter({
+/**
+ * Single primary face for the entire site (nav, headings, body, UI).
+ * Weights limited to the controlled system: 400 / 500 / 600 / 700.
+ */
+const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-plus-jakarta",
   display: "swap",
 });
 
@@ -73,7 +78,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={plusJakarta.variable}>
       <body className="min-h-dvh font-sans antialiased">
         <a
           href="#main"

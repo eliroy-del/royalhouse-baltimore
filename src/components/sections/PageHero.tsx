@@ -112,11 +112,11 @@ export function PageHero({
 
         <h1
           className={cn(
-            "font-display font-light leading-[1.02] tracking-[-0.02em]",
+            "font-display font-semibold leading-[1.08] tracking-[-0.022em]",
             eyebrow ? "mt-3" : null,
             size === "lg"
-              ? "text-[clamp(2.25rem,5.5vw,3.75rem)]"
-              : "text-[clamp(1.625rem,3.4vw,2.375rem)]",
+              ? "text-[clamp(2.5rem,5.5vw,4.25rem)]"
+              : "text-[clamp(1.875rem,3.6vw,2.75rem)]",
             align === "center" ? "mx-auto max-w-4xl" : "max-w-3xl",
           )}
         >
@@ -126,7 +126,7 @@ export function PageHero({
         {lede ? (
           <div
             className={cn(
-              "mt-3 text-[0.875rem] leading-relaxed text-white/75 sm:text-[0.9375rem]",
+              "mt-4 type-body-lg text-white/80",
               align === "center" ? "mx-auto max-w-2xl" : "max-w-2xl",
             )}
           >
@@ -215,19 +215,17 @@ export function CtaBand({
 
       <Container className="relative text-center">
         {eyebrow ? (
-          <p className="text-[0.9375rem] font-semibold uppercase tracking-[0.2em] text-white sm:text-base">
-            {eyebrow}
-          </p>
+          <p className="eyebrow text-gold-300">{eyebrow}</p>
         ) : null}
         <h2
           className={cn(
-            "mx-auto max-w-3xl font-display text-[clamp(1.5rem,2.8vw,2.125rem)] font-light leading-[1.05]",
+            "mx-auto max-w-3xl font-display text-[clamp(1.625rem,3vw,2.375rem)] font-semibold leading-[1.1]",
             eyebrow && "mt-3",
           )}
         >
           {title}
         </h2>
-        <p className="mx-auto mt-2.5 max-w-2xl text-[0.875rem] leading-relaxed text-white/70 sm:text-[0.9375rem]">
+        <p className="mx-auto mt-3 max-w-2xl type-body-lg text-white/75">
           {lede}
         </p>
         <div className="mt-5 flex flex-wrap items-center justify-center gap-3">{actions}</div>

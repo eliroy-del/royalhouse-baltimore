@@ -14,7 +14,7 @@ function isActive(pathname: string, href: string): boolean {
 }
 
 const triggerClasses = [
-  "relative inline-flex items-center gap-1 rounded-md px-3.5 py-3 text-base font-medium",
+  "relative inline-flex items-center gap-1 rounded-md px-3.5 py-3 type-nav",
   "text-white/85 transition-colors duration-200 hover:text-gold-300",
   "data-[state=open]:text-gold-300",
   "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500",

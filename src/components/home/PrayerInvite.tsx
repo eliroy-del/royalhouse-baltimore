@@ -30,7 +30,7 @@ export function PrayerInvite() {
             </Eyebrow>
 
             <Reveal delay={0.06}>
-              <h2 className="mt-3 font-display text-[clamp(1.75rem,3.6vw,2.75rem)] font-light leading-[1.03] tracking-tight text-white">
+              <h2 className="mt-3 font-display text-[clamp(1.75rem,3.6vw,2.75rem)] font-semibold leading-[1.03] tracking-tight text-white">
                 We would love to <em className="not-italic text-gold-300">pray with you</em>.
               </h2>
             </Reveal>

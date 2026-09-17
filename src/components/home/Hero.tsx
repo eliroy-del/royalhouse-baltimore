@@ -38,10 +38,10 @@ export function Hero() {
         <Container className="relative z-10 py-24 sm:py-28 lg:py-32">
           <div className="rise flex max-w-3xl flex-col items-start gap-5 text-left">
             <p className="eyebrow text-gold-300">{churchConfig.name}</p>
-            <h1 className="font-display text-[clamp(2.25rem,6.5vw,4.25rem)] font-normal leading-[1.05] tracking-[-0.02em] text-white">
+            <h1 className="font-display type-display text-white">
               {churchConfig.tagline}
             </h1>
-            <p className="max-w-xl text-[0.9375rem] leading-relaxed text-white/80 sm:text-base">
+            <p className="max-w-xl type-body-lg text-white/80">
               A place to build faith, share fellowship, encounter God, grow spiritually, and find
               community.
             </p>

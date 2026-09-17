@@ -118,7 +118,7 @@ export default async function MinistriesPage() {
         <Container width="narrow">
           <div className="text-center">
             <p className="eyebrow text-gold-300">Not Sure Where You Fit?</p>
-            <h2 className="mt-6 font-display text-[clamp(2rem,4vw,2.25rem)] font-light leading-[1.06]">
+            <h2 className="mt-6 font-display text-[clamp(2rem,4vw,2.25rem)] font-semibold leading-[1.06]">
               Tell us what you love and we will help you find it.
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-[1.0625rem] leading-relaxed text-white/70">
