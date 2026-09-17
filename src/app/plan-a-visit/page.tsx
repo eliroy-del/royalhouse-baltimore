@@ -57,18 +57,6 @@ export default function PlanAVisitPage() {
               </li>
             ))}
           </ul>
-          <p className="mt-4 text-[0.9375rem] text-navy-900/70">
-            {churchConfig.address.line1}, {churchConfig.address.line2}, {churchConfig.address.city},{" "}
-            {churchConfig.regionCode} {churchConfig.address.postalCode}
-          </p>
-          <p className="mt-2 text-[0.9375rem] text-navy-900/70">
-            Service length: {churchConfig.visit.serviceLength}
-          </p>
-          <ul className="mt-3 flex flex-col gap-1 text-[0.9375rem] text-navy-900/70">
-            {churchConfig.visit.serviceIncludes.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
         </Container>
       </Section>
 
