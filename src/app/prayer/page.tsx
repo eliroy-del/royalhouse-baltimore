@@ -5,7 +5,6 @@ import { CtaBand, PageHero } from "@/components/sections/PageHero";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { Icon } from "@/components/ui/Icon";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { images } from "@/config/images";
@@ -22,17 +21,14 @@ export const metadata = pageMetadata({
 
 const promises = [
   {
-    icon: "hands-praying" as const,
     title: "It gets prayed for",
     text: "Every request reaches our prayer team and is prayed over during the week, not filed and forgotten.",
   },
   {
-    icon: "church" as const,
     title: "It stays private",
     text: "Requests are read only by the pastoral prayer team. Nothing is published, shared or read out.",
   },
   {
-    icon: "message-circle" as const,
     title: "No strings",
     text: "You will not be added to a mailing list or chased. If you want follow-up, tick the box; if not, we will simply pray.",
   },
@@ -71,18 +67,11 @@ export default function PrayerPage() {
 
               <ul className="mt-6 flex flex-col gap-5 border-t border-navy-900/[0.08] pt-5">
                 {promises.map((promise) => (
-                  <li key={promise.title} className="flex gap-4">
-                    <span className="mt-0.5 flex size-10 shrink-0 items-center justify-center rounded-full bg-gold-100 text-gold-700">
-                      <Icon name={promise.icon} className="size-[1.125rem]" />
-                    </span>
-                    <div>
-                      <p className="text-[0.9375rem] font-semibold text-navy-900">
-                        {promise.title}
-                      </p>
-                      <p className="mt-1.5 text-[0.9375rem] leading-relaxed text-navy-900/62">
-                        {promise.text}
-                      </p>
-                    </div>
+                  <li key={promise.title}>
+                    <p className="text-[0.9375rem] font-semibold text-navy-900">{promise.title}</p>
+                    <p className="mt-1.5 text-[0.9375rem] leading-relaxed text-navy-900/62">
+                      {promise.text}
+                    </p>
                   </li>
                 ))}
               </ul>
