@@ -27,6 +27,12 @@ export const primaryNav: NavItem[] = [
         icon: "heart",
       },
       {
+        label: "Our Founders",
+        href: "/about/our-founders",
+        description: "Apostle General Sam & Mama Rita Korankye Ankrah",
+        icon: "users",
+      },
+      {
         label: "Lead Pastor",
         href: "/about/our-senior-pastor",
         description: "Pastor RichieO",

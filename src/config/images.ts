@@ -133,6 +133,10 @@ export const images = {
     src: "/images/apostle-agor-mina.jpg",
     alt: "Apostle Emmanuel Agormeda and Rev. Mrs. Willhemina Agormeda",
   },
+  foundersKorankyeAnkrah: {
+    src: "/images/founders-korankye-ankrah.jpg",
+    alt: "Most Rev. Sam Korankye Ankrah and Mama Rita Korankye Ankrah, Founders of Royalhouse Chapel International",
+  },
   prayerKneeling: {
     src: "/images/prayer-kneeling.jpg",
     alt: "A man kneeling in prayer during a gathering",
