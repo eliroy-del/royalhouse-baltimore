@@ -25,13 +25,13 @@ export function YouBelongHere() {
             />
           </div>
           <div className="max-w-2xl">
-            <p className="font-display text-[clamp(1.75rem,3vw,2.375rem)] italic leading-none text-gold-600">
+            <p className="font-display text-[clamp(2rem,3.4vw,2.75rem)] italic leading-none text-gold-600">
               Welcome
             </p>
-            <h2 className="mt-4 font-display text-[clamp(2.25rem,4.5vw,3.25rem)] leading-[1.08] text-navy-900">
+            <h2 className="mt-4 font-display text-[clamp(2.5rem,5vw,3.75rem)] font-semibold leading-[1.08] text-navy-900">
               {churchConfig.belongingLine}
             </h2>
-            <p className="mt-5 text-[1.05rem] leading-relaxed text-navy-900/75">
+            <p className="mt-6 max-w-xl text-[clamp(1.1875rem,1.4vw,1.375rem)] leading-[1.65] text-navy-900/75">
               Royalhouse Baltimore is a place to build faith, share fellowship, encounter God in
               prayer and worship, grow through God&rsquo;s Word, and find genuine community.
             </p>
