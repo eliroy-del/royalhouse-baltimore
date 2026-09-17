@@ -98,8 +98,18 @@ export const churchConfig: ChurchConfig = {
   },
 
   serviceTimes: [
-    { label: "Tuesday Gathering", day: "Tuesday", time: "7:00 PM" },
-    { label: "Sunday Gathering", day: "Sunday", time: "6:00 PM" },
+    {
+      label: "Tuesday Gathering",
+      day: "Tuesday",
+      time: "7:00 PM",
+      weekday: "Tuesday",
+    },
+    {
+      label: "Sunday Gathering",
+      day: "Sundays (Twice a Month)",
+      time: "Launch Sunday: May 2027",
+      weekday: "Sunday",
+    },
   ],
 
   contact: {

@@ -18,15 +18,21 @@ export function ServiceInfo() {
             <div className="grid gap-8 sm:grid-cols-2 sm:gap-10">
               {churchConfig.serviceTimes.map((service, index) => (
                 <div
-                  key={service.day}
+                  key={service.label}
                   className={
                     index > 0
                       ? "border-t border-white/15 pt-8 sm:border-l sm:border-t-0 sm:pl-10 sm:pt-0"
                       : undefined
                   }
                 >
-                  <p className="text-[0.8125rem] font-medium text-white/70">{service.day}s</p>
-                  <p className="mt-2 font-display text-[clamp(2.25rem,4.5vw,3.25rem)] leading-none tracking-[-0.03em] text-white">
+                  <p className="text-[0.8125rem] font-medium text-white/70">{service.day}</p>
+                  <p
+                    className={
+                      service.time.includes("PM") || service.time.includes("AM")
+                        ? "mt-2 font-display text-[clamp(2.25rem,4.5vw,3.25rem)] leading-none tracking-[-0.03em] text-white"
+                        : "mt-2 font-display text-[clamp(1.25rem,2.8vw,1.75rem)] leading-snug tracking-[-0.02em] text-white"
+                    }
+                  >
                     {service.time}
                   </p>
                 </div>

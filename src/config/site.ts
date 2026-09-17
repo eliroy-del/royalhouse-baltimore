@@ -27,7 +27,7 @@ export const siteConfig = {
   name: churchConfig.name,
   title: `${churchConfig.name}: A Church in Baltimore, Maryland`,
   description:
-    "Royalhouse Baltimore is a Spirit-filled church in Baltimore, Maryland. Join us Tuesdays at 7:00 PM and Sundays at 6:00 PM at 5411 Old Frederick Rd, Ste 11-12. You belong here.",
+    "Royalhouse Baltimore is a Spirit-filled church in Baltimore, Maryland. Join us Tuesdays at 7:00 PM. Sundays meet twice a month; Launch Sunday is May 2027 at 5411 Old Frederick Rd, Ste 11-12. You belong here.",
   url: siteUrl,
   locale: "en_US",
   ogImage: "/images/hero-worship-stage.jpg",

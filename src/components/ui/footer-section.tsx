@@ -77,7 +77,7 @@ export function Footerdemo() {
             <p className="mt-5 text-sm font-semibold text-white">Service Times</p>
             <ul className="mt-2 space-y-1 text-sm text-white/65">
               {churchConfig.serviceTimes.map((service) => (
-                <li key={service.day}>
+                <li key={service.label}>
                   {service.day} — {service.time.replace(":00 ", " ")}
                 </li>
               ))}

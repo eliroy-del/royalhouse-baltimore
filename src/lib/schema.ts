@@ -35,9 +35,13 @@ function postalAddress(): Json | undefined {
 
 function openingHours(): Json[] | undefined {
   if (!churchStatus.hasServiceTimes) return undefined;
-  return churchConfig.serviceTimes.map((service) => ({
+  const clock = churchConfig.serviceTimes.filter(
+    (service) => service.weekday && /\d/.test(service.time) && /(AM|PM)/i.test(service.time),
+  );
+  if (clock.length === 0) return undefined;
+  return clock.map((service) => ({
     "@type": "OpeningHoursSpecification",
-    dayOfWeek: `https://schema.org/${service.day}`,
+    dayOfWeek: `https://schema.org/${service.weekday}`,
     opens: service.time,
     name: service.label,
   }));

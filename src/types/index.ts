@@ -19,11 +19,14 @@ export type Weekday =
 export interface ServiceTime {
   /** e.g. "Sunday Celebration" */
   label: string;
-  day: Weekday;
-  /** Human readable, e.g. "9:00 AM". Kept as a string so the church controls formatting. */
+  /** Display heading shown in cards and lists, e.g. "Tuesday" or "Sundays (Twice a Month)" */
+  day: string;
+  /** Human readable detail, e.g. "7:00 PM" or "Launch Sunday: May 2027" */
   time: string;
   /** Optional qualifier, e.g. "Kids ministry in all services" */
   note?: string;
+  /** Schema.org weekday when this maps to a recurring weekly service */
+  weekday?: Weekday;
 }
 
 export interface Address {

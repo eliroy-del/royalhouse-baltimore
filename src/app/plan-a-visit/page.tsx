@@ -46,7 +46,7 @@ export default function PlanAVisitPage() {
           <p className="eyebrow text-gold-800">Service Times</p>
           <ul className="mt-4 grid gap-3 sm:grid-cols-2">
             {churchConfig.serviceTimes.map((service) => (
-              <li key={service.day} className="rounded-card border border-navy-900/10 bg-white p-4">
+              <li key={service.label} className="rounded-card border border-navy-900/10 bg-white p-4">
                 <p className="font-display text-2xl text-navy-900">{service.day}</p>
                 <p className="mt-1 text-navy-900/70">{service.time}</p>
               </li>

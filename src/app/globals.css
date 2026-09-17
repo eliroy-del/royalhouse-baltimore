@@ -281,14 +281,13 @@
    CUSTOM UTILITIES
    ============================================================ */
 
-/* Small-caps editorial label used above section headings */
+/* Section labels in Inter — gold color comes from the utility class on the element */
 @utility eyebrow {
-  font-size: 0.6875rem;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  /* Loose enough that a wrapped eyebrow (long ministry audiences, series
-     names) still reads as two clean lines rather than a cramped block. */
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-transform: none;
   line-height: 1.4;
 }
 
