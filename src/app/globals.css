@@ -10,7 +10,7 @@
 @theme {
   /* ---------- Typography ---------- */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
-  --font-display: var(--font-display-serif), ui-serif, "Iowan Old Style", Georgia, serif;
+  --font-display: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
 
   /* ---------- Brand: Royal Blue ---------- */
   --color-navy-950: #001226;
@@ -237,10 +237,10 @@
     text-wrap: pretty;
   }
 
-  /* Display type wants tighter tracking + optical leading */
+  /* Display headings use Inter with slightly tighter tracking */
   .font-display {
-    font-feature-settings: "liga", "dlig";
-    letter-spacing: -0.015em;
+    font-feature-settings: "cv11", "ss01", "liga";
+    letter-spacing: -0.02em;
   }
 
   input,
@@ -292,13 +292,12 @@
   line-height: 1.4;
 }
 
-/* Display figures for statistics and countdowns. Cormorant defaults to
-   old-style numerals, where a lone "1" is easily misread as a capital I, so
-   figures that carry meaning are set lining and tabular. */
+/* Display figures for statistics and countdowns. Use lining tabular
+   numerals so a lone "1" is not misread as a capital I. */
 @utility stat-figure {
   font-family: var(--font-display);
-  font-feature-settings: "liga", "dlig";
-  letter-spacing: -0.015em;
+  font-feature-settings: "cv11", "ss01", "liga";
+  letter-spacing: -0.02em;
   font-size: 2.25rem;
   line-height: 1;
   font-variant-numeric: lining-nums tabular-nums;

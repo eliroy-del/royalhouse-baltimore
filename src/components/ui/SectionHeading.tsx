@@ -79,8 +79,6 @@ export function SectionHeading({
       <Reveal delay={0.06}>
         <Tag
           className={cn(
-            // Cormorant sits low in its line box, so multi-line display
-            // headings need leading below 1 to look properly set.
             "font-display font-normal leading-[0.96] tracking-tight",
             size === "lg"
               ? "mt-2 text-[clamp(1.5rem,2.8vw,2.25rem)]"
