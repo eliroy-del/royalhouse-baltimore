@@ -39,6 +39,15 @@ const pages: { title: string; description: string; href: string; icon: IconName;
       keywords: "about who we are mission vision royalhouse chapel",
     },
     {
+      title: "Our Founders",
+      description:
+        "Meet Most Rev. Sam Korankye Ankrah and Mama Rita Korankye Ankrah, Founders of Royalhouse Chapel International.",
+      href: "/about/our-founders",
+      icon: "users",
+      keywords:
+        "founders apostle general sam korankye ankrah mama rita royalhouse chapel international ahenfie",
+    },
+    {
       title: "Give",
       description: "Tithes, offering, missions and community impact.",
       href: "/give",
