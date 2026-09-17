@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { PageHero } from "@/components/sections/PageHero";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { images } from "@/config/images";
@@ -77,14 +78,15 @@ export default async function SeniorPastorPage() {
               ))}
               <p>{FAMILY_LINE}</p>
             </div>
-            <a
-              href="https://www.instagram.com/_richieo/"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="mt-6 inline-flex items-center gap-2 text-[1rem] font-medium text-navy-900 underline decoration-gold-500/60 underline-offset-[5px] transition-colors hover:text-navy-700 hover:decoration-gold-500"
-            >
-              Instagram
-            </a>
+            <Button asChild variant="primary" size="lg" className="mt-6">
+              <a
+                href="https://www.instagram.com/_richieo/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Follow Pastor RichieO
+              </a>
+            </Button>
           </div>
         </Container>
       </Section>
