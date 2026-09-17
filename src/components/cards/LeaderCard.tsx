@@ -36,7 +36,9 @@ export function LeaderCard({ leader, className }: { leader: Leader; className?: 
 
       <div className="flex flex-1 flex-col p-6">
         <h3 className="text-lg font-semibold text-navy-900">{leader.name}</h3>
-        <p className="mt-1 eyebrow text-gold-800">{leader.role}</p>
+        <p className="mt-1 text-[1.125rem] font-semibold tracking-[0.03em] text-gold-600">
+          {leader.role}
+        </p>
         <p className="mt-4 flex-1 text-[0.9375rem] leading-relaxed text-navy-900/65">
           {leader.bio}
         </p>

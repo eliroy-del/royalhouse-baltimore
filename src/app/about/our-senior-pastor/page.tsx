@@ -64,7 +64,9 @@ export default async function SeniorPastorPage() {
             </div>
           </figure>
           <div className="lg:pt-1">
-            <p className="eyebrow text-gold-700">Lead Pastor</p>
+            <p className="text-[1.125rem] font-semibold tracking-[0.03em] text-gold-600">
+              Lead Pastor
+            </p>
             <h2 className="mt-3 font-display text-[clamp(2rem,4vw,3rem)] leading-[1.05] text-navy-900">
               Pastor RichieO
             </h2>

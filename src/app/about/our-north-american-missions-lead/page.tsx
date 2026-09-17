@@ -53,7 +53,9 @@ export default async function MissionsLeadPage() {
             />
           </div>
           <div>
-            <p className="eyebrow text-gold-700">Apostle, North American Missions</p>
+            <p className="text-[1.125rem] font-semibold tracking-[0.03em] text-gold-600">
+              Apostle, North American Missions
+            </p>
             <h2 className="mt-3 font-display text-4xl text-navy-900">
               Apostle Emmanuel Agormeda
             </h2>
