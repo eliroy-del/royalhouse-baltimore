@@ -119,13 +119,13 @@ export default function PlanAVisitPage() {
             </Reveal>
 
             <Reveal className="lg:order-1">
-              <h2 className="font-display text-[clamp(1.5rem,2.8vw,2rem)] font-semibold leading-tight text-navy-900">
+              <h2 className="font-display text-[clamp(1.75rem,3vw,2.375rem)] font-semibold leading-tight text-navy-900">
                 What should I wear?
               </h2>
-              <p className="mt-3 text-[0.9375rem] leading-relaxed text-navy-900/70">
+              <p className="mt-4 text-[1.0625rem] leading-relaxed text-navy-900/70 sm:text-[1.125rem]">
                 {churchConfig.visit.dressCode}
               </p>
-              <p className="mt-3 text-[0.9375rem] leading-relaxed text-navy-900/70">
+              <p className="mt-3 text-[1.0625rem] leading-relaxed text-navy-900/70 sm:text-[1.125rem]">
                 Your presence is what matters. Dress in whatever helps you feel at ease, and walk
                 through the door.
               </p>
