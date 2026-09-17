@@ -78,19 +78,19 @@ export default function PlanAVisitPage() {
             </Reveal>
 
             <Reveal delay={0.06}>
-              <h2 className="font-display text-[clamp(1.5rem,2.8vw,2rem)] font-semibold leading-tight text-navy-900">
+              <h2 className="font-display text-[clamp(1.75rem,3vw,2.375rem)] font-semibold leading-tight text-navy-900">
                 Children&rsquo;s Ministry
               </h2>
-              <div className="mt-5 space-y-5">
+              <div className="mt-6 space-y-6">
                 {churchConfig.visit.childrenPrograms.map((program) => (
                   <div key={program.name}>
-                    <p className="font-semibold text-navy-900">
+                    <p className="text-[1.1875rem] font-semibold leading-snug text-navy-900 sm:text-[1.3125rem]">
                       {program.name}
                       {program.ages !== "12+" ? (
                         <span className="font-normal text-navy-900/65"> — Ages {program.ages}</span>
                       ) : null}
                     </p>
-                    <p className="mt-1 text-[0.9375rem] leading-relaxed text-navy-900/70">
+                    <p className="mt-2 text-[1.0625rem] leading-relaxed text-navy-900/70 sm:text-[1.125rem]">
                       {program.description}
                     </p>
                   </div>
