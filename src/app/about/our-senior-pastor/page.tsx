@@ -51,15 +51,15 @@ export default async function SeniorPastorPage() {
       />
 
       <Section tone="cream" spacing="lg">
-        <Container className="grid items-start gap-10 lg:grid-cols-[minmax(0,20rem)_minmax(0,38rem)] lg:gap-16">
-          <figure className="mx-auto w-full max-w-[20rem] lg:mx-0">
-            <div className="relative aspect-[3/4] overflow-hidden rounded-media shadow-elevate">
+        <Container className="grid items-start gap-10 lg:grid-cols-[minmax(0,16rem)_minmax(0,40rem)] lg:gap-14">
+          <figure className="mx-auto w-full max-w-[16rem] lg:mx-0">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-media shadow-elevate">
               <Image
                 src={images.pastorRichieO.src}
                 alt={images.pastorRichieO.alt}
                 fill
-                sizes="320px"
-                className="object-cover"
+                sizes="256px"
+                className="object-cover object-[center_12%]"
               />
             </div>
           </figure>
@@ -75,6 +75,14 @@ export default async function SeniorPastorPage() {
               ))}
               <p>{FAMILY_LINE}</p>
             </div>
+            <a
+              href="https://www.instagram.com/_richieo/"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="mt-6 inline-flex items-center gap-2 text-[1rem] font-medium text-navy-900 underline decoration-gold-500/60 underline-offset-[5px] transition-colors hover:text-navy-700 hover:decoration-gold-500"
+            >
+              Instagram
+            </a>
           </div>
         </Container>
       </Section>
