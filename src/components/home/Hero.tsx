@@ -3,13 +3,12 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Icon } from "@/components/ui/Icon";
-import { churchConfig } from "@/config/church";
 import { images } from "@/config/images";
 
 export function Hero() {
   return (
-    <section className="relative isolate w-full overflow-hidden bg-navy-950 pb-14 sm:pb-16 lg:pb-20">
-      <div className="relative flex min-h-[70svh] w-full items-center sm:min-h-[74svh] lg:min-h-[78svh]">
+    <section className="relative isolate w-full overflow-hidden bg-navy-950 pb-10 sm:pb-12 lg:pb-14">
+      <div className="relative flex min-h-[min(100svh,44rem)] w-full items-center sm:min-h-[min(100svh,48rem)] lg:min-h-[min(92svh,52rem)]">
         <Image
           src={images.heroCampaign.src}
           alt={images.heroCampaign.alt}
@@ -35,25 +34,24 @@ export function Hero() {
           className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-navy-950/70 to-transparent"
         />
 
-        <Container className="relative z-10 py-24 sm:py-28 lg:py-32">
-          <div className="rise flex max-w-5xl flex-col items-start gap-5 text-left">
-            <p className="eyebrow text-gold-300">{churchConfig.name}</p>
+        <Container className="relative z-10 py-20 sm:py-24 lg:py-24">
+          <div className="rise flex max-w-5xl flex-col items-start gap-3.5 text-left sm:gap-4">
             <p className="type-body-lg font-medium text-white/90">
               A Spirit-filled church for the Baltimore area.
+            </p>
+            <p className="max-w-2xl text-[1.0625rem] font-medium leading-relaxed text-gold-300 sm:text-[1.125rem]">
+              Prayer. Praise. Worship. The Word. Fellowship.
             </p>
             <h1 className="font-display type-display text-white">
               Touching Our Generation
               <br />
               With the Power of God
             </h1>
-            <p className="max-w-2xl text-[1.0625rem] font-medium leading-relaxed text-gold-300 sm:text-[1.125rem]">
-              Prayer. Praise. Worship. The Word. Community. Fellowship.
-            </p>
             <p className="max-w-xl type-body-lg text-white/80">
               A growing church family where people from every background can encounter God, build
               meaningful relationships, and grow in faith.
             </p>
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="mt-1 flex flex-wrap items-center gap-3">
               <Button asChild variant="gold" size="lg">
                 <Link href="/plan-a-visit">
                   Plan Your Visit
