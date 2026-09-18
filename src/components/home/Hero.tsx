@@ -21,7 +21,7 @@ export function Hero() {
           className="object-cover object-[58%_center]"
         />
 
-        <div aria-hidden="true" className="absolute inset-0 bg-cornflower/50" />
+        <div aria-hidden="true" className="absolute inset-0 bg-cornflower/70" />
 
         <Container className="relative z-10 py-20 sm:py-24 lg:py-24">
           <div className="rise flex max-w-5xl flex-col items-start gap-3.5 text-left sm:gap-4">
