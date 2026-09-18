@@ -69,7 +69,10 @@ export function WhoWeAreHome() {
             <ul className="mt-8 grid gap-x-10 gap-y-3 sm:grid-cols-2">
               {churchConfig.identity.map((item) => (
                 <li key={item} className="flex items-start gap-2.5 text-[0.9375rem] text-navy-900">
-                  <span aria-hidden="true" className="mt-1.5 size-1.5 shrink-0 rounded-full bg-gold-400" />
+                  <span
+                    aria-hidden="true"
+                    className="mt-1.5 size-2 shrink-0 rotate-45 bg-navy-900"
+                  />
                   {item}
                 </li>
               ))}
