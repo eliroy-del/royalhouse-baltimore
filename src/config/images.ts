@@ -41,6 +41,10 @@ export const images = {
     src: "/images/baltimore-city.jpg",
     alt: "Baltimore rowhouses with marble steps at golden hour, the downtown skyline and Inner Harbor in the distance",
   },
+  baltimoreHarbor: {
+    src: "/images/baltimore-harbor.jpg",
+    alt: "Baltimore Inner Harbor skyline across the water under a bright blue sky",
+  },
   worshipTeam: {
     src: "/images/worship-team.jpg",
     alt: "A worship leader singing with her eyes closed while the band plays behind her",

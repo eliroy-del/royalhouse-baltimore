@@ -70,10 +70,27 @@ export default function WhoWeArePage() {
         breadcrumb={[{ label: "Who We Are" }]}
       />
 
-      <Section tone="cream" spacing="lg">
-        <Container width="narrow">
-          <h2 className="font-display text-3xl text-navy-900">Why Baltimore?</h2>
-          <div className="mt-5 space-y-4 type-body-lg text-navy-900/75">
+      <section className="relative isolate overflow-hidden py-20 sm:py-24 lg:py-28">
+        <ParallaxMedia
+          src={images.baltimoreHarbor.src}
+          alt=""
+          className="absolute inset-0"
+          imageClassName="object-[center_42%]"
+          sizes="100vw"
+          strength={14}
+          overlay="none"
+        />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-gradient-to-b from-navy-950/78 via-navy-950/72 to-navy-950/82"
+        />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-gradient-to-r from-navy-950/55 via-transparent to-navy-950/40"
+        />
+        <Container width="narrow" className="relative z-10">
+          <h2 className="font-display text-[clamp(2rem,4vw,3rem)] text-white">Why Baltimore?</h2>
+          <div className="mt-5 space-y-4 type-body-lg text-white/85">
             <p>
               The Baltimore region is rich with history, culture, creativity, resilience, families,
               students, entrepreneurs, and people with dreams for their future. It is a region with
@@ -89,7 +106,7 @@ export default function WhoWeArePage() {
             </p>
           </div>
         </Container>
-      </Section>
+      </section>
 
       <Section tone="white" spacing="lg">
         <Container>
