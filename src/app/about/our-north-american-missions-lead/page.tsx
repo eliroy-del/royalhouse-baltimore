@@ -13,7 +13,7 @@ export const metadata = pageMetadata({
   description:
     "Meet Apostle Emmanuel Agormeda, Apostle over Royalhouse Chapel churches across North America.",
   path: "/about/our-north-american-missions-lead",
-  image: images.apostleAgormeda.src,
+  image: images.apostleAgormedaSpeaking.src,
 });
 
 const FAMILY_LINE =
@@ -57,8 +57,8 @@ export default async function MissionsLeadPage() {
       />
       <PageHero
         title="Apostle Emmanuel Agormeda"
-        image={images.apostleAgormeda}
-        objectPosition="50% 15%"
+        image={images.apostleAgormedaSpeaking}
+        objectPosition="58% 28%"
         breadcrumb={[{ label: "Our North American Missions Lead" }]}
       />
 

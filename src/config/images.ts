@@ -145,6 +145,10 @@ export const images = {
     src: "/images/apostle-agormeda.jpg",
     alt: "Apostle Emmanuel Agormeda, Apostle over Royalhouse Chapel churches across North America",
   },
+  apostleAgormedaSpeaking: {
+    src: "/images/apostle-agormeda-speaking.jpg",
+    alt: "Apostle Emmanuel Agormeda speaking from the podium at Convention of Saints",
+  },
   apostleAgorMina: {
     src: "/images/apostle-agor-mina.png",
     alt: "Apostle Emmanuel Agormeda and Rev. Mrs. Willhemina Agormeda",
