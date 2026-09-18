@@ -42,7 +42,7 @@ export function Hero() {
             <p className="max-w-2xl text-[1.0625rem] font-medium leading-relaxed text-gold-300 sm:text-[1.125rem]">
               Prayer. Praise. Worship. The Word. Fellowship.
             </p>
-            <h1 className="font-display text-[clamp(1.75rem,5.2vw,4.25rem)] font-bold leading-[1.08] tracking-[-0.025em] text-white">
+            <h1 className="font-display text-[clamp(1.65rem,4.6vw,3.75rem)] font-bold uppercase leading-[1.1] tracking-[-0.02em] text-white">
               <span className="block whitespace-nowrap">Touching Our Generation</span>
               <span className="block whitespace-nowrap">With the Power of God</span>
             </h1>
