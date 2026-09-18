@@ -95,7 +95,7 @@ export function WhoWeAreHome() {
 
 export function OurVisionHome() {
   return (
-    <section className="relative isolate overflow-hidden py-20 sm:py-24 lg:py-28">
+    <section className="relative isolate overflow-hidden py-14 sm:py-20 lg:py-28">
       <ParallaxMedia
         src={images.congregationPrayer.src}
         alt=""

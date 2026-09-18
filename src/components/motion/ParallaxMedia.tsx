@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { navyBlurDataURL } from "@/config/images";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 import { cn } from "@/lib/utils";
@@ -20,8 +20,9 @@ interface ParallaxMediaProps {
 }
 
 /**
- * A photograph that drifts slowly against the scroll. The image is
- * over-sized so the parallax never reveals an edge.
+ * A photograph that drifts slowly against the scroll on large screens.
+ * On mobile/tablet (and when reduced-motion is set) it stays static for
+ * performance and readability.
  */
 export function ParallaxMedia({
   src,
@@ -35,6 +36,16 @@ export function ParallaxMedia({
 }: ParallaxMediaProps) {
   const ref = useRef<HTMLDivElement>(null);
   const reduceMotion = usePrefersReducedMotion();
+  const [allowParallax, setAllowParallax] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 1024px)");
+    const sync = () => setAllowParallax(mq.matches && !reduceMotion);
+    sync();
+    mq.addEventListener("change", sync);
+    return () => mq.removeEventListener("change", sync);
+  }, [reduceMotion]);
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
@@ -45,8 +56,7 @@ export function ParallaxMedia({
     <div ref={ref} className={cn("relative overflow-hidden bg-navy-900", className)}>
       <motion.div
         className="absolute inset-0"
-        style={reduceMotion ? undefined : { y }}
-        // Scale compensates for the parallax travel so no gap appears.
+        style={allowParallax ? { y } : undefined}
         initial={false}
       >
         <Image
@@ -57,7 +67,11 @@ export function ParallaxMedia({
           priority={priority}
           placeholder="blur"
           blurDataURL={navyBlurDataURL}
-          className={cn("object-cover", reduceMotion ? "scale-100" : "scale-[1.18]", imageClassName)}
+          className={cn(
+            "object-cover",
+            allowParallax ? "scale-[1.18]" : "scale-100",
+            imageClassName,
+          )}
         />
       </motion.div>
       {overlay === "soft" ? (

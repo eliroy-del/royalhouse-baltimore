@@ -16,27 +16,28 @@ export function Header() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,backdrop-filter] duration-500 ease-out-expo",
+        "fixed inset-x-0 top-0 z-50 pt-[env(safe-area-inset-top,0px)] transition-[background-color,box-shadow] duration-500 ease-out-expo",
         scrolled
-          ? "bg-navy-950/85 shadow-[0_1px_0_rgba(244,210,108,0.18),0_18px_40px_-24px_rgba(0,18,38,0.8)] backdrop-blur-xl"
+          ? "bg-navy-950/90 shadow-[0_1px_0_rgba(244,210,108,0.18),0_18px_40px_-24px_rgba(0,18,38,0.8)] backdrop-blur-xl"
           : "bg-gradient-to-b from-navy-950/55 to-transparent",
       )}
     >
       <Container
         className={cn(
-          "flex items-center justify-between gap-4 transition-[height] duration-500 ease-out-expo",
-          scrolled ? "h-24" : "h-28",
+          "flex items-center justify-between gap-3 transition-[height] duration-500 ease-out-expo",
+          scrolled ? "h-16 sm:h-20 lg:h-24" : "h-[4.5rem] sm:h-24 lg:h-28",
         )}
       >
-        <LogoLink tone="dark" size="md" preload />
+        <LogoLink tone="dark" size="md" preload className="min-w-0 shrink" />
 
-        <div className="flex items-center gap-1 sm:gap-2">
+        <div className="flex shrink-0 items-center gap-1 sm:gap-2">
           <DesktopNav />
+          {/* Keep Give with desktop nav breakpoint so tablet isn't half-open chrome */}
           <Button
             type="button"
             variant="gold"
             size="md"
-            className="hidden md:inline-flex"
+            className="hidden lg:inline-flex"
             onClick={openGive}
           >
             Give

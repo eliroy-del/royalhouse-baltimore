@@ -48,7 +48,7 @@ export function GiveModal({ open, onClose }: GiveModalProps) {
 
             <Dialog.Content asChild forceMount>
               <motion.div
-                className="fixed inset-x-0 bottom-0 z-[90] mx-auto w-full max-w-lg rounded-t-3xl bg-white p-6 shadow-float outline-none sm:inset-auto sm:bottom-auto sm:left-1/2 sm:top-1/2 sm:w-[min(32rem,calc(100vw-2rem))] sm:max-w-none sm:-translate-x-1/2 sm:-translate-y-1/2 sm:rounded-3xl sm:p-8"
+                className="fixed inset-x-0 bottom-0 z-[90] mx-auto w-full max-w-lg rounded-t-3xl bg-white p-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] shadow-float outline-none sm:inset-auto sm:bottom-auto sm:left-1/2 sm:top-1/2 sm:w-[min(32rem,calc(100vw-2rem))] sm:max-w-none sm:-translate-x-1/2 sm:-translate-y-1/2 sm:rounded-3xl sm:p-8 sm:pb-8"
                 initial={reduceMotion ? { opacity: 0 } : { opacity: 0, y: 24 }}
                 animate={reduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
                 exit={reduceMotion ? { opacity: 0 } : { opacity: 0, y: 16 }}

@@ -97,7 +97,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
           <Footer />
 
-          <div aria-hidden="true" className="h-16 bg-navy-950 lg:hidden" />
+          <div className="block h-16 bg-navy-950 pb-[env(safe-area-inset-bottom)] lg:hidden" />
           <MobileStickyBar />
         </GivingProvider>
 

@@ -42,8 +42,8 @@ export function PageHero({
       className={cn(
         "relative isolate flex flex-col justify-end overflow-hidden bg-navy-950 text-white",
         size === "lg"
-          ? "min-h-[42svh] pb-8 pt-32 sm:pb-10"
-          : "min-h-[32svh] pb-6 pt-28 sm:pb-8 lg:min-h-[36svh]",
+          ? "min-h-[min(42dvh,28rem)] pb-8 pt-28 sm:pb-10 sm:pt-32"
+          : "min-h-[min(34dvh,22rem)] pb-6 pt-24 sm:pb-8 sm:pt-28 lg:min-h-[min(38dvh,26rem)]",
         className,
       )}
     >
@@ -52,6 +52,7 @@ export function PageHero({
         alt=""
         fill
         priority
+        fetchPriority="high"
         sizes="100vw"
         quality={82}
         placeholder="blur"
@@ -108,11 +109,11 @@ export function PageHero({
 
         <h1
           className={cn(
-            "font-display font-semibold leading-[1.08] tracking-[-0.022em]",
+            "font-display font-semibold leading-[1.08] tracking-[-0.022em] break-words",
             eyebrow ? "mt-3" : null,
             size === "lg"
-              ? "text-[clamp(2.5rem,5.5vw,4.25rem)]"
-              : "text-[clamp(1.875rem,3.6vw,2.75rem)]",
+              ? "text-[clamp(1.875rem,5vw,4.25rem)]"
+              : "text-[clamp(1.5rem,4vw,2.75rem)]",
             align === "center" ? "mx-auto max-w-4xl" : "max-w-3xl",
           )}
         >

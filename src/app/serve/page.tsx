@@ -52,13 +52,17 @@ export default function ServePage() {
             {churchConfig.serveTeams.map((team) => (
               <article
                 key={team.id}
-                className="rounded-card border border-navy-900/10 bg-white p-5"
+                className="min-w-0 rounded-card border border-navy-900/10 bg-white p-4 sm:p-5"
               >
-                <h2 className="font-display text-2xl text-navy-900">{team.name}</h2>
+                <h2 className="font-display text-[clamp(1.25rem,2.5vw,1.5rem)] leading-snug break-words text-navy-900">
+                  {team.name}
+                </h2>
                 {team.areas.length > 0 ? (
                   <ul className="mt-3 flex flex-col gap-1 text-[0.9375rem] text-navy-900/70">
                     {team.areas.map((area) => (
-                      <li key={area}>{area}</li>
+                      <li key={area} className="break-words">
+                        {area}
+                      </li>
                     ))}
                   </ul>
                 ) : null}

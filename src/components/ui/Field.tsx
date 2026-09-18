@@ -86,7 +86,7 @@ export function Field({
 }
 
 export function Input({ className, ...props }: InputHTMLAttributes<HTMLInputElement>) {
-  return <input className={cn(controlBase, "h-10", className)} {...props} />;
+  return <input className={cn(controlBase, "h-11", className)} {...props} />;
 }
 
 export function Textarea({ className, ...props }: TextareaHTMLAttributes<HTMLTextAreaElement>) {
@@ -99,7 +99,7 @@ export function Select({ className, children, ...props }: SelectHTMLAttributes<H
       <select
         className={cn(
           controlBase,
-          "h-10 cursor-pointer appearance-none bg-white pr-10",
+          "h-11 cursor-pointer appearance-none bg-white pr-10",
           className,
         )}
         {...props}

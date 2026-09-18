@@ -10,23 +10,24 @@ export function ServiceInfo() {
   const address = addressLines();
 
   return (
-    <section className="relative z-10 -mt-10 px-4 sm:-mt-14">
+    <section className="relative z-10 -mt-8 px-4 sm:-mt-12 lg:-mt-14">
       <Container>
         <h2 className="sr-only">Gathering times and location</h2>
         <div className="overflow-hidden rounded-media shadow-float lg:grid lg:grid-cols-[minmax(0,1.45fr)_minmax(18rem,0.75fr)]">
-          <div className="bg-navy-950 px-6 py-8 sm:px-8 sm:py-9">
-            <div className="grid gap-7 sm:grid-cols-3 sm:gap-0">
+          <div className="bg-navy-950 px-5 py-7 sm:px-8 sm:py-9">
+            {/* Stack until large desktop so tablet doesn't squeeze three columns */}
+            <div className="grid gap-6 lg:grid-cols-3 lg:gap-0">
               {churchConfig.serviceTimes.map((service, index) => (
                 <div
                   key={service.label}
                   className={
                     index > 0
-                      ? "min-w-0 border-t border-white/25 pt-7 sm:border-l sm:border-t-0 sm:px-6 sm:pt-0 lg:px-7"
-                      : "min-w-0 sm:pr-6 lg:pr-7"
+                      ? "min-w-0 border-t border-white/25 pt-6 lg:border-l lg:border-t-0 lg:px-7 lg:pt-0"
+                      : "min-w-0 lg:pr-7"
                   }
                 >
                   {service.phase ? (
-                    <p className="whitespace-nowrap text-[0.875rem] font-semibold uppercase tracking-[0.06em] text-gold-300 sm:text-[0.9375rem]">
+                    <p className="text-[0.8125rem] font-semibold uppercase tracking-[0.06em] text-gold-300 sm:text-[0.9375rem]">
                       {service.phase}
                     </p>
                   ) : null}
@@ -42,12 +43,12 @@ export function ServiceInfo() {
             </div>
           </div>
 
-          <div className="flex flex-col justify-center bg-gold-400 px-6 py-8 sm:px-8 sm:py-9">
+          <div className="flex flex-col justify-center bg-gold-400 px-5 py-7 sm:px-8 sm:py-9">
             <address className="not-italic">
               {address.map((line) => (
                 <p
                   key={line}
-                  className="font-display text-[1.15rem] leading-snug text-navy-950 sm:text-[1.25rem]"
+                  className="font-display text-[1.125rem] leading-snug text-navy-950 sm:text-[1.25rem]"
                 >
                   {line}
                 </p>
@@ -58,7 +59,7 @@ export function ServiceInfo() {
                 asChild
                 variant="primary"
                 size="md"
-                className="mt-6 w-fit hover:bg-white hover:text-navy-950"
+                className="mt-5 w-full sm:mt-6 sm:w-fit hover:bg-white hover:text-navy-950"
               >
                 <Link href={directions} target="_blank" rel="noreferrer noopener">
                   Get Directions

@@ -34,7 +34,7 @@ export function GivePageClient({ email }: { email: string }) {
             Send your gift through Zelle using the email below as the recipient.
           </p>
           <p className="mt-4 break-all text-xl font-semibold text-navy-900">{email}</p>
-          <Button type="button" variant="gold" size="lg" className="mt-6" onClick={copyEmail}>
+          <Button type="button" variant="gold" size="lg" className="mt-6 w-full sm:w-auto" onClick={copyEmail}>
             {copied ? (
               <>
                 <Check aria-hidden="true" className="size-4" />
@@ -57,7 +57,7 @@ export function GivePageClient({ email }: { email: string }) {
           </p>
           <a
             href={`mailto:${officeEmail}`}
-            className="mt-4 inline-block font-medium text-navy-900 underline decoration-gold-500/60"
+            className="mt-4 inline-block break-all font-medium text-navy-900 underline decoration-gold-500/60"
           >
             {officeEmail}
           </a>

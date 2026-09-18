@@ -68,7 +68,7 @@ export function Footerdemo() {
               <p>
                 <a
                   href={`mailto:${churchConfig.contact.email}`}
-                  className="transition-colors hover:text-gold-300"
+                  className="break-all transition-colors hover:text-gold-300"
                 >
                   {churchConfig.contact.email}
                 </a>

@@ -15,14 +15,14 @@
   --font-display: var(--font-montserrat), ui-sans-serif, system-ui, -apple-system, sans-serif;
 
   /* Type scale tokens (rem) — sized up for clearer editorial presence */
-  --text-display: clamp(2.75rem, 4.8vw + 1.25rem, 5.75rem);
-  --text-h1: clamp(2.25rem, 3vw + 1rem, 3.75rem);
-  --text-h2: clamp(1.75rem, 2vw + 0.9rem, 2.75rem);
-  --text-h3: clamp(1.375rem, 0.9vw + 1rem, 1.875rem);
-  --text-h4: clamp(1.1875rem, 0.45vw + 1rem, 1.5rem);
-  --text-body-lg: clamp(1.125rem, 0.25vw + 1.05rem, 1.25rem);
-  --text-body: 1.125rem;
-  --text-body-sm: 1rem;
+  --text-display: clamp(2.25rem, 4.8vw + 1rem, 5.75rem);
+  --text-h1: clamp(1.875rem, 3vw + 0.85rem, 3.75rem);
+  --text-h2: clamp(1.5rem, 2vw + 0.75rem, 2.75rem);
+  --text-h3: clamp(1.25rem, 0.9vw + 0.95rem, 1.875rem);
+  --text-h4: clamp(1.125rem, 0.45vw + 0.95rem, 1.5rem);
+  --text-body-lg: clamp(1.0625rem, 0.25vw + 1rem, 1.25rem);
+  --text-body: 1.0625rem;
+  --text-body-sm: 0.9375rem;
   --text-caption: 0.875rem;
   --text-label: 0.8125rem;
   --text-nav: 1.0625rem;
@@ -218,8 +218,14 @@
   html {
     -webkit-text-size-adjust: 100%;
     scroll-behavior: smooth;
-    /* Offset anchor targets for the sticky header */
-    scroll-padding-top: 6.5rem;
+    /* Offset anchor targets for the sticky header + mobile safe area */
+    scroll-padding-top: calc(5.5rem + env(safe-area-inset-top, 0px));
+  }
+
+  @media (min-width: 1024px) {
+    html {
+      scroll-padding-top: 7rem;
+    }
   }
 
   body {
@@ -235,6 +241,8 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    /* Prefer clipping only as a last resort; keep sources fixed first. */
+    overflow-x: clip;
   }
 
   ::selection {
