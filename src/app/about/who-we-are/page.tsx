@@ -136,7 +136,7 @@ export default function WhoWeArePage() {
         />
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-b from-navy-950/68 via-navy-950/52 to-navy-950/70"
+          className="absolute inset-0 bg-gradient-to-b from-cornflower/75 via-cornflower/60 to-cornflower/78"
         />
         <Container className="relative z-10">
           <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,22rem)] lg:gap-14">

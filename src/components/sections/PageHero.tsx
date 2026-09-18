@@ -59,10 +59,10 @@ export function PageHero({
         className="-z-10 object-cover"
         style={{ objectPosition }}
       />
-      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-navy-950/55" />
+      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-cornflower/65" />
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-gradient-to-t from-navy-950 via-navy-950/70 to-navy-950/30"
+        className="absolute inset-0 -z-10 bg-gradient-to-t from-cornflower/95 via-cornflower/75 to-cornflower/35"
       />
 
       <Container className={cn("relative", align === "center" && "text-center")}>
@@ -204,7 +204,7 @@ export function CtaBand({
             blurDataURL={navyBlurDataURL}
             className="-z-10 object-cover"
           />
-          <div aria-hidden="true" className="absolute inset-0 -z-10 bg-navy-950/78" />
+          <div aria-hidden="true" className="absolute inset-0 -z-10 bg-cornflower/78" />
         </>
       ) : (
         <span

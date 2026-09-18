@@ -104,7 +104,7 @@ export function OurVisionHome() {
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-b from-navy-950/80 via-navy-950/64 to-navy-950/80"
+        className="absolute inset-0 bg-gradient-to-b from-cornflower/85 via-cornflower/70 to-cornflower/85"
       />
       <Container className="relative z-10">
         <div className="text-center">

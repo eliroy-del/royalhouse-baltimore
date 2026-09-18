@@ -21,18 +21,18 @@ export function Hero() {
           className="object-cover object-[58%_center]"
         />
 
-        <div aria-hidden="true" className="absolute inset-0 bg-[#004AAD]/45" />
+        <div aria-hidden="true" className="absolute inset-0 bg-cornflower/50" />
         <div
           aria-hidden="true"
-          className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-navy-950/80 to-transparent"
+          className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-cornflower/85 to-transparent"
         />
         <div
           aria-hidden="true"
-          className="absolute inset-y-0 left-0 w-[78%] bg-gradient-to-r from-navy-950/80 via-navy-950/45 to-transparent"
+          className="absolute inset-y-0 left-0 w-[78%] bg-gradient-to-r from-cornflower/85 via-cornflower/50 to-transparent"
         />
         <div
           aria-hidden="true"
-          className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-navy-950/70 to-transparent"
+          className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-cornflower/75 to-transparent"
         />
 
         <Container className="relative z-10 py-20 sm:py-24 lg:py-24">
