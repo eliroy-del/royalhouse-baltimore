@@ -59,10 +59,7 @@ export function GiveModal({ open, onClose }: GiveModalProps) {
                 </VisuallyHidden>
 
                 <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <p className="eyebrow text-gold-700">Give</p>
-                    <h2 className="mt-2 font-display text-3xl text-navy-900">Give With Purpose</h2>
-                  </div>
+                  <h2 className="font-display text-3xl text-navy-900">Give With Purpose</h2>
                   <Dialog.Close asChild>
                     <button
                       type="button"
