@@ -59,11 +59,7 @@ export function PageHero({
         className="-z-10 object-cover"
         style={{ objectPosition }}
       />
-      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-cornflower/65" />
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-gradient-to-t from-cornflower/95 via-cornflower/75 to-cornflower/35"
-      />
+      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-cornflower/5" />
 
       <Container className={cn("relative", align === "center" && "text-center")}>
         {breadcrumb ? (

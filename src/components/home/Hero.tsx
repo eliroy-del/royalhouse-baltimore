@@ -22,18 +22,6 @@ export function Hero() {
         />
 
         <div aria-hidden="true" className="absolute inset-0 bg-cornflower/5" />
-        <div
-          aria-hidden="true"
-          className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-cornflower/85 to-transparent"
-        />
-        <div
-          aria-hidden="true"
-          className="absolute inset-y-0 left-0 w-[78%] bg-gradient-to-r from-cornflower/85 via-cornflower/50 to-transparent"
-        />
-        <div
-          aria-hidden="true"
-          className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-cornflower/75 to-transparent"
-        />
 
         <Container className="relative z-10 py-20 sm:py-24 lg:py-24">
           <div className="rise flex max-w-5xl flex-col items-start gap-3.5 text-left sm:gap-4">
