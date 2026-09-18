@@ -6,35 +6,36 @@ import { cn } from "@/lib/utils";
 const buttonVariants = cva(
   [
     "group/btn relative inline-flex min-h-11 items-center justify-center gap-2 rounded-full type-button",
-    "whitespace-nowrap transition-[background-color,color,border-color,box-shadow,transform] duration-300",
+    "whitespace-nowrap transition-[background-color,color,border-color,box-shadow,transform,opacity] duration-200",
     "ease-out-expo",
     "focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-gold-500",
     "disabled:pointer-events-none disabled:opacity-50",
-    "active:translate-y-px",
+    "active:scale-[0.97] active:brightness-95",
   ],
   {
     variants: {
       variant: {
         /** Navy: the default action across light sections. */
         primary:
-          "bg-navy-900 text-white shadow-subtle hover:bg-gold-400 hover:text-navy-950 hover:shadow-elevate",
+          "bg-navy-900 text-white shadow-subtle hover:bg-gold-400 hover:text-navy-950 hover:shadow-elevate active:bg-navy-950",
         /** Royal gold: reserved for the single most important action on a screen. */
-        gold: "bg-gold-400 text-navy-950 shadow-subtle hover:bg-white hover:text-navy-950 hover:shadow-elevate",
+        gold: "bg-gold-400 text-navy-950 shadow-subtle hover:bg-white hover:text-navy-950 hover:shadow-elevate active:bg-gold-500",
         /** Outlined navy for secondary actions on light backgrounds. */
         outline:
-          "border border-navy-900/20 bg-transparent text-navy-900 hover:border-navy-900 hover:bg-navy-900 hover:text-white",
+          "border border-navy-900/20 bg-transparent text-navy-900 hover:border-navy-900 hover:bg-navy-900 hover:text-white active:bg-navy-950 active:text-white",
         /** White pill for use over photography and navy sections. */
-        light: "bg-white text-navy-900 shadow-elevate hover:bg-gold-400 hover:text-navy-950",
+        light:
+          "bg-white text-navy-900 shadow-elevate hover:bg-gold-400 hover:text-navy-950 active:bg-gold-300",
         /** Glass outline for use over photography. */
         "outline-light":
-          "border border-white/35 bg-white/[0.06] text-white backdrop-blur-sm hover:border-gold-400 hover:bg-gold-400 hover:text-navy-950",
-        ghost: "text-navy-900 hover:bg-navy-900/[0.05]",
-        "ghost-light": "text-white/90 hover:bg-white/10 hover:text-white",
+          "border border-white/35 bg-white/[0.06] text-white backdrop-blur-sm hover:border-gold-400 hover:bg-gold-400 hover:text-navy-950 active:bg-gold-500 active:text-navy-950",
+        ghost: "text-navy-900 hover:bg-navy-900/[0.05] active:bg-navy-900/[0.1]",
+        "ghost-light": "text-white/90 hover:bg-white/10 hover:text-white active:bg-white/20",
         /** Inline text action with the signature gold underline. */
-        link: "h-auto min-h-0 rounded-none p-0 text-navy-900 underline decoration-gold-500/60 decoration-1 underline-offset-[6px] hover:decoration-gold-500",
+        link: "h-auto min-h-0 rounded-none p-0 text-navy-900 underline decoration-gold-500/60 decoration-1 underline-offset-[6px] hover:decoration-gold-500 active:opacity-70 active:scale-100",
         /** The same inline action, for navy sections and photography. */
         "link-light":
-          "h-auto min-h-0 rounded-none p-0 text-white underline decoration-gold-400/70 decoration-1 underline-offset-[6px] hover:decoration-gold-300",
+          "h-auto min-h-0 rounded-none p-0 text-white underline decoration-gold-400/70 decoration-1 underline-offset-[6px] hover:decoration-gold-300 active:opacity-70 active:scale-100",
       },
       size: {
         /** Touch-friendly floor (~44px) on all interactive sizes. */

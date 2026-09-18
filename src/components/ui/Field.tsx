@@ -132,26 +132,45 @@ export function Checkbox({
   ...props
 }: InputHTMLAttributes<HTMLInputElement> & { id: string; label: string; description?: string }) {
   return (
-    <div className={cn("flex gap-2.5", className)}>
-      <input
-        id={id}
-        type="checkbox"
-        className={cn(
-          "mt-0.5 size-4 shrink-0 cursor-pointer appearance-none rounded border border-navy-900/25 bg-white",
-          "checked:border-gold-500 checked:bg-gold-500",
-          "bg-[length:10px] bg-center bg-no-repeat",
-          "checked:bg-[url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22 fill=%22none%22 stroke=%22%2307111f%22 stroke-width=%222.5%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22><path d=%22M3 8.5l3.5 3.5L13 5%22/></svg>')]",
-          "transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500",
-        )}
-        {...props}
-      />
-      <div className="text-[0.8125rem] leading-snug">
-        <LabelPrimitive.Root htmlFor={id} className="cursor-pointer font-medium text-navy-900">
-          {label}
-        </LabelPrimitive.Root>
-        {description ? <p className="text-navy-900/65">{description}</p> : null}
-      </div>
-    </div>
+    <label
+      htmlFor={id}
+      className={cn("group/check flex cursor-pointer gap-3 select-none", className)}
+    >
+      <span className="relative mt-0.5 size-5 shrink-0">
+        <input
+          id={id}
+          type="checkbox"
+          className="peer absolute inset-0 z-10 size-full cursor-pointer opacity-0"
+          {...props}
+        />
+        <span
+          aria-hidden="true"
+          className={cn(
+            "pointer-events-none absolute inset-0 rounded-[5px] border-2 bg-white transition-[background-color,border-color,box-shadow,transform] duration-150",
+            "border-navy-900/30 group-hover/check:border-navy-900/55",
+            "peer-checked:border-navy-900 peer-checked:bg-navy-900 peer-checked:shadow-subtle",
+            "peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-gold-500",
+            "peer-active:scale-95",
+          )}
+        />
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 16 16"
+          className="pointer-events-none absolute inset-0 m-auto size-3.5 text-gold-400 opacity-0 transition-opacity duration-150 peer-checked:opacity-100"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M3 8.5 6.5 12 13 4.5" />
+        </svg>
+      </span>
+      <span className="min-w-0 text-[0.875rem] leading-snug">
+        <span className="font-medium text-navy-900">{label}</span>
+        {description ? <span className="mt-0.5 block text-navy-900/65">{description}</span> : null}
+      </span>
+    </label>
   );
 }
 

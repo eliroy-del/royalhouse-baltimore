@@ -39,9 +39,10 @@ export function EventsBrowser({ events, categories }: EventsBrowserProps) {
               aria-pressed={isActive}
               onClick={() => setActive(option)}
               className={cn(
-                "min-h-11 rounded-full border px-4 py-2 text-[0.8125rem] font-medium transition-colors duration-300",
+                "min-h-11 rounded-full border px-4 py-2 text-[0.8125rem] font-medium transition-[background-color,border-color,color,transform] duration-200",
+                "active:scale-[0.97]",
                 isActive
-                  ? "border-navy-900 bg-navy-900 text-white"
+                  ? "border-navy-900 bg-navy-900 text-white shadow-subtle"
                   : "border-navy-900/12 text-navy-900/65 hover:border-gold-500/50 hover:bg-gold-100/50 hover:text-navy-900",
               )}
             >
