@@ -46,9 +46,13 @@ export function Hero() {
               <span className="block whitespace-nowrap">Touching Our Generation</span>
               <span className="block whitespace-nowrap">With the Power of God</span>
             </h1>
-            <p className="max-w-xl type-body-lg text-white/80">
-              A growing church family where people from every background can encounter God, build
-              meaningful relationships, and grow in faith.
+            <p className="max-w-3xl type-body-lg text-white/80">
+              <span className="block sm:whitespace-nowrap">
+                A growing church family where people from every background can encounter God,
+              </span>
+              <span className="block sm:whitespace-nowrap">
+                build meaningful relationships, and grow in faith.
+              </span>
             </p>
             <div className="mt-1 flex flex-wrap items-center gap-3">
               <Button asChild variant="gold" size="lg">
