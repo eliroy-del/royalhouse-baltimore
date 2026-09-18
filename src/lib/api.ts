@@ -108,9 +108,9 @@ export async function handleSubmission<T>({
 
 /* ------------------------------------------------------------
    DELIVERY
-   Form routes deliver through `src/lib/mail.ts` (Resend) to the
-   church inboxes in `churchConfig`. Set RESEND_API_KEY and a
-   verified FORM_FROM_EMAIL in the environment before launch.
+   Form routes deliver through `src/lib/email/` (Resend + React Email)
+   to baltimore@royalhousemd.org (or FORM_TO_EMAIL / PRAYER_TO_EMAIL).
+   Set RESEND_API_KEY and a verified FORM_FROM_EMAIL before launch.
    ------------------------------------------------------------ */
 
 export function logSubmission(scope: string, summary: Record<string, unknown>) {

@@ -1,3 +1,4 @@
+import { ServeForm } from "@/components/forms/ServeForm";
 import { PageHero } from "@/components/sections/PageHero";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Button } from "@/components/ui/Button";
@@ -32,9 +33,7 @@ export default function ServePage() {
         breadcrumb={[{ label: "Serve" }]}
         actions={
           <Button asChild variant="gold" size="lg">
-            <a href={churchConfig.forms.serveUrl} target="_blank" rel="noreferrer noopener">
-              Join a Team
-            </a>
+            <a href="#serve-form">Join a Team</a>
           </Button>
         }
       />
@@ -46,9 +45,7 @@ export default function ServePage() {
               Choose a team below, then tell us where you&rsquo;d like to serve.
             </p>
             <Button asChild variant="gold" size="lg" className="shrink-0">
-              <a href={churchConfig.forms.serveUrl} target="_blank" rel="noreferrer noopener">
-                Serve With Us
-              </a>
+              <a href="#serve-form">Serve With Us</a>
             </Button>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -67,6 +64,19 @@ export default function ServePage() {
                 ) : null}
               </article>
             ))}
+          </div>
+
+          <div
+            id="serve-form"
+            className="mt-10 scroll-mt-28 rounded-card border border-navy-900/10 bg-white p-5 sm:p-8"
+          >
+            <h2 className="font-display text-3xl text-navy-900">Join a Team</h2>
+            <p className="mt-2 max-w-2xl text-[1.05rem] leading-relaxed text-navy-900/75">
+              Share your interest and someone from our team will follow up with next steps.
+            </p>
+            <div className="mt-6 max-w-2xl">
+              <ServeForm />
+            </div>
           </div>
         </Container>
       </Section>

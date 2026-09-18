@@ -13,7 +13,7 @@ import { useFormPost } from "@/hooks/useFormPost";
 import { planVisitSchema, type PlanVisitInput } from "@/lib/validations";
 
 export function PlanVisitForm() {
-  const { status, message, submit, reset } = useFormPost("/api/visit");
+  const { status, message, submit, reset } = useFormPost("/api/plan-a-visit");
   const {
     register,
     handleSubmit,

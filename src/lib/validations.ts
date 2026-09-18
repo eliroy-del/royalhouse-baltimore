@@ -133,6 +133,29 @@ export const testimonySchema = z.object({
 
 export type TestimonyInput = z.input<typeof testimonySchema>;
 
+/* --------------------------------- Serve --------------------------------- */
+
+export const serveSchema = z.object({
+  name,
+  email,
+  phone: optionalPhone,
+  team: z
+    .string()
+    .trim()
+    .min(2, "Please choose a team")
+    .max(120, "That team name is too long"),
+  areas: z.string().trim().max(400).optional().default(""),
+  experience: z.string().trim().max(2000).optional().default(""),
+  message: z.string().trim().max(2000).optional().default(""),
+  consent: z.literal(true, {
+    message: "Please confirm we can contact you about serving",
+  }),
+  companyWebsite: honeypot,
+});
+
+export type ServeInput = z.input<typeof serveSchema>;
+export type ServeData = z.output<typeof serveSchema>;
+
 /* ------------------------------- Newsletter ------------------------------ */
 
 export const newsletterSchema = z.object({
