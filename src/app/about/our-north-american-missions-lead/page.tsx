@@ -36,8 +36,8 @@ export default async function MissionsLeadPage() {
       />
       <PageHero
         title="Apostle Emmanuel Agormeda"
-        image={images.apostleAgorMina}
-        objectPosition="50% 28%"
+        image={images.apostleAgormeda}
+        objectPosition="50% 15%"
         breadcrumb={[{ label: "Our North American Missions Lead" }]}
       />
 
@@ -47,30 +47,30 @@ export default async function MissionsLeadPage() {
             <figure>
               <div className="relative aspect-[3/4] overflow-hidden rounded-media shadow-elevate">
                 <Image
-                  src={images.apostleAgorMina.src}
-                  alt={images.apostleAgorMina.alt}
-                  fill
-                  sizes="(min-width: 1024px) 352px, min(100vw - 2rem, 352px)"
-                  quality={90}
-                  className="object-cover object-[center_18%]"
-                  priority
-                />
-              </div>
-              <figcaption className="mt-3 text-center text-[0.875rem] leading-relaxed text-navy-900/65">
-                Apostle Emmanuel Agormeda and Rev. Mrs. Willhemina Agormeda
-              </figcaption>
-            </figure>
-            <figure>
-              <div className="relative aspect-[3/4] overflow-hidden rounded-media shadow-elevate">
-                <Image
                   src={images.apostleAgormeda.src}
                   alt={images.apostleAgormeda.alt}
                   fill
                   sizes="(min-width: 1024px) 352px, min(100vw - 2rem, 352px)"
                   quality={90}
                   className="object-cover object-top"
+                  priority
                 />
               </div>
+            </figure>
+            <figure>
+              <div className="relative aspect-[3/4] overflow-hidden rounded-media shadow-elevate">
+                <Image
+                  src={images.apostleAgorMina.src}
+                  alt={images.apostleAgorMina.alt}
+                  fill
+                  sizes="(min-width: 1024px) 352px, min(100vw - 2rem, 352px)"
+                  quality={90}
+                  className="object-cover object-[center_18%]"
+                />
+              </div>
+              <figcaption className="mt-3 text-center text-[0.875rem] leading-relaxed text-navy-900/65">
+                Apostle Emmanuel Agormeda and Rev. Mrs. Willhemina Agormeda
+              </figcaption>
             </figure>
           </div>
           <div className="lg:pt-1">
