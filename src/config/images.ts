@@ -91,7 +91,7 @@ export const images = {
   },
   eventConference: {
     src: "/images/event-conference.jpg",
-    alt: "A packed conference auditorium seen from the balcony, warm light washing over the crowd",
+    alt: "A Royalhouse Chapel conference hall filled with red chairs as a speaker teaches from the stage under bright lights",
   },
   eventWorshipNight: {
     src: "/images/event-worship-night.jpg",

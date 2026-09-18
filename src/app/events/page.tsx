@@ -52,7 +52,7 @@ export default async function EventsPage() {
         }
         lede="Worship nights, prayer, youth, outreach and conferences. Come to one thing and you will have met half the church by the end of it."
         image={images.eventConference}
-        objectPosition="50% 40%"
+        objectPosition="50% 32%"
         breadcrumb={[{ label: "Events" }]}
       />
 
