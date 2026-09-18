@@ -69,7 +69,27 @@ export default function PlanAVisitPage() {
         </Container>
       </Section>
 
-      <Section tone="white" spacing="sm" id="children">
+      <Section tone="white" spacing="sm" id="form">
+        <Container width="narrow">
+          <div className="mb-4 text-center">
+            <h2 className="font-display text-[clamp(1.375rem,2.4vw,1.75rem)] font-semibold leading-tight text-navy-900">
+              Tell us you&rsquo;re coming.
+            </h2>
+          </div>
+          <div className="relative rounded-card border border-navy-900/[0.08] bg-cream p-3.5 sm:p-4">
+            <PlanVisitForm />
+          </div>
+          <p className="mt-6 text-center text-[0.9375rem] text-navy-900/65">
+            Prefer to message us first?{" "}
+            <Link href="/contact" className="font-medium text-navy-900 underline decoration-gold-500/60">
+              Contact the team
+            </Link>
+            .
+          </p>
+        </Container>
+      </Section>
+
+      <Section tone="cream" spacing="sm" id="children">
         <Container>
           <div className="grid items-start gap-5 lg:grid-cols-2 lg:gap-8">
             <Reveal y={18}>
@@ -139,26 +159,6 @@ export default function PlanAVisitPage() {
               </p>
             </Reveal>
           </div>
-        </Container>
-      </Section>
-
-      <Section tone="white" spacing="sm" id="form">
-        <Container width="narrow">
-          <div className="mb-4 text-center">
-            <h2 className="font-display text-[clamp(1.375rem,2.4vw,1.75rem)] font-semibold leading-tight text-navy-900">
-              Tell us you&rsquo;re coming.
-            </h2>
-          </div>
-          <div className="relative rounded-card border border-navy-900/[0.08] bg-cream p-3.5 sm:p-4">
-            <PlanVisitForm />
-          </div>
-          <p className="mt-6 text-center text-[0.9375rem] text-navy-900/65">
-            Prefer to message us first?{" "}
-            <Link href="/contact" className="font-medium text-navy-900 underline decoration-gold-500/60">
-              Contact the team
-            </Link>
-            .
-          </p>
         </Container>
       </Section>
     </>
