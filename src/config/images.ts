@@ -29,6 +29,10 @@ export const images = {
     src: "/images/welcome-lobby.jpg",
     alt: "A member of the welcome team smiling as she hands a welcome card to a young family in the church foyer",
   },
+  contactHero: {
+    src: "/images/contact-hero.jpg",
+    alt: "Young adults and leaders standing together on stage under a screen that reads Jesus",
+  },
   prayerCircle: {
     src: "/images/prayer-circle.jpg",
     alt: "A small group of adults standing in a circle with hands on one another's shoulders, praying together",
