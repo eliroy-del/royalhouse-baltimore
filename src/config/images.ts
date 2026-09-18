@@ -45,6 +45,10 @@ export const images = {
     src: "/images/baltimore-harbor.jpg",
     alt: "Baltimore Inner Harbor skyline across the water under a bright blue sky",
   },
+  baltimoreSkylineDusk: {
+    src: "/images/baltimore-skyline-dusk.jpg",
+    alt: "Baltimore Inner Harbor skyline at dusk with warm sunset light on the buildings",
+  },
   worshipTeam: {
     src: "/images/worship-team.jpg",
     alt: "A worship leader singing with her eyes closed while the band plays behind her",
