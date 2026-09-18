@@ -83,12 +83,11 @@ export default function PlanAVisitPage() {
               </h2>
               <div className="mt-6 space-y-6">
                 {churchConfig.visit.childrenPrograms.map((program) => (
-                  <div key={program.name}>
+                  <div key={`${program.name}-${program.ages}`}>
                     <p className="text-[1.1875rem] font-semibold leading-snug text-navy-900 sm:text-[1.3125rem]">
-                      {program.name}
-                      {program.ages !== "12+" ? (
-                        <span className="font-normal text-navy-900/65"> — Ages {program.ages}</span>
-                      ) : null}
+                      {program.name === "Ages"
+                        ? `${program.name} (${program.ages})`
+                        : `${program.name} (Ages ${program.ages})`}
                     </p>
                     <p className="mt-2 text-[1.0625rem] leading-relaxed text-navy-900/70 sm:text-[1.125rem]">
                       {program.description}

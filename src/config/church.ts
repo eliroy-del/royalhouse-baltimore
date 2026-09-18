@@ -164,18 +164,18 @@ export const churchConfig: ChurchConfig = {
     childrenPrograms: [
       {
         name: "Kids Zone",
-        ages: "2–6",
+        ages: "2 - 6",
         description:
           "A fun, engaging environment where younger children learn about Jesus through Bible stories, worship, activities and age-appropriate teaching.",
       },
       {
         name: "Kids Church",
-        ages: "7–11",
+        ages: "7 – 11",
         description:
           "An interactive environment where elementary-age children grow in Scripture, faith, friendship and confidence.",
       },
       {
-        name: "Ages 12+",
+        name: "Ages",
         ages: "12+",
         description: "Join the Main Gathering",
       },
