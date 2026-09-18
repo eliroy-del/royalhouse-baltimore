@@ -13,7 +13,7 @@ export const metadata = pageMetadata({
   description:
     "Meet Apostle Emmanuel Agormeda, Apostle over Royalhouse Chapel churches across North America.",
   path: "/about/our-north-american-missions-lead",
-  image: images.apostleAgorMina.src,
+  image: images.apostleAgormeda.src,
 });
 
 export default async function MissionsLeadPage() {
