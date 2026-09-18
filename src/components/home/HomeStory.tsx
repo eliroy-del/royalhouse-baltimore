@@ -234,7 +234,7 @@ export function WelcomeVideo() {
             sizes="80vw"
             className="object-cover"
           />
-          <div aria-hidden="true" className="absolute inset-0 bg-navy-950/45" />
+          <div aria-hidden="true" className="absolute inset-0 bg-cornflower/50" />
           {hasVideo ? (
             <a
               href={churchConfig.welcomeVideoUrl}
