@@ -102,13 +102,13 @@ export default async function MissionsLeadPage() {
       >
         <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:min-h-[min(72vh,38rem)]">
           <div className="order-2 flex flex-col justify-center px-8 py-12 sm:px-12 lg:order-1 lg:px-16 lg:py-16">
-            <div className="max-w-xl">
-              <p className="font-display text-[clamp(1.5rem,2.8vw,2.125rem)] font-semibold leading-[1.25] tracking-[-0.01em] text-white">
+            <div className="max-w-xl space-y-5 text-[clamp(1.25rem,2.4vw,1.5rem)] font-normal leading-relaxed text-white/90">
+              <p>
                 Apostle Emmanuel Agormeda is married to
                 <br />
                 Rev. Mrs. Willhemina Agormeda.
               </p>
-              <p className="mt-6 text-[clamp(1.125rem,2vw,1.375rem)] leading-relaxed text-white/80">
+              <p>
                 Together they serve Royalhouse Chapel churches across North America and are blessed
                 with three children.
               </p>
