@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { LogoLink } from "@/components/brand/Logo";
 import { useGiving } from "@/components/giving/GivingProvider";
 import { DesktopNav } from "@/components/navigation/DesktopNav";
@@ -32,7 +33,9 @@ export function Header() {
 
         <div className="flex shrink-0 items-center gap-1 sm:gap-2">
           <DesktopNav />
-          {/* Keep Give with desktop nav breakpoint so tablet isn't half-open chrome */}
+          <Button asChild variant="outline-light" size="md" className="hidden lg:inline-flex">
+            <Link href="/plan-a-visit">Plan a Visit</Link>
+          </Button>
           <Button
             type="button"
             variant="gold"
