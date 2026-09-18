@@ -16,7 +16,7 @@ export const metadata = pageMetadata({
   description:
     "Why Royalhouse Baltimore is here, what we believe, and how we serve Baltimore and surrounding communities.",
   path: "/about/who-we-are",
-  image: images.congregationPrayer.src,
+  image: images.baltimoreSkylineDusk.src,
 });
 
 const beliefs = [
@@ -65,8 +65,8 @@ export default function WhoWeArePage() {
       />
       <PageHero
         title="Who We Are"
-        image={images.congregationPrayer}
-        objectPosition="40% 22%"
+        image={images.baltimoreSkylineDusk}
+        objectPosition="50% 35%"
         breadcrumb={[{ label: "Who We Are" }]}
       />
 
