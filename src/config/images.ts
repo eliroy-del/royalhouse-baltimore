@@ -142,7 +142,7 @@ export const images = {
     alt: "Apostle Emmanuel Agormeda, Apostle over Royalhouse Chapel churches across North America",
   },
   apostleAgorMina: {
-    src: "/images/apostle-agor-mina.jpg",
+    src: "/images/apostle-agor-mina.png",
     alt: "Apostle Emmanuel Agormeda and Rev. Mrs. Willhemina Agormeda",
   },
   foundersKorankyeAnkrah: {

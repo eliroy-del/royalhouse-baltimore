@@ -101,27 +101,23 @@ export default async function MissionsLeadPage() {
         className="bg-navy-950"
       >
         <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:min-h-[min(72vh,38rem)]">
-          <figure className="relative flex min-h-[24rem] items-center justify-center overflow-hidden bg-[#e6d9c8] sm:min-h-[30rem] lg:min-h-0">
+          <div className="order-2 flex flex-col justify-center px-8 py-12 sm:px-12 lg:order-1 lg:px-14 lg:py-16">
+            <p className="max-w-lg text-[1.25rem] leading-relaxed text-white/90 sm:text-[1.375rem] lg:text-[1.5rem]">
+              Apostle Emmanuel Agormeda is married to Rev. Mrs. Willhemina Agormeda. Together they
+              serve Royalhouse Chapel churches across North America and are blessed with three
+              children.
+            </p>
+          </div>
+          <figure className="relative order-1 flex min-h-[24rem] items-end justify-center overflow-hidden bg-navy-950 sm:min-h-[30rem] lg:order-2 lg:min-h-0">
             <Image
               src={images.apostleAgorMina.src}
               alt={images.apostleAgorMina.alt}
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               quality={90}
-              className="object-contain object-center"
+              className="object-contain object-bottom"
             />
           </figure>
-          <div className="flex flex-col justify-center px-8 py-12 sm:px-12 lg:px-14 lg:py-16">
-            <h2 className="font-display text-[clamp(1.75rem,3vw,2.5rem)] leading-[1.08] text-gold-300">
-              Together in ministry
-            </h2>
-            <span aria-hidden="true" className="mt-5 block h-px w-14 bg-gold-400" />
-            <p className="mt-6 max-w-md type-body-lg text-white/75">
-              Apostle Emmanuel Agormeda is married to Rev. Mrs. Willhemina Agormeda. Together they
-              serve Royalhouse Chapel churches across North America and are blessed with three
-              children.
-            </p>
-          </div>
         </div>
       </section>
     </>
