@@ -21,7 +21,7 @@ export function Hero() {
           className="object-cover object-[58%_center]"
         />
 
-        <div aria-hidden="true" className="absolute inset-0 bg-cornflower/50" />
+        <div aria-hidden="true" className="absolute inset-0 bg-cornflower/5" />
         <div
           aria-hidden="true"
           className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-cornflower/85 to-transparent"
