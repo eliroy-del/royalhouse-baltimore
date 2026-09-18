@@ -158,8 +158,9 @@ export default function WhoWeArePage() {
         <Container className="relative z-10">
           <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,22rem)] lg:gap-14">
             <div className="max-w-2xl">
-              <h2 className="text-balance font-display text-[clamp(2rem,4vw,3rem)] leading-[1.08] text-white">
-                Our relationship to Royalhouse Chapel International
+              <h2 className="font-display text-[clamp(1.75rem,3.6vw,2.75rem)] leading-[1.1] text-white">
+                <span className="block sm:whitespace-nowrap">Our relationship to</span>
+                <span className="block sm:whitespace-nowrap">Royalhouse Chapel International</span>
               </h2>
               <span aria-hidden="true" className="mt-5 block h-px w-14 bg-gold-400" />
               <p className="mt-5 text-[1.05rem] leading-relaxed text-white/75">
