@@ -16,9 +16,30 @@ export const metadata = pageMetadata({
   image: images.apostleAgormeda.src,
 });
 
+const FAMILY_LINE =
+  "He is married to Rev. Mrs. Willhemina Agormeda and they have three children.";
+
+function ministryParagraphs(bio: string) {
+  const ministry = bio.replace(FAMILY_LINE, "").replace(/\s+/g, " ").trim();
+  const markers = ["He carries Apostolic", "He holds a Bachelor"] as const;
+  const parts: string[] = [];
+  let remaining = ministry;
+
+  for (const marker of markers) {
+    const index = remaining.indexOf(marker);
+    if (index > 0) {
+      parts.push(remaining.slice(0, index).trim());
+      remaining = remaining.slice(index).trim();
+    }
+  }
+  if (remaining) parts.push(remaining);
+  return parts.length ? parts : [ministry];
+}
+
 export default async function MissionsLeadPage() {
   const leaders = await getLeaders();
   const apostle = leaders.find((leader) => leader.id === "apostle-agormeda");
+  const paragraphs = apostle ? ministryParagraphs(apostle.bio) : [];
 
   return (
     <>
@@ -42,37 +63,21 @@ export default async function MissionsLeadPage() {
       />
 
       <Section tone="cream" spacing="lg">
-        <Container className="grid items-start gap-10 lg:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] lg:gap-16">
-          <div className="mx-auto flex w-full max-w-[22rem] flex-col gap-5 lg:mx-0">
-            <figure>
-              <div className="relative aspect-[3/4] overflow-hidden rounded-media shadow-elevate">
-                <Image
-                  src={images.apostleAgormeda.src}
-                  alt={images.apostleAgormeda.alt}
-                  fill
-                  sizes="(min-width: 1024px) 352px, min(100vw - 2rem, 352px)"
-                  quality={90}
-                  className="object-cover object-top"
-                  priority
-                />
-              </div>
-            </figure>
-            <figure>
-              <div className="relative aspect-[3/4] overflow-hidden rounded-media shadow-elevate">
-                <Image
-                  src={images.apostleAgorMina.src}
-                  alt={images.apostleAgorMina.alt}
-                  fill
-                  sizes="(min-width: 1024px) 352px, min(100vw - 2rem, 352px)"
-                  quality={90}
-                  className="object-cover object-[center_18%]"
-                />
-              </div>
-              <figcaption className="mt-3 text-center text-[0.875rem] leading-relaxed text-navy-900/65">
-                Apostle Emmanuel Agormeda and Rev. Mrs. Willhemina Agormeda
-              </figcaption>
-            </figure>
-          </div>
+        <Container className="grid items-start gap-10 lg:grid-cols-[minmax(0,24rem)_minmax(0,1fr)] lg:gap-16">
+          <figure className="mx-auto w-full max-w-[24rem] lg:mx-0">
+            <div className="relative aspect-[3/4] overflow-hidden rounded-media shadow-elevate">
+              <Image
+                src={images.apostleAgormeda.src}
+                alt={images.apostleAgormeda.alt}
+                fill
+                sizes="(min-width: 1024px) 384px, min(100vw - 2rem, 384px)"
+                quality={90}
+                className="object-cover object-top"
+                priority
+              />
+            </div>
+          </figure>
+
           <div className="lg:pt-1">
             <p className="text-[1.125rem] font-semibold tracking-[0.03em] text-gold-600">
               Apostle, North American Missions
@@ -81,12 +86,47 @@ export default async function MissionsLeadPage() {
               Apostle Emmanuel Agormeda
             </h2>
             <span aria-hidden="true" className="mt-5 block h-px w-14 bg-gold-400" />
-            {apostle ? (
-              <p className="mt-6 type-body-lg leading-relaxed text-navy-900/75">{apostle.bio}</p>
-            ) : null}
+            <div className="mt-6 space-y-4 type-body-lg text-navy-900/75">
+              {paragraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+              <p>{FAMILY_LINE}</p>
+            </div>
           </div>
         </Container>
       </Section>
+
+      <section
+        aria-label="Apostle Emmanuel Agormeda and Rev. Mrs. Willhemina Agormeda"
+        className="bg-navy-950"
+      >
+        <div className="grid lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:h-[min(78vh,40rem)]">
+          <figure className="relative min-h-[22rem] overflow-hidden sm:min-h-[28rem] lg:min-h-0">
+            <Image
+              src={images.apostleAgorMina.src}
+              alt={images.apostleAgorMina.alt}
+              fill
+              sizes="(min-width: 1024px) 58vw, 100vw"
+              quality={90}
+              className="object-cover object-[center_22%]"
+            />
+          </figure>
+          <div className="flex flex-col justify-center px-8 py-12 sm:px-12 lg:px-14 lg:py-16">
+            <p className="text-[1.125rem] font-semibold tracking-[0.03em] text-gold-300">
+              Together in ministry
+            </p>
+            <h2 className="mt-3 font-display text-[clamp(1.75rem,3vw,2.5rem)] leading-[1.08] text-white">
+              Rev. Mrs. Willhemina Agormeda
+            </h2>
+            <span aria-hidden="true" className="mt-5 block h-px w-14 bg-gold-400" />
+            <p className="mt-6 max-w-md type-body-lg text-white/75">
+              Apostle Emmanuel Agormeda is married to Rev. Mrs. Willhemina Agormeda. Together they
+              serve Royalhouse Chapel churches across North America and are blessed with three
+              children.
+            </p>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
