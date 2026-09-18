@@ -151,32 +151,29 @@ export function PlanVisitHome() {
             </p>
             <ul className="mt-6 flex flex-col gap-2 text-[0.9375rem] text-navy-900">
               {churchConfig.visit.serviceIncludes.map((item) => (
-                <li key={item} className="flex items-start gap-2">
-                  <span aria-hidden="true" className="mt-2 size-1.5 shrink-0 rounded-full bg-gold-400" />
+                <li key={item} className="flex items-start gap-2.5">
+                  <span
+                    aria-hidden="true"
+                    className="mt-1.5 size-2 shrink-0 rotate-45 bg-navy-900"
+                  />
                   {item}
                 </li>
               ))}
             </ul>
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
               <div className="rounded-card border border-navy-900/10 bg-white p-4 shadow-subtle">
-                <span className="inline-flex size-9 items-center justify-center rounded-full bg-gold-100 text-navy-900">
-                  <Icon name="clock" className="size-4" />
-                </span>
-                <p className="mt-3 text-[0.6875rem] font-semibold uppercase tracking-[0.18em] text-gold-700">
+                <p className="text-[0.9375rem] font-semibold uppercase tracking-[0.12em] text-navy-900">
                   Service length
                 </p>
-                <p className="mt-1 font-display text-2xl leading-tight text-navy-900">
+                <p className="mt-2 font-display text-2xl leading-tight text-navy-900">
                   {churchConfig.visit.serviceLength.replace(/\.$/, "")}
                 </p>
               </div>
               <div className="rounded-card border border-navy-900/10 bg-white p-4 shadow-subtle">
-                <span className="inline-flex size-9 items-center justify-center rounded-full bg-gold-100 text-navy-900">
-                  <Icon name="baby" className="size-4" />
-                </span>
-                <p className="mt-3 text-[0.6875rem] font-semibold uppercase tracking-[0.18em] text-gold-700">
+                <p className="text-[0.9375rem] font-semibold uppercase tracking-[0.12em] text-navy-900">
                   Children's Ministry
                 </p>
-                <p className="mt-1 font-display text-2xl leading-tight text-navy-900">
+                <p className="mt-2 font-display text-2xl leading-tight text-navy-900">
                   Ages 2–11
                 </p>
               </div>
