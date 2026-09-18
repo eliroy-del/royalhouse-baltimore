@@ -26,7 +26,7 @@ export function ServiceInfo() {
                   }
                 >
                   {service.phase ? (
-                    <p className="text-[0.875rem] font-semibold uppercase tracking-[0.06em] text-gold-300 sm:text-[0.9375rem]">
+                    <p className="whitespace-nowrap text-[0.875rem] font-semibold uppercase tracking-[0.06em] text-gold-300 sm:text-[0.9375rem]">
                       {service.phase}
                     </p>
                   ) : null}
