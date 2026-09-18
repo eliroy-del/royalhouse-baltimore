@@ -138,7 +138,7 @@ export const churchConfig: ChurchConfig = {
 
   social: {
     instagram: "https://www.instagram.com/royalhousebaltimore",
-    facebook: PENDING,
+    facebook: "https://www.facebook.com/royalhousebaltimore",
     youtube: PENDING,
     tiktok: "https://www.tiktok.com/@royalhousebaltimore",
     whatsapp: PENDING,

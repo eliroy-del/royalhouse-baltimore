@@ -23,7 +23,7 @@ export function Hero() {
 
         <div aria-hidden="true" className="absolute inset-0 bg-cornflower/70" />
 
-        <Container className="relative z-10 w-full py-16 sm:py-24 lg:py-24">
+        <Container className="relative z-10 w-full pb-16 pt-28 sm:py-24 lg:py-24">
           <div className="rise flex max-w-5xl flex-col items-start gap-3 text-left sm:gap-4">
             <p className="font-display text-[clamp(1.25rem,2.8vw,2rem)] font-semibold tracking-[0.02em] text-gold-300">
               {churchConfig.name}

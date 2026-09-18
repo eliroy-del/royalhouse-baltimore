@@ -218,13 +218,13 @@
   html {
     -webkit-text-size-adjust: 100%;
     scroll-behavior: smooth;
-    /* Offset anchor targets for the sticky header + mobile safe area */
-    scroll-padding-top: calc(5.5rem + env(safe-area-inset-top, 0px));
+    /* Offset for sticky header (utility bar + nav) + mobile safe area */
+    scroll-padding-top: calc(7.25rem + env(safe-area-inset-top, 0px));
   }
 
   @media (min-width: 1024px) {
     html {
-      scroll-padding-top: 7rem;
+      scroll-padding-top: 9rem;
     }
   }
 

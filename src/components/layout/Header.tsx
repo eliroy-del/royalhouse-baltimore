@@ -3,16 +3,21 @@
 import Link from "next/link";
 import { LogoLink } from "@/components/brand/Logo";
 import { useGiving } from "@/components/giving/GivingProvider";
+import { SocialLinks } from "@/components/layout/SocialLinks";
 import { DesktopNav } from "@/components/navigation/DesktopNav";
 import { MobileNav } from "@/components/navigation/MobileNav";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { churchConfig } from "@/config/church";
 import { useScrolled } from "@/hooks/useScrolled";
 import { cn } from "@/lib/utils";
+
+const TOP_SOCIAL = ["facebook", "tiktok"] as const;
 
 export function Header() {
   const scrolled = useScrolled(24);
   const { openGive } = useGiving();
+  const email = churchConfig.contact.email;
 
   return (
     <header
@@ -23,10 +28,32 @@ export function Header() {
           : "bg-gradient-to-b from-navy-950/55 to-transparent",
       )}
     >
+      <div
+        className={cn(
+          "border-b transition-colors duration-500",
+          scrolled ? "border-white/10" : "border-white/15",
+        )}
+      >
+        <Container className="flex h-9 items-center justify-between gap-3 sm:h-10">
+          <a
+            href={`mailto:${email}`}
+            className="min-w-0 truncate text-[0.75rem] font-medium text-white/80 transition-colors hover:text-gold-300 sm:text-[0.8125rem]"
+          >
+            {email}
+          </a>
+          <SocialLinks
+            tone="dark"
+            size="sm"
+            platforms={TOP_SOCIAL}
+            className="shrink-0 gap-1.5"
+          />
+        </Container>
+      </div>
+
       <Container
         className={cn(
           "flex items-center justify-between gap-3 transition-[height] duration-500 ease-out-expo",
-          scrolled ? "h-16 sm:h-20 lg:h-24" : "h-[4.5rem] sm:h-24 lg:h-28",
+          scrolled ? "h-14 sm:h-16 lg:h-20" : "h-16 sm:h-20 lg:h-24",
         )}
       >
         <LogoLink tone="dark" size="md" preload className="min-w-0 shrink" />

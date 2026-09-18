@@ -6,24 +6,31 @@ interface SocialLinksProps {
   tone?: "light" | "dark";
   className?: string;
   size?: "sm" | "md";
+  /** Override which platforms appear, and in what order. */
+  platforms?: readonly string[];
 }
 
-const order = ["instagram", "tiktok"] as const;
+const defaultOrder = ["instagram", "tiktok"] as const;
 
-/** Live Instagram and TikTok profiles for Royalhouse Baltimore. */
-export function SocialLinks({ tone = "light", className, size = "md" }: SocialLinksProps) {
+/** Live social profiles for Royalhouse Baltimore. */
+export function SocialLinks({
+  tone = "light",
+  className,
+  size = "md",
+  platforms = defaultOrder,
+}: SocialLinksProps) {
   return (
     <ul className={cn("flex flex-wrap items-center gap-2", className)}>
-      {order.map((platform) => {
+      {platforms.map((platform) => {
         const entry = socialGlyphs[platform];
         if (!entry) return null;
         const Glyph = entry.icon;
-        const url = churchConfig.social[platform];
+        const url = churchConfig.social[platform as keyof typeof churchConfig.social];
         if (!isSupplied(url)) return null;
 
         const classes = cn(
           "inline-flex items-center justify-center rounded-full border transition-colors duration-300",
-          size === "md" ? "size-10" : "size-9",
+          size === "md" ? "size-10" : "size-8",
           tone === "dark"
             ? "border-white/15 text-white/70 hover:border-gold-400/60 hover:bg-white/[0.06] hover:text-gold-300"
             : "border-navy-900/12 text-navy-900/65 hover:border-gold-500/50 hover:bg-gold-100/60 hover:text-gold-700",
@@ -38,7 +45,7 @@ export function SocialLinks({ tone = "light", className, size = "md" }: SocialLi
               aria-label={`${entry.label}, opens in a new tab`}
               className={classes}
             >
-              <Glyph className="size-[1.0625rem]" />
+              <Glyph className={size === "md" ? "size-[1.0625rem]" : "size-3.5"} />
             </a>
           </li>
         );
