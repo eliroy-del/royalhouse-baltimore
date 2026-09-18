@@ -16,7 +16,7 @@ export const metadata = pageMetadata({
   description:
     "Connect with Royalhouse Baltimore. Email baltimore@royalhousemd.org or call (301) 437-9441.",
   path: "/contact",
-  image: images.welcomeHome.src,
+  image: images.welcomeLobby.src,
 });
 
 export default function ContactPage() {
@@ -33,8 +33,8 @@ export default function ContactPage() {
 
       <PageHero
         title="We'd love to hear from you."
-        image={images.welcomeHome}
-        objectPosition="40% 45%"
+        image={images.welcomeLobby}
+        objectPosition="42% 38%"
         size="md"
       />
 
