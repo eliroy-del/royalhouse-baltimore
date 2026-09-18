@@ -108,13 +108,9 @@ export async function handleSubmission<T>({
 
 /* ------------------------------------------------------------
    DELIVERY
-   No email provider is configured yet, so submissions are
-   recorded to the server log with sensitive bodies withheld.
-
-   ⚠️ BEFORE LAUNCH: replace `deliver*` with a real transport
-   (Resend / Postmark / SendGrid) or a church management system
-   (Planning Center, Church Community Builder). Keep prayer
-   requests and pastoral care off any third-party analytics.
+   Form routes deliver through `src/lib/mail.ts` (Resend) to the
+   church inboxes in `churchConfig`. Set RESEND_API_KEY and a
+   verified FORM_FROM_EMAIL in the environment before launch.
    ------------------------------------------------------------ */
 
 export function logSubmission(scope: string, summary: Record<string, unknown>) {

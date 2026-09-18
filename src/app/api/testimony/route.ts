@@ -1,13 +1,13 @@
-import { handleSubmission, logSubmission } from "@/lib/api";
+import { deliverMail, officeInbox } from "@/lib/mail";
+import { handleSubmission } from "@/lib/api";
 import { testimonySchema } from "@/lib/validations";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 /**
- * Testimonies enter a moderation queue. Nothing submitted here is ever
- * published automatically, a human must review it, and `permissionToPublish`
- * must be explicitly granted before it can appear on the site.
+ * Testimonies enter a moderation queue by email. Nothing submitted here is
+ * published automatically.
  */
 export async function POST(request: Request) {
   return handleSubmission({
@@ -17,16 +17,34 @@ export async function POST(request: Request) {
     limit: 3,
     successMessage:
       "Thank you for sharing. A member of our team will read it personally and get in touch before anything is published.",
-    deliver: (data) => {
-      // TODO: write to a moderation queue with `approved: false`.
-      logSubmission("testimony", {
-        name: data.anonymous ? "(anonymous requested)" : data.name,
-        email: data.email,
-        category: data.category,
-        permissionToPublish: data.permissionToPublish,
-        anonymous: data.anonymous,
-        length: data.testimony.length,
-        moderationStatus: "pending",
+    deliver: async (data) => {
+      const displayName = data.anonymous ? "(anonymous requested)" : data.name;
+
+      await deliverMail({
+        scope: "testimony",
+        to: officeInbox(),
+        replyTo: data.email,
+        subject: `Testimony · ${data.category} · ${displayName}`,
+        text: [
+          `Name: ${displayName}`,
+          `Email: ${data.email}`,
+          `Category: ${data.category}`,
+          `Permission to publish: ${data.permissionToPublish ? "yes" : "no"}`,
+          `Anonymous: ${data.anonymous ? "yes" : "no"}`,
+          "",
+          data.testimony,
+          "",
+          "Moderation status: pending",
+        ].join("\n"),
+        summary: {
+          name: displayName,
+          email: data.email,
+          category: data.category,
+          permissionToPublish: data.permissionToPublish,
+          anonymous: data.anonymous,
+          length: data.testimony.length,
+          moderationStatus: "pending",
+        },
       });
     },
   });

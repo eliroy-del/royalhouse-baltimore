@@ -5,10 +5,12 @@ import { useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
+import { churchConfig } from "@/config/church";
 import { trackEvent } from "@/lib/analytics";
 
 export function GivePageClient({ email }: { email: string }) {
   const [copied, setCopied] = useState(false);
+  const officeEmail = churchConfig.contact.email;
 
   async function copyEmail() {
     await navigator.clipboard.writeText(email);
@@ -54,10 +56,10 @@ export function GivePageClient({ email }: { email: string }) {
             instructions.
           </p>
           <a
-            href="mailto:baltimore@royalhousemd.org"
+            href={`mailto:${officeEmail}`}
             className="mt-4 inline-block font-medium text-navy-900 underline decoration-gold-500/60"
           >
-            baltimore@royalhousemd.org
+            {officeEmail}
           </a>
         </div>
       </Container>

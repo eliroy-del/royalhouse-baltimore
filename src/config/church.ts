@@ -132,7 +132,7 @@ export const churchConfig: ChurchConfig = {
   contact: {
     phone: "(301) 437-9441",
     email: "baltimore@royalhousemd.org",
-    prayerEmail: PENDING,
+    prayerEmail: "baltimore@royalhousemd.org",
     officeHours: [],
   },
 
