@@ -15,6 +15,9 @@ export async function EventsPreview() {
   return (
     <Section tone="white" spacing="sm" id="events">
       <Container>
+        <h2 className="mb-5 font-display text-[clamp(2rem,4vw,3rem)] text-navy-900">
+          Upcoming Event
+        </h2>
         {featured ? (
           upcoming.length > 0 ? (
             <div className="grid gap-3 lg:grid-cols-[minmax(0,1.45fr)_minmax(0,1fr)] lg:gap-3">
