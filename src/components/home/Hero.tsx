@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Icon } from "@/components/ui/Icon";
+import { churchConfig } from "@/config/church";
 import { images } from "@/config/images";
 
 export function Hero() {
@@ -36,17 +37,20 @@ export function Hero() {
 
         <Container className="relative z-10 py-20 sm:py-24 lg:py-24">
           <div className="rise flex max-w-5xl flex-col items-start gap-3.5 text-left sm:gap-4">
-            <p className="type-body-lg font-medium text-white/90">
+            <p className="font-display text-[clamp(1.375rem,2.8vw,2rem)] font-semibold tracking-[0.02em] text-gold-300">
+              {churchConfig.name}
+            </p>
+            <p className="text-[1.125rem] font-medium text-white/90 sm:text-[1.25rem]">
               A Spirit-filled church for the Baltimore area.
             </p>
-            <p className="max-w-2xl text-[1.0625rem] font-medium leading-relaxed text-gold-300 sm:text-[1.125rem]">
+            <p className="max-w-2xl text-[1.125rem] font-medium leading-relaxed text-gold-300 sm:text-[1.25rem]">
               Prayer. Praise. Worship. The Word. Fellowship.
             </p>
             <h1 className="font-display text-[clamp(1.65rem,4.6vw,3.75rem)] font-bold uppercase leading-[1.1] tracking-[-0.02em] text-white">
               <span className="block whitespace-nowrap">Touching Our Generation</span>
               <span className="block whitespace-nowrap">With the Power of God</span>
             </h1>
-            <p className="max-w-3xl type-body-lg text-white/80">
+            <p className="max-w-3xl text-[1.125rem] leading-relaxed text-white/80 sm:text-[1.25rem]">
               <span className="block sm:whitespace-nowrap">
                 A growing church family where people from every background can encounter God,
               </span>
