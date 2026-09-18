@@ -100,23 +100,20 @@ export default async function MissionsLeadPage() {
         aria-label="Apostle Emmanuel Agormeda and Rev. Mrs. Willhemina Agormeda"
         className="bg-navy-950"
       >
-        <div className="grid lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:h-[min(78vh,40rem)]">
-          <figure className="relative min-h-[22rem] overflow-hidden sm:min-h-[28rem] lg:min-h-0">
+        <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:min-h-[min(72vh,38rem)]">
+          <figure className="relative flex min-h-[24rem] items-center justify-center overflow-hidden bg-[#e6d9c8] sm:min-h-[30rem] lg:min-h-0">
             <Image
               src={images.apostleAgorMina.src}
               alt={images.apostleAgorMina.alt}
               fill
-              sizes="(min-width: 1024px) 58vw, 100vw"
+              sizes="(min-width: 1024px) 50vw, 100vw"
               quality={90}
-              className="object-cover object-[center_22%]"
+              className="object-contain object-center"
             />
           </figure>
           <div className="flex flex-col justify-center px-8 py-12 sm:px-12 lg:px-14 lg:py-16">
-            <p className="text-[1.125rem] font-semibold tracking-[0.03em] text-gold-300">
+            <h2 className="font-display text-[clamp(1.75rem,3vw,2.5rem)] leading-[1.08] text-gold-300">
               Together in ministry
-            </p>
-            <h2 className="mt-3 font-display text-[clamp(1.75rem,3vw,2.5rem)] leading-[1.08] text-white">
-              Rev. Mrs. Willhemina Agormeda
             </h2>
             <span aria-hidden="true" className="mt-5 block h-px w-14 bg-gold-400" />
             <p className="mt-6 max-w-md type-body-lg text-white/75">
