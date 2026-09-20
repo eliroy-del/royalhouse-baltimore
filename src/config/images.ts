@@ -97,6 +97,10 @@ export const images = {
     src: "/images/event-conference.jpg",
     alt: "A Royalhouse Chapel conference hall filled with red chairs as a speaker teaches from the stage under bright lights",
   },
+  thanksgivingSocial2026: {
+    src: "/images/thanksgiving-social-2026.jpg",
+    alt: "Thanksgiving Social flyer with event details and a Thanksgiving dinner table",
+  },
   eventWorshipNight: {
     src: "/images/event-worship-night.jpg",
     alt: "Silhouettes of a congregation with hands raised during an evening worship night lit by hundreds of small lights",

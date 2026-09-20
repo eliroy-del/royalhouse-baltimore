@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 import { navyBlurDataURL } from "@/config/images";
 import { dateParts, formatDate } from "@/lib/dates";
@@ -49,66 +50,82 @@ export function EventCard({ event, variant = "default", className }: EventCardPr
 
   if (variant === "feature") {
     return (
-      <Link
-        href={href}
+      <article
         className={cn(
-          "group relative isolate flex min-h-[12rem] flex-col justify-end overflow-hidden rounded-media bg-navy-950 p-4 text-white sm:min-h-[13rem] lg:p-5",
+          "overflow-hidden rounded-media border border-navy-900/[0.08] bg-white shadow-elevate md:grid md:grid-cols-[minmax(18rem,24rem)_minmax(0,1fr)]",
           className,
         )}
       >
-        <Image
-          src={event.image}
-          alt={event.imageAlt}
-          fill
-          sizes="(min-width: 1024px) 66vw, 100vw"
-          placeholder="blur"
-          blurDataURL={navyBlurDataURL}
-          className="-z-10 object-cover transition-transform duration-[1.2s] ease-out-expo group-hover:scale-[1.04]"
-        />
-        <div aria-hidden="true" className="absolute inset-0 -z-10 scrim-navy" />
-
-        <div className="flex flex-wrap items-center gap-2">
-          <Badge variant="gold" size="sm">
-            Featured
-          </Badge>
-          <Badge variant="outline-light" size="sm">
-            {event.category}
-          </Badge>
-        </div>
-
-        <h3 className="mt-3 max-w-2xl font-display text-[clamp(1.375rem,2.6vw,1.75rem)] leading-[1.05]">
-          {event.title}
-        </h3>
-        <p className="mt-2 max-w-xl text-[0.8125rem] leading-relaxed text-white/75 sm:text-[0.875rem]">
-          {event.summary}
-        </p>
-
-        <dl className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-[0.8125rem] text-white/80">
-          <div className="flex items-center gap-2">
-            <dt className="sr-only">Date</dt>
-            <Icon name="calendar" className="size-3.5 text-gold-400" />
-            <dd>{formatDate(event.date)}</dd>
-          </div>
-          <div className="flex items-center gap-2">
-            <dt className="sr-only">Time</dt>
-            <Icon name="clock" className="size-3.5 text-gold-400" />
-            <dd>{event.startTime}</dd>
-          </div>
-          <div className="flex items-center gap-2">
-            <dt className="sr-only">Location</dt>
-            <Icon name="map-pin" className="size-3.5 text-gold-400" />
-            <dd>{event.location}</dd>
-          </div>
-        </dl>
-
-        <span className="mt-4 inline-flex items-center gap-2 text-[0.8125rem] font-semibold text-gold-300">
-          See event details
-          <Icon
-            name="arrow-right"
-            className="size-3.5 transition-transform duration-300 group-hover:translate-x-1"
+        <Link
+          href={href}
+          aria-label={`View details for ${event.title}`}
+          className="group relative block aspect-[791/1024] overflow-hidden bg-navy-950"
+        >
+          <Image
+            src={event.image}
+            alt={event.imageAlt}
+            fill
+            sizes="(min-width: 768px) 24rem, 100vw"
+            placeholder="blur"
+            blurDataURL={navyBlurDataURL}
+            className="object-contain transition-transform duration-700 ease-out-expo group-hover:scale-[1.015]"
           />
-        </span>
-      </Link>
+        </Link>
+
+        <div className="flex min-w-0 flex-col justify-center p-5 sm:p-7 lg:p-9">
+          <div className="flex flex-wrap items-center gap-2">
+            <Badge variant="gold" size="sm">
+              Featured
+            </Badge>
+            <Badge variant="soft" size="sm">
+              {event.category}
+            </Badge>
+          </div>
+
+          <h2 className="mt-4 font-display text-[clamp(1.75rem,4vw,2.75rem)] leading-[1.08] text-navy-900">
+            {event.title}
+          </h2>
+          <p className="mt-3 max-w-xl text-[1rem] leading-relaxed text-navy-900/70 sm:text-[1.0625rem]">
+            {event.summary}
+          </p>
+
+          <dl className="mt-6 grid gap-3 text-[0.875rem] text-navy-900/75 sm:grid-cols-2">
+            <div className="flex items-start gap-2">
+              <dt className="sr-only">Date</dt>
+              <Icon name="calendar" className="mt-0.5 size-4 shrink-0 text-gold-700" />
+              <dd>{formatDate(event.date)}</dd>
+            </div>
+            <div className="flex items-start gap-2">
+              <dt className="sr-only">Time</dt>
+              <Icon name="clock" className="mt-0.5 size-4 shrink-0 text-gold-700" />
+              <dd>{event.startTime}</dd>
+            </div>
+            <div className="flex items-start gap-2 sm:col-span-2">
+              <dt className="sr-only">Location</dt>
+              <Icon name="map-pin" className="mt-0.5 size-4 shrink-0 text-gold-700" />
+              <dd>{event.location}</dd>
+            </div>
+          </dl>
+
+          <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            {event.registrationUrl ? (
+              <Button asChild variant="gold" size="lg">
+                <a
+                  href={event.registrationUrl}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Register Free
+                  <Icon name="arrow-right" className="size-4" />
+                </a>
+              </Button>
+            ) : null}
+            <Button asChild variant="outline" size="lg">
+              <Link href={href}>Event Details</Link>
+            </Button>
+          </div>
+        </div>
+      </article>
     );
   }
 

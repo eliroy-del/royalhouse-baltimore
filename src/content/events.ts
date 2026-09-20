@@ -6,7 +6,8 @@ export const events: ChurchEvent[] = [
     id: "thanksgiving-social",
     title: "Thanksgiving Social",
     slug: "thanksgiving-social",
-    summary: "A Friendsgiving for Baltimore & the surrounding community.",
+    summary:
+      "Food. Fun. Faith. Fellowship. Free and open to everyone—registration required by November 15.",
     description: [
       "Thanksgiving is better with good food, good people, and good vibes.",
       "Come hang out, meet new people, enjoy a Thanksgiving dinner, play some games, take some pictures, listen to some music, and experience the kind of community where you can actually feel at home.",
@@ -15,8 +16,8 @@ export const events: ChurchEvent[] = [
       "Free and open to everyone. Whether you're a Baltimore local, a college student, new to the area, or just looking for something different to do that night, you've got a seat at the table.",
       "Come for the food. Stay for the people.",
     ],
-    image: images.welcomeHome.src,
-    imageAlt: images.welcomeHome.alt,
+    image: images.thanksgivingSocial2026.src,
+    imageAlt: images.thanksgivingSocial2026.alt,
     date: "2026-11-24",
     startTime: "7:00 PM",
     location: "5411 Old Frederick Rd, Ste 11-12, Baltimore, MD 21229",
