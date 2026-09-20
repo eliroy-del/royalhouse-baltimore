@@ -86,7 +86,6 @@ export default async function EventDetailPage({ params }: { params: Promise<{ sl
       />
 
       <PageHero
-        eyebrow={event.category}
         title={event.title}
         image={{
           src: event.heroImage ?? event.image,
