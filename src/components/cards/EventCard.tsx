@@ -86,7 +86,7 @@ export function EventCard({ event, variant = "default", className }: EventCardPr
             {event.title}
           </h2>
 
-          <dl className="mt-6 grid gap-3 text-[0.875rem] text-navy-900/75 sm:grid-cols-2">
+          <dl className="mt-6 flex flex-wrap gap-x-8 gap-y-3 text-[0.875rem] text-navy-900/75">
             <div className="flex items-start gap-2">
               <dt className="sr-only">Date</dt>
               <Icon name="calendar" className="mt-0.5 size-4 shrink-0 text-gold-700" />
@@ -97,7 +97,7 @@ export function EventCard({ event, variant = "default", className }: EventCardPr
               <Icon name="clock" className="mt-0.5 size-4 shrink-0 text-gold-700" />
               <dd>{event.startTime}</dd>
             </div>
-            <div className="flex items-start gap-2 sm:col-span-2">
+            <div className="flex w-full items-start gap-2">
               <dt className="sr-only">Location</dt>
               <Icon name="map-pin" className="mt-0.5 size-4 shrink-0 text-gold-700" />
               <dd>{event.location}</dd>
