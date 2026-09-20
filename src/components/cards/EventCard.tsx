@@ -85,9 +85,6 @@ export function EventCard({ event, variant = "default", className }: EventCardPr
           <h2 className="mt-4 font-display text-[clamp(1.75rem,4vw,2.75rem)] leading-[1.08] text-navy-900">
             {event.title}
           </h2>
-          <p className="mt-3 max-w-xl text-[1rem] leading-relaxed text-navy-900/70 sm:text-[1.0625rem]">
-            {event.summary}
-          </p>
 
           <dl className="mt-6 grid gap-3 text-[0.875rem] text-navy-900/75 sm:grid-cols-2">
             <div className="flex items-start gap-2">
