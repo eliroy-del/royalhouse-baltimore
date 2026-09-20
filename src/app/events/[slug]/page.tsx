@@ -11,7 +11,6 @@ import { Container } from "@/components/ui/Container";
 import { Icon } from "@/components/ui/Icon";
 import { Section } from "@/components/ui/Section";
 import { ShareButton } from "@/components/ui/ShareButton";
-import { images } from "@/config/images";
 import { churchStatus, directionsUrl } from "@/lib/church";
 import { getEventBySlug, getEvents, getRelatedEvents } from "@/lib/content";
 import { formatDate, formatDayOfWeek, googleCalendarUrl, isUpcoming } from "@/lib/dates";
@@ -90,8 +89,10 @@ export default async function EventDetailPage({ params }: { params: Promise<{ sl
         eyebrow={event.category}
         title={event.title}
         lede={event.summary}
-        image={images.eventConference}
-        objectPosition="50% 34%"
+        image={{
+          src: event.heroImage ?? event.image,
+          alt: event.heroImageAlt ?? event.imageAlt,
+        }}
         size="lg"
         breadcrumb={[{ label: "Events", href: "/events" }, { label: event.title }]}
         actions={

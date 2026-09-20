@@ -18,6 +18,8 @@ export const events: ChurchEvent[] = [
     ],
     image: images.thanksgivingSocial2026.src,
     imageAlt: images.thanksgivingSocial2026.alt,
+    heroImage: images.eventBlueTexture.src,
+    heroImageAlt: images.eventBlueTexture.alt,
     date: "2026-11-24",
     startTime: "7:00 PM",
     location: "5411 Old Frederick Rd, Ste 11-12, Baltimore, MD 21229",

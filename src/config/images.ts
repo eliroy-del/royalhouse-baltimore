@@ -101,6 +101,10 @@ export const images = {
     src: "/images/thanksgiving-social-2026.jpg",
     alt: "Thanksgiving Social flyer with event details and a Thanksgiving dinner table",
   },
+  eventBlueTexture: {
+    src: "/images/event-blue-texture.png",
+    alt: "Textured royal blue background with layered geometric angles",
+  },
   eventWorshipNight: {
     src: "/images/event-worship-night.jpg",
     alt: "Silhouettes of a congregation with hands raised during an evening worship night lit by hundreds of small lights",

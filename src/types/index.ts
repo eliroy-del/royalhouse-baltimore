@@ -82,6 +82,9 @@ export interface ChurchEvent {
   description: string[];
   image: string;
   imageAlt: string;
+  /** Optional wide background for the event detail hero. */
+  heroImage?: string;
+  heroImageAlt?: string;
   /** ISO date string (YYYY-MM-DD). */
   date: string;
   /** Optional ISO end date for multi-day events. */
