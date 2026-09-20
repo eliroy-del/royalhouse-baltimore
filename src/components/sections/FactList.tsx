@@ -25,7 +25,7 @@ export function FactList({ facts, className }: FactListProps) {
     <dl className={cn("flex flex-col divide-y divide-navy-900/[0.07]", className)}>
       {facts.map((fact) => (
         <div key={fact.label} className="py-3.5 first:pt-0 last:pb-0">
-          <dt className="flex items-center gap-2 text-[0.75rem] uppercase tracking-[0.14em] text-navy-900/65">
+          <dt className="flex items-center gap-2 text-[0.75rem] font-bold uppercase tracking-[0.14em] text-navy-900/70">
             <Icon name={fact.icon} className="size-4 shrink-0 text-gold-600" />
             {fact.label}
           </dt>

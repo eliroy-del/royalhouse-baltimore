@@ -188,7 +188,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ sl
 
             <aside className="lg:sticky lg:top-28 lg:self-start">
               <div className="rounded-media border border-navy-900/[0.08] bg-white p-5">
-                <h2 className="eyebrow text-navy-900/65">Event details</h2>
+                <h2 className="eyebrow font-bold text-navy-900/75">Event details</h2>
                 <FactList className="mt-5" facts={details} />
 
                 <div className="mt-7 flex flex-col gap-2.5">
