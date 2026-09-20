@@ -1,5 +1,6 @@
 "use client";
 
+import { Mail } from "lucide-react";
 import Link from "next/link";
 import { LogoLink } from "@/components/brand/Logo";
 import { useGiving } from "@/components/giving/GivingProvider";
@@ -12,7 +13,7 @@ import { churchConfig } from "@/config/church";
 import { useScrolled } from "@/hooks/useScrolled";
 import { cn } from "@/lib/utils";
 
-const TOP_SOCIAL = ["facebook", "tiktok"] as const;
+const TOP_SOCIAL = ["instagram", "tiktok"] as const;
 
 export function Header() {
   const scrolled = useScrolled(24);
@@ -37,9 +38,10 @@ export function Header() {
         <Container className="flex h-9 items-center justify-between gap-3 sm:h-10">
           <a
             href={`mailto:${email}`}
-            className="min-w-0 truncate text-[0.75rem] font-medium text-white/80 transition-colors hover:text-gold-300 sm:text-[0.8125rem]"
+            className="flex min-w-0 items-center gap-2 text-[0.75rem] font-medium text-white/80 transition-colors hover:text-gold-300 sm:text-[0.8125rem]"
           >
-            {email}
+            <Mail aria-hidden="true" className="size-3.5 shrink-0" strokeWidth={1.75} />
+            <span className="truncate">{email}</span>
           </a>
           <SocialLinks
             tone="dark"
