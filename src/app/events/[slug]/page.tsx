@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { EventCard } from "@/components/cards/EventCard";
 import { FactList } from "@/components/sections/FactList";
 import { MapEmbed } from "@/components/sections/MapEmbed";
-import { CtaBand, PageHero } from "@/components/sections/PageHero";
+import { PageHero } from "@/components/sections/PageHero";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
@@ -246,21 +246,6 @@ export default async function EventDetailPage({ params }: { params: Promise<{ sl
         </Section>
       ) : null}
 
-      <CtaBand
-        eyebrow="First Time?"
-        title="Events are a lovely way to start."
-        lede="No pressure, no spotlight. Just come, have a look around, and let us make you welcome."
-        actions={
-          <>
-            <Button asChild variant="gold" size="xl">
-              <Link href="/plan-a-visit">Plan Your Visit</Link>
-            </Button>
-            <Button asChild variant="outline-light" size="xl">
-              <Link href="/connect">Get Connected</Link>
-            </Button>
-          </>
-        }
-      />
     </>
   );
 }
