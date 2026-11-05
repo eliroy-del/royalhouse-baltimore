@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { EventCard } from "@/components/cards/EventCard";
@@ -11,6 +12,7 @@ import { Container } from "@/components/ui/Container";
 import { Icon } from "@/components/ui/Icon";
 import { Section } from "@/components/ui/Section";
 import { ShareButton } from "@/components/ui/ShareButton";
+import { navyBlurDataURL } from "@/config/images";
 import { churchStatus, directionsUrl } from "@/lib/church";
 import { getEventBySlug, getEvents, getRelatedEvents } from "@/lib/content";
 import { formatDate, formatDayOfWeek, googleCalendarUrl, isUpcoming } from "@/lib/dates";
@@ -143,7 +145,20 @@ export default async function EventDetailPage({ params }: { params: Promise<{ sl
             </div>
           ) : null}
 
-          <div className="grid gap-5 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:gap-6">
+          <div className="grid items-start gap-8 lg:grid-cols-[minmax(16rem,20rem)_minmax(0,1fr)] lg:gap-10">
+            <figure className="relative mx-auto aspect-[791/1024] w-full max-w-[20rem] overflow-hidden rounded-media bg-navy-950 lg:mx-0 lg:sticky lg:top-28">
+              <Image
+                src={event.image}
+                alt={event.imageAlt}
+                fill
+                sizes="(min-width: 1024px) 20rem, 20rem"
+                placeholder="blur"
+                blurDataURL={navyBlurDataURL}
+                className="object-contain"
+              />
+            </figure>
+
+            <div className="grid gap-5 xl:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] xl:gap-6">
             <div>
               <div className="flex flex-wrap items-center gap-2.5">
                 <Badge variant="gold" size="md">
@@ -219,6 +234,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ sl
 
               <MapEmbed className="mt-6" />
             </aside>
+            </div>
           </div>
         </Container>
       </Section>
