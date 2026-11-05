@@ -142,7 +142,7 @@ export function EventCard({ event, variant = "default", className }: EventCardPr
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
           placeholder="blur"
           blurDataURL={navyBlurDataURL}
-          className="object-cover transition-transform duration-[1.2s] ease-out-expo group-hover:scale-[1.05]"
+          className="object-contain transition-transform duration-[1.2s] ease-out-expo group-hover:scale-[1.05]"
         />
         <span className="absolute left-4 top-4 flex size-14 flex-col items-center justify-center rounded-xl bg-white/95 text-navy-900 shadow-elevate backdrop-blur">
           <span className="eyebrow text-gold-800">{month}</span>

@@ -27,6 +27,28 @@ export const events: ChurchEvent[] = [
     featured: true,
     registrationUrl: "https://forms.gle/M7gmj55QXwYk1U9z7",
   },
+  {
+    id: "power-sundays-2026",
+    title: "Power Sundays",
+    slug: "power-sundays",
+    summary:
+      "Sunday, November 22 at 6:00 PM with Pastor RichieO and Apostle Emmanuel Agormeda.",
+    description: [
+      "Join us for Power Sundays on Sunday, November 22 at 6:00 PM.",
+      "Pastor RichieO, Lead Pastor of RCI Baltimore, and Apostle Emmanuel Agormeda, Head of Missions, North America.",
+      "5411 Old Frederick Rd, Ste 11, Baltimore, MD 21229. Contact: (443) 313-9442.",
+    ],
+    image: images.powerSundays2026.src,
+    imageAlt: images.powerSundays2026.alt,
+    heroImage: images.eventBlueTexture.src,
+    heroImageAlt: images.eventBlueTexture.alt,
+    date: "2026-11-22",
+    startTime: "6:00 PM",
+    location: "5411 Old Frederick Rd, Ste 11, Baltimore, MD 21229",
+    category: "Special",
+    speaker: "Pastor RichieO and Apostle Emmanuel Agormeda",
+    featured: false,
+  },
 ];
 
 export const eventCategories = [

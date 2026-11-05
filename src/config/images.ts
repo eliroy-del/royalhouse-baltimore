@@ -101,6 +101,10 @@ export const images = {
     src: "/images/thanksgiving-social-2026.jpg",
     alt: "Thanksgiving Social flyer with event details and a Thanksgiving dinner table",
   },
+  powerSundays2026: {
+    src: "/images/power-sundays-2026.jpg",
+    alt: "Power Sundays flyer featuring Pastor RichieO and Apostle Emmanuel Agormeda",
+  },
   eventBlueTexture: {
     src: "/images/event-blue-texture.png",
     alt: "Textured royal blue background with layered geometric angles",
