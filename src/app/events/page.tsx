@@ -64,7 +64,7 @@ export default async function EventsPage() {
             </Reveal>
 
             {rest.length > 0 ? (
-              <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="mt-5 flex flex-col gap-4">
                 {rest.slice(0, 3).map((event) => (
                   <EventCard key={event.id} event={event} variant="compact" />
                 ))}

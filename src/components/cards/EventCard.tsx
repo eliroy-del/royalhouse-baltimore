@@ -24,25 +24,32 @@ export function EventCard({ event, variant = "default", className }: EventCardPr
       <Link
         href={href}
         className={cn(
-          "group flex items-center gap-3 rounded-card border border-navy-900/[0.08] bg-white p-3 transition-all duration-500 ease-out-expo hover:-translate-y-0.5 hover:border-gold-500/40 hover:shadow-elevate",
+          "group flex items-center gap-4 rounded-card border border-navy-900/[0.08] bg-white p-3.5 transition-all duration-500 ease-out-expo hover:-translate-y-0.5 hover:border-gold-500/40 hover:shadow-elevate sm:gap-5 sm:p-4",
           className,
         )}
       >
-        <span className="flex size-12 shrink-0 flex-col items-center justify-center rounded-lg bg-navy-900 text-white">
-          <span className="eyebrow text-[0.5625rem] text-gold-300">{month}</span>
-          <span className="font-display text-xl leading-none figures-lining">{day}</span>
+        <span className="relative h-[5.75rem] w-[4.5rem] shrink-0 overflow-hidden rounded-lg bg-navy-950 sm:h-[7rem] sm:w-[5.4rem]">
+          <Image
+            src={event.image}
+            alt={event.imageAlt}
+            fill
+            sizes="86px"
+            placeholder="blur"
+            blurDataURL={navyBlurDataURL}
+            className="object-contain"
+          />
         </span>
         <span className="min-w-0 flex-1">
-          <span className="block text-[0.875rem] font-semibold text-navy-900 transition-colors group-hover:text-navy-800">
+          <span className="block text-[1.0625rem] font-semibold leading-snug text-navy-900 transition-colors group-hover:text-navy-800 sm:text-lg">
             {event.title}
           </span>
-          <span className="mt-0.5 block truncate text-[0.75rem] text-navy-900/65">
-            {event.startTime} · {event.category}
+          <span className="mt-1 block text-[0.875rem] leading-relaxed text-navy-900/65">
+            {formatDate(event.date)} · {event.startTime}
           </span>
         </span>
         <Icon
           name="arrow-right"
-          className="size-4 shrink-0 text-navy-900/30 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-gold-600"
+          className="size-5 shrink-0 text-navy-900/30 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-gold-600"
         />
       </Link>
     );

@@ -32,7 +32,7 @@ export async function EventsPreview() {
                 <Stagger className="flex flex-col gap-2">
                   {upcoming.slice(0, 3).map((event) => (
                     <StaggerItem key={event.id}>
-                      <EventCard event={event} variant="compact" className="gap-3 p-3" />
+                      <EventCard event={event} variant="compact" />
                     </StaggerItem>
                   ))}
                 </Stagger>
